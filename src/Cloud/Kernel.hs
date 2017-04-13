@@ -17,8 +17,6 @@ data Message = Ping (ProcessId, [Integer])
 
 instance Binary Message                 -- <2>
 
-  -- >>
-
 
 serverIO :: (Integer->Integer) -> [Integer] -> IO [Integer]
 serverIO f list = do
@@ -32,8 +30,8 @@ otherServer f list = do
     return res
 
   -- <<pingServer
-pingServer2 :: Integer -> Process ()
-pingServer2 f = do
+pingServer :: Integer -> Process ()
+pingServer f = do
     Ping (from, inputList) <- expect                              -- <1>
     mypid <- getSelfPid
     res <- otherServer (\x-> x * x) inputList                             -- <3>
@@ -50,17 +48,15 @@ pingServer2 f = do
         send from (Pong mypid)
 -}
 
-  -- <<remotable
-pingServer = pingServer2 2
-
---remotable ['pingServer]
+remotable ['pingServer]
   -- >>
-
+f :: Integer -> Integer
+f x = x * x
 
 master :: [NodeId] -> Process ()
 master peers = do
   ps <- forM peers $ \nid -> do
-    let cls = $(mkStaticClosure 'pingServer)
+    let cls = $(mkClosure 'pingServer) (2 :: Integer)
     spawn nid cls
 
   mypid <- getSelfPid

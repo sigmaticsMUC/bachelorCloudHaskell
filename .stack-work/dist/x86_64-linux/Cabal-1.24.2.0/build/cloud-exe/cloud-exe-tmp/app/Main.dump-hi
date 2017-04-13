@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-11 15:12:56.091389 UTC
+2017-04-13 10:32:28.17053 UTC
 
 interface main@main:Main [family instance module] 8002
-  interface hash: 5bdada34c9160c78934e754087b20b18
-  ABI hash: 5e9f8300429aa60ac2fe72092728306c
+  interface hash: 7a3e36bdf1dccd09e7431a99fbd91373
+  ABI hash: 3fbc26c37a5ccc5dfb17843766b3d612
   export-list hash: 7b0cdadee2a60fe753cc61973a229f19
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: d8ef5a18fb790a725d944da527b6f121
@@ -103,7 +103,8 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Class b88eee4db2420047af9b40010da11191
-import  -/  cloud-0.1.0.0@cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu:Cloud.Kernel 14ef1c3e2bbb0e9ec6d4d4d419329937
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu:Cloud.Clsering 1d679367d140abffcbc77a86a95710d6
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu:Cloud.Kernel 218008052047c281871984b3406f0a3e
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu:DistribUtils fea1bb7f89efb967bc3c02be9775e770
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
@@ -902,19 +903,19 @@ b567f81f781803544f7b53e7abbceb46
                    @ Main.Message
                    @ Main.Message
                    Main.$s$fSerializablea) -}
-5398f0c0df18f33b22585a4acbf60da1
+4f2c69e86f0a760ccccda3e15eae5de7
   main :: GHC.Types.IO ()
   {- Arity: 1,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-2f1d83e9e1ab980ba8f20396a3764733
+                Cloud.Clsering.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+2312bb20cd00bb2825ece3a1e858c404
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
-                   Cloud.Kernel.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+                   Cloud.Clsering.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
 5d09dbdcdaed009ec34816d65afea8f6
   master ::
     [Control.Distributed.Process.Internal.Types.NodeId]

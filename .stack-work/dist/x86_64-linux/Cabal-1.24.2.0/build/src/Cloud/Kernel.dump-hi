@@ -1,24 +1,26 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-11 15:12:53.769266 UTC
+2017-04-13 10:32:24.835891 UTC
 
 interface cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu:Cloud.Kernel [family instance module] 8002
-  interface hash: 28537b27c5f677fad4b8dbac1c75b7d3
-  ABI hash: 14ef1c3e2bbb0e9ec6d4d4d419329937
-  export-list hash: e8045f810aea9bdfa5f4a7a345d0505f
-  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  interface hash: 6eb5e98dc90ab6a5dbee85621dbbec75
+  ABI hash: 218008052047c281871984b3406f0a3e
+  export-list hash: 3638e8daa824bc6bba3b9664670c59eb
+  orphan hash: d9b322b4ce9d880e0b388ca242aee14d
   flag hash: 803d98d62aac3ee2e6dfa84540c08dea
   sig of: Nothing
   used TH splices: True
   where
 exports:
   Cloud.Kernel.__remoteTable
+  Cloud.Kernel.f
   Cloud.Kernel.main
   Cloud.Kernel.master
   Cloud.Kernel.otherServer
   Cloud.Kernel.pingServer
-  Cloud.Kernel.pingServer2
+  Cloud.Kernel.pingServer__sdict
   Cloud.Kernel.pingServer__static
+  Cloud.Kernel.pingServer__tdict
   Cloud.Kernel.serverIO
   Cloud.Kernel.waitForPongs
   Cloud.Kernel.Message{Cloud.Kernel.Ping}
@@ -107,10 +109,12 @@ import  -/  DistribUtils fea1bb7f89efb967bc3c02be9775e770
   distribMain a0ff5fcdcfa2489a2b683da18d162fe0
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Closure.BuiltIn 09bd43d2da350c5cae04e4056c2ca0e6
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Closure.TH 7d063937231664b6296c0e9a44084cdd
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Primitives b74924c8dd3a3c8d0b2bca48b358e70f
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Spawn 1a9baddb46b4ecf56600f892b4a6cb81
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Serializable 500cfb956cecdda59dfccf37b8980e97
 import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ:Control.Distributed.Static 841c7e8459fcc6cc4abf344e1885a430
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
@@ -330,33 +334,78 @@ b4e0618ca69b9cc9dd191c5794f53126
                              <(Control.Distributed.Process.Internal.Types.ProcessId,
                                [GHC.Integer.Type.Integer])>_R
                              <x>_P))) -}
-7af9e6fb0ccc81e1b23446b2687c721d
+a63141c530f8fe1691fa2d9dad039b39
   $s$fSerializablea ::
+    Control.Distributed.Process.Serializable.Serializable ()
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ()
+                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+                  Cloud.Kernel.$s$fSerializablea1 -}
+fb40d494430987578224754d34b59e92
+  $s$fSerializablea1 :: Data.Typeable.Internal.Typeable ()
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Kernel.$s$fSerializablea2
+                  `cast`
+                (Sym (Data.Typeable.Internal.N:Typeable[0] <*>_N <()>_N)) -}
+78a8fe6d229d6f78e064f84636f5f62a
+  $s$fSerializablea10 ::
     Control.Distributed.Process.Serializable.Serializable
       Cloud.Kernel.Message
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ Cloud.Kernel.Message
-                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
-                  Cloud.Kernel.$s$fSerializablea1 -}
-152a7ff20ac85596f87dc0ca57cf3c5d
-  $s$fSerializablea1 ::
+                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable2
+                  Cloud.Kernel.$s$fSerializablea11 -}
+eee2e1c0b4ed8f96cb8300001185f21d
+  $s$fSerializablea11 ::
     Data.Typeable.Internal.Typeable Cloud.Kernel.Message
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.$s$fSerializablea2
+                Cloud.Kernel.$s$fSerializablea12
                   `cast`
                 (Sym (Data.Typeable.Internal.N:Typeable[0]
                           <*>_N <Cloud.Kernel.Message>_N)) -}
-8b4f806f4f3ada9d1fadcbb96df4045f
-  $s$fSerializablea2 ::
+ce2dcefce162c479636c0ce4c70f3403
+  $s$fSerializablea12 ::
     GHC.Prim.Proxy# Cloud.Kernel.Message
     -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy# Cloud.Kernel.Message) ->
+                 Cloud.Kernel.$s$fSerializablea13) -}
+d629fc468d67643711db6589b8e119db
+  $s$fSerializablea13 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fSerializablea14
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Cloud.Kernel.$tcMessage
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+0aeffc0159f5b67aec4a6d6c2b935180
+  $s$fSerializablea14 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   11258687216177686724##
+                   10690598792153829504##) -}
+96a41a432fd4861500091dc8ca7e0ad5
+  $s$fSerializablea2 ::
+    GHC.Prim.Proxy# () -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy# ()) ->
                  Cloud.Kernel.$s$fSerializablea3) -}
-527f59dc3ea48c1b472e0dbbbb3ac84a
+39f7ff2c9b3db3620b08dccf431104a7
   $s$fSerializablea3 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
@@ -370,23 +419,43 @@ b4e0618ca69b9cc9dd191c5794f53126
                  Data.Typeable.Internal.TypeRep
                    dt1
                    dt2
-                   Cloud.Kernel.$tcMessage
+                   GHC.Tuple.$tc()
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-607c931834c7bebbca6773f111b70ffd
+a1a89105889d7178eb9df701f314dd4e
   $s$fSerializablea4 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
-                   11258687216177686724##
-                   10690598792153829504##) -}
-aa5ee56514aa867ba28cd88615fb71a1
-  $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
-    Data.Binary.Class.Binary Cloud.Kernel.Message
-  {- Strictness: m,
+                   15843165073189925570##
+                   13730769858450861905##) -}
+b26bea68dafd29a00f19bf7e73338454
+  $s$fSerializablea5 ::
+    Control.Distributed.Process.Serializable.Serializable
+      GHC.Integer.Type.Integer
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Integer.Type.Integer
+                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
+                  Cloud.Kernel.$s$fSerializablea6 -}
+e721675146ed938fad908c29f4af1903
+  $s$fSerializablea6 ::
+    Data.Typeable.Internal.Typeable GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.$fBinaryMessage -}
-75cdf0be7890f7a0217471ea0cafb5a6
-  $stoDynamic2 :: Data.Typeable.Internal.TypeRep
+                Cloud.Kernel.$s$fSerializablea7
+                  `cast`
+                (Sym (Data.Typeable.Internal.N:Typeable[0]
+                          <*>_N <GHC.Integer.Type.Integer>_N)) -}
+0cd9c3d797c0c2516c805dfadd79f3fd
+  $s$fSerializablea7 ::
+    GHC.Prim.Proxy# GHC.Integer.Type.Integer
+    -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy# GHC.Integer.Type.Integer) ->
+                 Cloud.Kernel.$s$fSerializablea8) -}
+c218a7d055adffa3c38f997c629cb53d
+  $s$fSerializablea8 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -394,20 +463,86 @@ aa5ee56514aa867ba28cd88615fb71a1
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$stoDynamic3
+                           Cloud.Kernel.$s$fSerializablea9
                            kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
                  Data.Typeable.Internal.TypeRep
                    dt1
                    dt2
-                   GHC.Tuple.$tc()
+                   GHC.Integer.Type.$tcInteger
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-eb4136bc162631cacd51c3b691ea6ffe
-  $stoDynamic3 :: GHC.Fingerprint.Type.Fingerprint
+304dad4ff2cdc68bae86fc5eb96a72f0
+  $s$fSerializablea9 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
-                   15843165073189925570##
-                   13730769858450861905##) -}
+                   4243490490217825131##
+                   6185988462045966752##) -}
+bf23970861ef34d032aba54e94c1d4f9
+  $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
+    Data.Binary.Class.Binary ()
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Binary.Class.$fBinary() -}
+46db7b92c3578b55170bbb4c8eee9de6
+  $s$fSerializablea_$s$fSerializablea_$cp1Serializable1 ::
+    Data.Binary.Class.Binary GHC.Integer.Type.Integer
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Binary.Class.$fBinaryInteger -}
+31014f2125d38f1f210b7642fb3025f7
+  $s$fSerializablea_$s$fSerializablea_$cp1Serializable2 ::
+    Data.Binary.Class.Binary Cloud.Kernel.Message
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Kernel.$fBinaryMessage -}
+3753d196b0ae068dda3d5427694c2bea
+  $stoDynamic12 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$stoDynamic13
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Control.Distributed.Process.Serializable.$tcSerializableDict
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+6085c128e071f9ceb2ff34a0706cb200
+  $stoDynamic13 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   10658944029390058201##
+                   13154103510098428930##) -}
+abd15a953351880b2ab503dd97235d94
+  $stoDynamic2 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic4 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.$stoDynamic3
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+f772b788539c9bd06944550f48a335f1
+  $stoDynamic3 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea3
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
 edea95461d672ba35d63fc32c82b1bb6
   $stoDynamic4 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
@@ -431,6 +566,54 @@ edea95461d672ba35d63fc32c82b1bb6
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    16388574162845728638##
                    4943431739041295902##) -}
+58d215a345ff4f1d2d453e4b38b97cfb
+  $stoDynamic6 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic8 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.$stoDynamic7
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+56c4a2e0cc2c79c0a1346f691c0d1caf
+  $stoDynamic7 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea8
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+6dda9197d7d4d258e4d3f7e13fd6c8c1
+  $stoDynamic8 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$stoDynamic9
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Types.$tc(->)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+2736209830bf06f08e1707620fb1c460
+  $stoDynamic9 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   16275961958878852713##
+                   3578558998586661682##) -}
 e22a1357abebb6c555fb4a9025664900
   $tc'Ping :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -575,7 +758,7 @@ d49e6895921674c951e2cd47b52add2c
   $wgo1 ::
     [GHC.Integer.Type.Integer] -> GHC.Prim.Int# -> GHC.Prim.Int#
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>, Inline: [0] -}
-fd8b3942d42ed2dfd7d90f9acd471ce9
+5b65813ba6f03d1aeccafcbcd619eae3
   $wlvl ::
     Control.Distributed.Process.Internal.StrictMVar.StrictMVar
       (Control.Distributed.Process.Internal.StrictList.StrictList
@@ -637,7 +820,7 @@ fd8b3942d42ed2dfd7d90f9acd471ce9
                         ww1
                         ww2
                         Control.Distributed.Process.Internal.CQueue.Blocking
-                        Cloud.Kernel.__remoteTable7
+                        Cloud.Kernel.__remoteTable16
                           `cast`
                         ([Control.Distributed.Process.Internal.Primitives.N:Match[0]
                               <Cloud.Kernel.Message>_N])_R
@@ -647,7 +830,7 @@ fd8b3942d42ed2dfd7d90f9acd471ce9
                    -> case GHC.Prim.raiseIO#
                              @ GHC.Exception.SomeException
                              @ Cloud.Kernel.Message
-                             Cloud.Kernel.__remoteTable5
+                             Cloud.Kernel.__remoteTable14
                              ipv
                       ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
                       of {}
@@ -688,7 +871,7 @@ fd8b3942d42ed2dfd7d90f9acd471ce9
                         = GHC.Base.map
                             @ GHC.Integer.Type.Integer
                             @ GHC.Integer.Type.Integer
-                            Cloud.Kernel.__remoteTable4
+                            Cloud.Kernel.__remoteTable13
                             inputList
                       } in
                       case GHC.IO.Handle.Text.hPutStr2
@@ -713,7 +896,7 @@ fd8b3942d42ed2dfd7d90f9acd471ce9
                       case ww10 of ww35 { Control.Concurrent.Chan.Chan ww36 ww37 ->
                       Control.Distributed.Process.Internal.Primitives.$wsend
                         @ Cloud.Kernel.Message
-                        Cloud.Kernel.$s$fSerializablea
+                        Cloud.Kernel.$s$fSerializablea10
                         ww18
                         ww19
                         ww20
@@ -760,7 +943,7 @@ b4e0618ca69b9cc9dd191c5794f53126
                   (GHC.Generics.Rec0
                      (Control.Distributed.Process.Internal.Types.ProcessId,
                       [GHC.Integer.Type.Integer]))))
-ee35b4115b2db528f67c1791b3b59095
+5cc7b19e67e4a3ffd2ab4adb2631ad28
   __remoteTable ::
     Control.Distributed.Static.RemoteTable
     -> Control.Distributed.Static.RemoteTable
@@ -770,71 +953,61 @@ ee35b4115b2db528f67c1791b3b59095
                   `cast`
                 (<Control.Distributed.Static.RemoteTable>_R
                  ->_R Sym (Control.Distributed.Static.N:RemoteTable[0])) -}
-48835477f638ee38e4305e570ea47999
+d283eff63d8908fb930874b9518bbd10
   __remoteTable1 ::
     Control.Distributed.Static.RemoteTable
     -> Data.Map.Base.Map GHC.Base.String Data.Rank1Dynamic.Dynamic
   {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: Control.Distributed.Static.RemoteTable) ->
+     Unfolding: (\ (x :: Control.Distributed.Static.RemoteTable) ->
                  Control.Distributed.Static.$sinsert_$sgo10
                    @ Data.Rank1Dynamic.Dynamic
-                   Cloud.Kernel.__remoteTable12
-                   Cloud.Kernel.__remoteTable2
-                   ds `cast` (Control.Distributed.Static.N:RemoteTable[0])) -}
-b275a89bbba04d8699ad9243088439f0
-  __remoteTable10 :: Data.Rank1Typeable.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$stoDynamic4 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Kernel.__remoteTable11
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
-                 (Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types)
-                   `cast`
-                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
-c6024e1e816d52f49aa211c825473579
-  __remoteTable11 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$stoDynamic2
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-df2e9791d3fb8ee7a0aea21cd1da045b
-  __remoteTable12 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "Cloud.Kernel.pingServer"#) -}
-1e86c9a8757061b6ecbc48baea1b7235
-  __remoteTable2 :: Data.Rank1Dynamic.Dynamic
+                   Cloud.Kernel.__remoteTable21
+                   Cloud.Kernel.__remoteTable10
+                   (Control.Distributed.Static.$sinsert_$sgo10
+                      @ Data.Rank1Dynamic.Dynamic
+                      Cloud.Kernel.__remoteTable9
+                      Cloud.Kernel.__remoteTable6
+                      (Control.Distributed.Static.$sinsert_$sgo10
+                         @ Data.Rank1Dynamic.Dynamic
+                         Cloud.Kernel.__remoteTable5
+                         Cloud.Kernel.__remoteTable2
+                         x `cast` (Control.Distributed.Static.N:RemoteTable[0])))) -}
+b2216c8db7da2db06d5866b3eadbd0a6
+  __remoteTable10 :: Data.Rank1Dynamic.Dynamic
   {- Strictness: m,
      Unfolding: (Data.Rank1Dynamic.Dynamic
-                   Cloud.Kernel.__remoteTable10
-                   Cloud.Kernel.__remoteTable3
+                   Cloud.Kernel.__remoteTable19
+                   Cloud.Kernel.__remoteTable11
                      `cast`
                    (Trans
-                        (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
-                        (Trans
-                             (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                       <*>_N
-                                       <Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                                       <GHC.Types.IO>_R
-                                       <()>_N))
-                             (Trans
-                                  (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)
-                                  (UnsafeCo representational (Control.Distributed.Process.Internal.Types.Process
-                                                                ()) GHC.Prim.Any))))) -}
-f62dee9b1b7c769b502a6981984dc319
-  __remoteTable3 ::
+                        (<GHC.Integer.Type.Integer>_R
+                         ->_R Trans
+                                  (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                   ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                                  (Trans
+                                       (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                 <*>_N
+                                                 <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                                 <GHC.Types.IO>_R
+                                                 <()>_N))
+                                       (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)))
+                        (UnsafeCo representational (GHC.Integer.Type.Integer
+                                                    -> Control.Distributed.Process.Internal.Types.Process
+                                                         ()) GHC.Prim.Any))) -}
+d55fd342550bc1e3d30b845d2b70d2fb
+  __remoteTable11 ::
+    GHC.Integer.Type.Integer
+    -> Control.Distributed.Process.Internal.Types.LocalProcess
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (f1 :: GHC.Integer.Type.Integer)
+                   (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Cloud.Kernel.__remoteTable12 eta eta1) -}
+81f101de78cfcd05497785522e7bf860
+  __remoteTable12 ::
     Control.Distributed.Process.Internal.Types.LocalProcess
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -862,19 +1035,19 @@ f62dee9b1b7c769b502a6981984dc319
                    ww16
                    ww17
                    w1 } } }) -}
-c4a957b787965ac8ecfd308f03b3186d
-  __remoteTable4 ::
+c89991320ba3ffdd4a2dac810e03f360
+  __remoteTable13 ::
     GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (1, True, False)
                 (\ (x :: GHC.Integer.Type.Integer) ->
                  GHC.Integer.Type.timesInteger x x) -}
-a174e77590601f33ddb2a00acbc0151e
-  __remoteTable5 :: GHC.Exception.SomeException
+82bc16fc0741aa934dd291679cb1f5e6
+  __remoteTable14 :: GHC.Exception.SomeException
   {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
-                   Cloud.Kernel.__remoteTable6) -}
-b6319e3bf9ae32a63995f05c4d24d74f
-  __remoteTable6 :: GHC.IO.Exception.IOException
+                   Cloud.Kernel.__remoteTable15) -}
+0b90e501d34dc5971908fdae86dee732
+  __remoteTable15 :: GHC.IO.Exception.IOException
   {- Unfolding: (GHC.IO.Exception.IOError
                    (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
                    GHC.IO.Exception.UserError
@@ -882,23 +1055,23 @@ b6319e3bf9ae32a63995f05c4d24d74f
                    Control.Distributed.Process.Internal.Primitives.expect4
                    (GHC.Base.Nothing @ Foreign.C.Types.CInt)
                    (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
-645e28a7b2b5018984fa8657ba70521b
-  __remoteTable7 ::
+18851a9f3ee83c4c1aa1ea285060dc3d
+  __remoteTable16 ::
     [Control.Distributed.Process.Internal.Primitives.Match
        Cloud.Kernel.Message]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ (Control.Distributed.Process.Internal.Primitives.Match
                         Cloud.Kernel.Message)
-                   Cloud.Kernel.__remoteTable8
+                   Cloud.Kernel.__remoteTable17
                    (GHC.Types.[]
                       @ (Control.Distributed.Process.Internal.Primitives.Match
                            Cloud.Kernel.Message))) -}
-08970226e807d55da2553d4621cbf729
-  __remoteTable8 ::
+e46957313d4317d96716ee32d65d393d
+  __remoteTable17 ::
     Control.Distributed.Process.Internal.Primitives.Match
       Cloud.Kernel.Message
-  {- Unfolding: (Cloud.Kernel.__remoteTable9
+  {- Unfolding: (Cloud.Kernel.__remoteTable18
                    (Control.Distributed.Process.Internal.Primitives.expect2
                       @ Cloud.Kernel.Message)
                    (Control.Distributed.Process.Internal.Types.$fApplicativeProcess3
@@ -915,8 +1088,8 @@ b6319e3bf9ae32a63995f05c4d24d74f
                                             <GHC.Types.IO>_R
                                             <Cloud.Kernel.Message>_N))
                                   (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <Cloud.Kernel.Message>_N)))) -}
-92477681f340d6dd5a866a29a926eba5
-  __remoteTable9 ::
+8722fa5234a465007c48e14138ce4915
+  __remoteTable18 ::
     (Cloud.Kernel.Message -> GHC.Types.Bool)
     -> (Cloud.Kernel.Message
         -> Control.Distributed.Process.Internal.Types.Process
@@ -926,13 +1099,133 @@ b6319e3bf9ae32a63995f05c4d24d74f
   {- Unfolding: (Control.Distributed.Process.Internal.Primitives.matchIf
                    @ Cloud.Kernel.Message
                    @ Cloud.Kernel.Message
+                   Cloud.Kernel.$s$fSerializablea10) -}
+4db732beb183a48ca9111ef3dc23c394
+  __remoteTable19 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic6 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.__remoteTable20
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 (Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types)
+                   `cast`
+                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
+b8c5dd72444326ff98e28086a01c153a
+  __remoteTable2 :: Data.Rank1Dynamic.Dynamic
+  {- Strictness: m,
+     Unfolding: (Data.Rank1Dynamic.Dynamic
+                   Cloud.Kernel.__remoteTable4
+                   Cloud.Kernel.__remoteTable3
+                     `cast`
+                   (UnsafeCo representational (Control.Distributed.Process.Serializable.SerializableDict
+                                                 ()) GHC.Prim.Any)) -}
+3e20436f7ce19e10172e3896be8a9374
+  __remoteTable20 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$stoDynamic2
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+6e4d4721237a86b86c720135d9ded4c9
+  __remoteTable21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Cloud.Kernel.pingServer"#) -}
+32d188ba978276bb8ce28ca0b99d9d24
+  __remoteTable3 ::
+    Control.Distributed.Process.Serializable.SerializableDict ()
+  {- Strictness: m,
+     Unfolding: (Control.Distributed.Process.Serializable.SerializableDict
+                   @ ()
                    Cloud.Kernel.$s$fSerializablea) -}
-66ba6ef775c94c1a7788e8223ce8a448
+88de24985384ccc17932bfb1293d2d44
+  __remoteTable4 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic12 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.$stoDynamic3
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 (Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types)
+                   `cast`
+                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
+1cd02b4d673ba835ccb93975b7c9ac8a
+  __remoteTable5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Cloud.Kernel.pingServer__tdict"#) -}
+6b4fa1fbffa67ef2b142625de02847e8
+  __remoteTable6 :: Data.Rank1Dynamic.Dynamic
+  {- Strictness: m,
+     Unfolding: (Data.Rank1Dynamic.Dynamic
+                   Cloud.Kernel.__remoteTable8
+                   Cloud.Kernel.__remoteTable7
+                     `cast`
+                   (UnsafeCo representational (Control.Distributed.Process.Serializable.SerializableDict
+                                                 GHC.Integer.Type.Integer) GHC.Prim.Any)) -}
+d540f8a72aed5d172e1fee290e865a75
+  __remoteTable7 ::
+    Control.Distributed.Process.Serializable.SerializableDict
+      GHC.Integer.Type.Integer
+  {- Strictness: m,
+     Unfolding: (Control.Distributed.Process.Serializable.SerializableDict
+                   @ GHC.Integer.Type.Integer
+                   Cloud.Kernel.$s$fSerializablea5) -}
+59ecdd37826b9d9ee01565e66ee80bb4
+  __remoteTable8 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic12 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.$stoDynamic7
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 (Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types)
+                   `cast`
+                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
+1bb29113b611973e23a25fb7abfdf75e
+  __remoteTable9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Cloud.Kernel.pingServer__sdict"#) -}
+f654f1345efa974da3be00c106086ed0
+  f :: GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: GHC.Integer.Type.Integer) ->
+                 GHC.Integer.Type.timesInteger x x) -}
+b5457acaae3dff2aec3d310054af0b35
   main :: GHC.Types.IO ()
   {- Arity: 1,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Kernel.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5c3780bc6143806dfcccf6f26b2e4e00
+d5654f0c907b6ceba797e272e747f33c
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -983,7 +1276,7 @@ df1f37d2f0d302b6e74be817ef371892
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-a55fb7f5db91e4868377553fc988178e
+1611ca13b6ac3e7e78bf5b9f90cddb57
   otherServer ::
     (GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer)
     -> [GHC.Integer.Type.Integer]
@@ -1005,7 +1298,7 @@ a55fb7f5db91e4868377553fc988178e
                                          <GHC.Types.IO>_R
                                          <[GHC.Integer.Type.Integer]>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <[GHC.Integer.Type.Integer]>_N))) -}
-e889a56295106d3f91f195151867fa80
+55506969cbf9d8f2d4f27b6094ad0f3a
   otherServer1 ::
     (GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer)
     -> [GHC.Integer.Type.Integer]
@@ -1015,12 +1308,12 @@ e889a56295106d3f91f195151867fa80
           [GHC.Integer.Type.Integer] #)
   {- Arity: 4, Strictness: <L,C(U)><L,1*U><L,A><S,U>,
      Unfolding: InlineRule (4, True, True)
-                (\ (f :: GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer)
+                (\ (f1 :: GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer)
                    (list :: [GHC.Integer.Type.Integer])
                    (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
                    (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 Cloud.Kernel.otherServer2 f list eta1) -}
-21e6a4d373e14b0f74bb4ba15d87d476
+                 Cloud.Kernel.otherServer2 f1 list eta1) -}
+30181b96782f2c80716a09827c46345e
   otherServer2 ::
     (GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer)
     -> [GHC.Integer.Type.Integer]
@@ -1028,8 +1321,8 @@ e889a56295106d3f91f195151867fa80
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           [GHC.Integer.Type.Integer] #)
   {- Arity: 3, Strictness: <L,C(U)><L,1*U><S,U>,
-     Unfolding: (\ (f :: GHC.Integer.Type.Integer
-                         -> GHC.Integer.Type.Integer)
+     Unfolding: (\ (f1 :: GHC.Integer.Type.Integer
+                          -> GHC.Integer.Type.Integer)
                    (list :: [GHC.Integer.Type.Integer])
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  let {
@@ -1037,7 +1330,7 @@ e889a56295106d3f91f195151867fa80
                    = GHC.Base.map
                        @ GHC.Integer.Type.Integer
                        @ GHC.Integer.Type.Integer
-                       f
+                       f1
                        list
                  } in
                  case GHC.IO.Handle.Text.hPutStr2
@@ -1048,42 +1341,13 @@ e889a56295106d3f91f195151867fa80
                         GHC.Types.True
                         eta of ds1 { (#,#) ipv ipv1 ->
                  (# ipv, b #) }) -}
-e33825ab645eafd8856780fe35fc2020
-  pingServer :: Control.Distributed.Process.Internal.Types.Process ()
-  {- Arity: 2,
-     Strictness: <S(SLSLLS),1*U(U(U(U),U(U,U),U(U)),U,U,U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.__remoteTable3
-                  `cast`
-                (Trans
-                     (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                      ->_R Sym (GHC.Types.N:IO[0] <()>_R))
-                     (Trans
-                          (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                    <*>_N
-                                    <Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                                    <GHC.Types.IO>_R
-                                    <()>_N))
-                          (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-0ab7aaa1a1acd0d9cc001f7cf9e0d48a
-  pingServer1 ::
-    GHC.Integer.Type.Integer
-    -> Control.Distributed.Process.Internal.Types.LocalProcess
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <L,A>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (f :: GHC.Integer.Type.Integer)
-                   (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
-                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 Cloud.Kernel.__remoteTable3 eta eta1) -}
-598b68af03f4d33baca7c0384d6d8904
-  pingServer2 ::
+a682355d03c3bc65e107078d4dfe29a0
+  pingServer ::
     GHC.Integer.Type.Integer
     -> Control.Distributed.Process.Internal.Types.Process ()
   {- Arity: 3, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.pingServer1
+                Cloud.Kernel.__remoteTable11
                   `cast`
                 (<GHC.Integer.Type.Integer>_R
                  ->_R Trans
@@ -1096,31 +1360,84 @@ e33825ab645eafd8856780fe35fc2020
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-46fd6d12d5b518d1b8b948fa83fbc27b
+ade0b3434d15baa480e77ffaf9e6a140
+  pingServer__sdict ::
+    Control.Distributed.Static.Static
+      (Control.Distributed.Process.Serializable.SerializableDict
+         GHC.Integer.Type.Integer)
+  {- Strictness: m1,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Kernel.pingServer__sdict1
+                  `cast`
+                (Sym (Control.Distributed.Static.N:Static[0]
+                          <Control.Distributed.Process.Serializable.SerializableDict
+                             GHC.Integer.Type.Integer>_P)) -}
+85efafc05e2bee7039f7828cec7d0839
+  pingServer__sdict1 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m1,
+     Unfolding: (Control.Distributed.Static.StaticLabel
+                   Cloud.Kernel.pingServer__sdict2) -}
+132a2313e49ff27141dafbff335a6884
+  pingServer__sdict2 :: GHC.Base.String
+  {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
+                        @ GHC.Types.Char
+                        Control.DeepSeq.$fNFDataChar_$crnf
+                          `cast`
+                        (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
+                        Cloud.Kernel.__remoteTable9 of wild { () ->
+                 Cloud.Kernel.__remoteTable9 }) -}
+ad97a85c1f247b9d11e55d8bee0f22af
   pingServer__static ::
     Control.Distributed.Static.Static
-      (Control.Distributed.Process.Internal.Types.Process ())
+      (GHC.Integer.Type.Integer
+       -> Control.Distributed.Process.Internal.Types.Process ())
   {- Strictness: m1,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Kernel.pingServer__static1
                   `cast`
                 (Sym (Control.Distributed.Static.N:Static[0]
-                          <Control.Distributed.Process.Internal.Types.Process ()>_P)) -}
-bddc83dc969eebb42ef81111dbb0b33b
+                          <GHC.Integer.Type.Integer
+                           -> Control.Distributed.Process.Internal.Types.Process ()>_P)) -}
+a0562f0c4a97ee33b8c193d4f4b3bfeb
   pingServer__static1 :: Control.Distributed.Static.StaticLabel
   {- Strictness: m1,
      Unfolding: (Control.Distributed.Static.StaticLabel
                    Cloud.Kernel.pingServer__static2) -}
-8269e8200e4d72a9563147193cd2e7d0
+299ec42b9eefa57932f835e9e2025599
   pingServer__static2 :: GHC.Base.String
   {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
                         @ GHC.Types.Char
                         Control.DeepSeq.$fNFDataChar_$crnf
                           `cast`
                         (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
-                        Cloud.Kernel.__remoteTable12 of wild { () ->
-                 Cloud.Kernel.__remoteTable12 }) -}
-6fad4ccd0cf8ecfb6e18272a20b51ef6
+                        Cloud.Kernel.__remoteTable21 of wild { () ->
+                 Cloud.Kernel.__remoteTable21 }) -}
+2f2ebba7250063ebc1bdc6e6dc5cdb6a
+  pingServer__tdict ::
+    Control.Distributed.Static.Static
+      (Control.Distributed.Process.Serializable.SerializableDict ())
+  {- Strictness: m1,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Kernel.pingServer__tdict1
+                  `cast`
+                (Sym (Control.Distributed.Static.N:Static[0]
+                          <Control.Distributed.Process.Serializable.SerializableDict
+                             ()>_P)) -}
+553d421ed8f49ebc089d5dd8311a06da
+  pingServer__tdict1 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m1,
+     Unfolding: (Control.Distributed.Static.StaticLabel
+                   Cloud.Kernel.pingServer__tdict2) -}
+a2dabb211d02e6b4ad88c951127d547e
+  pingServer__tdict2 :: GHC.Base.String
+  {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
+                        @ GHC.Types.Char
+                        Control.DeepSeq.$fNFDataChar_$crnf
+                          `cast`
+                        (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
+                        Cloud.Kernel.__remoteTable5 of wild { () ->
+                 Cloud.Kernel.__remoteTable5 }) -}
+43fe8d2b19623b892c7ec0d1061984b0
   serverIO ::
     (GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer)
     -> [GHC.Integer.Type.Integer]
@@ -1171,6 +1488,21 @@ instance GHC.Generics.Generic [Cloud.Kernel.Message]
   = Cloud.Kernel.$fGenericMessage
 family instance GHC.Generics.Rep [Cloud.Kernel.Message]
   = Cloud.Kernel.Rep_Message
+"SPEC/Cloud.Kernel $fSerializablea @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                          ())
+                                                         ($dBinary :: Data.Binary.Class.Binary ())
+  Control.Distributed.Process.Serializable.$fSerializablea @ ()
+                                                           $dBinary
+                                                           $dTypeable
+  = Cloud.Kernel.$s$fSerializablea
+"SPEC/Cloud.Kernel $fSerializablea @ Integer" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                               GHC.Integer.Type.Integer)
+                                                              ($dBinary :: Data.Binary.Class.Binary
+                                                                             GHC.Integer.Type.Integer)
+  Control.Distributed.Process.Serializable.$fSerializablea @ GHC.Integer.Type.Integer
+                                                           $dBinary
+                                                           $dTypeable
+  = Cloud.Kernel.$s$fSerializablea5
 "SPEC/Cloud.Kernel $fSerializablea @ Message" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
                                                                                Cloud.Kernel.Message)
                                                               ($dBinary :: Data.Binary.Class.Binary
@@ -1178,7 +1510,23 @@ family instance GHC.Generics.Rep [Cloud.Kernel.Message]
   Control.Distributed.Process.Serializable.$fSerializablea @ Cloud.Kernel.Message
                                                            $dBinary
                                                            $dTypeable
-  = Cloud.Kernel.$s$fSerializablea
+  = Cloud.Kernel.$s$fSerializablea10
+"SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                           ())
+                                                                          ($dBinary :: Data.Binary.Class.Binary
+                                                                                         ())
+  Control.Distributed.Process.Serializable.$fSerializablea_$cp1Serializable @ ()
+                                                                            $dBinary
+                                                                            $dTypeable
+  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+"SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ Integer" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                                GHC.Integer.Type.Integer)
+                                                                               ($dBinary :: Data.Binary.Class.Binary
+                                                                                              GHC.Integer.Type.Integer)
+  Control.Distributed.Process.Serializable.$fSerializablea_$cp1Serializable @ GHC.Integer.Type.Integer
+                                                                            $dBinary
+                                                                            $dTypeable
+  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
 "SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ Message" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
                                                                                                 Cloud.Kernel.Message)
                                                                                ($dBinary :: Data.Binary.Class.Binary
@@ -1186,7 +1534,7 @@ family instance GHC.Generics.Rep [Cloud.Kernel.Message]
   Control.Distributed.Process.Serializable.$fSerializablea_$cp1Serializable @ Cloud.Kernel.Message
                                                                             $dBinary
                                                                             $dTypeable
-  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable2
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

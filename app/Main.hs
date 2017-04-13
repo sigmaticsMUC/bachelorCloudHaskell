@@ -13,6 +13,7 @@ import Data.Typeable
 import GHC.Generics (Generic)
 
 import qualified Cloud.Kernel as CK
+import qualified Cloud.Clsering as CC
 
 data Message = Ping (ProcessId, [Integer])
   deriving (Typeable, Generic)          -- <1>
@@ -115,5 +116,6 @@ master = do
   -- <<main
 main :: IO ()
 --main = distribMain master Main.__remoteTable
-main = CK.main
+--main = CK.main
+main = CC.main
   -- >>
