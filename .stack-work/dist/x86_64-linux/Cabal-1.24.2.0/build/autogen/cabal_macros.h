@@ -63,6 +63,13 @@
   (major1) == 1 && (major2) <  4 || \
   (major1) == 1 && (major2) == 4 && (minor) <= 3)
 
+/* package split-0.2.3.1 */
+#define VERSION_split "0.2.3.1"
+#define MIN_VERSION_split(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 3)
+
 /* package template-haskell-2.11.1.0 */
 #define VERSION_template_haskell "2.11.1.0"
 #define MIN_VERSION_template_haskell(major1,major2,minor) (\
@@ -147,7 +154,7 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu"
+#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
 
-#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-LOVrmizgZXA2KuglYxUEJu"
+#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
 

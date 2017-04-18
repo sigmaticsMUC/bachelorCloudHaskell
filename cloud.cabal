@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib, DistribUtils, Cloud.Kernel, Cloud.Clsering
+  exposed-modules:     Cloud.Test.Splitting, Cloud.Utils.DistribUtils, Cloud.Test.Kernel, Cloud.Test.Clsering
   build-depends:       base >= 4.7 && < 5
     , network
     , distributed-process
@@ -25,6 +25,7 @@ library
     , distributed-process-simplelocalnet
     , binary
     , process
+    , split
   default-language:    Haskell2010
 
 executable cloud-exe
@@ -41,6 +42,7 @@ executable cloud-exe
                      , distributed-process-simplelocalnet
                      , binary
                      , process
+                     , split
   default-language:    Haskell2010
 
 test-suite cloud-test

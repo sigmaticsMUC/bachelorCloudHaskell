@@ -1,1 +1,3 @@
-module Mandelbulb.Utils.Domain where
+module Mandelbulb.Utils.Domain(
+
+)where
