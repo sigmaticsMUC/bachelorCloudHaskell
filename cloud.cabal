@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Cloud.Test.Splitting, Cloud.Utils.DistribUtils, Cloud.Test.Kernel, Cloud.Test.Clsering
+  exposed-modules:     MandelBulb.Utils.Domain, MandelBulb.Math.Core,  Cloud.Test.Splitting, Cloud.Utils.DistribUtils, Cloud.Test.Kernel, Cloud.Test.Clsering
   build-depends:       base >= 4.7 && < 5
     , network
     , distributed-process

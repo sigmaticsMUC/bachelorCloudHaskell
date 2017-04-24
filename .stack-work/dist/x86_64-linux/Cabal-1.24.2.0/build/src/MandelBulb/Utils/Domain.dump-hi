@@ -1,0 +1,117 @@
+
+==================== FINAL INTERFACE ====================
+2017-04-24 19:19:49.551601 UTC
+
+interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:MandelBulb.Utils.Domain 8002
+  interface hash: a45e37c2537f9d7ab3af9260015a8865
+  ABI hash: 5002590e03c64fe36a88a5c6d11be27e
+  export-list hash: 67da925667f1485a1abe15c79e8a26fe
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ddd7647a4e66491a595ddf558958a2aa
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MandelBulb.Utils.Domain.generateDomain
+  MandelBulb.Utils.Domain.rowMajor
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+65a0e72e4d04ee9bbe8c7c8e7449d789
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MandelBulb.Utils.Domain.$trModule2
+                   MandelBulb.Utils.Domain.$trModule1) -}
+c5614170538a22f82d8d02c6a99d6303
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MandelBulb.Utils.Domain"#) -}
+5b06a50e6efff26b25af2160ac856576
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
+334afd5b69642b3d3d7fedaec1cead09
+  $wgenerateDomain ::
+    GHC.Types.Double
+    -> GHC.Types.Double
+    -> GHC.Prim.Double#
+    -> GHC.Types.Double
+    -> GHC.Types.Double
+    -> GHC.Prim.Double#
+    -> MandelBulb.Utils.Domain.Step
+    -> (# [[MandelBulb.Utils.Domain.Point]],
+          [[[MandelBulb.Utils.Domain.Point]]] #)
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U(U)><L,U(U)><S,U><L,U(U)><L,U(U)><S,U><L,U(U)>,
+     Inline: [0] -}
+6f82eb9d4a35a0e77d8963a7b9bf071a
+  type Domain = [MandelBulb.Utils.Domain.Plane]
+22917968a006fc63084f6380ebc26b9e
+  type Plane = [MandelBulb.Utils.Domain.Row]
+d514ecea7e9c58bfe2c5b6bd9fc67fc2
+  type Point = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+623b13d3f4659399dcbc6ed2cbbba4b0
+  type Row = [MandelBulb.Utils.Domain.Point]
+e31a0e1adbb22376351f5f9fe50f14c9
+  type Step = GHC.Types.Double
+1828641397460c44e766a4f687ea4882
+  generateDomain ::
+    MandelBulb.Utils.Domain.Point
+    -> MandelBulb.Utils.Domain.Point
+    -> MandelBulb.Utils.Domain.Step
+    -> [[[MandelBulb.Utils.Domain.Point]]]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLS(S)),1*U(U(U),U(U),U(U))><S(LLS(S)),1*U(U(U),U(U),U(U))><L,U(U)>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: MandelBulb.Utils.Domain.Point)
+                   (w1 :: MandelBulb.Utils.Domain.Point)
+                   (w2 :: MandelBulb.Utils.Domain.Step) ->
+                 case w of ww { (,,) ww1 ww2 ww3 ->
+                 case ww3 of ww4 { GHC.Types.D# ww5 ->
+                 case w1 of ww6 { (,,) ww7 ww8 ww9 ->
+                 case ww9 of ww10 { GHC.Types.D# ww11 ->
+                 case MandelBulb.Utils.Domain.$wgenerateDomain
+                        ww1
+                        ww2
+                        ww5
+                        ww7
+                        ww8
+                        ww11
+                        w2 of ww12 { (#,#) ww13 ww14 ->
+                 GHC.Types.:
+                   @ [[MandelBulb.Utils.Domain.Point]]
+                   ww13
+                   ww14 } } } } }) -}
+9ba7e6b634dd2f63fd469376975894b8
+  rowMajor ::
+    MandelBulb.Utils.Domain.Domain -> [MandelBulb.Utils.Domain.Point]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: [[[MandelBulb.Utils.Domain.Point]]]) ->
+                 MandelBulb.Utils.Domain.rowMajor_go x) -}
+cecbd4f150bfa654ac0b3deaba69568d
+  rowMajor_go ::
+    [[[MandelBulb.Utils.Domain.Point]]]
+    -> [(GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

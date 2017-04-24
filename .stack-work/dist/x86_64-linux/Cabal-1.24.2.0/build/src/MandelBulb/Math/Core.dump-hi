@@ -1,0 +1,92 @@
+
+==================== FINAL INTERFACE ====================
+2017-04-24 19:19:50.014742 UTC
+
+interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:MandelBulb.Math.Core 8002
+  interface hash: 33b2ffe00af9bbf646cb78f013e49f4a
+  ABI hash: d0d8696e46fca7ae7e2fc4388ea877cd
+  export-list hash: a8e5488e5f983e6fdcf9a244580d4f9b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ed72a826337bf6a9c63f2f27ffdcdd90
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MandelBulb.Math.Core.doBulb
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+f48d4b4e090f764956007aff32abfa16
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MandelBulb.Math.Core.$trModule2
+                   MandelBulb.Math.Core.$trModule1) -}
+705353715eb2be70935eea37752cb21d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MandelBulb.Math.Core"#) -}
+7d99f2273fa9ebe056c9a63d64ce613f
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
+32e33e2c366816d842e112d42e7171a7
+  type Iter = GHC.Integer.Type.Integer
+6253db44ef998ad2897d96fab26f988a
+  type Limit = GHC.Types.Double
+b957c6a5f1dda5a7561721faae8fe034
+  type Vect = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+7ea4d62ebab1e5dd42628ef6f6b42c6f
+  bulb ::
+    MandelBulb.Math.Core.Iter
+    -> MandelBulb.Math.Core.Iter
+    -> MandelBulb.Math.Core.Limit
+    -> MandelBulb.Math.Core.Vect
+    -> MandelBulb.Math.Core.Vect
+    -> MandelBulb.Math.Core.Iter
+  {- Arity: 5,
+     Strictness: <S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))><L,1*U(1*U(U),1*U(U),1*U(U))> -}
+1f99d935b1955a005de3dddf9445f6fb
+  doBulb ::
+    MandelBulb.Math.Core.Iter
+    -> MandelBulb.Math.Core.Iter
+    -> MandelBulb.Math.Core.Limit
+    -> MandelBulb.Math.Core.Vect
+    -> MandelBulb.Math.Core.Iter
+  {- Arity: 4, Strictness: <S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))>,
+     Unfolding: InlineRule (4, True, False)
+                (\ (i :: MandelBulb.Math.Core.Iter)
+                   (m :: MandelBulb.Math.Core.Iter)
+                   (l :: MandelBulb.Math.Core.Limit)
+                   (c :: MandelBulb.Math.Core.Vect) ->
+                 MandelBulb.Math.Core.bulb i m l c MandelBulb.Math.Core.doBulb1) -}
+701702ebde5250293287d31e62f728e2
+  doBulb1 :: (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((MandelBulb.Math.Core.doBulb2,
+                  MandelBulb.Math.Core.doBulb2, MandelBulb.Math.Core.doBulb2)) -}
+d1955a648bd5c029e7db5000842c5c42
+  doBulb2 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0##) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
