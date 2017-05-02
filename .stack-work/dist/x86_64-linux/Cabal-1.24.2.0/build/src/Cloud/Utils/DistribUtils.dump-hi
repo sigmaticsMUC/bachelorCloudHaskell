@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-20 09:07:32.507956 UTC
+2017-05-02 14:06:51.639669 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Utils.DistribUtils 8002
-  interface hash: ee35d2213bc50ac4e6ac5247a968edb2
-  ABI hash: 70484f8f4d26a6a2c637d114c8312c20
-  export-list hash: acae052e4a39fdcae618e5841e8bdf5d
+  interface hash: c846980ab45b0b8b5fd534224680350e
+  ABI hash: 72378fffcd57306aea594d1d458b4c5f
+  export-list hash: 7e71243dacf4c6af4e8cd8539cf6c906
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 1026a2cfb023281ca0d4eea698dc370a
   sig of: Nothing
@@ -13,7 +13,7 @@ interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Utils.DistribUtils 8002
   where
 exports:
   Cloud.Utils.DistribUtils.distribMain
-module dependencies:
+module dependencies: Cloud.Kernel Cloud.Type
 package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       binary-0.8.3.0@binary-0.8.3.0
                       bytestring-0.10.8.1@bytestring-0.10.8.1
@@ -34,6 +34,7 @@ package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       pretty-1.1.3.3@pretty-1.1.3.3
                       random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
                       rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b
+                      split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk
                       stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
                       syb-0.6@syb-0.6-IcoSwlPi2Nx4zSqMmorFPS template-haskell-2.11.1.0
                       text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
@@ -62,6 +63,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Type
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -78,8 +80,12 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.Environment 08cb808e8e6a7821e6f8cfa76a977431
+import  -/  Cloud.Kernel 476b13680b6c1ac12aaf20760bee1ca6
+  exports: 9eb35cd141cc4b8a572b5e1cc9336c54
+  __remoteTable 9192193b0af90cbe2f8519652771f817
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c

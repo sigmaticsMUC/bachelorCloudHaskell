@@ -1,0 +1,1851 @@
+
+==================== FINAL INTERFACE ====================
+2017-05-02 14:06:48.961424 UTC
+
+interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Type [family instance module] 8002
+  interface hash: 3641efde6fed0dee32bcb93ff6c544ef
+  ABI hash: 3373dadb8e4cacb29588c4364b8ba05f
+  export-list hash: 5612a4ad13c85539a7d49d1aebd082af
+  orphan hash: 83a0b0cabc80dfac9626352de3bb6025
+  flag hash: 803d98d62aac3ee2e6dfa84540c08dea
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cloud.Type.MSG{Cloud.Type.ARG Cloud.Type.RESPONSE}
+  Cloud.Type.Result
+  Cloud.Type.Vect
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      data-accessor-0.2.2.7@data-accessor-0.2.2.7-4qt9kbhlqc22eurok1PC3k
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT
+                      distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      network-transport-0.4.4.0@network-transport-0.4.4.0-7G0sWBx1K9o9bqvCq0N0q5
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Compose base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Table
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Trace.Types
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Types
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         network-transport-0.4.4.0@network-transport-0.4.4.0-7G0sWBx1K9o9bqvCq0N0q5:Network.Transport
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:Data.Typeable 9257e47d10882145c67c5b489965cfb7
+import  -/  base-4.9.1.0:Data.Typeable.Internal 0e9bdefa4325a0112d8e73b5e1e1f85d
+import  -/  base-4.9.1.0:GHC.Generics 1dbec2bc7dd1c5bd8c89ed857eaed19b
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Class b88eee4db2420047af9b40010da11191
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG :: Data.Binary.Class.Binary Cloud.Type.MSG
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.MSG
+                  Cloud.Type.$fBinaryMSG_$s$dmput
+                  Cloud.Type.$fBinaryMSG_$cget
+                  Cloud.Type.$fBinaryMSG_$cputList -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG1 ::
+    Data.ByteString.Internal.ByteString
+    -> Data.Binary.Get.Internal.Success Cloud.Type.MSG r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 2, Strictness: <S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ r
+                   (w :: Data.ByteString.Internal.ByteString)
+                   (w1 :: Data.Binary.Get.Internal.Success Cloud.Type.MSG r) ->
+                 case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 Cloud.Type.$w$cget @ r ww1 ww2 ww3 ww4 w1 }) -}
+f5b09443eb1d6d5a7ffd4925c22b6d9b
+  $fBinaryMSG10 ::
+    (GHC.Num.Num w, Data.Bits.Bits w, Data.Binary.Class.Binary w) =>
+    w
+    -> w
+    -> GHC.Generics.C1
+         ('GHC.Generics.MetaCons
+            "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               'GHC.Base.Nothing
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0
+               (Control.Distributed.Process.Internal.Types.ProcessId,
+                [Cloud.Type.Vect])))
+         a1
+    -> Data.Binary.Put.Put
+  {- Arity: 6,
+     Strictness: <L,A><L,A><L,1*U(1*C1(U(A,U)),A,A)><S,1*U><L,A><L,1*U(1*U(U(U,U,U,U),U,U),U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ w
+                   @ a1
+                   (w1 :: GHC.Num.Num w)
+                   (w2 :: Data.Bits.Bits w)
+                   (w3 :: Data.Binary.Class.Binary w)
+                   (w4 :: w)
+                   (w5 :: w)
+                   (w6 :: GHC.Generics.C1
+                            ('GHC.Generics.MetaCons
+                               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  'GHC.Base.Nothing
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0
+                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                   [Cloud.Type.Vect])))
+                            a1) ->
+                 case Cloud.Type.$w$dGSumPut1
+                        @ w
+                        @ a1
+                        w3
+                        w4
+                        w6 of ww { (#,#) ww1 ww2 ->
+                 (Data.Binary.Put.PairS @ () ww1 ww2)
+                   `cast`
+                 (Sym (Data.Binary.Put.N:PutM[0]) <()>_N) }) -}
+40cf1286a07bed5fbc3eaec1f59b9b92
+  $fBinaryMSG11 ::
+    [(GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)]
+    -> Data.Binary.Put.Put
+  {- Unfolding: (Data.Binary.Class.$fBinary(,,)_$cputList
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Binary.Class.$fBinaryDouble
+                   Data.Binary.Class.$fBinaryDouble
+                   Data.Binary.Class.$fBinaryDouble) -}
+012a221dbfcf57eae41fbfd08c4f284c
+  $fBinaryMSG2 ::
+    (GHC.Classes.Ord word, GHC.Num.Num word, Data.Bits.Bits word) =>
+    word
+    -> word
+    -> forall r.
+       Data.ByteString.Internal.ByteString
+       -> Data.Binary.Get.Internal.Success
+            (GHC.Generics.M1
+               GHC.Generics.C
+               ('GHC.Generics.MetaCons
+                  "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               (GHC.Generics.M1
+                  GHC.Generics.S
+                  ('GHC.Generics.MetaSel
+                     'GHC.Base.Nothing
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0
+                     (Control.Distributed.Process.Internal.Types.ProcessId,
+                      [(Cloud.Type.Vect, Cloud.Type.Result)])))
+               a1)
+            r
+       -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 7,
+     Strictness: <L,A><L,A><L,A><L,A><L,A><S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (7, True, False)
+                (\ @ word
+                   @ a1
+                   (w :: GHC.Classes.Ord word)
+                   (w1 :: GHC.Num.Num word)
+                   (w2 :: Data.Bits.Bits word)
+                   (w3 :: word)
+                   (w4 :: word)
+                   @ r
+                   (w5 :: Data.ByteString.Internal.ByteString)
+                   (w6 :: Data.Binary.Get.Internal.Success
+                            (GHC.Generics.M1
+                               GHC.Generics.C
+                               ('GHC.Generics.MetaCons
+                                  "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                               (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     'GHC.Base.Nothing
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0
+                                     (Control.Distributed.Process.Internal.Types.ProcessId,
+                                      [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                               a1)
+                            r) ->
+                 case w5 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 Cloud.Type.$w$dGSumGet @ word @ a1 @ r ww1 ww2 ww3 ww4 w6 }) -}
+f062430f90da0062f2d512c15bce0bf9
+  $fBinaryMSG3 ::
+    Data.Binary.Class.Binary
+      (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Type.$fBinaryMSG_$s$fBinary(,,) -}
+7954a3da936864123ce2357345cbdd1b
+  $fBinaryMSG4 ::
+    (GHC.Classes.Ord word, GHC.Num.Num word, Data.Bits.Bits word) =>
+    word
+    -> word
+    -> forall r.
+       Data.ByteString.Internal.ByteString
+       -> Data.Binary.Get.Internal.Success
+            (GHC.Generics.M1
+               GHC.Generics.C
+               ('GHC.Generics.MetaCons
+                  "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               (GHC.Generics.M1
+                  GHC.Generics.S
+                  ('GHC.Generics.MetaSel
+                     'GHC.Base.Nothing
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0
+                     (Control.Distributed.Process.Internal.Types.ProcessId,
+                      [Cloud.Type.Vect])))
+               a1)
+            r
+       -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 7,
+     Strictness: <L,A><L,A><L,A><L,A><L,A><S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (7, True, False)
+                (\ @ word
+                   @ a1
+                   (w :: GHC.Classes.Ord word)
+                   (w1 :: GHC.Num.Num word)
+                   (w2 :: Data.Bits.Bits word)
+                   (w3 :: word)
+                   (w4 :: word)
+                   @ r
+                   (w5 :: Data.ByteString.Internal.ByteString)
+                   (w6 :: Data.Binary.Get.Internal.Success
+                            (GHC.Generics.M1
+                               GHC.Generics.C
+                               ('GHC.Generics.MetaCons
+                                  "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                               (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     'GHC.Base.Nothing
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0
+                                     (Control.Distributed.Process.Internal.Types.ProcessId,
+                                      [Cloud.Type.Vect])))
+                               a1)
+                            r) ->
+                 case w5 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 Cloud.Type.$w$dGSumGet1 @ word @ a1 @ r ww1 ww2 ww3 ww4 w6 }) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG5 ::
+    Cloud.Type.MSG
+    -> (GHC.Generics.:+:)
+         (GHC.Generics.M1
+            GHC.Generics.C
+            ('GHC.Generics.MetaCons
+               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  'GHC.Base.Nothing
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.K1
+                  GHC.Generics.R
+                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                   [Cloud.Type.Vect]))))
+         (GHC.Generics.M1
+            GHC.Generics.C
+            ('GHC.Generics.MetaCons
+               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  'GHC.Base.Nothing
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.K1
+                  GHC.Generics.R
+                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                   [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+         x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (x1 :: Cloud.Type.MSG) ->
+                 case x1 of wild {
+                   Cloud.Type.ARG g1
+                   -> GHC.Generics.L1
+                        @ (GHC.Generics.M1
+                             GHC.Generics.C
+                             ('GHC.Generics.MetaCons
+                                "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   'GHC.Base.Nothing
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.K1
+                                   GHC.Generics.R
+                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [Cloud.Type.Vect]))))
+                        @ (GHC.Generics.M1
+                             GHC.Generics.C
+                             ('GHC.Generics.MetaCons
+                                "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   'GHC.Base.Nothing
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.K1
+                                   GHC.Generics.R
+                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                        @ x
+                        g1
+                          `cast`
+                        (Trans
+                             (Sym (GHC.Generics.N:K1[0]
+                                       <GHC.Generics.R>_P
+                                       <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                         [Cloud.Type.Vect])>_R
+                                       <x>_P))
+                             (Trans
+                                  (Sym (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.S>_P
+                                            <'GHC.Generics.MetaSel
+                                               'GHC.Base.Nothing
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy>_P
+                                            <GHC.Generics.K1
+                                               GHC.Generics.R
+                                               (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                [Cloud.Type.Vect])>_R))
+                                  (Sym (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.C>_P
+                                            <'GHC.Generics.MetaCons
+                                               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  'GHC.Base.Nothing
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1
+                                                  GHC.Generics.R
+                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                   [Cloud.Type.Vect]))>_R)) <x>_N))
+                   Cloud.Type.RESPONSE g1
+                   -> GHC.Generics.R1
+                        @ (GHC.Generics.M1
+                             GHC.Generics.C
+                             ('GHC.Generics.MetaCons
+                                "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   'GHC.Base.Nothing
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.K1
+                                   GHC.Generics.R
+                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [Cloud.Type.Vect]))))
+                        @ (GHC.Generics.M1
+                             GHC.Generics.C
+                             ('GHC.Generics.MetaCons
+                                "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   'GHC.Base.Nothing
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.K1
+                                   GHC.Generics.R
+                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                        @ x
+                        g1
+                          `cast`
+                        (Trans
+                             (Sym (GHC.Generics.N:K1[0]
+                                       <GHC.Generics.R>_P
+                                       <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                         [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                       <x>_P))
+                             (Trans
+                                  (Sym (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.S>_P
+                                            <'GHC.Generics.MetaSel
+                                               'GHC.Base.Nothing
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy>_P
+                                            <GHC.Generics.K1
+                                               GHC.Generics.R
+                                               (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                [(Cloud.Type.Vect, Cloud.Type.Result)])>_R))
+                                  (Sym (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.C>_P
+                                            <'GHC.Generics.MetaCons
+                                               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  'GHC.Base.Nothing
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1
+                                                  GHC.Generics.R
+                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                   [(Cloud.Type.Vect,
+                                                     Cloud.Type.Result)]))>_R)) <x>_N)) }) -}
+cd7c61ff70d800c81e69d2b5ebec42d5
+  $fBinaryMSG6 ::
+    Data.Binary.Class.GBinaryPut
+      (GHC.Generics.D1
+         ('GHC.Generics.MetaData
+            "MSG"
+            "Cloud.Type"
+            "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+            'GHC.Types.False)
+         (GHC.Generics.C1
+            ('GHC.Generics.MetaCons
+               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            (GHC.Generics.S1
+               ('GHC.Generics.MetaSel
+                  'GHC.Base.Nothing
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0
+                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                   [Cloud.Type.Vect])))
+          GHC.Generics.:+: GHC.Generics.C1
+                             ('GHC.Generics.MetaCons
+                                "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   'GHC.Base.Nothing
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0
+                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [(Cloud.Type.Vect, Cloud.Type.Result)])))))
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Type.$fBinaryMSG7
+                  `cast`
+                (Sym (Data.Binary.Class.N:GBinaryPut[0]
+                          <GHC.Generics.M1
+                             GHC.Generics.D
+                             ('GHC.Generics.MetaData
+                                "MSG"
+                                "Cloud.Type"
+                                "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                'GHC.Types.False)
+                             (GHC.Generics.C1
+                                ('GHC.Generics.MetaCons
+                                   "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      'GHC.Base.Nothing
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0
+                                      (Control.Distributed.Process.Internal.Types.ProcessId,
+                                       [Cloud.Type.Vect])))
+                              GHC.Generics.:+: GHC.Generics.C1
+                                                 ('GHC.Generics.MetaCons
+                                                    "RESPONSE"
+                                                    'GHC.Generics.PrefixI
+                                                    'GHC.Types.False)
+                                                 (GHC.Generics.S1
+                                                    ('GHC.Generics.MetaSel
+                                                       'GHC.Base.Nothing
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.Rec0
+                                                       (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                        [(Cloud.Type.Vect,
+                                                          Cloud.Type.Result)]))))>_N)) -}
+d90e8df34d3c1ad43dab4c937b844aa6
+  $fBinaryMSG7 ::
+    GHC.Generics.M1
+      GHC.Generics.D
+      ('GHC.Generics.MetaData
+         "MSG"
+         "Cloud.Type"
+         "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+         'GHC.Types.False)
+      (GHC.Generics.C1
+         ('GHC.Generics.MetaCons
+            "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         (GHC.Generics.S1
+            ('GHC.Generics.MetaSel
+               'GHC.Base.Nothing
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0
+               (Control.Distributed.Process.Internal.Types.ProcessId,
+                [Cloud.Type.Vect])))
+       GHC.Generics.:+: GHC.Generics.C1
+                          ('GHC.Generics.MetaCons
+                             "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                'GHC.Base.Nothing
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0
+                                (Control.Distributed.Process.Internal.Types.ProcessId,
+                                 [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+      t
+    -> Data.Binary.Put.Put
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ t
+                   (eta :: GHC.Generics.M1
+                             GHC.Generics.D
+                             ('GHC.Generics.MetaData
+                                "MSG"
+                                "Cloud.Type"
+                                "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                'GHC.Types.False)
+                             (GHC.Generics.C1
+                                ('GHC.Generics.MetaCons
+                                   "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      'GHC.Base.Nothing
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0
+                                      (Control.Distributed.Process.Internal.Types.ProcessId,
+                                       [Cloud.Type.Vect])))
+                              GHC.Generics.:+: GHC.Generics.C1
+                                                 ('GHC.Generics.MetaCons
+                                                    "RESPONSE"
+                                                    'GHC.Generics.PrefixI
+                                                    'GHC.Types.False)
+                                                 (GHC.Generics.S1
+                                                    ('GHC.Generics.MetaSel
+                                                       'GHC.Base.Nothing
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.Rec0
+                                                       (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                        [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                             t) ->
+                 Data.Binary.Generic.$w$cgput
+                   @ (GHC.Generics.M1
+                        GHC.Generics.C
+                        ('GHC.Generics.MetaCons
+                           "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        (GHC.Generics.S1
+                           ('GHC.Generics.MetaSel
+                              'GHC.Base.Nothing
+                              'GHC.Generics.NoSourceUnpackedness
+                              'GHC.Generics.NoSourceStrictness
+                              'GHC.Generics.DecidedLazy)
+                           (GHC.Generics.Rec0
+                              (Control.Distributed.Process.Internal.Types.ProcessId,
+                               [Cloud.Type.Vect]))))
+                   @ (GHC.Generics.M1
+                        GHC.Generics.C
+                        ('GHC.Generics.MetaCons
+                           "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        (GHC.Generics.S1
+                           ('GHC.Generics.MetaSel
+                              'GHC.Base.Nothing
+                              'GHC.Generics.NoSourceUnpackedness
+                              'GHC.Generics.NoSourceStrictness
+                              'GHC.Generics.DecidedLazy)
+                           (GHC.Generics.Rec0
+                              (Control.Distributed.Process.Internal.Types.ProcessId,
+                               [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                   Cloud.Type.$fBinaryMSG10
+                     `cast`
+                   (Sym (Data.Binary.Generic.N:GSumPut[0]
+                             <GHC.Generics.C1
+                                ('GHC.Generics.MetaCons
+                                   "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                (GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      'GHC.Base.Nothing
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0
+                                      (Control.Distributed.Process.Internal.Types.ProcessId,
+                                       [Cloud.Type.Vect])))>_N))
+                   Cloud.Type.$fBinaryMSG8
+                     `cast`
+                   (Sym (Data.Binary.Generic.N:GSumPut[0]
+                             <GHC.Generics.C1
+                                ('GHC.Generics.MetaCons
+                                   "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                (GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      'GHC.Base.Nothing
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0
+                                      (Control.Distributed.Process.Internal.Types.ProcessId,
+                                       [(Cloud.Type.Vect, Cloud.Type.Result)])))>_N))
+                   1##
+                   1##
+                   @ t
+                   eta
+                     `cast`
+                   (GHC.Generics.N:M1[0]
+                        <GHC.Generics.D>_P
+                        <'GHC.Generics.MetaData
+                           "MSG"
+                           "Cloud.Type"
+                           "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                           'GHC.Types.False>_P
+                        <GHC.Generics.C1
+                           ('GHC.Generics.MetaCons
+                              "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                           (GHC.Generics.S1
+                              ('GHC.Generics.MetaSel
+                                 'GHC.Base.Nothing
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.Rec0
+                                 (Control.Distributed.Process.Internal.Types.ProcessId,
+                                  [Cloud.Type.Vect])))
+                         GHC.Generics.:+: GHC.Generics.C1
+                                            ('GHC.Generics.MetaCons
+                                               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                            (GHC.Generics.S1
+                                               ('GHC.Generics.MetaSel
+                                                  'GHC.Base.Nothing
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.Rec0
+                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                   [(Cloud.Type.Vect,
+                                                     Cloud.Type.Result)])))>_R <t>_N)) -}
+84877ae69d1bfe18a77f5f47e808cf1e
+  $fBinaryMSG8 ::
+    (GHC.Num.Num w, Data.Bits.Bits w, Data.Binary.Class.Binary w) =>
+    w
+    -> w
+    -> GHC.Generics.C1
+         ('GHC.Generics.MetaCons
+            "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               'GHC.Base.Nothing
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0
+               (Control.Distributed.Process.Internal.Types.ProcessId,
+                [(Cloud.Type.Vect, Cloud.Type.Result)])))
+         a1
+    -> Data.Binary.Put.Put
+  {- Arity: 6,
+     Strictness: <L,A><L,A><L,1*U(1*C1(U(A,U)),A,A)><S,1*U><L,A><L,1*U(1*U(U(U,U,U,U),U,U),U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ w
+                   @ a1
+                   (w1 :: GHC.Num.Num w)
+                   (w2 :: Data.Bits.Bits w)
+                   (w3 :: Data.Binary.Class.Binary w)
+                   (w4 :: w)
+                   (w5 :: w)
+                   (w6 :: GHC.Generics.C1
+                            ('GHC.Generics.MetaCons
+                               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  'GHC.Base.Nothing
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0
+                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                   [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                            a1) ->
+                 case Cloud.Type.$w$dGSumPut
+                        @ w
+                        @ a1
+                        w3
+                        w4
+                        w6 of ww { (#,#) ww1 ww2 ->
+                 (Data.Binary.Put.PairS @ () ww1 ww2)
+                   `cast`
+                 (Sym (Data.Binary.Put.N:PutM[0]) <()>_N) }) -}
+7a5400114d2a83e0649397f7dd205baf
+  $fBinaryMSG9 ::
+    [((GHC.Types.Double, GHC.Types.Double, GHC.Types.Double),
+      GHC.Integer.Type.Integer)]
+    -> Data.Binary.Put.Put
+  {- Unfolding: (Data.Binary.Class.$fBinary(,)_$cputList
+                   @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                   @ GHC.Integer.Type.Integer
+                   Cloud.Type.$fBinaryMSG_$s$fBinary(,,)
+                   Data.Binary.Class.$fBinaryInteger) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG_$cfrom ::
+    Cloud.Type.MSG -> GHC.Generics.Rep Cloud.Type.MSG x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Type.$fBinaryMSG5
+                  `cast`
+                (forall (x :: <GHC.Types.*>_N).
+                 <Cloud.Type.MSG>_R
+                 ->_R Trans
+                          (Sym (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.D>_P
+                                    <'GHC.Generics.MetaData
+                                       "MSG"
+                                       "Cloud.Type"
+                                       "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                       'GHC.Types.False>_P
+                                    <GHC.Generics.M1
+                                       GHC.Generics.C
+                                       ('GHC.Generics.MetaCons
+                                          "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             'GHC.Base.Nothing
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1
+                                             GHC.Generics.R
+                                             (Control.Distributed.Process.Internal.Types.ProcessId,
+                                              [Cloud.Type.Vect])))
+                                     GHC.Generics.:+: GHC.Generics.M1
+                                                        GHC.Generics.C
+                                                        ('GHC.Generics.MetaCons
+                                                           "RESPONSE"
+                                                           'GHC.Generics.PrefixI
+                                                           'GHC.Types.False)
+                                                        (GHC.Generics.M1
+                                                           GHC.Generics.S
+                                                           ('GHC.Generics.MetaSel
+                                                              'GHC.Base.Nothing
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.K1
+                                                              GHC.Generics.R
+                                                              (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                               [(Cloud.Type.Vect,
+                                                                 Cloud.Type.Result)])))>_R))
+                          (Sub (Sym (Cloud.Type.Rep_MSG[0]))) <x>_N) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG_$cget :: Data.Binary.Get.Internal.Get Cloud.Type.MSG
+  {- Arity: 2, Strictness: <S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Type.$fBinaryMSG1
+                  `cast`
+                (Sym (Data.Binary.Get.Internal.N:Get[0] <Cloud.Type.MSG>_R)) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG_$cputList :: [Cloud.Type.MSG] -> Data.Binary.Put.Put
+  {- Arity: 1 -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG_$cto ::
+    GHC.Generics.Rep Cloud.Type.MSG x -> Cloud.Type.MSG
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: GHC.Generics.Rep Cloud.Type.MSG x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (Cloud.Type.Rep_MSG[0]))
+                           (GHC.Generics.N:M1[0]
+                                <GHC.Generics.D>_P
+                                <'GHC.Generics.MetaData
+                                   "MSG"
+                                   "Cloud.Type"
+                                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                   'GHC.Types.False>_P
+                                <GHC.Generics.M1
+                                   GHC.Generics.C
+                                   ('GHC.Generics.MetaCons
+                                      "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                   (GHC.Generics.M1
+                                      GHC.Generics.S
+                                      ('GHC.Generics.MetaSel
+                                         'GHC.Base.Nothing
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.K1
+                                         GHC.Generics.R
+                                         (Control.Distributed.Process.Internal.Types.ProcessId,
+                                          [Cloud.Type.Vect])))
+                                 GHC.Generics.:+: GHC.Generics.M1
+                                                    GHC.Generics.C
+                                                    ('GHC.Generics.MetaCons
+                                                       "RESPONSE"
+                                                       'GHC.Generics.PrefixI
+                                                       'GHC.Types.False)
+                                                    (GHC.Generics.M1
+                                                       GHC.Generics.S
+                                                       ('GHC.Generics.MetaSel
+                                                          'GHC.Base.Nothing
+                                                          'GHC.Generics.NoSourceUnpackedness
+                                                          'GHC.Generics.NoSourceStrictness
+                                                          'GHC.Generics.DecidedLazy)
+                                                       (GHC.Generics.K1
+                                                          GHC.Generics.R
+                                                          (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                           [(Cloud.Type.Vect,
+                                                             Cloud.Type.Result)])))>_R) <x>_N) of wild {
+                   GHC.Generics.L1 ds1
+                   -> Cloud.Type.ARG
+                        ds1
+                          `cast`
+                        (Trans
+                             (Trans
+                                  (GHC.Generics.N:M1[0]
+                                       <GHC.Generics.C>_P
+                                       <'GHC.Generics.MetaCons
+                                          "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                       <GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             'GHC.Base.Nothing
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1
+                                             GHC.Generics.R
+                                             (Control.Distributed.Process.Internal.Types.ProcessId,
+                                              [Cloud.Type.Vect]))>_R)
+                                  (GHC.Generics.N:M1[0]
+                                       <GHC.Generics.S>_P
+                                       <'GHC.Generics.MetaSel
+                                          'GHC.Base.Nothing
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy>_P
+                                       <GHC.Generics.K1
+                                          GHC.Generics.R
+                                          (Control.Distributed.Process.Internal.Types.ProcessId,
+                                           [Cloud.Type.Vect])>_R) <x>_N)
+                             (GHC.Generics.N:K1[0]
+                                  <GHC.Generics.R>_P
+                                  <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [Cloud.Type.Vect])>_R
+                                  <x>_P))
+                   GHC.Generics.R1 ds1
+                   -> Cloud.Type.RESPONSE
+                        ds1
+                          `cast`
+                        (Trans
+                             (Trans
+                                  (GHC.Generics.N:M1[0]
+                                       <GHC.Generics.C>_P
+                                       <'GHC.Generics.MetaCons
+                                          "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                       <GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             'GHC.Base.Nothing
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1
+                                             GHC.Generics.R
+                                             (Control.Distributed.Process.Internal.Types.ProcessId,
+                                              [(Cloud.Type.Vect, Cloud.Type.Result)]))>_R)
+                                  (GHC.Generics.N:M1[0]
+                                       <GHC.Generics.S>_P
+                                       <'GHC.Generics.MetaSel
+                                          'GHC.Base.Nothing
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy>_P
+                                       <GHC.Generics.K1
+                                          GHC.Generics.R
+                                          (Control.Distributed.Process.Internal.Types.ProcessId,
+                                           [(Cloud.Type.Vect, Cloud.Type.Result)])>_R) <x>_N)
+                             (GHC.Generics.N:K1[0]
+                                  <GHC.Generics.R>_P
+                                  <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                    [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                  <x>_P)) }) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fBinaryMSG_$s$dmput :: Cloud.Type.MSG -> Data.Binary.Put.Put
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (-3, True, False)
+                (\ (eta :: Cloud.Type.MSG) ->
+                 Cloud.Type.$fBinaryMSG6
+                   `cast`
+                 (Data.Binary.Class.N:GBinaryPut[0] (Sym (Cloud.Type.Rep_MSG[0])))
+                   @ GHC.Prim.Any
+                   (Cloud.Type.$fBinaryMSG_$cfrom @ GHC.Prim.Any eta)) -}
+8cdfdb24e878c8df9b8058e965ddc8d2
+  $fBinaryMSG_$s$fBinary(,) ::
+    Data.Binary.Class.Binary
+      ((GHC.Types.Double, GHC.Types.Double, GHC.Types.Double),
+       GHC.Integer.Type.Integer)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ((GHC.Types.Double, GHC.Types.Double, GHC.Types.Double),
+                     GHC.Integer.Type.Integer)
+                  (Data.Binary.Class.$fBinary(,)_$cput
+                     @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Type.$fBinaryMSG3
+                     Data.Binary.Class.$fBinaryInteger)
+                  (Data.Binary.Class.$fBinary(,)_$cget
+                     @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Type.$fBinaryMSG3
+                     Data.Binary.Class.$fBinaryInteger)
+                  (Data.Binary.Class.$fBinary(,)_$cputList
+                     @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Type.$fBinaryMSG3
+                     Data.Binary.Class.$fBinaryInteger) -}
+b5d45f09dcdf37a371161d63f9314110
+  $fBinaryMSG_$s$fBinary(,,) ::
+    Data.Binary.Class.Binary
+      (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                  (Data.Binary.Class.$fBinary(,,)_$cput
+                     @ GHC.Types.Double
+                     @ GHC.Types.Double
+                     @ GHC.Types.Double
+                     Data.Binary.Class.$fBinaryDouble
+                     Data.Binary.Class.$fBinaryDouble
+                     Data.Binary.Class.$fBinaryDouble)
+                  (Data.Binary.Class.$fBinary(,,)_$cget
+                     @ GHC.Types.Double
+                     @ GHC.Types.Double
+                     @ GHC.Types.Double
+                     Data.Binary.Class.$fBinaryDouble
+                     Data.Binary.Class.$fBinaryDouble
+                     Data.Binary.Class.$fBinaryDouble)
+                  (Data.Binary.Class.$fBinary(,,)_$cputList
+                     @ GHC.Types.Double
+                     @ GHC.Types.Double
+                     @ GHC.Types.Double
+                     Data.Binary.Class.$fBinaryDouble
+                     Data.Binary.Class.$fBinaryDouble
+                     Data.Binary.Class.$fBinaryDouble) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $fGenericMSG :: GHC.Generics.Generic Cloud.Type.MSG
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.MSG
+                  Cloud.Type.$fBinaryMSG_$cfrom
+                  Cloud.Type.$fBinaryMSG_$cto -}
+65d1a384a43e180bec08b60c9c3ceb00
+  $tc'ARG :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13707221700822943620##
+                   15700128289501809771##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tc'ARG1) -}
+4db53ea0e74615fbc9dfea80a7dcb346
+  $tc'ARG1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ARG"#) -}
+afbdabab654b4ee1ae40551aa333ba6c
+  $tc'RESPONSE :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8383755855477269680##
+                   9072921097350574241##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tc'RESPONSE1) -}
+fbb2385768495c588466836883de2bbb
+  $tc'RESPONSE1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'RESPONSE"#) -}
+bafa9c15f4cb250862d887666bc06bc5
+  $tcMSG :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14859974865717270006##
+                   11547563113161976325##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tcMSG1) -}
+554d89048b84bb959403d91ed44a45e1
+  $tcMSG1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MSG"#) -}
+0ff4fe67ff0228c63d3927484fdcf279
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Cloud.Type.$trModule2
+                   Cloud.Type.$trModule1) -}
+c5d7a745252d93f56da1b31e03d8ef31
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Cloud.Type"#) -}
+060852a3c8db2dfadec0660551f8d9a9
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  $w$cget ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Binary.Get.Internal.Success Cloud.Type.MSG r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 5, Strictness: <S,U><L,U><S,U><S,U><L,C(C1(U))>,
+     Inline: [0],
+     Unfolding: (\ @ r
+                   (ww :: GHC.Prim.Addr#)
+                   (ww1 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: Data.Binary.Get.Internal.Success Cloud.Type.MSG r) ->
+                 Data.Binary.Generic.$w$cgget
+                   @ (GHC.Generics.M1
+                        GHC.Generics.C
+                        ('GHC.Generics.MetaCons
+                           "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        (GHC.Generics.S1
+                           ('GHC.Generics.MetaSel
+                              'GHC.Base.Nothing
+                              'GHC.Generics.NoSourceUnpackedness
+                              'GHC.Generics.NoSourceStrictness
+                              'GHC.Generics.DecidedLazy)
+                           (GHC.Generics.Rec0
+                              (Control.Distributed.Process.Internal.Types.ProcessId,
+                               [Cloud.Type.Vect]))))
+                   @ (GHC.Generics.M1
+                        GHC.Generics.C
+                        ('GHC.Generics.MetaCons
+                           "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                        (GHC.Generics.S1
+                           ('GHC.Generics.MetaSel
+                              'GHC.Base.Nothing
+                              'GHC.Generics.NoSourceUnpackedness
+                              'GHC.Generics.NoSourceStrictness
+                              'GHC.Generics.DecidedLazy)
+                           (GHC.Generics.Rec0
+                              (Control.Distributed.Process.Internal.Types.ProcessId,
+                               [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                   Cloud.Type.$fBinaryMSG4
+                     `cast`
+                   (Trans
+                        (forall (word :: <*>_N) (a1 :: <*>_N).
+                         <GHC.Classes.Ord word>_R
+                         ->_R <GHC.Num.Num word>_R
+                         ->_R <Data.Bits.Bits word>_R
+                         ->_R <word>_R
+                         ->_R <word>_R
+                         ->_R Sym (Data.Binary.Get.Internal.N:Get[0]
+                                       <GHC.Generics.M1
+                                          GHC.Generics.C
+                                          ('GHC.Generics.MetaCons
+                                             "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                          (GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                'GHC.Base.Nothing
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.Rec0
+                                                (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                 [Cloud.Type.Vect])))
+                                          a1>_R))
+                        (Sym (Data.Binary.Generic.N:GSumGet[0]
+                                  <GHC.Generics.C1
+                                     ('GHC.Generics.MetaCons
+                                        "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           'GHC.Base.Nothing
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0
+                                           (Control.Distributed.Process.Internal.Types.ProcessId,
+                                            [Cloud.Type.Vect])))>_N)))
+                   Cloud.Type.$fBinaryMSG2
+                     `cast`
+                   (Trans
+                        (forall (word :: <*>_N) (a1 :: <*>_N).
+                         <GHC.Classes.Ord word>_R
+                         ->_R <GHC.Num.Num word>_R
+                         ->_R <Data.Bits.Bits word>_R
+                         ->_R <word>_R
+                         ->_R <word>_R
+                         ->_R Sym (Data.Binary.Get.Internal.N:Get[0]
+                                       <GHC.Generics.M1
+                                          GHC.Generics.C
+                                          ('GHC.Generics.MetaCons
+                                             "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                          (GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                'GHC.Base.Nothing
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.Rec0
+                                                (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                 [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                                          a1>_R))
+                        (Sym (Data.Binary.Generic.N:GSumGet[0]
+                                  <GHC.Generics.C1
+                                     ('GHC.Generics.MetaCons
+                                        "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           'GHC.Base.Nothing
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0
+                                           (Control.Distributed.Process.Internal.Types.ProcessId,
+                                            [(Cloud.Type.Vect, Cloud.Type.Result)])))>_N)))
+                   1##
+                   1##
+                   @ GHC.Prim.Any
+                   @ r
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   (\ (i' :: Data.ByteString.Internal.ByteString)
+                      (a1 :: (GHC.Generics.:+:)
+                               (GHC.Generics.C1
+                                  ('GHC.Generics.MetaCons
+                                     "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  (GHC.Generics.S1
+                                     ('GHC.Generics.MetaSel
+                                        'GHC.Base.Nothing
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy)
+                                     (GHC.Generics.Rec0
+                                        (Control.Distributed.Process.Internal.Types.ProcessId,
+                                         [Cloud.Type.Vect]))))
+                               (GHC.Generics.C1
+                                  ('GHC.Generics.MetaCons
+                                     "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                  (GHC.Generics.S1
+                                     ('GHC.Generics.MetaSel
+                                        'GHC.Base.Nothing
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy)
+                                     (GHC.Generics.Rec0
+                                        (Control.Distributed.Process.Internal.Types.ProcessId,
+                                         [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                               GHC.Prim.Any) ->
+                    w i'
+                      (Cloud.Type.$fBinaryMSG_$cto
+                         @ GHC.Prim.Any
+                         a1
+                           `cast`
+                         (Trans
+                              (Sym (GHC.Generics.N:M1[0]
+                                        <GHC.Generics.D>_P
+                                        <'GHC.Generics.MetaData
+                                           "MSG"
+                                           "Cloud.Type"
+                                           "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                           'GHC.Types.False>_P
+                                        <GHC.Generics.C1
+                                           ('GHC.Generics.MetaCons
+                                              "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                           (GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 'GHC.Base.Nothing
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0
+                                                 (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                  [Cloud.Type.Vect])))
+                                         GHC.Generics.:+: GHC.Generics.C1
+                                                            ('GHC.Generics.MetaCons
+                                                               "RESPONSE"
+                                                               'GHC.Generics.PrefixI
+                                                               'GHC.Types.False)
+                                                            (GHC.Generics.S1
+                                                               ('GHC.Generics.MetaSel
+                                                                  'GHC.Base.Nothing
+                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                  'GHC.Generics.NoSourceStrictness
+                                                                  'GHC.Generics.DecidedLazy)
+                                                               (GHC.Generics.Rec0
+                                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                                   [(Cloud.Type.Vect,
+                                                                     Cloud.Type.Result)])))>_R))
+                              (Sub (Sym (Cloud.Type.Rep_MSG[0]))) <GHC.Prim.Any>_N)))) -}
+a473f61cb2bdba1c0244561da4bd7bfa
+  $w$dGSumGet ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Binary.Get.Internal.Success
+         (GHC.Generics.M1
+            GHC.Generics.C
+            ('GHC.Generics.MetaCons
+               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  'GHC.Base.Nothing
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0
+                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                   [(Cloud.Type.Vect, Cloud.Type.Result)])))
+            a1)
+         r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 5, Strictness: <S,U><L,U><S,U><S,U><L,C(C1(U))>,
+     Inline: [0],
+     Unfolding: (\ @ word
+                   @ a1
+                   @ r
+                   (ww :: GHC.Prim.Addr#)
+                   (ww1 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: Data.Binary.Get.Internal.Success
+                           (GHC.Generics.M1
+                              GHC.Generics.C
+                              ('GHC.Generics.MetaCons
+                                 "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                              (GHC.Generics.M1
+                                 GHC.Generics.S
+                                 ('GHC.Generics.MetaSel
+                                    'GHC.Base.Nothing
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0
+                                    (Control.Distributed.Process.Internal.Types.ProcessId,
+                                     [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                              a1)
+                           r) ->
+                 Control.Distributed.Process.Internal.Types.$w$cget1
+                   @ r
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   (\ (i' :: Data.ByteString.Internal.ByteString)
+                      (a2 :: Control.Distributed.Process.Internal.Types.ProcessId)[OneShot] ->
+                    case i' of ww4 { Data.ByteString.Internal.PS ww5 ww6 ww7 ww8 ->
+                    Data.Binary.Class.$w$cget10
+                      @ (Cloud.Type.Vect, Cloud.Type.Result)
+                      Cloud.Type.$fBinaryMSG_$s$fBinary(,)
+                      @ r
+                      ww5
+                      ww6
+                      ww7
+                      ww8
+                      (\ (i'1 :: Data.ByteString.Internal.ByteString)
+                         (a3 :: [(Cloud.Type.Vect, Cloud.Type.Result)])[OneShot] ->
+                       w i'1
+                         (a2, a3)
+                           `cast`
+                         (Trans
+                              (Sym (GHC.Generics.N:K1[0]
+                                        <GHC.Generics.R>_P
+                                        <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                          [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                        <a1>_P))
+                              (Trans
+                                   (Sym (GHC.Generics.N:M1[0]
+                                             <GHC.Generics.S>_P
+                                             <'GHC.Generics.MetaSel
+                                                'GHC.Base.Nothing
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy>_P
+                                             <GHC.Generics.K1
+                                                GHC.Generics.R
+                                                (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                 [(Cloud.Type.Vect, Cloud.Type.Result)])>_R))
+                                   (Sym (GHC.Generics.N:M1[0]
+                                             <GHC.Generics.C>_P
+                                             <'GHC.Generics.MetaCons
+                                                "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                             <GHC.Generics.M1
+                                                GHC.Generics.S
+                                                ('GHC.Generics.MetaSel
+                                                   'GHC.Base.Nothing
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.Rec0
+                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                    [(Cloud.Type.Vect,
+                                                      Cloud.Type.Result)]))>_R)) <a1>_N))) })) -}
+e3c135f4c07f3546447ba5dfebe5379b
+  $w$dGSumGet1 ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Binary.Get.Internal.Success
+         (GHC.Generics.M1
+            GHC.Generics.C
+            ('GHC.Generics.MetaCons
+               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  'GHC.Base.Nothing
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0
+                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                   [Cloud.Type.Vect])))
+            a1)
+         r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 5, Strictness: <S,U><L,U><S,U><S,U><L,C(C1(U))>,
+     Inline: [0],
+     Unfolding: (\ @ word
+                   @ a1
+                   @ r
+                   (ww :: GHC.Prim.Addr#)
+                   (ww1 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: Data.Binary.Get.Internal.Success
+                           (GHC.Generics.M1
+                              GHC.Generics.C
+                              ('GHC.Generics.MetaCons
+                                 "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                              (GHC.Generics.M1
+                                 GHC.Generics.S
+                                 ('GHC.Generics.MetaSel
+                                    'GHC.Base.Nothing
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0
+                                    (Control.Distributed.Process.Internal.Types.ProcessId,
+                                     [Cloud.Type.Vect])))
+                              a1)
+                           r) ->
+                 Control.Distributed.Process.Internal.Types.$w$cget1
+                   @ r
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   (\ (i' :: Data.ByteString.Internal.ByteString)
+                      (a2 :: Control.Distributed.Process.Internal.Types.ProcessId)[OneShot] ->
+                    case i' of ww4 { Data.ByteString.Internal.PS ww5 ww6 ww7 ww8 ->
+                    Data.Binary.Class.$w$cget10
+                      @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                      Cloud.Type.$fBinaryMSG_$s$fBinary(,,)
+                      @ r
+                      ww5
+                      ww6
+                      ww7
+                      ww8
+                      (\ (i'1 :: Data.ByteString.Internal.ByteString)
+                         (a3 :: [Cloud.Type.Vect])[OneShot] ->
+                       w i'1
+                         (a2, a3)
+                           `cast`
+                         (Trans
+                              (Sym (GHC.Generics.N:K1[0]
+                                        <GHC.Generics.R>_P
+                                        <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                          [Cloud.Type.Vect])>_R
+                                        <a1>_P))
+                              (Trans
+                                   (Sym (GHC.Generics.N:M1[0]
+                                             <GHC.Generics.S>_P
+                                             <'GHC.Generics.MetaSel
+                                                'GHC.Base.Nothing
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy>_P
+                                             <GHC.Generics.K1
+                                                GHC.Generics.R
+                                                (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                 [Cloud.Type.Vect])>_R))
+                                   (Sym (GHC.Generics.N:M1[0]
+                                             <GHC.Generics.C>_P
+                                             <'GHC.Generics.MetaCons
+                                                "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                             <GHC.Generics.M1
+                                                GHC.Generics.S
+                                                ('GHC.Generics.MetaSel
+                                                   'GHC.Base.Nothing
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.Rec0
+                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                    [Cloud.Type.Vect]))>_R)) <a1>_N))) })) -}
+f112b268e7721e695707af834680e66f
+  $w$dGSumPut ::
+    Data.Binary.Class.Binary w =>
+    w
+    -> GHC.Generics.C1
+         ('GHC.Generics.MetaCons
+            "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               'GHC.Base.Nothing
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0
+               (Control.Distributed.Process.Internal.Types.ProcessId,
+                [(Cloud.Type.Vect, Cloud.Type.Result)])))
+         a1
+    -> (# (), Data.ByteString.Builder.Internal.Builder #)
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(U(A,U)),A,A)><S,1*U><L,1*U(1*U(U(U,U,U,U),U,U),U)>,
+     Inline: [0],
+     Unfolding: (\ @ w
+                   @ a1
+                   (w1 :: Data.Binary.Class.Binary w)
+                   (w2 :: w)
+                   (w3 :: GHC.Generics.C1
+                            ('GHC.Generics.MetaCons
+                               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  'GHC.Base.Nothing
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0
+                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                   [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                            a1) ->
+                 case w2 of code { DEFAULT ->
+                 (# GHC.Tuple.(),
+                    let {
+                      ds1 :: Data.ByteString.Builder.Internal.Builder
+                      = case w3
+                               `cast`
+                             (Trans
+                                  (Trans
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.C>_P
+                                            <'GHC.Generics.MetaCons
+                                               "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  'GHC.Base.Nothing
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.Rec0
+                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                   [(Cloud.Type.Vect, Cloud.Type.Result)]))>_R)
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.S>_P
+                                            <'GHC.Generics.MetaSel
+                                               'GHC.Base.Nothing
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy>_P
+                                            <GHC.Generics.K1
+                                               GHC.Generics.R
+                                               (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                [(Cloud.Type.Vect, Cloud.Type.Result)])>_R) <a1>_N)
+                                  (GHC.Generics.N:K1[0]
+                                       <GHC.Generics.R>_P
+                                       <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                         [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                       <a1>_P)) of ww { (,) ww1 ww2 ->
+                        let {
+                          ds2 :: Data.ByteString.Builder.Internal.Builder
+                          = case (Cloud.Type.$fBinaryMSG9 ww2)
+                                   `cast`
+                                 (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds w' ->
+                            w' }
+                        } in
+                        let {
+                          ds :: Data.ByteString.Builder.Internal.Builder
+                          = case ww1 of ww4 { Control.Distributed.Process.Internal.Types.ProcessId ww5 ww6 ww3 ->
+                            let {
+                              ds3 :: Data.ByteString.Builder.Internal.Builder
+                              = case Data.Binary.Class.$w$cput7
+                                       ww5
+                                         `cast`
+                                       (Trans
+                                            (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                                            (Network.Transport.N:EndPointAddress[0])) of ww9 { (#,#) ww10 ww11 ->
+                                ww11 }
+                            } in
+                            let {
+                              ds4 :: Data.ByteString.Builder.Internal.Builder
+                              = case Control.Distributed.Process.Internal.Types.$w$cput1
+                                       (Control.Distributed.Process.Internal.Types.LocalProcessId
+                                          ww6
+                                          ww3) of ww9 { (#,#) ww10 ww11 ->
+                                ww11 }
+                            } in
+                            (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                             ds3 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                               @ r
+                               (ds4 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                                  @ r
+                                  eta))
+                              `cast`
+                            (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) }
+                        } in
+                        (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                         ds `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                           @ r
+                           (ds2 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                              @ r
+                              eta))
+                          `cast`
+                        (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) }
+                    } in
+                    let {
+                      ds :: Data.ByteString.Builder.Internal.Builder
+                      = case (Data.Binary.Class.put @ w w1 code)
+                               `cast`
+                             (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds2 w8 ->
+                        w8 }
+                    } in
+                    (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                     ds `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                       @ r
+                       (ds1 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                          @ r
+                          eta))
+                      `cast`
+                    (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) #) }) -}
+68afcead9d7fd6a0cc918f01372d65f4
+  $w$dGSumPut1 ::
+    Data.Binary.Class.Binary w =>
+    w
+    -> GHC.Generics.C1
+         ('GHC.Generics.MetaCons
+            "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               'GHC.Base.Nothing
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0
+               (Control.Distributed.Process.Internal.Types.ProcessId,
+                [Cloud.Type.Vect])))
+         a1
+    -> (# (), Data.ByteString.Builder.Internal.Builder #)
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(U(A,U)),A,A)><S,1*U><L,1*U(1*U(U(U,U,U,U),U,U),U)>,
+     Inline: [0],
+     Unfolding: (\ @ w
+                   @ a1
+                   (w1 :: Data.Binary.Class.Binary w)
+                   (w2 :: w)
+                   (w3 :: GHC.Generics.C1
+                            ('GHC.Generics.MetaCons
+                               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                            (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  'GHC.Base.Nothing
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0
+                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                   [Cloud.Type.Vect])))
+                            a1) ->
+                 case w2 of code { DEFAULT ->
+                 (# GHC.Tuple.(),
+                    let {
+                      ds1 :: Data.ByteString.Builder.Internal.Builder
+                      = case w3
+                               `cast`
+                             (Trans
+                                  (Trans
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.C>_P
+                                            <'GHC.Generics.MetaCons
+                                               "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  'GHC.Base.Nothing
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.Rec0
+                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                   [Cloud.Type.Vect]))>_R)
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.S>_P
+                                            <'GHC.Generics.MetaSel
+                                               'GHC.Base.Nothing
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy>_P
+                                            <GHC.Generics.K1
+                                               GHC.Generics.R
+                                               (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                [Cloud.Type.Vect])>_R) <a1>_N)
+                                  (GHC.Generics.N:K1[0]
+                                       <GHC.Generics.R>_P
+                                       <(Control.Distributed.Process.Internal.Types.ProcessId,
+                                         [Cloud.Type.Vect])>_R
+                                       <a1>_P)) of ww { (,) ww1 ww2 ->
+                        let {
+                          ds2 :: Data.ByteString.Builder.Internal.Builder
+                          = case (Cloud.Type.$fBinaryMSG11 ww2)
+                                   `cast`
+                                 (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds w' ->
+                            w' }
+                        } in
+                        let {
+                          ds :: Data.ByteString.Builder.Internal.Builder
+                          = case ww1 of ww4 { Control.Distributed.Process.Internal.Types.ProcessId ww5 ww6 ww3 ->
+                            let {
+                              ds3 :: Data.ByteString.Builder.Internal.Builder
+                              = case Data.Binary.Class.$w$cput7
+                                       ww5
+                                         `cast`
+                                       (Trans
+                                            (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                                            (Network.Transport.N:EndPointAddress[0])) of ww9 { (#,#) ww10 ww11 ->
+                                ww11 }
+                            } in
+                            let {
+                              ds4 :: Data.ByteString.Builder.Internal.Builder
+                              = case Control.Distributed.Process.Internal.Types.$w$cput1
+                                       (Control.Distributed.Process.Internal.Types.LocalProcessId
+                                          ww6
+                                          ww3) of ww9 { (#,#) ww10 ww11 ->
+                                ww11 }
+                            } in
+                            (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                             ds3 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                               @ r
+                               (ds4 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                                  @ r
+                                  eta))
+                              `cast`
+                            (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) }
+                        } in
+                        (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                         ds `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                           @ r
+                           (ds2 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                              @ r
+                              eta))
+                          `cast`
+                        (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) }
+                    } in
+                    let {
+                      ds :: Data.ByteString.Builder.Internal.Builder
+                      = case (Data.Binary.Class.put @ w w1 code)
+                               `cast`
+                             (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds2 w8 ->
+                        w8 }
+                    } in
+                    (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                     ds `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                       @ r
+                       (ds1 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                          @ r
+                          eta))
+                      `cast`
+                    (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) #) }) -}
+5cb484fe59aeb4d8d76bba3329f32c4e
+  data MSG
+    = ARG (Control.Distributed.Process.Internal.Types.ProcessId,
+           [Cloud.Type.Vect])
+    | RESPONSE (Control.Distributed.Process.Internal.Types.ProcessId,
+                [(Cloud.Type.Vect, Cloud.Type.Result)])
+5cb484fe59aeb4d8d76bba3329f32c4e
+  axiom Rep_MSG::
+      GHC.Generics.Rep Cloud.Type.MSG
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "MSG"
+               "Cloud.Type"
+               "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "ARG" 'GHC.Generics.PrefixI 'GHC.Types.False)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     'GHC.Base.Nothing
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0
+                     (Control.Distributed.Process.Internal.Types.ProcessId,
+                      [Cloud.Type.Vect])))
+             GHC.Generics.:+: GHC.Generics.C1
+                                ('GHC.Generics.MetaCons
+                                   "RESPONSE" 'GHC.Generics.PrefixI 'GHC.Types.False)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      'GHC.Base.Nothing
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0
+                                      (Control.Distributed.Process.Internal.Types.ProcessId,
+                                       [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+48c1c54b417dff7c0ec1bc96414d6bcc
+  type Result = GHC.Integer.Type.Integer
+8c391a93b4b1398d5c285c5d294fd60a
+  type Vect = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+instance Data.Binary.Class.Binary [Cloud.Type.MSG]
+  = Cloud.Type.$fBinaryMSG
+instance GHC.Generics.Generic [Cloud.Type.MSG]
+  = Cloud.Type.$fGenericMSG
+family instance GHC.Generics.Rep [Cloud.Type.MSG]
+  = Cloud.Type.Rep_MSG
+"SPEC/Cloud.Type $dmput @ MSG" [ALWAYS] forall ($dGBinaryPut :: Data.Binary.Class.GBinaryPut
+                                                                  (GHC.Generics.Rep Cloud.Type.MSG))
+                                               ($dGeneric :: GHC.Generics.Generic Cloud.Type.MSG)
+                                               ($dBinary :: Data.Binary.Class.Binary Cloud.Type.MSG)
+  Data.Binary.Class.$dmput @ Cloud.Type.MSG
+                           $dBinary
+                           $dGeneric
+                           $dGBinaryPut
+  = Cloud.Type.$fBinaryMSG_$s$dmput
+"SPEC/Cloud.Type $fBinary(,) @ (Double, Double, Double) @ Integer" [ALWAYS] forall ($dBinary1 :: Data.Binary.Class.Binary
+                                                                                                   GHC.Integer.Type.Integer)
+                                                                                   ($dBinary :: Data.Binary.Class.Binary
+                                                                                                  (GHC.Types.Double,
+                                                                                                   GHC.Types.Double,
+                                                                                                   GHC.Types.Double))
+  Data.Binary.Class.$fBinary(,) @ (GHC.Types.Double,
+                                   GHC.Types.Double, GHC.Types.Double)
+                                @ GHC.Integer.Type.Integer
+                                $dBinary
+                                $dBinary1
+  = Cloud.Type.$fBinaryMSG_$s$fBinary(,)
+"SPEC/Cloud.Type $fBinary(,,) @ Double @ Double @ Double" [ALWAYS] forall ($dBinary2 :: Data.Binary.Class.Binary
+                                                                                          GHC.Types.Double)
+                                                                          ($dBinary1 :: Data.Binary.Class.Binary
+                                                                                          GHC.Types.Double)
+                                                                          ($dBinary :: Data.Binary.Class.Binary
+                                                                                         GHC.Types.Double)
+  Data.Binary.Class.$fBinary(,,) @ GHC.Types.Double
+                                 @ GHC.Types.Double
+                                 @ GHC.Types.Double
+                                 $dBinary
+                                 $dBinary1
+                                 $dBinary2
+  = Cloud.Type.$fBinaryMSG_$s$fBinary(,,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

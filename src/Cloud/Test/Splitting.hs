@@ -11,7 +11,6 @@ import Control.Distributed.Process hiding (Message)
 import Control.Distributed.Process.Closure
 import Control.Monad
 
-import System.CPUTime
 
 import Cloud.Utils.DistribUtils
 

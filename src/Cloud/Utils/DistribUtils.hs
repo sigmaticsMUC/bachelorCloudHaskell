@@ -1,5 +1,7 @@
 {-# LANGUAGE TemplateHaskell #-}
-module Cloud.Utils.DistribUtils ( distribMain ) where
+module Cloud.Utils.DistribUtils(
+ distribMain
+)where
 
 import Control.Distributed.Process
 import Control.Distributed.Process.Closure
@@ -9,13 +11,14 @@ import Control.Distributed.Static hiding (initRemoteTable)
 
 import System.Environment
 import Network.Socket hiding (shutdown)
+import qualified Cloud.Kernel as CK
 
 import Language.Haskell.TH
 
 distribMain :: ([NodeId] -> Process ()) -> (RemoteTable -> RemoteTable) -> IO ()
 distribMain master frtable = do
   args <- getArgs
-  let rtable = frtable initRemoteTable
+  let rtable = (CK.__remoteTable . frtable) initRemoteTable
 
   case args of
     [] -> do
