@@ -7,10 +7,10 @@ module Cloud.Master(
 
 import Control.Distributed.Process hiding (Message)
 
-import Cloud.Type (Vect, Result, MSG (RESPONSE))
+import Cloud.Type (Vect, IterationCount, Result, MSG (RESPONSE))
 import Cloud.Kernel (spawnProcesses, distribute)
 
-masterProcess :: Closure(Vect->Result) -> [Vect] -> [NodeId] -> Process ()
+masterProcess :: Closure(Vect->IterationCount) -> [Vect] -> [NodeId] -> Process ()
 masterProcess cF args nodes = do
   master <- getSelfPid
   say "spawning processes..."
@@ -18,11 +18,11 @@ masterProcess cF args nodes = do
   say $ (show $ length nodes) ++ " processes spawned!"
   distribute master args ps
   response <- waitForChuncks ps [[]]
-  let result = concat response
+  let result = filter (\(_, i) -> i /= 256) (concat response)
   say (show result)
   return ()
 
-waitForChuncks :: [ProcessId] -> [[(Vect, Result)]] -> Process ([[(Vect, Result)]])
+waitForChuncks :: [ProcessId] -> [[Result]] -> Process ([[Result]])
 waitForChuncks [] ls = return ls
 waitForChuncks pids ls = do
   m <- expect

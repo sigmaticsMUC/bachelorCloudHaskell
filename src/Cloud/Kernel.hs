@@ -10,10 +10,10 @@ import Control.Distributed.Process hiding (Message)
 import Control.Distributed.Process.Closure
 import Control.Monad
 import Data.List.Split
-import Cloud.Type (Vect, Result, MSG (ARG, RESPONSE))
+import Cloud.Type (Vect, IterationCount, Result, MSG (ARG, RESPONSE))
 
 
-slaveProcess :: (ProcessId, Closure(Vect->Result)) -> Process ()
+slaveProcess :: (ProcessId, Closure(Vect->IterationCount)) -> Process ()
 slaveProcess (master, cF) = do
   us <- getSelfPid
   f <- unClosure cF
@@ -26,7 +26,7 @@ slaveProcess (master, cF) = do
 
 remotable ['slaveProcess]
 
-spawnProcesses :: ProcessId -> Closure (Vect->Result) -> [NodeId] -> Process [ProcessId]
+spawnProcesses :: ProcessId -> Closure (Vect->IterationCount) -> [NodeId] -> Process [ProcessId]
 spawnProcesses master cF nodes = do
   pids <- forM nodes $ \nid -> do
     say $ "spawning on" ++ (show nid)

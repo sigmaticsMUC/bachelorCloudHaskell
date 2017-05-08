@@ -3,6 +3,7 @@
 module Cloud.Type(
   Vect,
   Result,
+  IterationCount,
   MSG (ARG, RESPONSE)
 )where
 
@@ -14,9 +15,10 @@ import Control.Distributed.Process hiding (Message)
 
 
 type Vect = (Double, Double, Double)
-type Result = Integer
+type IterationCount = Integer
+type Result = (Vect, IterationCount)
 
-data MSG = ARG (ProcessId, [Vect]) | RESPONSE (ProcessId, [(Vect, Result)])
+data MSG = ARG (ProcessId, [Vect]) | RESPONSE (ProcessId, [Result])
   deriving (Typeable, Generic)
 
 instance Binary MSG

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-02 14:06:50.94826 UTC
+2017-05-08 11:58:02.758926 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Kernel 8002
-  interface hash: bcd74334f8af02d61f0efa18747292ae
-  ABI hash: 476b13680b6c1ac12aaf20760bee1ca6
-  export-list hash: 9eb35cd141cc4b8a572b5e1cc9336c54
-  orphan hash: 2459288f76341273c490a0336075081a
+  interface hash: 48755c606258d0318f71a25dffd16d56
+  ABI hash: c21ea41e605932865138f98b6130df7f
+  export-list hash: 445dcc8263bc74023883a4e67c319ca4
+  orphan hash: f31feabd9def0fab182393bc9f0e189c
   flag hash: 3154edb06e70847877e7ec9876375ad9
   sig of: Nothing
   used TH splices: True
@@ -86,11 +86,11 @@ import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
-import  -/  Cloud.Type 3373dadb8e4cacb29588c4364b8ba05f
-  exports: 5612a4ad13c85539a7d49d1aebd082af
-  ARG 262e8e2001eea47f3ce0fda7dc565e9c
-  RESPONSE 8e0fa34e5ea978f45c3d9ad160ede1f3
-  Result 48c1c54b417dff7c0ec1bc96414d6bcc
+import  -/  Cloud.Type e26068b1ce979c7abf63e8447ed3f79b
+  exports: ab061419ace2ca64be5cfacf30c7de81
+  ARG a2abbaebd66eb19bb80a25fe969672b6
+  IterationCount a6eb91aab4183c65cccf21a26bc83a19
+  RESPONSE 2fbd8db545b27152764e05af3bab433f
   Vect 8c391a93b4b1398d5c285c5d294fd60a
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
@@ -104,43 +104,43 @@ import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDyp
 import  -/  rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b:Data.Rank1Dynamic f77a29a40055e3d0ea5d0878528a8a87
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split c60198a427bfd51d9fb4562c059ec1d2
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.Internals 25dced234ed01c9c803d678763a4d772
-b9719f1415f9ba224b98e2edddb85e47
+81115acc74f44797fdba21d649981fe0
   $s$fBinary(,) ::
     Data.Binary.Class.Binary
       (Control.Distributed.Process.Internal.Types.ProcessId,
        Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ (Control.Distributed.Process.Internal.Types.ProcessId,
                      Control.Distributed.Static.Closure
-                       (Cloud.Type.Vect -> Cloud.Type.Result))
+                       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                   (Data.Binary.Class.$fBinary(,)_$cput
                      @ Control.Distributed.Process.Internal.Types.ProcessId
                      @ (Control.Distributed.Static.Closure
-                          (Cloud.Type.Vect -> Cloud.Type.Result))
+                          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                      Control.Distributed.Process.Internal.Types.$fBinaryProcessId
                      Cloud.Kernel.$s$fBinary(,)_$dBinary1)
                   (Data.Binary.Class.$fBinary(,)_$cget
                      @ Control.Distributed.Process.Internal.Types.ProcessId
                      @ (Control.Distributed.Static.Closure
-                          (Cloud.Type.Vect -> Cloud.Type.Result))
+                          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                      Control.Distributed.Process.Internal.Types.$fBinaryProcessId
                      Cloud.Kernel.$s$fBinary(,)_$dBinary1)
                   (Data.Binary.Class.$fBinary(,)_$cputList
                      @ Control.Distributed.Process.Internal.Types.ProcessId
                      @ (Control.Distributed.Static.Closure
-                          (Cloud.Type.Vect -> Cloud.Type.Result))
+                          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                      Control.Distributed.Process.Internal.Types.$fBinaryProcessId
                      Cloud.Kernel.$s$fBinary(,)_$dBinary1) -}
-2a245f1b8d7a7cb53a5ca86735fac3fb
+70c399f72aaceb6e29026b8c7f367d6d
   $s$fBinary(,)1 ::
-    GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.Result)
+    GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy#
-                              (Cloud.Type.Vect -> Cloud.Type.Result)) ->
+                              (Cloud.Type.Vect -> Cloud.Type.IterationCount)) ->
                  Cloud.Kernel.$s$fBinary(,)2) -}
 a8f926deed9a18fc40936ede3614631d
   $s$fBinary(,)10 :: Data.Typeable.Internal.TypeRep
@@ -347,60 +347,60 @@ a1cc5bf003e84a4ab8d6a3df914bd23a
                    @ Data.Typeable.Internal.TypeRep
                    Cloud.Kernel.$s$fBinary(,)10
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-f80e1b50e497735f2c7ea8b1ed3980a8
+d7ccc873dc5b1cce96afc3b9de64178f
   $s$fBinary(,)_$dBinary1 ::
     Data.Binary.Class.Binary
       (Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Kernel.$s$fBinary(,)_$s$fBinaryClosure -}
-992ae953c527ae54e39643428a0f0e3e
+87ece0c3b00b28fce57d8ea36f54a9be
   $s$fBinary(,)_$s$fBinaryClosure ::
     Data.Binary.Class.Binary
       (Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ (Control.Distributed.Static.Closure
-                       (Cloud.Type.Vect -> Cloud.Type.Result))
+                       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                   (Control.Distributed.Static.$fBinaryClosure_$cput
-                     @ (Cloud.Type.Vect -> Cloud.Type.Result)
+                     @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
                      Cloud.Kernel.$s$fBinary(,)1
                        `cast`
                      (Sym (Data.Typeable.Internal.N:Typeable[0]
-                               <*>_N <Cloud.Type.Vect -> Cloud.Type.Result>_N)))
+                               <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N)))
                   (Control.Distributed.Static.$fBinaryClosure_$cget
-                     @ (Cloud.Type.Vect -> Cloud.Type.Result)
+                     @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
                      Cloud.Kernel.$s$fBinary(,)1
                        `cast`
                      (Sym (Data.Typeable.Internal.N:Typeable[0]
-                               <*>_N <Cloud.Type.Vect -> Cloud.Type.Result>_N)))
+                               <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N)))
                   (Control.Distributed.Static.$fBinaryClosure_$cputList
-                     @ (Cloud.Type.Vect -> Cloud.Type.Result)
+                     @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
                      Cloud.Kernel.$s$fBinary(,)1
                        `cast`
                      (Sym (Data.Typeable.Internal.N:Typeable[0]
-                               <*>_N <Cloud.Type.Vect -> Cloud.Type.Result>_N))) -}
-4f699141c06ab9830fdbc0fc0d86b07f
+                               <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N))) -}
+e154db764a9d0899247699f881920ccf
   $s$fSerializablea ::
     Control.Distributed.Process.Serializable.Serializable
       (Control.Distributed.Process.Internal.Types.ProcessId,
        Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ (Control.Distributed.Process.Internal.Types.ProcessId,
                      Control.Distributed.Static.Closure
-                       (Cloud.Type.Vect -> Cloud.Type.Result))
+                       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                   Cloud.Kernel.$s$fSerializablea_$dBinary
                   Cloud.Kernel.$s$fSerializablea1 -}
-166cbdbbdd831a6cbb61bd5269d0735e
+707f29fdd4573adb5bb2eccfe5272425
   $s$fSerializablea1 ::
     Data.Typeable.Internal.Typeable
       (Control.Distributed.Process.Internal.Types.ProcessId,
        Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Kernel.$s$fSerializablea2
@@ -409,7 +409,7 @@ f80e1b50e497735f2c7ea8b1ed3980a8
                           <*>_N
                           <(Control.Distributed.Process.Internal.Types.ProcessId,
                             Control.Distributed.Static.Closure
-                              (Cloud.Type.Vect -> Cloud.Type.Result))>_N)) -}
+                              (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_N)) -}
 ba7d972832066660c31faefbc0f9ff85
   $s$fSerializablea10 :: [Data.Typeable.Internal.TypeRep]
   {- Unfolding: (GHC.Types.:
@@ -445,7 +445,7 @@ f084303d333a73db009c7bc942500bf0
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    17502837480397947244##
                    15872498598114190556##) -}
-e8a87b78796efcbdaa343de2db0edec4
+024f14665787dde5aa9493888d010e5d
   $s$fSerializablea14 ::
     Control.Distributed.Process.Serializable.Serializable
       Cloud.Type.MSG
@@ -454,7 +454,7 @@ e8a87b78796efcbdaa343de2db0edec4
                   @ Cloud.Type.MSG
                   Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
                   Cloud.Kernel.$s$fSerializablea15 -}
-7a6f066edf89e5ff86557be73af7787d
+0d74e5ceb1029a1cf693af87eb11345c
   $s$fSerializablea15 ::
     Data.Typeable.Internal.Typeable Cloud.Type.MSG
   {- Arity: 1, Strictness: <L,A>,
@@ -463,7 +463,7 @@ e8a87b78796efcbdaa343de2db0edec4
                   `cast`
                 (Sym (Data.Typeable.Internal.N:Typeable[0]
                           <*>_N <Cloud.Type.MSG>_N)) -}
-829d50b928c3f4baccad335acdd72e74
+4e25710b6871479d7619992426732835
   $s$fSerializablea16 ::
     GHC.Prim.Proxy# Cloud.Type.MSG -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
@@ -501,19 +501,19 @@ d3bf1fa46c82f38231daa0b8942d1f98
                   @ ()
                   Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
                   Cloud.Kernel.$s$fSerializablea20 -}
-62dd079f3394787a54337ff590765974
+d8818af058aa46a4fc405d08f191d87b
   $s$fSerializablea2 ::
     GHC.Prim.Proxy#
       (Control.Distributed.Process.Internal.Types.ProcessId,
        Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
     -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy#
                               (Control.Distributed.Process.Internal.Types.ProcessId,
                                Control.Distributed.Static.Closure
-                                 (Cloud.Type.Vect -> Cloud.Type.Result))) ->
+                                 (Cloud.Type.Vect -> Cloud.Type.IterationCount))) ->
                  Cloud.Kernel.$s$fSerializablea3) -}
 d32101c80da70698767b0cb1e6b8870d
   $s$fSerializablea20 :: Data.Typeable.Internal.Typeable ()
@@ -703,15 +703,15 @@ bbbf7ffe128854b724435110e990694a
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    11168708350194058468##
                    6517994011780897202##) -}
-33db4e9068b17ab24bce6f5811668b36
+003c5170a0d3924c7cc93266f2510899
   $s$fSerializablea_$dBinary ::
     Data.Binary.Class.Binary
       (Control.Distributed.Process.Internal.Types.ProcessId,
        Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True) Cloud.Kernel.$s$fBinary(,) -}
-076f98d91c3483e75df9f1f9eb4e54bc
+92356f0dcb92a612d1d27ff916964075
   $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
     Data.Binary.Class.Binary Cloud.Type.MSG
   {- Strictness: m,
@@ -857,11 +857,11 @@ be8e790a28e8c9e6ddde652ed9ae338e
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-c54fb05e69210f1f05a5f072381ca8fc
+56c82fcacb54fd3764d95da91f205669
   $wslaveProcess ::
     Control.Distributed.Process.Internal.Types.ProcessId
     -> Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result)
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Control.Distributed.Process.Internal.Types.LocalProcess
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -870,15 +870,15 @@ c54fb05e69210f1f05a5f072381ca8fc
      Inline: [0],
      Unfolding: (\ (ww :: Control.Distributed.Process.Internal.Types.ProcessId)
                    (ww1 :: Control.Distributed.Static.Closure
-                             (Cloud.Type.Vect -> Cloud.Type.Result))
+                             (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                    (w :: Control.Distributed.Process.Internal.Types.LocalProcess)
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Control.Distributed.Process.Internal.Primitives.unClosure1
-                        @ (Cloud.Type.Vect -> Cloud.Type.Result)
+                        @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
                         Cloud.Kernel.__remoteTable18
                           `cast`
                         (Sym (Data.Typeable.Internal.N:Typeable[0]
-                                  <*>_N <Cloud.Type.Vect -> Cloud.Type.Result>_N))
+                                  <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N))
                         ww1
                         w
                         w1 of ds1 { (#,#) ipv ipv1 ->
@@ -939,17 +939,20 @@ c54fb05e69210f1f05a5f072381ca8fc
                              $wgo :: [Cloud.Type.Vect]
                                      -> GHC.Prim.State# GHC.Prim.RealWorld
                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                           [(Cloud.Type.Vect, Cloud.Type.Result)] #)
+                                           [(Cloud.Type.Vect, Cloud.Type.IterationCount)] #)
                                {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
                              = \ (w2 :: [Cloud.Type.Vect])
                                  (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                                case w2 of wild3 {
-                                 [] -> (# w3, GHC.Types.[] @ (Cloud.Type.Vect, Cloud.Type.Result) #)
+                                 []
+                                 -> (# w3,
+                                       GHC.Types.[]
+                                         @ (Cloud.Type.Vect, Cloud.Type.IterationCount) #)
                                  : y ys
                                  -> case $wgo ys w3 of ds6 { (#,#) ipv8 ipv9 ->
                                     (# ipv8,
                                        GHC.Types.:
-                                         @ (Cloud.Type.Vect, Cloud.Type.Result)
+                                         @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
                                          (y, ipv1 y)
                                          ipv9 #) } }
                            } in
@@ -989,7 +992,7 @@ c54fb05e69210f1f05a5f072381ca8fc
                              @ ()
                              Cloud.Kernel.__remoteTable11
                              ipv6 } } } } } } } } } } } }) -}
-9192193b0af90cbe2f8519652771f817
+8cf48d0de53bc0e72c84a47a4d9323a8
   __remoteTable ::
     Control.Distributed.Static.RemoteTable
     -> Control.Distributed.Static.RemoteTable
@@ -999,7 +1002,7 @@ c54fb05e69210f1f05a5f072381ca8fc
                   `cast`
                 (<Control.Distributed.Static.RemoteTable>_R
                  ->_R Sym (Control.Distributed.Static.N:RemoteTable[0])) -}
-607b5305d8078f034fbd93302aa566c2
+bda848f37e1bd0079ce38d9f425633c3
   __remoteTable1 ::
     Control.Distributed.Static.RemoteTable
     -> Data.Map.Base.Map GHC.Base.String Data.Rank1Dynamic.Dynamic
@@ -1018,11 +1021,11 @@ c54fb05e69210f1f05a5f072381ca8fc
                          Cloud.Kernel.__remoteTable5
                          Cloud.Kernel.__remoteTable2
                          x `cast` (Control.Distributed.Static.N:RemoteTable[0])))) -}
-b16f3ad98711320ca260e4303e6f6442
+8d32a728b86219940f7774691a5b313e
   __remoteTable10 ::
     (Control.Distributed.Process.Internal.Types.ProcessId,
      Control.Distributed.Static.Closure
-       (Cloud.Type.Vect -> Cloud.Type.Result))
+       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
     -> Control.Distributed.Process.Internal.Types.LocalProcess
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1032,7 +1035,7 @@ b16f3ad98711320ca260e4303e6f6442
      Unfolding: InlineRule (3, True, False)
                 (\ (w :: (Control.Distributed.Process.Internal.Types.ProcessId,
                           Control.Distributed.Static.Closure
-                            (Cloud.Type.Vect -> Cloud.Type.Result)))
+                            (Cloud.Type.Vect -> Cloud.Type.IterationCount)))
                    (w1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
                    (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w of ww { (,) ww1 ww2 ->
@@ -1054,7 +1057,7 @@ b16f3ad98711320ca260e4303e6f6442
                    Control.Distributed.Process.Internal.Primitives.expect4
                    (GHC.Base.Nothing @ Foreign.C.Types.CInt)
                    (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
-7d9960c2dc1b740f05b4fccc65345f0a
+1c0d78b5d34d3f5671a90b6d80180324
   __remoteTable14 ::
     [Control.Distributed.Process.Internal.Primitives.Match
        Cloud.Type.MSG]
@@ -1066,7 +1069,7 @@ b16f3ad98711320ca260e4303e6f6442
                    (GHC.Types.[]
                       @ (Control.Distributed.Process.Internal.Primitives.Match
                            Cloud.Type.MSG))) -}
-3dedaf337673d800f6542e426d8b7a28
+ab010f27d6e6509953bbbfa68d08f470
   __remoteTable15 ::
     Control.Distributed.Process.Internal.Primitives.Match
       Cloud.Type.MSG
@@ -1087,7 +1090,7 @@ b16f3ad98711320ca260e4303e6f6442
                                             <GHC.Types.IO>_R
                                             <Cloud.Type.MSG>_N))
                                   (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <Cloud.Type.MSG>_N)))) -}
-d0eb7a95c5d50c60aef67276a68c62c8
+cb74899340908acda1dbb39e91e68741
   __remoteTable16 ::
     (Cloud.Type.MSG -> GHC.Types.Bool)
     -> (Cloud.Type.MSG
@@ -1103,14 +1106,14 @@ d0eb7a95c5d50c60aef67276a68c62c8
   __remoteTable17 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Waiting for input..."#) -}
-ca3fa36ca7670e639e6c322f63d99417
+b143a8e88e54c9c5cc63b68fd19a2fa3
   __remoteTable18 ::
-    GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.Result)
+    GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy#
-                              (Cloud.Type.Vect -> Cloud.Type.Result)) ->
+                              (Cloud.Type.Vect -> Cloud.Type.IterationCount)) ->
                  Cloud.Kernel.$s$fSerializablea6) -}
 8b0a538e8655f164867161cdd7084fb4
   __remoteTable19 :: Data.Rank1Typeable.TypeRep
@@ -1180,7 +1183,7 @@ f200756d03d3879f45a8baa88d0dca3b
   __remoteTable5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Cloud.Kernel.slaveProcess__tdict"#) -}
-1617f5e69ad1d065bff9bcbd1176e7e3
+9859bc4f23c72a0efe9f0b9407a8693c
   __remoteTable6 :: Data.Rank1Dynamic.Dynamic
   {- Strictness: m,
      Unfolding: (Data.Rank1Dynamic.Dynamic
@@ -1191,18 +1194,18 @@ f200756d03d3879f45a8baa88d0dca3b
                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
                                                   Control.Distributed.Static.Closure
                                                     (Cloud.Type.Vect
-                                                     -> Cloud.Type.Result))) GHC.Prim.Any)) -}
-30b5a102f11c2316197875e304af3056
+                                                     -> Cloud.Type.IterationCount))) GHC.Prim.Any)) -}
+2ba47f972950b361419aca44d63af627
   __remoteTable7 ::
     Control.Distributed.Process.Serializable.SerializableDict
       (Control.Distributed.Process.Internal.Types.ProcessId,
        Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result))
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m,
      Unfolding: (Control.Distributed.Process.Serializable.SerializableDict
                    @ (Control.Distributed.Process.Internal.Types.ProcessId,
                       Control.Distributed.Static.Closure
-                        (Cloud.Type.Vect -> Cloud.Type.Result))
+                        (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                    Cloud.Kernel.$s$fSerializablea) -}
 c72e4e395299519d08f77646186289ff
   __remoteTable8 :: Data.Rank1Typeable.TypeRep
@@ -1225,7 +1228,7 @@ c72e4e395299519d08f77646186289ff
                  (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
                    `cast`
                  (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
-2c62ca8d7b7aed247a0d67a056f42850
+3e8ce4697a02cfad4972a1cc310c437c
   __remoteTable9 :: Data.Rank1Dynamic.Dynamic
   {- Strictness: m,
      Unfolding: (Data.Rank1Dynamic.Dynamic
@@ -1235,7 +1238,7 @@ c72e4e395299519d08f77646186289ff
                    (Trans
                         (<(Control.Distributed.Process.Internal.Types.ProcessId,
                            Control.Distributed.Static.Closure
-                             (Cloud.Type.Vect -> Cloud.Type.Result))>_R
+                             (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_R
                          ->_R Trans
                                   (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
                                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
@@ -1248,7 +1251,8 @@ c72e4e395299519d08f77646186289ff
                                        (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)))
                         (UnsafeCo representational ((Control.Distributed.Process.Internal.Types.ProcessId,
                                                      Control.Distributed.Static.Closure
-                                                       (Cloud.Type.Vect -> Cloud.Type.Result))
+                                                       (Cloud.Type.Vect
+                                                        -> Cloud.Type.IterationCount))
                                                     -> Control.Distributed.Process.Internal.Types.Process
                                                          ()) GHC.Prim.Any))) -}
 fc49a9a53fa767c4080cefbd5cae8674
@@ -1266,11 +1270,11 @@ fc49a9a53fa767c4080cefbd5cae8674
     -> [Control.Distributed.Process.Internal.Types.ProcessId]
     -> Control.Distributed.Process.Internal.Types.Process ()
   {- Arity: 3, Strictness: <L,U><L,U><L,U> -}
-f635eed08e7b1bbcaa8018b84a28d6e8
+577cfbad26a2f48590215273fe084d4a
   slaveProcess ::
     (Control.Distributed.Process.Internal.Types.ProcessId,
      Control.Distributed.Static.Closure
-       (Cloud.Type.Vect -> Cloud.Type.Result))
+       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
     -> Control.Distributed.Process.Internal.Types.Process ()
   {- Arity: 3,
      Strictness: <S,1*U(1*U(U(U,U,U,U),U,U),U)><L,U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
@@ -1279,7 +1283,7 @@ f635eed08e7b1bbcaa8018b84a28d6e8
                   `cast`
                 (<(Control.Distributed.Process.Internal.Types.ProcessId,
                    Control.Distributed.Static.Closure
-                     (Cloud.Type.Vect -> Cloud.Type.Result))>_R
+                     (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_R
                  ->_R Trans
                           (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
                            ->_R Sym (GHC.Types.N:IO[0] <()>_R))
@@ -1290,33 +1294,33 @@ f635eed08e7b1bbcaa8018b84a28d6e8
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-ab688671c73051bea5eb2cef0ba39666
+2ca89c1664507fa6dceaf2eab0c7c740
   spawnProcesses ::
     Control.Distributed.Process.Internal.Types.ProcessId
     -> Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.Result)
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.Process
          [Control.Distributed.Process.Internal.Types.ProcessId]
   {- Arity: 3, Strictness: <L,1*U(U(U,U,U,U),U,U)><L,U><L,1*U> -}
 "SPEC/Cloud.Kernel $fBinary(,) @ ProcessId @ (Closure
-                                               (Vect -> Result))" [ALWAYS] forall ($dBinary1 :: Data.Binary.Class.Binary
-                                                                                                                                                        (Control.Distributed.Static.Closure
-                                                                                                                                                           (Cloud.Type.Vect
-                                                                                                                                                            -> Cloud.Type.Result)))
-                                                                                                                                        ($dBinary :: Data.Binary.Class.Binary
-                                                                                                                                                       Control.Distributed.Process.Internal.Types.ProcessId)
+                                               (Vect -> IterationCount))" [ALWAYS] forall ($dBinary1 :: Data.Binary.Class.Binary
+                                                                                                                                                                (Control.Distributed.Static.Closure
+                                                                                                                                                                   (Cloud.Type.Vect
+                                                                                                                                                                    -> Cloud.Type.IterationCount)))
+                                                                                                                                                ($dBinary :: Data.Binary.Class.Binary
+                                                                                                                                                               Control.Distributed.Process.Internal.Types.ProcessId)
   Data.Binary.Class.$fBinary(,) @ Control.Distributed.Process.Internal.Types.ProcessId
                                 @ (Control.Distributed.Static.Closure
-                                     (Cloud.Type.Vect -> Cloud.Type.Result))
+                                     (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                                 $dBinary
                                 $dBinary1
   = Cloud.Kernel.$s$fBinary(,)
-"SPEC/Cloud.Kernel $fBinaryClosure @ (Vect -> Result)" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
-                                                                                        (Cloud.Type.Vect
-                                                                                         -> Cloud.Type.Result))
+"SPEC/Cloud.Kernel $fBinaryClosure @ (Vect -> IterationCount)" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                                (Cloud.Type.Vect
+                                                                                                 -> Cloud.Type.IterationCount))
   Control.Distributed.Static.$fBinaryClosure @ (Cloud.Type.Vect
-                                                -> Cloud.Type.Result)
+                                                -> Cloud.Type.IterationCount)
                                              $dTypeable
   = Cloud.Kernel.$s$fBinary(,)_$s$fBinaryClosure
 "SPEC/Cloud.Kernel $fSerializablea @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
@@ -1327,20 +1331,20 @@ ab688671c73051bea5eb2cef0ba39666
                                                            $dTypeable
   = Cloud.Kernel.$s$fSerializablea19
 "SPEC/Cloud.Kernel $fSerializablea @ (ProcessId,
-                                     Closure (Vect -> Result))" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
-                                                                                                                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                                                                                                                   Control.Distributed.Static.Closure
-                                                                                                                                                     (Cloud.Type.Vect
-                                                                                                                                                      -> Cloud.Type.Result)))
-                                                                                                                                 ($dBinary :: Data.Binary.Class.Binary
-                                                                                                                                                (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                                                                                                                 Control.Distributed.Static.Closure
-                                                                                                                                                   (Cloud.Type.Vect
-                                                                                                                                                    -> Cloud.Type.Result)))
+                                     Closure (Vect -> IterationCount))" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                                                                                          (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                                                                                                                           Control.Distributed.Static.Closure
+                                                                                                                                                             (Cloud.Type.Vect
+                                                                                                                                                              -> Cloud.Type.IterationCount)))
+                                                                                                                                         ($dBinary :: Data.Binary.Class.Binary
+                                                                                                                                                        (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                                                                                                                         Control.Distributed.Static.Closure
+                                                                                                                                                           (Cloud.Type.Vect
+                                                                                                                                                            -> Cloud.Type.IterationCount)))
   Control.Distributed.Process.Serializable.$fSerializablea @ (Control.Distributed.Process.Internal.Types.ProcessId,
                                                               Control.Distributed.Static.Closure
                                                                 (Cloud.Type.Vect
-                                                                 -> Cloud.Type.Result))
+                                                                 -> Cloud.Type.IterationCount))
                                                            $dBinary
                                                            $dTypeable
   = Cloud.Kernel.$s$fSerializablea

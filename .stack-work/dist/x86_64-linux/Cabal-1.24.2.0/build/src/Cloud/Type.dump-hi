@@ -1,17 +1,18 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-02 14:06:48.961424 UTC
+2017-05-08 11:58:01.270331 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Type [family instance module] 8002
-  interface hash: 3641efde6fed0dee32bcb93ff6c544ef
-  ABI hash: 3373dadb8e4cacb29588c4364b8ba05f
-  export-list hash: 5612a4ad13c85539a7d49d1aebd082af
+  interface hash: c102ab32d864894e86126db74dc2617b
+  ABI hash: e26068b1ce979c7abf63e8447ed3f79b
+  export-list hash: ab061419ace2ca64be5cfacf30c7de81
   orphan hash: 83a0b0cabc80dfac9626352de3bb6025
   flag hash: 803d98d62aac3ee2e6dfa84540c08dea
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Cloud.Type.IterationCount
   Cloud.Type.MSG{Cloud.Type.ARG Cloud.Type.RESPONSE}
   Cloud.Type.Result
   Cloud.Type.Vect
@@ -80,7 +81,7 @@ import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Class b88eee4db2420047af9b
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG :: Data.Binary.Class.Binary Cloud.Type.MSG
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -89,7 +90,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2
                   Cloud.Type.$fBinaryMSG_$s$dmput
                   Cloud.Type.$fBinaryMSG_$cget
                   Cloud.Type.$fBinaryMSG_$cputList -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG1 ::
     Data.ByteString.Internal.ByteString
     -> Data.Binary.Get.Internal.Success Cloud.Type.MSG r
@@ -167,7 +168,7 @@ f5b09443eb1d6d5a7ffd4925c22b6d9b
                    Data.Binary.Class.$fBinaryDouble
                    Data.Binary.Class.$fBinaryDouble
                    Data.Binary.Class.$fBinaryDouble) -}
-012a221dbfcf57eae41fbfd08c4f284c
+fb997479271698c503de6d1b1238356b
   $fBinaryMSG2 ::
     (GHC.Classes.Ord word, GHC.Num.Num word, Data.Bits.Bits word) =>
     word
@@ -188,7 +189,7 @@ f5b09443eb1d6d5a7ffd4925c22b6d9b
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0
                      (Control.Distributed.Process.Internal.Types.ProcessId,
-                      [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                      [Cloud.Type.Result])))
                a1)
             r
        -> Data.Binary.Get.Internal.Decoder r
@@ -219,7 +220,7 @@ f5b09443eb1d6d5a7ffd4925c22b6d9b
                                      'GHC.Generics.DecidedLazy)
                                   (GHC.Generics.Rec0
                                      (Control.Distributed.Process.Internal.Types.ProcessId,
-                                      [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                                      [Cloud.Type.Result])))
                                a1)
                             r) ->
                  case w5 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
@@ -288,7 +289,7 @@ f062430f90da0062f2d512c15bce0bf9
                             r) ->
                  case w5 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
                  Cloud.Type.$w$dGSumGet1 @ word @ a1 @ r ww1 ww2 ww3 ww4 w6 }) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG5 ::
     Cloud.Type.MSG
     -> (GHC.Generics.:+:)
@@ -321,7 +322,7 @@ f062430f90da0062f2d512c15bce0bf9
                (GHC.Generics.K1
                   GHC.Generics.R
                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                   [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                   [Cloud.Type.Result]))))
          x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -358,7 +359,7 @@ f062430f90da0062f2d512c15bce0bf9
                                 (GHC.Generics.K1
                                    GHC.Generics.R
                                    (Control.Distributed.Process.Internal.Types.ProcessId,
-                                    [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                                    [Cloud.Type.Result]))))
                         @ x
                         g1
                           `cast`
@@ -426,7 +427,7 @@ f062430f90da0062f2d512c15bce0bf9
                                 (GHC.Generics.K1
                                    GHC.Generics.R
                                    (Control.Distributed.Process.Internal.Types.ProcessId,
-                                    [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                                    [Cloud.Type.Result]))))
                         @ x
                         g1
                           `cast`
@@ -434,7 +435,7 @@ f062430f90da0062f2d512c15bce0bf9
                              (Sym (GHC.Generics.N:K1[0]
                                        <GHC.Generics.R>_P
                                        <(Control.Distributed.Process.Internal.Types.ProcessId,
-                                         [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                         [Cloud.Type.Result])>_R
                                        <x>_P))
                              (Trans
                                   (Sym (GHC.Generics.N:M1[0]
@@ -447,7 +448,7 @@ f062430f90da0062f2d512c15bce0bf9
                                             <GHC.Generics.K1
                                                GHC.Generics.R
                                                (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                [(Cloud.Type.Vect, Cloud.Type.Result)])>_R))
+                                                [Cloud.Type.Result])>_R))
                                   (Sym (GHC.Generics.N:M1[0]
                                             <GHC.Generics.C>_P
                                             <'GHC.Generics.MetaCons
@@ -462,9 +463,8 @@ f062430f90da0062f2d512c15bce0bf9
                                                (GHC.Generics.K1
                                                   GHC.Generics.R
                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                   [(Cloud.Type.Vect,
-                                                     Cloud.Type.Result)]))>_R)) <x>_N)) }) -}
-cd7c61ff70d800c81e69d2b5ebec42d5
+                                                   [Cloud.Type.Result]))>_R)) <x>_N)) }) -}
+f6bb2459cc075a95fc71d6bb689ed285
   $fBinaryMSG6 ::
     Data.Binary.Class.GBinaryPut
       (GHC.Generics.D1
@@ -496,7 +496,7 @@ cd7c61ff70d800c81e69d2b5ebec42d5
                                    'GHC.Generics.DecidedLazy)
                                 (GHC.Generics.Rec0
                                    (Control.Distributed.Process.Internal.Types.ProcessId,
-                                    [(Cloud.Type.Vect, Cloud.Type.Result)])))))
+                                    [Cloud.Type.Result])))))
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Type.$fBinaryMSG7
@@ -534,9 +534,8 @@ cd7c61ff70d800c81e69d2b5ebec42d5
                                                        'GHC.Generics.DecidedLazy)
                                                     (GHC.Generics.Rec0
                                                        (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                        [(Cloud.Type.Vect,
-                                                          Cloud.Type.Result)]))))>_N)) -}
-d90e8df34d3c1ad43dab4c937b844aa6
+                                                        [Cloud.Type.Result]))))>_N)) -}
+9645efe2d86124d69d64afc5686902bd
   $fBinaryMSG7 ::
     GHC.Generics.M1
       GHC.Generics.D
@@ -568,7 +567,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                 'GHC.Generics.DecidedLazy)
                              (GHC.Generics.Rec0
                                 (Control.Distributed.Process.Internal.Types.ProcessId,
-                                 [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                                 [Cloud.Type.Result]))))
       t
     -> Data.Binary.Put.Put
   {- Arity: 1, Strictness: <S,1*U>,
@@ -606,7 +605,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                                        'GHC.Generics.DecidedLazy)
                                                     (GHC.Generics.Rec0
                                                        (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                        [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                                                        [Cloud.Type.Result]))))
                              t) ->
                  Data.Binary.Generic.$w$cgput
                    @ (GHC.Generics.M1
@@ -634,7 +633,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                               'GHC.Generics.DecidedLazy)
                            (GHC.Generics.Rec0
                               (Control.Distributed.Process.Internal.Types.ProcessId,
-                               [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                               [Cloud.Type.Result]))))
                    Cloud.Type.$fBinaryMSG10
                      `cast`
                    (Sym (Data.Binary.Generic.N:GSumPut[0]
@@ -666,7 +665,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0
                                       (Control.Distributed.Process.Internal.Types.ProcessId,
-                                       [(Cloud.Type.Vect, Cloud.Type.Result)])))>_N))
+                                       [Cloud.Type.Result])))>_N))
                    1##
                    1##
                    @ t
@@ -702,9 +701,8 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                                   'GHC.Generics.DecidedLazy)
                                                (GHC.Generics.Rec0
                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                   [(Cloud.Type.Vect,
-                                                     Cloud.Type.Result)])))>_R <t>_N)) -}
-84877ae69d1bfe18a77f5f47e808cf1e
+                                                   [Cloud.Type.Result])))>_R <t>_N)) -}
+059c6cc38c02fb067841726f98c3c739
   $fBinaryMSG8 ::
     (GHC.Num.Num w, Data.Bits.Bits w, Data.Binary.Class.Binary w) =>
     w
@@ -721,7 +719,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                'GHC.Generics.DecidedLazy)
             (GHC.Generics.Rec0
                (Control.Distributed.Process.Internal.Types.ProcessId,
-                [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                [Cloud.Type.Result])))
          a1
     -> Data.Binary.Put.Put
   {- Arity: 6,
@@ -747,7 +745,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                   'GHC.Generics.DecidedLazy)
                                (GHC.Generics.Rec0
                                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                                   [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                                   [Cloud.Type.Result])))
                             a1) ->
                  case Cloud.Type.$w$dGSumPut
                         @ w
@@ -768,7 +766,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                    @ GHC.Integer.Type.Integer
                    Cloud.Type.$fBinaryMSG_$s$fBinary(,,)
                    Data.Binary.Class.$fBinaryInteger) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG_$cfrom ::
     Cloud.Type.MSG -> GHC.Generics.Rep Cloud.Type.MSG x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
@@ -816,20 +814,19 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                                            (GHC.Generics.K1
                                                               GHC.Generics.R
                                                               (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                               [(Cloud.Type.Vect,
-                                                                 Cloud.Type.Result)])))>_R))
+                                                               [Cloud.Type.Result])))>_R))
                           (Sub (Sym (Cloud.Type.Rep_MSG[0]))) <x>_N) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG_$cget :: Data.Binary.Get.Internal.Get Cloud.Type.MSG
   {- Arity: 2, Strictness: <S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Type.$fBinaryMSG1
                   `cast`
                 (Sym (Data.Binary.Get.Internal.N:Get[0] <Cloud.Type.MSG>_R)) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG_$cputList :: [Cloud.Type.MSG] -> Data.Binary.Put.Put
   {- Arity: 1 -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG_$cto ::
     GHC.Generics.Rep Cloud.Type.MSG x -> Cloud.Type.MSG
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
@@ -877,8 +874,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                                        (GHC.Generics.K1
                                                           GHC.Generics.R
                                                           (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                           [(Cloud.Type.Vect,
-                                                             Cloud.Type.Result)])))>_R) <x>_N) of wild {
+                                                           [Cloud.Type.Result])))>_R) <x>_N) of wild {
                    GHC.Generics.L1 ds1
                    -> Cloud.Type.ARG
                         ds1
@@ -936,7 +932,7 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                           (GHC.Generics.K1
                                              GHC.Generics.R
                                              (Control.Distributed.Process.Internal.Types.ProcessId,
-                                              [(Cloud.Type.Vect, Cloud.Type.Result)]))>_R)
+                                              [Cloud.Type.Result]))>_R)
                                   (GHC.Generics.N:M1[0]
                                        <GHC.Generics.S>_P
                                        <'GHC.Generics.MetaSel
@@ -947,13 +943,13 @@ d90e8df34d3c1ad43dab4c937b844aa6
                                        <GHC.Generics.K1
                                           GHC.Generics.R
                                           (Control.Distributed.Process.Internal.Types.ProcessId,
-                                           [(Cloud.Type.Vect, Cloud.Type.Result)])>_R) <x>_N)
+                                           [Cloud.Type.Result])>_R) <x>_N)
                              (GHC.Generics.N:K1[0]
                                   <GHC.Generics.R>_P
                                   <(Control.Distributed.Process.Internal.Types.ProcessId,
-                                    [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                    [Cloud.Type.Result])>_R
                                   <x>_P)) }) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fBinaryMSG_$s$dmput :: Cloud.Type.MSG -> Data.Binary.Put.Put
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (-3, True, False)
@@ -1015,7 +1011,7 @@ b5d45f09dcdf37a371161d63f9314110
                      Data.Binary.Class.$fBinaryDouble
                      Data.Binary.Class.$fBinaryDouble
                      Data.Binary.Class.$fBinaryDouble) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $fGenericMSG :: GHC.Generics.Generic Cloud.Type.MSG
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1074,7 +1070,7 @@ c5d7a745252d93f56da1b31e03d8ef31
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+5d3e3dbbeee882c66a2b3b200295b045
   $w$cget ::
     GHC.Prim.Addr#
     -> GHC.ForeignPtr.ForeignPtrContents
@@ -1116,7 +1112,7 @@ c5d7a745252d93f56da1b31e03d8ef31
                               'GHC.Generics.DecidedLazy)
                            (GHC.Generics.Rec0
                               (Control.Distributed.Process.Internal.Types.ProcessId,
-                               [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                               [Cloud.Type.Result]))))
                    Cloud.Type.$fBinaryMSG4
                      `cast`
                    (Trans
@@ -1179,7 +1175,7 @@ c5d7a745252d93f56da1b31e03d8ef31
                                                 'GHC.Generics.DecidedLazy)
                                              (GHC.Generics.Rec0
                                                 (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                 [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                                                 [Cloud.Type.Result])))
                                           a1>_R))
                         (Sym (Data.Binary.Generic.N:GSumGet[0]
                                   <GHC.Generics.C1
@@ -1194,7 +1190,7 @@ c5d7a745252d93f56da1b31e03d8ef31
                                            'GHC.Generics.DecidedLazy)
                                         (GHC.Generics.Rec0
                                            (Control.Distributed.Process.Internal.Types.ProcessId,
-                                            [(Cloud.Type.Vect, Cloud.Type.Result)])))>_N)))
+                                            [Cloud.Type.Result])))>_N)))
                    1##
                    1##
                    @ GHC.Prim.Any
@@ -1228,7 +1224,7 @@ c5d7a745252d93f56da1b31e03d8ef31
                                         'GHC.Generics.DecidedLazy)
                                      (GHC.Generics.Rec0
                                         (Control.Distributed.Process.Internal.Types.ProcessId,
-                                         [(Cloud.Type.Vect, Cloud.Type.Result)]))))
+                                         [Cloud.Type.Result]))))
                                GHC.Prim.Any) ->
                     w i'
                       (Cloud.Type.$fBinaryMSG_$cto
@@ -1268,10 +1264,9 @@ c5d7a745252d93f56da1b31e03d8ef31
                                                                   'GHC.Generics.DecidedLazy)
                                                                (GHC.Generics.Rec0
                                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                                   [(Cloud.Type.Vect,
-                                                                     Cloud.Type.Result)])))>_R))
+                                                                   [Cloud.Type.Result])))>_R))
                               (Sub (Sym (Cloud.Type.Rep_MSG[0]))) <GHC.Prim.Any>_N)))) -}
-a473f61cb2bdba1c0244561da4bd7bfa
+621a410179266f31e7c9d940c6cae0a1
   $w$dGSumGet ::
     GHC.Prim.Addr#
     -> GHC.ForeignPtr.ForeignPtrContents
@@ -1291,7 +1286,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                   'GHC.Generics.DecidedLazy)
                (GHC.Generics.Rec0
                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                   [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                   [Cloud.Type.Result])))
             a1)
          r
     -> Data.Binary.Get.Internal.Decoder r
@@ -1318,7 +1313,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                                     'GHC.Generics.DecidedLazy)
                                  (GHC.Generics.Rec0
                                     (Control.Distributed.Process.Internal.Types.ProcessId,
-                                     [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                                     [Cloud.Type.Result])))
                               a1)
                            r) ->
                  Control.Distributed.Process.Internal.Types.$w$cget1
@@ -1331,7 +1326,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                       (a2 :: Control.Distributed.Process.Internal.Types.ProcessId)[OneShot] ->
                     case i' of ww4 { Data.ByteString.Internal.PS ww5 ww6 ww7 ww8 ->
                     Data.Binary.Class.$w$cget10
-                      @ (Cloud.Type.Vect, Cloud.Type.Result)
+                      @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
                       Cloud.Type.$fBinaryMSG_$s$fBinary(,)
                       @ r
                       ww5
@@ -1339,7 +1334,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                       ww7
                       ww8
                       (\ (i'1 :: Data.ByteString.Internal.ByteString)
-                         (a3 :: [(Cloud.Type.Vect, Cloud.Type.Result)])[OneShot] ->
+                         (a3 :: [Cloud.Type.Result])[OneShot] ->
                        w i'1
                          (a2, a3)
                            `cast`
@@ -1347,7 +1342,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                               (Sym (GHC.Generics.N:K1[0]
                                         <GHC.Generics.R>_P
                                         <(Control.Distributed.Process.Internal.Types.ProcessId,
-                                          [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                          [Cloud.Type.Result])>_R
                                         <a1>_P))
                               (Trans
                                    (Sym (GHC.Generics.N:M1[0]
@@ -1360,7 +1355,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                                              <GHC.Generics.K1
                                                 GHC.Generics.R
                                                 (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                 [(Cloud.Type.Vect, Cloud.Type.Result)])>_R))
+                                                 [Cloud.Type.Result])>_R))
                                    (Sym (GHC.Generics.N:M1[0]
                                              <GHC.Generics.C>_P
                                              <'GHC.Generics.MetaCons
@@ -1374,8 +1369,7 @@ a473f61cb2bdba1c0244561da4bd7bfa
                                                    'GHC.Generics.DecidedLazy)
                                                 (GHC.Generics.Rec0
                                                    (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                    [(Cloud.Type.Vect,
-                                                      Cloud.Type.Result)]))>_R)) <a1>_N))) })) -}
+                                                    [Cloud.Type.Result]))>_R)) <a1>_N))) })) -}
 e3c135f4c07f3546447ba5dfebe5379b
   $w$dGSumGet1 ::
     GHC.Prim.Addr#
@@ -1480,7 +1474,7 @@ e3c135f4c07f3546447ba5dfebe5379b
                                                 (GHC.Generics.Rec0
                                                    (Control.Distributed.Process.Internal.Types.ProcessId,
                                                     [Cloud.Type.Vect]))>_R)) <a1>_N))) })) -}
-f112b268e7721e695707af834680e66f
+8f8863b3dff59655ce3946c10e843478
   $w$dGSumPut ::
     Data.Binary.Class.Binary w =>
     w
@@ -1496,7 +1490,7 @@ f112b268e7721e695707af834680e66f
                'GHC.Generics.DecidedLazy)
             (GHC.Generics.Rec0
                (Control.Distributed.Process.Internal.Types.ProcessId,
-                [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                [Cloud.Type.Result])))
          a1
     -> (# (), Data.ByteString.Builder.Internal.Builder #)
   {- Arity: 3,
@@ -1518,7 +1512,7 @@ f112b268e7721e695707af834680e66f
                                   'GHC.Generics.DecidedLazy)
                                (GHC.Generics.Rec0
                                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                                   [(Cloud.Type.Vect, Cloud.Type.Result)])))
+                                   [Cloud.Type.Result])))
                             a1) ->
                  case w2 of code { DEFAULT ->
                  (# GHC.Tuple.(),
@@ -1541,7 +1535,7 @@ f112b268e7721e695707af834680e66f
                                                   'GHC.Generics.DecidedLazy)
                                                (GHC.Generics.Rec0
                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                   [(Cloud.Type.Vect, Cloud.Type.Result)]))>_R)
+                                                   [Cloud.Type.Result]))>_R)
                                        (GHC.Generics.N:M1[0]
                                             <GHC.Generics.S>_P
                                             <'GHC.Generics.MetaSel
@@ -1552,11 +1546,11 @@ f112b268e7721e695707af834680e66f
                                             <GHC.Generics.K1
                                                GHC.Generics.R
                                                (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                [(Cloud.Type.Vect, Cloud.Type.Result)])>_R) <a1>_N)
+                                                [Cloud.Type.Result])>_R) <a1>_N)
                                   (GHC.Generics.N:K1[0]
                                        <GHC.Generics.R>_P
                                        <(Control.Distributed.Process.Internal.Types.ProcessId,
-                                         [(Cloud.Type.Vect, Cloud.Type.Result)])>_R
+                                         [Cloud.Type.Result])>_R
                                        <a1>_P)) of ww { (,) ww1 ww2 ->
                         let {
                           ds2 :: Data.ByteString.Builder.Internal.Builder
@@ -1758,13 +1752,15 @@ f112b268e7721e695707af834680e66f
                           eta))
                       `cast`
                     (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) #) }) -}
-5cb484fe59aeb4d8d76bba3329f32c4e
+a6eb91aab4183c65cccf21a26bc83a19
+  type IterationCount = GHC.Integer.Type.Integer
+5d3e3dbbeee882c66a2b3b200295b045
   data MSG
     = ARG (Control.Distributed.Process.Internal.Types.ProcessId,
            [Cloud.Type.Vect])
     | RESPONSE (Control.Distributed.Process.Internal.Types.ProcessId,
-                [(Cloud.Type.Vect, Cloud.Type.Result)])
-5cb484fe59aeb4d8d76bba3329f32c4e
+                [Cloud.Type.Result])
+5d3e3dbbeee882c66a2b3b200295b045
   axiom Rep_MSG::
       GHC.Generics.Rep Cloud.Type.MSG
         = GHC.Generics.D1
@@ -1796,9 +1792,9 @@ f112b268e7721e695707af834680e66f
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0
                                       (Control.Distributed.Process.Internal.Types.ProcessId,
-                                       [(Cloud.Type.Vect, Cloud.Type.Result)]))))
-48c1c54b417dff7c0ec1bc96414d6bcc
-  type Result = GHC.Integer.Type.Integer
+                                       [Cloud.Type.Result]))))
+7b1c9a8409219ff24a3681454df7431e
+  type Result = (Cloud.Type.Vect, Cloud.Type.IterationCount)
 8c391a93b4b1398d5c285c5d294fd60a
   type Vect = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
 instance Data.Binary.Class.Binary [Cloud.Type.MSG]

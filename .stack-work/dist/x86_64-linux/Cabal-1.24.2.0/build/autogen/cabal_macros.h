@@ -77,6 +77,20 @@
   (major1) == 2 && (major2) <  11 || \
   (major1) == 2 && (major2) == 11 && (minor) <= 1)
 
+/* package easyplot-1.0 */
+#define VERSION_easyplot "1.0"
+#define MIN_VERSION_easyplot(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 0)
+
+/* package gnuplot-0.5.4.1 */
+#define VERSION_gnuplot "0.5.4.1"
+#define MIN_VERSION_gnuplot(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 4)
+
 /* tool cpphs-1.20.1 */
 #define TOOL_VERSION_cpphs "1.20.1"
 #define MIN_TOOL_VERSION_cpphs(major1,major2,minor) (\

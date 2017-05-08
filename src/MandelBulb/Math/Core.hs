@@ -7,29 +7,44 @@ type Iter = Integer
 type Limit = Double
 
 
-v_next :: Vect -> Vect
-v_next (x, y, z) = (x_new, y_new, z_new)
-  where x_new = ((3*z*z-x*x-y*y)*x*(x*x-3*y*y))/(x*x+y*y)
-        y_new = ((3*z*z-x*x-y*y)*y*(3*x*x-y*y))/(x*x+y*y)
-        z_new = z*(z*z-3*x*x-3*y*y)
+r :: Vect -> Double
+r v = norm v
 
+theta :: Vect -> Double
+theta (x, y, z) = atan(y / x)
+
+phi :: Vect -> Double
+phi vec@(_, _, z) = acos(z / (norm vec))
+
+v_n :: Double -> Vect -> Vect
+v_n n v = (x_new, y_new, z_new)
+  where r_n = (r v) ** n
+        x_new = r_n * sin(n*(theta v)) * cos(n*(phi v))
+        y_new = r_n * sin(n*(theta v)) * sin(n*(phi v))
+        z_new = r_n * cos(n*(theta v))
+
+
+v_next :: Double -> Vect -> Vect
+v_next n v = v_n n v
 
 addVec :: Vect -> Vect -> Vect
 addVec (a, b, c) (d, e, f) = (a+d, b+e, c+f)
 
-iterateBlb :: Vect -> Vect -> Vect
-iterateBlb (0,0,0) c = c
-iterateBlb v c = addVec (v_next v) c
+
+iterateBlb :: Double -> Vect -> Vect -> Vect
+iterateBlb _ (0,0,0) c = c
+iterateBlb n v c = addVec (v_next n v) c
 
 
-bulb :: Iter -> Iter -> Limit -> Vect -> Vect -> Iter
-bulb i m l c v
-  | (i < m) && ((norm v) < l) = bulb (i+1) m l c v_new
+bulb :: Double -> Iter -> Iter -> Limit -> Vect -> Vect -> Iter
+bulb n i m l c v
+  | (i < m) && ((norm v) < l) = bulb n (i+1) m l c v_new
   | otherwise = i
-    where v_new = iterateBlb v c
+    where v_new = iterateBlb n v c
 
-doBulb :: Iter -> Iter -> Limit -> Vect -> Iter
-doBulb i m l c = bulb i m l c (0, 0, 0)
+doBulb :: Double -> Iter -> Iter -> Limit -> Vect -> Iter
+doBulb n i m l c = bulb n i m l c (0, 0, 0)
+
 
 norm :: Vect -> Double
 norm (x, y, z) = sqrt $ (x*x) + (y*y) + (z*z)

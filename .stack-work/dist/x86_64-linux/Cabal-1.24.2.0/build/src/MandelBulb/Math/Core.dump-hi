@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-24 19:19:50.014742 UTC
+2017-05-08 11:58:00.250754 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:MandelBulb.Math.Core 8002
-  interface hash: 33b2ffe00af9bbf646cb78f013e49f4a
-  ABI hash: d0d8696e46fca7ae7e2fc4388ea877cd
+  interface hash: e7ea50893601b58ecea7610f53452821
+  ABI hash: 836712e5bf261b777ce657d37e06546a
   export-list hash: a8e5488e5f983e6fdcf9a244580d4f9b
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ed72a826337bf6a9c63f2f27ffdcdd90
@@ -50,30 +50,40 @@ f48d4b4e090f764956007aff32abfa16
   type Limit = GHC.Types.Double
 b957c6a5f1dda5a7561721faae8fe034
   type Vect = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
-7ea4d62ebab1e5dd42628ef6f6b42c6f
+3bde16ec0c4006167efb18ea193c3863
   bulb ::
-    MandelBulb.Math.Core.Iter
+    GHC.Types.Double
+    -> MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Limit
     -> MandelBulb.Math.Core.Vect
+    -> MandelBulb.Math.Core.Vect
+    -> MandelBulb.Math.Core.Iter
+  {- Arity: 6,
+     Strictness: <L,U(U)><S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))><L,1*U(1*U(U),1*U(U),1*U(U))> -}
+5e9889a59026f5e7b51fa70f9f3b285e
+  doBulb ::
+    GHC.Types.Double
+    -> MandelBulb.Math.Core.Iter
+    -> MandelBulb.Math.Core.Iter
+    -> MandelBulb.Math.Core.Limit
     -> MandelBulb.Math.Core.Vect
     -> MandelBulb.Math.Core.Iter
   {- Arity: 5,
-     Strictness: <S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))><L,1*U(1*U(U),1*U(U),1*U(U))> -}
-1f99d935b1955a005de3dddf9445f6fb
-  doBulb ::
-    MandelBulb.Math.Core.Iter
-    -> MandelBulb.Math.Core.Iter
-    -> MandelBulb.Math.Core.Limit
-    -> MandelBulb.Math.Core.Vect
-    -> MandelBulb.Math.Core.Iter
-  {- Arity: 4, Strictness: <S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))>,
-     Unfolding: InlineRule (4, True, False)
-                (\ (i :: MandelBulb.Math.Core.Iter)
+     Strictness: <L,U(U)><S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))>,
+     Unfolding: InlineRule (5, True, False)
+                (\ (n :: GHC.Types.Double)
+                   (i :: MandelBulb.Math.Core.Iter)
                    (m :: MandelBulb.Math.Core.Iter)
                    (l :: MandelBulb.Math.Core.Limit)
                    (c :: MandelBulb.Math.Core.Vect) ->
-                 MandelBulb.Math.Core.bulb i m l c MandelBulb.Math.Core.doBulb1) -}
+                 MandelBulb.Math.Core.bulb
+                   n
+                   i
+                   m
+                   l
+                   c
+                   MandelBulb.Math.Core.doBulb1) -}
 701702ebde5250293287d31e62f728e2
   doBulb1 :: (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
   {- HasNoCafRefs, Strictness: m,
