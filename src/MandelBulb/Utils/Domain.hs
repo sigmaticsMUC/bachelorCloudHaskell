@@ -1,5 +1,6 @@
 module MandelBulb.Utils.Domain(
   generateDomain,
+  generatePlane,
   rowMajor
 )where
 

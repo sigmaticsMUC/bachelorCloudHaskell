@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-08 12:00:05.710146 UTC
+2017-06-22 23:06:49.815184 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Master 8002
-  interface hash: aa6ebeb33e07753f06bd5f3c34a9246a
-  ABI hash: 961ca3a95a23f9754171254da57e853a
+  interface hash: 29412ec000e99be719f7fe7f6f0651c6
+  ABI hash: 1a7d683ebdc46ee674f968ecd89019a0
   export-list hash: 0ed6f26dee9929fe9c5d49beaff19911
   orphan hash: 71a08ebe1c46279fca47c989b813f170
   flag hash: 3154edb06e70847877e7ec9876375ad9
@@ -75,11 +75,18 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO.Handle ba98a5b34d78cbf48b41fe58a3735c69
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD dbf0d0d4f42ab1465129a88ccf7880ff
+import  -/  base-4.9.1.0:GHC.IO.Handle.Text b65719f3b262b071ab1aabeb72fc9d8b
+import  -/  base-4.9.1.0:GHC.IO.IOMode 2f5782f93b12a0d860d6d661b9fb405c
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  Cloud.Kernel c21ea41e605932865138f98b6130df7f
   exports: 445dcc8263bc74023883a4e67c319ca4
   distribute 2cd3adc7a3e711cacb33a155a03e2a10
@@ -95,6 +102,8 @@ import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OV
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
 import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ:Control.Distributed.Static 841c7e8459fcc6cc4abf344e1885a430
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
 984c0484778231fdff9021b5a4949345
   $s$fSerializablea ::
     Control.Distributed.Process.Serializable.Serializable
@@ -163,7 +172,7 @@ c847decc0e36b4547f249eab70a75396
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-91b9d8377766f548c948bd8283da07cc
+7cf80bfea72438bd316d80cdd1d22885
   masterProcess ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -189,7 +198,7 @@ c847decc0e36b4547f249eab70a75396
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-26187e7ee8a5aa9f98f371bc7903b186
+7eb7644c0e02485779aad71f3ff9c515
   masterProcess1 ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -199,7 +208,114 @@ c847decc0e36b4547f249eab70a75396
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 5,
-     Strictness: <L,U><L,U><L,U><L,U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U,U,U,U(U,U),U,U))><S,U> -}
+     Strictness: <L,U><L,U><L,U><L,U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U,U,U,U(U,U),U,U))><S,U>,
+     Unfolding: (\ (cF :: Control.Distributed.Static.Closure
+                            (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                   (args :: [Cloud.Type.Vect])
+                   (nodes :: [Control.Distributed.Process.Internal.Types.NodeId])
+                   (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Control.Distributed.Process.Internal.Primitives.say1
+                        Cloud.Master.masterProcess6
+                        eta
+                        eta1 of ds1 { (#,#) ipv ipv1 ->
+                 let {
+                   master :: Control.Distributed.Process.Internal.Types.ProcessId
+                   = case eta of wild { Control.Distributed.Process.Internal.Types.LocalProcess ds3 dt ds4 dt1 dt2 ds5 ->
+                     ds4 }
+                 } in
+                 case ((Cloud.Kernel.spawnProcesses master cF nodes)
+                         `cast`
+                       (Trans
+                            (Control.Distributed.Process.Internal.Types.N:Process[0] <[Control.Distributed.Process.Internal.Types.ProcessId]>_N)
+                            (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                 <*>_N
+                                 <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                 <GHC.Types.IO>_R
+                                 <[Control.Distributed.Process.Internal.Types.ProcessId]>_N))
+                         eta)
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <[Control.Distributed.Process.Internal.Types.ProcessId]>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Control.Distributed.Process.Internal.Primitives.say1
+                        (case GHC.List.$wlenAcc
+                                @ Control.Distributed.Process.Internal.Types.NodeId
+                                nodes
+                                0# of ww2 { DEFAULT ->
+                         case GHC.Show.$wshowSignedInt
+                                0#
+                                ww2
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Base.++
+                           @ GHC.Types.Char
+                           (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                           Cloud.Master.masterProcess5 } })
+                        eta
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case ((Cloud.Kernel.distribute master args ipv3)
+                         `cast`
+                       (Trans
+                            (Control.Distributed.Process.Internal.Types.N:Process[0] <()>_N)
+                            (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                 <*>_N
+                                 <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                 <GHC.Types.IO>_R
+                                 <()>_N))
+                         eta)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case Cloud.Master.masterProcess4
+                        ipv3
+                        Cloud.Master.masterProcess3
+                        eta
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Cloud.Master.masterProcess2
+                        GHC.IO.IOMode.WriteMode
+                        ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        ipv11
+                        (GHC.CString.unpackAppendCString#
+                           "x, y, z, c\n"#
+                           (Cloud.Master.masterProcess_go ipv9))
+                        GHC.Types.True
+                        ipv10 of ds7 { (#,#) ipv12 ipv13 ->
+                 case GHC.IO.Handle.hClose1
+                        ipv11
+                        ipv12 of ds8 { (#,#) ipv14 ipv15 ->
+                 (# ipv14, GHC.Tuple.() #) } } } } } } } }) -}
+bbf9f0a6a4725a6407652de911b1c752
+  masterProcess2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "../test3.txt"#) -}
+0ac97b5d3e4bc98c61c898a9ac9ffa45
+  masterProcess3 :: [[Cloud.Type.Result]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [Cloud.Type.Result]
+                   (GHC.Types.[] @ Cloud.Type.Result)
+                   (GHC.Types.[] @ [Cloud.Type.Result])) -}
+94723a7fb561f89d6701ea2ab5c21049
+  masterProcess4 ::
+    [Control.Distributed.Process.Internal.Types.ProcessId]
+    -> [[Cloud.Type.Result]]
+    -> Control.Distributed.Process.Internal.Types.LocalProcess
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Cloud.Type.Result]] #)
+  {- Arity: 4,
+     Strictness: <S,1*U><L,U><L,1*U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U,U,U,U(U,U),U,U))><S,U> -}
+781a1de55b1989e09e25f3f78bd0ed72
+  masterProcess5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   " processes spawned!"#) -}
+1a2a1e497a2dde27a4fdcf2f1b443856
+  masterProcess6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "spawning processes..."#) -}
+781091cea8904187400bde5a6c4f6ada
+  masterProcess_go :: [[Cloud.Type.Result]] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
 "SPEC/Cloud.Master $fSerializablea @ MSG" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
                                                                            Cloud.Type.MSG)
                                                           ($dBinary :: Data.Binary.Class.Binary

@@ -1,5 +1,6 @@
 module MandelBulb.Math.Core(
-  doBulb
+  doBulb,
+  norm
 )where
 
 type Vect = (Double, Double, Double)
@@ -16,13 +17,21 @@ theta (x, y, z) = atan(y / x)
 phi :: Vect -> Double
 phi vec@(_, _, z) = acos(z / (norm vec))
 
+{-
 v_n :: Double -> Vect -> Vect
 v_n n v = (x_new, y_new, z_new)
   where r_n = (r v) ** n
         x_new = r_n * sin(n*(theta v)) * cos(n*(phi v))
         y_new = r_n * sin(n*(theta v)) * sin(n*(phi v))
         z_new = r_n * cos(n*(theta v))
+-}
 
+
+v_n :: Double -> Vect -> Vect
+v_n n v@(x, y, z) = (x_new, y_new, z_new)
+  where x_new = (3*z*z-x*x-y*y)*x*(x*x-3*y*y)*(1.0/(x*x+y*y))
+        y_new = (3*z*z-x*x-y*y)*y*(3*x*x-y*y)*(1.0/(x*x+y*y))
+        z_new = z*(z*z-3*x*x-3*y*y)
 
 v_next :: Double -> Vect -> Vect
 v_next n v = v_n n v
