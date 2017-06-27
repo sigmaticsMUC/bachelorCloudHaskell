@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-08 11:58:03.392702 UTC
+2017-06-27 14:43:34.119922 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Utils.DistribUtils 8002
-  interface hash: b94a3e18232204e8112147f77f682f85
+  interface hash: deb9d0e3e2129cdab6ec8a27b0e7f7b6
   ABI hash: 72378fffcd57306aea594d1d458b4c5f
   export-list hash: 7e71243dacf4c6af4e8cd8539cf6c906
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -14,6 +14,7 @@ interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Utils.DistribUtils 8002
 exports:
   Cloud.Utils.DistribUtils.distribMain
 module dependencies: Cloud.Kernel Cloud.Type
+                     MandelBulb.Utils.Domain
 package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       binary-0.8.3.0@binary-0.8.3.0
                       bytestring-0.10.8.1@bytestring-0.10.8.1
@@ -83,9 +84,9 @@ family instance modules: base-4.9.1.0:Control.Applicative
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.Environment 08cb808e8e6a7821e6f8cfa76a977431
-import  -/  Cloud.Kernel c21ea41e605932865138f98b6130df7f
-  exports: 445dcc8263bc74023883a4e67c319ca4
-  __remoteTable 8cf48d0de53bc0e72c84a47a4d9323a8
+import  -/  Cloud.Kernel 02cf46df8c459650e449eee2211e2c54
+  exports: ba5f7ba31c3fd5b4b666afa635ed98c4
+  __remoteTable 74081429cdad5cdc62d73e5ba57a9e67
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c

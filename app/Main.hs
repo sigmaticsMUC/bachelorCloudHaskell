@@ -13,8 +13,10 @@ import System.CPUTime
 import Graphics.EasyPlot
 import System.IO
 
+h = 0.1
+
 --domain_ = DM.rowMajor $ DM.generateDomain (0, 0, 0) (0.5,0.5,1) 0.01
-domain_ = DM.rowMajor $ DM.generateDomain (-2,-2,-2) (2, 2, 2) 0.005
+domain_ = DM.rowMajor $ DM.generateDomain (-2,-2,-2) (2, 2, 2) h
 mbulb = doBulb 8 0 256 4.0
 
 mbulb_ :: () -> (Vect -> IterationCount)
@@ -23,7 +25,7 @@ mbulb_ () = mbulb
 remotable ['mbulb_]
 
 master :: [NodeId] -> Process ()
-master = masterProcess ($(mkClosure 'mbulb_) ()) domain_
+master = masterProcess ($(mkClosure 'mbulb_) ()) domain_ h
 
 
 main :: IO ()

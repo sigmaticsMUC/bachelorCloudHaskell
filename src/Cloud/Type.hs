@@ -18,7 +18,7 @@ type Vect = (Double, Double, Double)
 type IterationCount = Integer
 type Result = (Vect, IterationCount)
 
-data MSG = ARG (ProcessId, [Vect]) | RESPONSE (ProcessId, [Result])
+data MSG = ARG (ProcessId, (Vect, Vect)) | RESPONSE (ProcessId, [Result])
   deriving (Typeable, Generic)
 
 instance Binary MSG

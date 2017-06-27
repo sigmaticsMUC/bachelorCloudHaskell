@@ -27,22 +27,21 @@ toCSVLine :: (Vect, Integer) -> String
 toCSVLine (v, i) = (vecToString v) ++ "," ++ (iterToRgbString i) ++ "\n"
 
 
-masterProcess :: Closure(Vect->IterationCount) -> [Vect] -> [NodeId] -> Process ()
-masterProcess cF args nodes = do
+masterProcess :: Closure(Vect->IterationCount) -> [Vect] -> Double -> [NodeId] -> Process ()
+masterProcess cF args h nodes = do
   master <- getSelfPid
   say "spawning processes..."
-  ps <- spawnProcesses master cF nodes
+  ps <- spawnProcesses h master cF nodes
   say $ (show $ length nodes) ++ " processes spawned!"
   distribute master args ps
   response <- waitForChuncks ps [[]]
-  let result = filter (\(_, i) -> i == 255) (concat response)
   --say (show result)
-  liftIO $ writeToFile $ "x, y, z, c\n" ++ (concat (map toCSVLine result))
+  liftIO $ writeToFile $ "x, y, z, c\n" ++ (concat (map toCSVLine (concat response)))
   return ()
 
 writeToFile :: String -> IO ()
 writeToFile dataS = do
-  outh <- openFile "../test3.txt" WriteMode
+  outh <- openFile "./HIER.txt" WriteMode
   hPutStrLn outh dataS
   hClose outh
   return ()

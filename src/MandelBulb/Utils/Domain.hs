@@ -28,5 +28,5 @@ generateRow a@(sx, sy, sz) b@(ex, ey, ez)  h
   | otherwise = a : (generateRow (sx + h, sy, sz) b h)
 
 
-rowMajor :: Domain -> [Point]
+rowMajor :: [[[a]]] -> [a]
 rowMajor = concat . concat
