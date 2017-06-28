@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-27 14:52:39.661992 UTC
+2017-06-28 11:48:14.15872 UTC
 
 interface main@main:Main 8002
-  interface hash: a441efbd5744dba8819bfc9342edccdd
-  ABI hash: 8fb16a33607e55e969c2ce4a524577e6
+  interface hash: 43fcc2c6c28df2aa7d13793295251716
+  ABI hash: fb1ec25116705acf1469bccebcee8567
   export-list hash: 4fa2392dd5685416f78b56250ac68a52
   orphan hash: 5fca8292af8d04d339aa20da86b44d53
   flag hash: 387e78a1174af00d868509f3a7fc4598
@@ -664,7 +664,7 @@ c4bcaa7ad72c8baa388b102b57c48e0a
 6e6a09e6c6ecb5772a84b3e117a8180a
   countToColorString2 :: GHC.Types.Double
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 20.0##) -}
-3cf55da3e92aa9745e52bdca259b79b6
+6daa5b099ec943ee4888f433a16ea9d2
   domain_ :: [MandelBulb.Utils.Domain.Point]
   {- Unfolding: (case MandelBulb.Utils.Domain.$wgenerateDomain
                         Main.domain_2
@@ -683,9 +683,10 @@ c4bcaa7ad72c8baa388b102b57c48e0a
 627288138d2ebb8330e42e7060c5f1e2
   domain_2 :: GHC.Types.Double
   {- HasNoCafRefs, Unfolding: (GHC.Types.D# -2.0##) -}
-e6cb5e7d9d398f9ec595997d069df00a
+6214d6285e285077ac06332aed4a33d8
   h :: GHC.Types.Double
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.1##) -}
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.D# 1.0e-2##) -}
 a39cf6ad01248946a4c074a6fd52e08a
   iterToRgbString :: GHC.Integer.Type.Integer -> GHC.Base.String
   {- Arity: 1, Strictness: <S,U>m2, Inline: INLINE[0],
@@ -693,12 +694,12 @@ a39cf6ad01248946a4c074a6fd52e08a
                 (\ (w :: GHC.Integer.Type.Integer) ->
                  case Main.$witerToRgbString w of ww { (#,#) ww1 ww2 ->
                  GHC.Types.: @ GHC.Types.Char ww1 ww2 }) -}
-8dcef55596ef93cb408430a6b32a2d6e
+61e24182c382df004a854b1fda26caab
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5436c30735fa685739f3d87296815bac
+d887f18820cd43b0d3c6dc697a0388c5
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -768,7 +769,7 @@ e07338230127967395ef2af6f7eea304
                    (cont :: Data.ByteString.Builder.Internal.BuildStep r)
                    (range :: Data.ByteString.Builder.Internal.BufferRange) ->
                  cont range) -}
-fff31480f047c22abaca5048e81a4d0f
+4169423dd0370538241f830c771a816f
   main14 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -782,7 +783,7 @@ a4c892693f4b4662b4c9556454b21e0e
 f6335948d897f9d139e43b080b5fa7cd
   main3 :: GHC.Types.Double
   {- HasNoCafRefs, Unfolding: (GHC.Types.D# 10.0##) -}
-0e20e142ba01d95b7bf7ed6706e9b9e9
+3700cbbd04a9ccd68d528f76355c860a
   main4 ::
     [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.LocalProcess
@@ -841,7 +842,7 @@ f6335948d897f9d139e43b080b5fa7cd
                   case i of wild { GHC.Types.D# x ->
                   GHC.Types.D# (GHC.Prim.*## (GHC.Prim.*## x x) x) },
                   Main.countToColorString1)) -}
-90651ec38f8badb0361e9243217127bf
+376bf57a05fbd98b7dc7865b6267f0e9
   master ::
     [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.Process ()

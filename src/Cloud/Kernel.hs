@@ -37,7 +37,7 @@ slaveProcess (master, h, cF) = do
     let result = f vec
     return (vec, result)
   let results' = filter (\(_, i) -> i /= 255) results
-  liftIO $ putStrLn $ show $ results'
+  --liftIO $ putStrLn $ show $ results'
   send master (RESPONSE (us, results'))
 
 remotable ['slaveProcess]
@@ -57,6 +57,7 @@ distribute master args pids = do
   let spliceData = zip splices pids
   forM_ spliceData $ \(args', pid) -> do
     let a = head args'
+    --let b = last args'
     let b = (head . reverse) args'
     say $ "sending data to " ++ (show pid)
     send pid (ARG (master, (a, b)))

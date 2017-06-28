@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-27 15:06:35.036769 UTC
+2017-06-28 11:47:01.121847 UTC
 
 interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Kernel 8002
-  interface hash: 32840ac0c630eeaaa57294601de74d8b
+  interface hash: f4d7ce677d972b66f51c457137bb3236
   ABI hash: 02cf46df8c459650e449eee2211e2c54
   export-list hash: ba5f7ba31c3fd5b4b666afa635ed98c4
   orphan hash: 2093258bba9141a2e47520d651f6ff71
@@ -78,7 +78,6 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
 import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
-import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
@@ -86,7 +85,6 @@ import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
 import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
 import  -/  Cloud.Type 196540bca95a49a5bcd4f66f5b73eb37
   exports: ab061419ace2ca64be5cfacf30c7de81

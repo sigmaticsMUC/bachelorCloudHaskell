@@ -13,7 +13,7 @@ import System.CPUTime
 import Graphics.EasyPlot
 import System.IO
 
-h = 0.1
+h = 0.01
 
 --domain_ = DM.rowMajor $ DM.generateDomain (0, 0, 0) (0.5,0.5,1) 0.01
 domain_ = DM.rowMajor $ DM.generateDomain (-2,-2,-2) (2, 2, 2) h
