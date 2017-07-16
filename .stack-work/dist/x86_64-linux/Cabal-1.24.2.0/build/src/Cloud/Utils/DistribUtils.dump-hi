@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-27 14:43:34.119922 UTC
+2017-07-16 14:09:33.913425 UTC
 
-interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Utils.DistribUtils 8002
-  interface hash: deb9d0e3e2129cdab6ec8a27b0e7f7b6
-  ABI hash: 72378fffcd57306aea594d1d458b4c5f
-  export-list hash: 7e71243dacf4c6af4e8cd8539cf6c906
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistribUtils 8002
+  interface hash: 701f9807c580061dc1a1e407d5c2b0f7
+  ABI hash: 7a30ff6404145e21427d41a448b02b18
+  export-list hash: c86439f57009490fafae3a266c460abd
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 1026a2cfb023281ca0d4eea698dc370a
   sig of: Nothing
@@ -64,7 +64,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
-                         cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Type
+                         cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -84,9 +84,9 @@ family instance modules: base-4.9.1.0:Control.Applicative
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.Environment 08cb808e8e6a7821e6f8cfa76a977431
-import  -/  Cloud.Kernel 02cf46df8c459650e449eee2211e2c54
-  exports: ba5f7ba31c3fd5b4b666afa635ed98c4
-  __remoteTable 74081429cdad5cdc62d73e5ba57a9e67
+import  -/  Cloud.Kernel 678f727864b1f73295efc27f21676cd9
+  exports: 3fe9b24c38d0ca70dff2e76b839bc674
+  __remoteTable cdeb7dae883457034f3acdf117f3183e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
@@ -96,22 +96,22 @@ import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDyp
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket 155ab4d71dfecd4d511d71b952a9d57c
 import  -/  template-haskell-2.11.1.0:Language.Haskell.TH d856a1f9d606be57026da48a46c8b0a9
-440a564e1f22cf02b035fd036bee7afd
+7151c3b41ecf54af030cc6bd08ad4858
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Cloud.Utils.DistribUtils.$trModule2
                    Cloud.Utils.DistribUtils.$trModule1) -}
-990117cb5a7c007dd25429183dbcc685
+6b794bb16f7fec1aab012b42dc5acc6c
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Cloud.Utils.DistribUtils"#) -}
-5405e8751c14f171104945080c09f9ea
+9038807a400717c74b1cbcd2df65e8fe
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-cd9539a0a9a228c5da229c6002c90287
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+5313bc3794ef7c8d87374437f9f112c4
   distribMain ::
     ([Control.Distributed.Process.Internal.Types.NodeId]
      -> Control.Distributed.Process.Internal.Types.Process ())
@@ -127,7 +127,7 @@ cd9539a0a9a228c5da229c6002c90287
                  ->_R <Control.Distributed.Static.RemoteTable
                        -> Control.Distributed.Static.RemoteTable>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-53aa822287f574fc3a0b3f26dbecb1f1
+0c37a16c6f07d5705cc30efc6b2c963d
   distribMain1 ::
     ([Control.Distributed.Process.Internal.Types.NodeId]
      -> Control.Distributed.Process.Internal.Types.Process ())

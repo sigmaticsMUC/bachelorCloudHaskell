@@ -26,7 +26,7 @@ slaveProcess (master, cF) = do
   send master (RESPONSE (us, results))
 -}
 
-slaveProcess :: (ProcessId, Double, Closure(Vect->IterationCount)) -> Process ()
+slaveProcess :: (ProcessId, Float, Closure(Vect->IterationCount)) -> Process ()
 slaveProcess (master, h, cF) = do
   us <- getSelfPid
   f <- unClosure cF
@@ -42,14 +42,13 @@ slaveProcess (master, h, cF) = do
 
 remotable ['slaveProcess]
 
-spawnProcesses :: Double -> ProcessId -> Closure (Vect->IterationCount) -> [NodeId] -> Process [ProcessId]
+spawnProcesses :: Float -> ProcessId -> Closure (Vect->IterationCount) -> [NodeId] -> Process [ProcessId]
 spawnProcesses h master cF nodes = do
   pids <- forM nodes $ \nid -> do
     say $ "spawning on" ++ (show nid)
     let cSlave = ($(mkClosure 'slaveProcess) (master, h, cF))
     spawn nid cSlave
   return pids
-
 
 distribute :: ProcessId -> [Vect] -> [ProcessId] -> Process ()
 distribute master args pids = do

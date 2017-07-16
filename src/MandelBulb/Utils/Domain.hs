@@ -4,8 +4,8 @@ module MandelBulb.Utils.Domain(
   rowMajor
 )where
 
-type Point = (Double, Double, Double)
-type Step = Double
+type Point = (Float, Float, Float)
+type Step = Float
 type Domain = [Plane]
 type Plane = [Row]
 type Row = [Point]

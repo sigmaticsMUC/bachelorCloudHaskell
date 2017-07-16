@@ -1,0 +1,108 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-16 14:09:24.408436 UTC
+
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:IOUtils.ColorMap 8002
+  interface hash: 25f49928ff2a7b26b2293daf28311ba1
+  ABI hash: 062b33f581ea43e041792df386e38d22
+  export-list hash: 869ade08746aa255081219931a55f794
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: facbb4190854d381b93fed21f8551940
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  IOUtils.ColorMap.heightToRGB8
+module dependencies:
+package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
+                      zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Tga
+                         JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Tiff
+                         JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity base-4.9.1.0:Data.List.NonEmpty
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Semigroup
+                         base-4.9.1.0:Data.Type.Equality base-4.9.1.0:Data.Version
+                         base-4.9.1.0:Data.Void base-4.9.1.0:GHC.Exts
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
+import  -/  JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed:Codec.Picture c28c03ed1b5e2bad2d1a6a2be36f49e1
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+e3983e806af2b6ff35d1166749b7327f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   IOUtils.ColorMap.$trModule2
+                   IOUtils.ColorMap.$trModule1) -}
+5e1660a9aa1ac2fb1033b1f6423b4111
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "IOUtils.ColorMap"#) -}
+8e1251f7d288b61bc97b80606801e051
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+22b22c4dd8123a840a0501c3cc17a245
+  $wheightToRGB8 ::
+    GHC.Prim.Float#
+    -> (# GHC.Types.Float, GHC.Types.Float, GHC.Types.Float #)
+  {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+4a7b59b10ceb40421ce9025cd878ae21
+  type RGB8 = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+59fdfbb8ad9711241b1c2a1fd5a3d370
+  heightToRGB8 ::
+    GHC.Types.Float
+    -> (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+    -> IOUtils.ColorMap.RGB8
+  {- Arity: 2, Strictness: <L,A><S(S(S)LL),1*U(1*U(U),A,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Float)
+                   (w1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)) ->
+                 case w1 of ww { (,,) ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.F# ww5 ->
+                 case IOUtils.ColorMap.$wheightToRGB8
+                        ww5 of ww6 { (#,,#) ww7 ww8 ww9 ->
+                 (ww7, ww8, ww9) } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

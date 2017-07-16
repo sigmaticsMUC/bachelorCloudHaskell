@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-20 14:23:41.895391 UTC
+2017-07-16 14:09:23.791028 UTC
 
-interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:MandelBulb.Math.Core 8002
-  interface hash: d88d8eefbf0e97ac35a8a735a704a5b6
-  ABI hash: 3f45a6c9526d808f52a6c1b8bd43ebc3
-  export-list hash: b312886461940fe01198330dd4334ff5
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:MandelBulb.Math.Core 8002
+  interface hash: 88a50b2a0c7249fab3f4bcd02faff382
+  ABI hash: 90a7117be398eb7b2e9b4c70569a426a
+  export-list hash: 021c563522e187b1b2c5decacf3c1a97
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ed72a826337bf6a9c63f2f27ffdcdd90
   sig of: Nothing
@@ -30,22 +30,22 @@ import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
-f48d4b4e090f764956007aff32abfa16
+227b37a497cea7648c610f5299d694d2
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    MandelBulb.Math.Core.$trModule2
                    MandelBulb.Math.Core.$trModule1) -}
-705353715eb2be70935eea37752cb21d
+704acdc45d4b8cd3296ca2972e21f4ed
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "MandelBulb.Math.Core"#) -}
-7d99f2273fa9ebe056c9a63d64ce613f
+4776bfb29b5706ec0685de8a68771d81
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-665ab8ffa8cf60a6d84bf01bf877f39c
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+812d16e708ea1ffdb9d6ce563e05ff62
   $wbulb ::
     MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Iter
@@ -56,15 +56,15 @@ f48d4b4e090f764956007aff32abfa16
   {- Arity: 5,
      Strictness: <S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))><L,1*U(1*U(U),1*U(U),1*U(U))>,
      Inline: [0] -}
-32e33e2c366816d842e112d42e7171a7
+c365aee670734189ce6207fb66d25590
   type Iter = GHC.Integer.Type.Integer
-6253db44ef998ad2897d96fab26f988a
-  type Limit = GHC.Types.Double
-b957c6a5f1dda5a7561721faae8fe034
-  type Vect = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
-386a7ed0be74d6fc586c320ab1ca662e
+203cc651c2efd8700837dfbad1d9ea2f
+  type Limit = GHC.Types.Float
+42649663a66ceffcf1a3da5f69dc16e6
+  type Vect = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+60dbf0b0da0f0a18453d1cb36e03d937
   bulb ::
-    GHC.Types.Double
+    GHC.Types.Float
     -> MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Limit
@@ -75,16 +75,16 @@ b957c6a5f1dda5a7561721faae8fe034
      Strictness: <L,A><S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))><L,1*U(1*U(U),1*U(U),1*U(U))>,
      Inline: INLINE[0],
      Unfolding: InlineRule (6, True, True)
-                (\ (w :: GHC.Types.Double)
+                (\ (w :: GHC.Types.Float)
                    (w1 :: MandelBulb.Math.Core.Iter)
                    (w2 :: MandelBulb.Math.Core.Iter)
                    (w3 :: MandelBulb.Math.Core.Limit)
                    (w4 :: MandelBulb.Math.Core.Vect)
                    (w5 :: MandelBulb.Math.Core.Vect) ->
                  MandelBulb.Math.Core.$wbulb w1 w2 w3 w4 w5) -}
-eb86644b4b3d3eb36b89e63c45a1a487
+288e11a85621efe60d070adecf60ece7
   doBulb ::
-    GHC.Types.Double
+    GHC.Types.Float
     -> MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Iter
     -> MandelBulb.Math.Core.Limit
@@ -93,7 +93,7 @@ eb86644b4b3d3eb36b89e63c45a1a487
   {- Arity: 5,
      Strictness: <L,A><S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))>,
      Unfolding: InlineRule (5, True, False)
-                (\ (n :: GHC.Types.Double)
+                (\ (n :: GHC.Types.Float)
                    (i :: MandelBulb.Math.Core.Iter)
                    (m :: MandelBulb.Math.Core.Iter)
                    (l :: MandelBulb.Math.Core.Limit)
@@ -105,30 +105,31 @@ eb86644b4b3d3eb36b89e63c45a1a487
                    l
                    c
                    MandelBulb.Math.Core.doBulb1) -}
-701702ebde5250293287d31e62f728e2
-  doBulb1 :: (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+782314411567d9baa06b71dc52590fe7
+  doBulb1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
   {- HasNoCafRefs, Strictness: m,
      Unfolding: ((MandelBulb.Math.Core.doBulb2,
                   MandelBulb.Math.Core.doBulb2, MandelBulb.Math.Core.doBulb2)) -}
-d1955a648bd5c029e7db5000842c5c42
-  doBulb2 :: GHC.Types.Double
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0##) -}
-b19f23b1eb325b6413742a5a9c41aeb2
-  norm :: MandelBulb.Math.Core.Vect -> GHC.Types.Double
+1d375c95e6b1c111be2c38921bb2863a
+  doBulb2 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.0#) -}
+e9e4bb4cab77228c2db90bb758bd234a
+  norm :: MandelBulb.Math.Core.Vect -> GHC.Types.Float
   {- Arity: 1, HasNoCafRefs,
      Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))>m,
      Unfolding: InlineRule (1, True, False)
-                (\ (ds :: (GHC.Types.Double, GHC.Types.Double,
-                           GHC.Types.Double)) ->
+                (\ (ds :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)) ->
                  case ds of wild { (,,) x y z ->
-                 case x of wild1 { GHC.Types.D# x1 ->
-                 case y of wild2 { GHC.Types.D# x2 ->
-                 case z of wild3 { GHC.Types.D# x3 ->
-                 GHC.Types.D#
-                   (GHC.Prim.sqrtDouble#
-                      (GHC.Prim.+##
-                         (GHC.Prim.+## (GHC.Prim.*## x1 x1) (GHC.Prim.*## x2 x2))
-                         (GHC.Prim.*## x3 x3))) } } } }) -}
+                 case x of wild1 { GHC.Types.F# x1 ->
+                 case y of wild2 { GHC.Types.F# x2 ->
+                 case z of wild3 { GHC.Types.F# x3 ->
+                 GHC.Types.F#
+                   (GHC.Prim.sqrtFloat#
+                      (GHC.Prim.plusFloat#
+                         (GHC.Prim.plusFloat#
+                            (GHC.Prim.timesFloat# x1 x1)
+                            (GHC.Prim.timesFloat# x2 x2))
+                         (GHC.Prim.timesFloat# x3 x3))) } } } }) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

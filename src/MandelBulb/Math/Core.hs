@@ -3,18 +3,18 @@ module MandelBulb.Math.Core(
   norm
 )where
 
-type Vect = (Double, Double, Double)
+type Vect = (Float, Float, Float)
 type Iter = Integer
-type Limit = Double
+type Limit = Float
 
 
-r :: Vect -> Double
+r :: Vect -> Float
 r v = norm v
 
-theta :: Vect -> Double
+theta :: Vect -> Float
 theta (x, y, z) = atan(y / x)
 
-phi :: Vect -> Double
+phi :: Vect -> Float
 phi vec@(_, _, z) = acos(z / (norm vec))
 
 {-
@@ -27,33 +27,33 @@ v_n n v = (x_new, y_new, z_new)
 -}
 
 
-v_n :: Double -> Vect -> Vect
+v_n :: Float -> Vect -> Vect
 v_n n v@(x, y, z) = (x_new, y_new, z_new)
   where x_new = (3*z*z-x*x-y*y)*x*(x*x-3*y*y)*(1.0/(x*x+y*y))
         y_new = (3*z*z-x*x-y*y)*y*(3*x*x-y*y)*(1.0/(x*x+y*y))
         z_new = z*(z*z-3*x*x-3*y*y)
 
-v_next :: Double -> Vect -> Vect
+v_next :: Float -> Vect -> Vect
 v_next n v = v_n n v
 
 addVec :: Vect -> Vect -> Vect
 addVec (a, b, c) (d, e, f) = (a+d, b+e, c+f)
 
 
-iterateBlb :: Double -> Vect -> Vect -> Vect
+iterateBlb :: Float -> Vect -> Vect -> Vect
 iterateBlb _ (0,0,0) c = c
 iterateBlb n v c = addVec (v_next n v) c
 
 
-bulb :: Double -> Iter -> Iter -> Limit -> Vect -> Vect -> Iter
+bulb :: Float -> Iter -> Iter -> Limit -> Vect -> Vect -> Iter
 bulb n i m l c v
   | (i < m) && ((norm v) < l) = bulb n (i+1) m l c v_new
   | otherwise = i
     where v_new = iterateBlb n v c
 
-doBulb :: Double -> Iter -> Iter -> Limit -> Vect -> Iter
+doBulb :: Float -> Iter -> Iter -> Limit -> Vect -> Iter
 doBulb n i m l c = bulb n i m l c (0, 0, 0)
 
 
-norm :: Vect -> Double
+norm :: Vect -> Float
 norm (x, y, z) = sqrt $ (x*x) + (y*y) + (z*z)

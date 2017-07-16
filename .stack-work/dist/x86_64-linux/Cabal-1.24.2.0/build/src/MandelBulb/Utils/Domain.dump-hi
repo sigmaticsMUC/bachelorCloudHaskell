@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-27 14:43:29.681939 UTC
+2017-07-16 14:09:22.540867 UTC
 
-interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:MandelBulb.Utils.Domain 8002
-  interface hash: 30c951ed6e65140c961451954298f2e3
-  ABI hash: d6a9c309a7af900a2d8bb2eab5d2b6cd
-  export-list hash: b125e29ffe6f9de80d3189e997cdaec8
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:MandelBulb.Utils.Domain 8002
+  interface hash: caab01a2383212efa196c95c7d10f579
+  ABI hash: fcff6e7791bddff4fc7bd31083131372
+  export-list hash: 66cf7b4a5fd5b58c027cc4d521042622
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ddd7647a4e66491a595ddf558958a2aa
   sig of: Nothing
@@ -29,58 +29,58 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
-65a0e72e4d04ee9bbe8c7c8e7449d789
+424a0e03cb2e17c9f57f97c2b067858a
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    MandelBulb.Utils.Domain.$trModule2
                    MandelBulb.Utils.Domain.$trModule1) -}
-c5614170538a22f82d8d02c6a99d6303
+40c685d53c4b30022cec622c8ee7e859
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "MandelBulb.Utils.Domain"#) -}
-5b06a50e6efff26b25af2160ac856576
+a6fc953927b7a65c327ced1d2c26bb24
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-334afd5b69642b3d3d7fedaec1cead09
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+109ba82de3f5ab5e52e9f0f126c19c31
   $wgenerateDomain ::
-    GHC.Types.Double
-    -> GHC.Types.Double
-    -> GHC.Prim.Double#
-    -> GHC.Types.Double
-    -> GHC.Types.Double
-    -> GHC.Prim.Double#
+    GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Prim.Float#
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Prim.Float#
     -> MandelBulb.Utils.Domain.Step
     -> (# [[MandelBulb.Utils.Domain.Point]],
           [[[MandelBulb.Utils.Domain.Point]]] #)
   {- Arity: 7, HasNoCafRefs,
      Strictness: <L,U(U)><L,U(U)><S,U><L,U(U)><L,U(U)><S,U><L,U(U)>,
      Inline: [0] -}
-d8c0108fa4f1c62bb683e64659593a77
+368b3a0da617c4b56eace63f840172f6
   $wgeneratePlane ::
-    GHC.Types.Double
-    -> GHC.Prim.Double#
-    -> GHC.Types.Double
-    -> GHC.Types.Double
-    -> GHC.Prim.Double#
+    GHC.Types.Float
+    -> GHC.Prim.Float#
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Prim.Float#
     -> MandelBulb.Utils.Domain.Step
     -> (# [MandelBulb.Utils.Domain.Point],
           [[MandelBulb.Utils.Domain.Point]] #)
   {- Arity: 6, HasNoCafRefs,
      Strictness: <L,U(U)><S,U><L,U><L,U(U)><S,U><L,U(U)>, Inline: [0] -}
-6f82eb9d4a35a0e77d8963a7b9bf071a
+f64ad53c1fa9edf04b11a9aea8174a4e
   type Domain = [MandelBulb.Utils.Domain.Plane]
-22917968a006fc63084f6380ebc26b9e
+fcb4c476c9cd6c40bccba9a429d7e26e
   type Plane = [MandelBulb.Utils.Domain.Row]
-d514ecea7e9c58bfe2c5b6bd9fc67fc2
-  type Point = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
-623b13d3f4659399dcbc6ed2cbbba4b0
+bc944c0b39229a9309097900aee048d4
+  type Point = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+fd18497166a139af309260a6d14f8282
   type Row = [MandelBulb.Utils.Domain.Point]
-e31a0e1adbb22376351f5f9fe50f14c9
-  type Step = GHC.Types.Double
-1828641397460c44e766a4f687ea4882
+d10bcd52e9dee36aa1f829d5edab1e01
+  type Step = GHC.Types.Float
+95e821dd0c322f9716f8a095fc6b492a
   generateDomain ::
     MandelBulb.Utils.Domain.Point
     -> MandelBulb.Utils.Domain.Point
@@ -94,9 +94,9 @@ e31a0e1adbb22376351f5f9fe50f14c9
                    (w1 :: MandelBulb.Utils.Domain.Point)
                    (w2 :: MandelBulb.Utils.Domain.Step) ->
                  case w of ww { (,,) ww1 ww2 ww3 ->
-                 case ww3 of ww4 { GHC.Types.D# ww5 ->
+                 case ww3 of ww4 { GHC.Types.F# ww5 ->
                  case w1 of ww6 { (,,) ww7 ww8 ww9 ->
-                 case ww9 of ww10 { GHC.Types.D# ww11 ->
+                 case ww9 of ww10 { GHC.Types.F# ww11 ->
                  case MandelBulb.Utils.Domain.$wgenerateDomain
                         ww1
                         ww2
@@ -109,7 +109,7 @@ e31a0e1adbb22376351f5f9fe50f14c9
                    @ [[MandelBulb.Utils.Domain.Point]]
                    ww13
                    ww14 } } } } }) -}
-d5bce4a81b337851a0ebf26ff4819a86
+eb915167de6a8405d99767eb30a9e078
   generatePlane ::
     MandelBulb.Utils.Domain.Point
     -> MandelBulb.Utils.Domain.Point
@@ -123,9 +123,9 @@ d5bce4a81b337851a0ebf26ff4819a86
                    (w1 :: MandelBulb.Utils.Domain.Point)
                    (w2 :: MandelBulb.Utils.Domain.Step) ->
                  case w of ww { (,,) ww1 ww2 ww3 ->
-                 case ww2 of ww4 { GHC.Types.D# ww5 ->
+                 case ww2 of ww4 { GHC.Types.F# ww5 ->
                  case w1 of ww6 { (,,) ww7 ww8 ww9 ->
-                 case ww8 of ww10 { GHC.Types.D# ww11 ->
+                 case ww8 of ww10 { GHC.Types.F# ww11 ->
                  case MandelBulb.Utils.Domain.$wgeneratePlane
                         ww1
                         ww5
@@ -137,12 +137,12 @@ d5bce4a81b337851a0ebf26ff4819a86
                    @ [MandelBulb.Utils.Domain.Point]
                    ww13
                    ww14 } } } } }) -}
-6809bb80338bd35cc6c61cbf4ddde0a1
+94e1f38c05483c9a2c8a05bda5bdf6b5
   rowMajor :: [[[a]]] -> [a]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: (\ @ a (x :: [[[a]]]) ->
                  MandelBulb.Utils.Domain.rowMajor1 @ a x) -}
-919f54530b3a49dca12b4bf54d47ca25
+98272de7f74e06f0b0ba9d51b3134097
   rowMajor1 :: [[[a]]] -> [a]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 vectorised variables:

@@ -1,20 +1,24 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-28 11:32:18.748643 UTC
+2017-07-16 14:41:04.467066 UTC
 
-interface cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3:Cloud.Type [family instance module] 8002
-  interface hash: f26f93b198759898ebc2f8ca4c2bd863
-  ABI hash: 196540bca95a49a5bcd4f66f5b73eb37
-  export-list hash: ab061419ace2ca64be5cfacf30c7de81
-  orphan hash: 83a0b0cabc80dfac9626352de3bb6025
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type [family instance module] 8002
+  interface hash: 9d77286e5961a5f8eb661f4d952552c5
+  ABI hash: 07640426b2f4e38a72607d9978c2cf18
+  export-list hash: 803f70d5b9768e522790e03388e1996f
+  orphan hash: 1f89196ec79b30dc2ec554878f6778bd
   flag hash: 803d98d62aac3ee2e6dfa84540c08dea
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Cloud.Type.initStructure
+  Cloud.Type.DistControlStruct{Cloud.Type.DistControlStruct openTasks_ responses_ runningTasks_ timeStamps_}
   Cloud.Type.IterationCount
   Cloud.Type.MSG{Cloud.Type.ARG Cloud.Type.RESPONSE}
   Cloud.Type.Result
+  Cloud.Type.Task{Cloud.Type.Task}
+  Cloud.Type.TimeStamp{Cloud.Type.TimeStamp}
   Cloud.Type.Vect
 module dependencies:
 package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
@@ -74,14 +78,17 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
 import  -/  base-4.9.1.0:Data.Typeable 9257e47d10882145c67c5b489965cfb7
 import  -/  base-4.9.1.0:Data.Typeable.Internal 0e9bdefa4325a0112d8e73b5e1e1f85d
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.Generics 1dbec2bc7dd1c5bd8c89ed857eaed19b
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Class b88eee4db2420047af9b40010da11191
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG :: Data.Binary.Class.Binary Cloud.Type.MSG
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -90,7 +97,7 @@ bf034cd3390ac885965bb47ac2c869d3
                   Cloud.Type.$fBinaryMSG_$s$dmput
                   Cloud.Type.$fBinaryMSG_$cget
                   Cloud.Type.$fBinaryMSG_$cputList -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG1 ::
     Data.ByteString.Internal.ByteString
     -> Data.Binary.Get.Internal.Success Cloud.Type.MSG r
@@ -103,7 +110,7 @@ bf034cd3390ac885965bb47ac2c869d3
                    (w1 :: Data.Binary.Get.Internal.Success Cloud.Type.MSG r) ->
                  case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
                  Cloud.Type.$w$cget @ r ww1 ww2 ww3 ww4 w1 }) -}
-9c6fae2732269811e58c9b03ec745a66
+48b679c1e77dc39da379e5df40923d96
   $fBinaryMSG10 ::
     (GHC.Num.Num w, Data.Bits.Bits w, Data.Binary.Class.Binary w) =>
     w
@@ -157,7 +164,7 @@ bf034cd3390ac885965bb47ac2c869d3
                  (Data.Binary.Put.PairS @ () ww1 ww2)
                    `cast`
                  (Sym (Data.Binary.Put.N:PutM[0]) <()>_N) }) -}
-fb997479271698c503de6d1b1238356b
+fdb26e94a224cad0d23fc00d991c088e
   $fBinaryMSG2 ::
     (GHC.Classes.Ord word, GHC.Num.Num word, Data.Bits.Bits word) =>
     word
@@ -214,14 +221,14 @@ fb997479271698c503de6d1b1238356b
                             r) ->
                  case w5 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
                  Cloud.Type.$w$dGSumGet @ word @ a1 @ r ww1 ww2 ww3 ww4 w6 }) -}
-f062430f90da0062f2d512c15bce0bf9
+9389427ea13b3b0e951d31e512263da6
   $fBinaryMSG3 ::
     Data.Binary.Class.Binary
-      (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+      (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Type.$fBinaryMSG_$s$fBinary(,,) -}
-20ef86ca7e5f24e305414c191c62b1b1
+beed6d92cebd156680785ebfa997bf6b
   $fBinaryMSG4 ::
     (GHC.Classes.Ord word, GHC.Num.Num word, Data.Bits.Bits word) =>
     word
@@ -278,7 +285,7 @@ f062430f90da0062f2d512c15bce0bf9
                             r) ->
                  case w5 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
                  Cloud.Type.$w$dGSumGet1 @ word @ a1 @ r ww1 ww2 ww3 ww4 w6 }) -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG5 ::
     Cloud.Type.MSG
     -> (GHC.Generics.:+:)
@@ -453,14 +460,14 @@ bf034cd3390ac885965bb47ac2c869d3
                                                   GHC.Generics.R
                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
                                                    [Cloud.Type.Result]))>_R)) <x>_N)) }) -}
-044831350cdcf6cda14b1de7037bd46e
+50266b89108088d4583f1cfa00bb7503
   $fBinaryMSG6 ::
     Data.Binary.Class.GBinaryPut
       (GHC.Generics.D1
          ('GHC.Generics.MetaData
             "MSG"
             "Cloud.Type"
-            "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+            "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
             'GHC.Types.False)
          (GHC.Generics.C1
             ('GHC.Generics.MetaCons
@@ -496,7 +503,7 @@ bf034cd3390ac885965bb47ac2c869d3
                              ('GHC.Generics.MetaData
                                 "MSG"
                                 "Cloud.Type"
-                                "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                                 'GHC.Types.False)
                              (GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
@@ -524,14 +531,14 @@ bf034cd3390ac885965bb47ac2c869d3
                                                     (GHC.Generics.Rec0
                                                        (Control.Distributed.Process.Internal.Types.ProcessId,
                                                         [Cloud.Type.Result]))))>_N)) -}
-c6e070ab82ed23c9a045bd8c23a6dd1b
+dcf17a875675b19c9a7c0ae2766e3e7b
   $fBinaryMSG7 ::
     GHC.Generics.M1
       GHC.Generics.D
       ('GHC.Generics.MetaData
          "MSG"
          "Cloud.Type"
-         "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+         "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
          'GHC.Types.False)
       (GHC.Generics.C1
          ('GHC.Generics.MetaCons
@@ -567,7 +574,7 @@ c6e070ab82ed23c9a045bd8c23a6dd1b
                              ('GHC.Generics.MetaData
                                 "MSG"
                                 "Cloud.Type"
-                                "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                                 'GHC.Types.False)
                              (GHC.Generics.C1
                                 ('GHC.Generics.MetaCons
@@ -665,7 +672,7 @@ c6e070ab82ed23c9a045bd8c23a6dd1b
                         <'GHC.Generics.MetaData
                            "MSG"
                            "Cloud.Type"
-                           "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                           "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                            'GHC.Types.False>_P
                         <GHC.Generics.C1
                            ('GHC.Generics.MetaCons
@@ -691,7 +698,7 @@ c6e070ab82ed23c9a045bd8c23a6dd1b
                                                (GHC.Generics.Rec0
                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
                                                    [Cloud.Type.Result])))>_R <t>_N)) -}
-059c6cc38c02fb067841726f98c3c739
+e33bcb69f3d76b1e959857a4cb6df8dc
   $fBinaryMSG8 ::
     (GHC.Num.Num w, Data.Bits.Bits w, Data.Binary.Class.Binary w) =>
     w
@@ -745,17 +752,17 @@ c6e070ab82ed23c9a045bd8c23a6dd1b
                  (Data.Binary.Put.PairS @ () ww1 ww2)
                    `cast`
                  (Sym (Data.Binary.Put.N:PutM[0]) <()>_N) }) -}
-7a5400114d2a83e0649397f7dd205baf
+fa9f75a65fa58ab57aaec38b8f34af5e
   $fBinaryMSG9 ::
-    [((GHC.Types.Double, GHC.Types.Double, GHC.Types.Double),
+    [((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
       GHC.Integer.Type.Integer)]
     -> Data.Binary.Put.Put
   {- Unfolding: (Data.Binary.Class.$fBinary(,)_$cputList
-                   @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                   @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
                    @ GHC.Integer.Type.Integer
                    Cloud.Type.$fBinaryMSG_$s$fBinary(,,)
                    Data.Binary.Class.$fBinaryInteger) -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG_$cfrom ::
     Cloud.Type.MSG -> GHC.Generics.Rep Cloud.Type.MSG x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
@@ -770,7 +777,7 @@ bf034cd3390ac885965bb47ac2c869d3
                                     <'GHC.Generics.MetaData
                                        "MSG"
                                        "Cloud.Type"
-                                       "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                       "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                                        'GHC.Types.False>_P
                                     <GHC.Generics.M1
                                        GHC.Generics.C
@@ -805,17 +812,17 @@ bf034cd3390ac885965bb47ac2c869d3
                                                               (Control.Distributed.Process.Internal.Types.ProcessId,
                                                                [Cloud.Type.Result])))>_R))
                           (Sub (Sym (Cloud.Type.Rep_MSG[0]))) <x>_N) -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG_$cget :: Data.Binary.Get.Internal.Get Cloud.Type.MSG
   {- Arity: 2, Strictness: <S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Type.$fBinaryMSG1
                   `cast`
                 (Sym (Data.Binary.Get.Internal.N:Get[0] <Cloud.Type.MSG>_R)) -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG_$cputList :: [Cloud.Type.MSG] -> Data.Binary.Put.Put
   {- Arity: 1 -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG_$cto ::
     GHC.Generics.Rep Cloud.Type.MSG x -> Cloud.Type.MSG
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
@@ -830,7 +837,7 @@ bf034cd3390ac885965bb47ac2c869d3
                                 <'GHC.Generics.MetaData
                                    "MSG"
                                    "Cloud.Type"
-                                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                                    'GHC.Types.False>_P
                                 <GHC.Generics.M1
                                    GHC.Generics.C
@@ -938,7 +945,7 @@ bf034cd3390ac885965bb47ac2c869d3
                                   <(Control.Distributed.Process.Internal.Types.ProcessId,
                                     [Cloud.Type.Result])>_R
                                   <x>_P)) }) -}
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   $fBinaryMSG_$s$dmput :: Cloud.Type.MSG -> Data.Binary.Put.Put
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (-3, True, False)
@@ -948,59 +955,249 @@ bf034cd3390ac885965bb47ac2c869d3
                  (Data.Binary.Class.N:GBinaryPut[0] (Sym (Cloud.Type.Rep_MSG[0])))
                    @ GHC.Prim.Any
                    (Cloud.Type.$fBinaryMSG_$cfrom @ GHC.Prim.Any eta)) -}
-8cdfdb24e878c8df9b8058e965ddc8d2
+5930ff0d7ae06622efeda05b19992571
   $fBinaryMSG_$s$fBinary(,) ::
     Data.Binary.Class.Binary
-      ((GHC.Types.Double, GHC.Types.Double, GHC.Types.Double),
+      ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
        GHC.Integer.Type.Integer)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ ((GHC.Types.Double, GHC.Types.Double, GHC.Types.Double),
+                  @ ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
                      GHC.Integer.Type.Integer)
                   (Data.Binary.Class.$fBinary(,)_$cput
-                     @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
                      @ GHC.Integer.Type.Integer
                      Cloud.Type.$fBinaryMSG3
                      Data.Binary.Class.$fBinaryInteger)
                   (Data.Binary.Class.$fBinary(,)_$cget
-                     @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
                      @ GHC.Integer.Type.Integer
                      Cloud.Type.$fBinaryMSG3
                      Data.Binary.Class.$fBinaryInteger)
                   (Data.Binary.Class.$fBinary(,)_$cputList
-                     @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
                      @ GHC.Integer.Type.Integer
                      Cloud.Type.$fBinaryMSG3
                      Data.Binary.Class.$fBinaryInteger) -}
-b5d45f09dcdf37a371161d63f9314110
+c4bba847c4e7dc0dbf54fb26c640d684
   $fBinaryMSG_$s$fBinary(,,) ::
     Data.Binary.Class.Binary
-      (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+      (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                  @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
                   (Data.Binary.Class.$fBinary(,,)_$cput
-                     @ GHC.Types.Double
-                     @ GHC.Types.Double
-                     @ GHC.Types.Double
-                     Data.Binary.Class.$fBinaryDouble
-                     Data.Binary.Class.$fBinaryDouble
-                     Data.Binary.Class.$fBinaryDouble)
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     Data.Binary.Class.$fBinaryFloat
+                     Data.Binary.Class.$fBinaryFloat
+                     Data.Binary.Class.$fBinaryFloat)
                   (Data.Binary.Class.$fBinary(,,)_$cget
-                     @ GHC.Types.Double
-                     @ GHC.Types.Double
-                     @ GHC.Types.Double
-                     Data.Binary.Class.$fBinaryDouble
-                     Data.Binary.Class.$fBinaryDouble
-                     Data.Binary.Class.$fBinaryDouble)
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     Data.Binary.Class.$fBinaryFloat
+                     Data.Binary.Class.$fBinaryFloat
+                     Data.Binary.Class.$fBinaryFloat)
                   (Data.Binary.Class.$fBinary(,,)_$cputList
-                     @ GHC.Types.Double
-                     @ GHC.Types.Double
-                     @ GHC.Types.Double
-                     Data.Binary.Class.$fBinaryDouble
-                     Data.Binary.Class.$fBinaryDouble
-                     Data.Binary.Class.$fBinaryDouble) -}
-bf034cd3390ac885965bb47ac2c869d3
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     Data.Binary.Class.$fBinaryFloat
+                     Data.Binary.Class.$fBinaryFloat
+                     Data.Binary.Class.$fBinaryFloat) -}
+925c344c11d18e1fe23f8bd00516342d
+  $fEqDistControlStruct ::
+    GHC.Classes.Eq Cloud.Type.DistControlStruct
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.DistControlStruct
+                  Cloud.Type.$fEqDistControlStruct_$c==
+                  Cloud.Type.$fEqDistControlStruct_$c/= -}
+3872f428d855b6207b8a9ec13203095b
+  $fEqDistControlStruct1 ::
+    GHC.Classes.Eq (Cloud.Type.Vect, Cloud.Type.IterationCount)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Type.$fEqDistControlStruct_$s$fEq(,) -}
+a667a82cdee9a0ce6b5b9a537412c652
+  $fEqDistControlStruct2 ::
+    GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Type.$fEqDistControlStruct_$s$fEq(,,) -}
+925c344c11d18e1fe23f8bd00516342d
+  $fEqDistControlStruct_$c/= ::
+    Cloud.Type.DistControlStruct
+    -> Cloud.Type.DistControlStruct -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U,1*U,1*U,1*U)><S(SLLL),1*U(1*U,1*U,1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cloud.Type.DistControlStruct)
+                   (b :: Cloud.Type.DistControlStruct) ->
+                 case Cloud.Type.$fEqDistControlStruct_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+925c344c11d18e1fe23f8bd00516342d
+  $fEqDistControlStruct_$c== ::
+    Cloud.Type.DistControlStruct
+    -> Cloud.Type.DistControlStruct -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U,1*U,1*U,1*U)><S(SLLL),1*U(1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.DistControlStruct)
+                   (w1 :: Cloud.Type.DistControlStruct) ->
+                 case w of ww { Cloud.Type.DistControlStruct ww1 ww2 ww3 ww4 ->
+                 case w1 of ww5 { Cloud.Type.DistControlStruct ww6 ww7 ww8 ww9 ->
+                 Cloud.Type.$w$c== ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }) -}
+389049e9a9237aee77b0d533f177292b
+  $fEqDistControlStruct_$s$fEq(,) ::
+    GHC.Classes.Eq
+      ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
+       GHC.Integer.Type.Integer)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
+                     GHC.Integer.Type.Integer)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Type.$fEqDistControlStruct2
+                     GHC.Integer.Type.$fEqInteger)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Type.$fEqDistControlStruct2
+                     GHC.Integer.Type.$fEqInteger) -}
+9c708642c96d981fe13c69f1f8dc0c78
+  $fEqDistControlStruct_$s$fEq(,,) ::
+    GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                  (GHC.Classes.$fEq(,,)_$c==
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     GHC.Classes.$fEqFloat
+                     GHC.Classes.$fEqFloat
+                     GHC.Classes.$fEqFloat)
+                  Cloud.Type.$fEqDistControlStruct_$s$fEq(,,)_$c/= -}
+3028bb5a5da8f3c5c3f7654eb21f5bbf
+  $fEqDistControlStruct_$s$fEq(,,)_$c/= ::
+    (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+    -> (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))><S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float))
+                   (b1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)) ->
+                 case GHC.Classes.$fEq(,,)_$c==
+                        @ GHC.Types.Float
+                        @ GHC.Types.Float
+                        @ GHC.Types.Float
+                        GHC.Classes.$fEqFloat
+                        GHC.Classes.$fEqFloat
+                        GHC.Classes.$fEqFloat
+                        a1
+                        b1 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+9c25419968cd24b7099c7fd291514204
+  $fEqDistControlStruct_$s$fEq[] ::
+    GHC.Classes.Eq [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
+                  (GHC.Classes.$fEq[]_$c==
+                     @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                     Cloud.Type.$fEqDistControlStruct1)
+                  Cloud.Type.$fEqDistControlStruct_$s$fEq[]_$c/= -}
+013264af921c2d99f111057bcec90482
+  $fEqDistControlStruct_$s$fEq[]_$c/= ::
+    [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
+    -> [(Cloud.Type.Vect, Cloud.Type.IterationCount)] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: [(Cloud.Type.Vect, Cloud.Type.IterationCount)])
+                   (y :: [(Cloud.Type.Vect, Cloud.Type.IterationCount)]) ->
+                 GHC.Classes.not
+                   (GHC.Classes.$fEq[]_$c==
+                      @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                      Cloud.Type.$fEqDistControlStruct1
+                      x
+                      y)) -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fEqTask :: GHC.Classes.Eq Cloud.Type.Task
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.Task
+                  Cloud.Type.$fEqTask_$c==
+                  Cloud.Type.$fEqTask_$c/= -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fEqTask_$c/= ::
+    Cloud.Type.Task -> Cloud.Type.Task -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U))))><S(S(S)L),1*U(1*U(U),1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U))))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cloud.Type.Task) (b :: Cloud.Type.Task) ->
+                 case Cloud.Type.$fEqTask_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fEqTask_$c== ::
+    Cloud.Type.Task -> Cloud.Type.Task -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U))))><S(S(S)L),1*U(1*U(U),1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U))))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.Task) (w1 :: Cloud.Type.Task) ->
+                 case w of ww { Cloud.Type.Task ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Cloud.Type.Task ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Cloud.Type.$w$c==1 ww4 ww2 ww9 ww7 } } } }) -}
+e912185473c22035d01b7ca12dcc02d0
+  $fEqTimeStamp :: GHC.Classes.Eq Cloud.Type.TimeStamp
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.TimeStamp
+                  Cloud.Type.$fEqTimeStamp_$c==
+                  Cloud.Type.$fEqTimeStamp_$c/= -}
+e912185473c22035d01b7ca12dcc02d0
+  $fEqTimeStamp_$c/= ::
+    Cloud.Type.TimeStamp -> Cloud.Type.TimeStamp -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.TimeStamp) (w1 :: Cloud.Type.TimeStamp) ->
+                 case w of ww { Cloud.Type.TimeStamp ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Cloud.Type.TimeStamp ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Cloud.Type.$w$c/= ww4 ww2 ww9 ww7 } } } }) -}
+e912185473c22035d01b7ca12dcc02d0
+  $fEqTimeStamp_$c== ::
+    Cloud.Type.TimeStamp -> Cloud.Type.TimeStamp -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.TimeStamp) (w1 :: Cloud.Type.TimeStamp) ->
+                 case w of ww { Cloud.Type.TimeStamp ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Cloud.Type.TimeStamp ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Cloud.Type.$w$c==2 ww4 ww2 ww9 ww7 } } } }) -}
+71952858e6c7a20c759dea30cab6b714
   $fGenericMSG :: GHC.Generics.Generic Cloud.Type.MSG
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1008,58 +1205,435 @@ bf034cd3390ac885965bb47ac2c869d3
                   @ Cloud.Type.MSG
                   Cloud.Type.$fBinaryMSG_$cfrom
                   Cloud.Type.$fBinaryMSG_$cto -}
-65d1a384a43e180bec08b60c9c3ceb00
+925c344c11d18e1fe23f8bd00516342d
+  $fShowDistControlStruct ::
+    GHC.Show.Show Cloud.Type.DistControlStruct
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.DistControlStruct
+                  Cloud.Type.$fShowDistControlStruct_$cshowsPrec
+                  Cloud.Type.$fShowDistControlStruct_$cshow
+                  Cloud.Type.$fShowDistControlStruct_$cshowList -}
+925c344c11d18e1fe23f8bd00516342d
+  $fShowDistControlStruct1 ::
+    Cloud.Type.DistControlStruct -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Cloud.Type.DistControlStruct)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { Cloud.Type.DistControlStruct ww1 ww2 ww3 ww4 ->
+                 Cloud.Type.$w$cshowsPrec 0# ww1 ww2 ww3 ww4 w1 }) -}
+925c344c11d18e1fe23f8bd00516342d
+  $fShowDistControlStruct_$cshow ::
+    Cloud.Type.DistControlStruct -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Cloud.Type.DistControlStruct) ->
+                 Cloud.Type.$fShowDistControlStruct_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+925c344c11d18e1fe23f8bd00516342d
+  $fShowDistControlStruct_$cshowList ::
+    [Cloud.Type.DistControlStruct] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Cloud.Type.DistControlStruct
+                   Cloud.Type.$fShowDistControlStruct1) -}
+925c344c11d18e1fe23f8bd00516342d
+  $fShowDistControlStruct_$cshowsPrec ::
+    GHC.Types.Int -> Cloud.Type.DistControlStruct -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Cloud.Type.DistControlStruct)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Cloud.Type.DistControlStruct ww3 ww4 ww5 ww6 ->
+                 Cloud.Type.$w$cshowsPrec ww1 ww3 ww4 ww5 ww6 w2 } }) -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fShowTask :: GHC.Show.Show Cloud.Type.Task
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.Task
+                  Cloud.Type.$fShowTask_$cshowsPrec
+                  Cloud.Type.$fShowTask_$cshow
+                  Cloud.Type.$fShowTask_$cshowList -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fShowTask1 :: Cloud.Type.Task -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Cloud.Type.Task) (w1 :: GHC.Base.String) ->
+                 case w of ww { Cloud.Type.Task ww1 ww2 ->
+                 Cloud.Type.$w$cshowsPrec1 0# ww1 ww2 w1 }) -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fShowTask_$cshow :: Cloud.Type.Task -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U(U),1*U(1*U(1*U(U),1*U(U),1*U(U)),U(U(U),U(U),U(U))))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Cloud.Type.Task) ->
+                 Cloud.Type.$fShowTask_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fShowTask_$cshowList :: [Cloud.Type.Task] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Cloud.Type.Task
+                   Cloud.Type.$fShowTask1) -}
+94acd7a86585f7090bbb2c12b05538a8
+  $fShowTask_$cshowsPrec ::
+    GHC.Types.Int -> Cloud.Type.Task -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U(1*U(1*U(U),1*U(U),1*U(U)),U(U(U),U(U),U(U))))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Cloud.Type.Task)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Cloud.Type.Task ww3 ww4 ->
+                 Cloud.Type.$w$cshowsPrec1 ww1 ww3 ww4 w2 } }) -}
+e912185473c22035d01b7ca12dcc02d0
+  $fShowTimeStamp :: GHC.Show.Show Cloud.Type.TimeStamp
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.TimeStamp
+                  Cloud.Type.$fShowTimeStamp_$cshowsPrec
+                  Cloud.Type.$fShowTimeStamp_$cshow
+                  Cloud.Type.$fShowTimeStamp_$cshowList -}
+e912185473c22035d01b7ca12dcc02d0
+  $fShowTimeStamp1 :: Cloud.Type.TimeStamp -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ (w :: Cloud.Type.TimeStamp) ->
+                 case w of ww { Cloud.Type.TimeStamp ww1 ww2 ->
+                 Cloud.Type.$w$cshowsPrec2 0# ww1 ww2 }) -}
+0d93bee785059e3a40c49ae7af567ae4
+  $fShowTimeStamp2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+9a1b1c9624148487e66706be4f536da1
+  $fShowTimeStamp3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "comptime_ = "#) -}
+18323436c1b042b0f6de9c3b02555eb7
+  $fShowTimeStamp4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+291e23aeaafece320ce38d420e8003f9
+  $fShowTimeStamp5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "stampId_ = "#) -}
+20ae1e1aa45d56a507cce3e99f94bc7c
+  $fShowTimeStamp6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "TimeStamp {"#) -}
+4c2bc3e8a51f44988df81810a39f46bf
+  $fShowTimeStamp7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+e912185473c22035d01b7ca12dcc02d0
+  $fShowTimeStamp_$cshow :: Cloud.Type.TimeStamp -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U(U),1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Cloud.Type.TimeStamp) ->
+                 Cloud.Type.$fShowTimeStamp_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e912185473c22035d01b7ca12dcc02d0
+  $fShowTimeStamp_$cshowList ::
+    [Cloud.Type.TimeStamp] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Cloud.Type.TimeStamp
+                   Cloud.Type.$fShowTimeStamp1) -}
+e912185473c22035d01b7ca12dcc02d0
+  $fShowTimeStamp_$cshowsPrec ::
+    GHC.Types.Int -> Cloud.Type.TimeStamp -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Cloud.Type.TimeStamp) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Cloud.Type.TimeStamp ww3 ww4 ->
+                 Cloud.Type.$w$cshowsPrec2 ww1 ww3 ww4 } }) -}
+a4738b0a123fc766cded2b7fba218b53
   $tc'ARG :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   13707221700822943620##
-                   15700128289501809771##
+                   8213346110040501402##
+                   3434945003199803671##
                    Cloud.Type.$trModule
                    Cloud.Type.$tc'ARG1) -}
-4db53ea0e74615fbc9dfea80a7dcb346
+bcf4bc273d85ae7a2b6958e7b57953fc
   $tc'ARG1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'ARG"#) -}
-afbdabab654b4ee1ae40551aa333ba6c
+6f6bc0e1d830c3970ab6727f4410012f
+  $tc'DistControlStruct :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5408473312847517508##
+                   12639297914534250456##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tc'DistControlStruct1) -}
+7d24ac80c1d3f2444fbe0e5ff2bac78b
+  $tc'DistControlStruct1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'DistControlStruct"#) -}
+1887afaca08d902b21035dac69773ea9
   $tc'RESPONSE :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   8383755855477269680##
-                   9072921097350574241##
+                   6577929617397015995##
+                   5511198451911316474##
                    Cloud.Type.$trModule
                    Cloud.Type.$tc'RESPONSE1) -}
-fbb2385768495c588466836883de2bbb
+9d4ce46e22d78b56ed48969f46b0bf32
   $tc'RESPONSE1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'RESPONSE"#) -}
-bafa9c15f4cb250862d887666bc06bc5
+c441f1e55eca239c570b8d4c424383b5
+  $tc'Task :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6564594587138952428##
+                   3062650720054696665##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tc'Task1) -}
+695a6d79d4f73204f34b733175f584c1
+  $tc'Task1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Task"#) -}
+cffded969383b1228b26a98e6cfc7e06
+  $tc'TimeStamp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9102861884397276125##
+                   6715122389309332038##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tc'TimeStamp1) -}
+0308c92f54b4ae4c877dbdaa228b2b33
+  $tc'TimeStamp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'TimeStamp"#) -}
+1589a5be022a8a7f00363609a254d082
+  $tcDistControlStruct :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4207845293419882866##
+                   4728975110550799414##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tcDistControlStruct1) -}
+7a1b97bea20c69c46bff5c7c5a6fdba6
+  $tcDistControlStruct1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "DistControlStruct"#) -}
+6a178b10b843767565d3f02ac5d07bf0
   $tcMSG :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   14859974865717270006##
-                   11547563113161976325##
+                   4541439096892297965##
+                   3051610108435893611##
                    Cloud.Type.$trModule
                    Cloud.Type.$tcMSG1) -}
-554d89048b84bb959403d91ed44a45e1
+cc2e01e3d8c8e88b4412c20f4c923cbd
   $tcMSG1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "MSG"#) -}
-0ff4fe67ff0228c63d3927484fdcf279
+c01d8d90ab8abda3d05413f03f9ca67b
+  $tcTask :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5970977359794921009##
+                   6300851848380152409##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tcTask1) -}
+e1796bf8cb423a6818e45f79f49b2462
+  $tcTask1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Task"#) -}
+01e3a0b4c56e6d4e0079784f71a711d8
+  $tcTimeStamp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13359689899992572122##
+                   18366002679046466916##
+                   Cloud.Type.$trModule
+                   Cloud.Type.$tcTimeStamp1) -}
+9484569a48f66de412087da6d8dcbad4
+  $tcTimeStamp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "TimeStamp"#) -}
+8d00d2fc93b38ba2333eac1ffe9d0554
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Cloud.Type.$trModule2
                    Cloud.Type.$trModule1) -}
-c5d7a745252d93f56da1b31e03d8ef31
+e0193bfda585841f58400d6f6e76a232
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Cloud.Type"#) -}
-060852a3c8db2dfadec0660551f8d9a9
+5ea7f9d3eb253a3246a91e3798013c74
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"#) -}
-bf034cd3390ac885965bb47ac2c869d3
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+f052c2c06e0d5b81bb549acc0a3a5a08
+  $w$c/= ::
+    GHC.Prim.Int#
+    -> Cloud.Type.Comptime
+    -> GHC.Prim.Int#
+    -> Cloud.Type.Comptime
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Cloud.Type.Comptime)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: Cloud.Type.Comptime) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.D# x ->
+                      case ww3 of wild2 { GHC.Types.D# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==## x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+e6967c3cdd12caf721918a13fff86018
+  $w$c== ::
+    [Cloud.Type.TimeStamp]
+    -> [Cloud.Type.Task]
+    -> [Cloud.Type.Task]
+    -> [[Cloud.Type.Result]]
+    -> [Cloud.Type.TimeStamp]
+    -> [Cloud.Type.Task]
+    -> [Cloud.Type.Task]
+    -> [[Cloud.Type.Result]]
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Cloud.Type.TimeStamp])
+                   (ww1 :: [Cloud.Type.Task])
+                   (ww2 :: [Cloud.Type.Task])
+                   (ww3 :: [[Cloud.Type.Result]])
+                   (ww4 :: [Cloud.Type.TimeStamp])
+                   (ww5 :: [Cloud.Type.Task])
+                   (ww6 :: [Cloud.Type.Task])
+                   (ww7 :: [[Cloud.Type.Result]]) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ Cloud.Type.TimeStamp
+                        Cloud.Type.$fEqTimeStamp
+                        ww
+                        ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$c==
+                             @ Cloud.Type.Task
+                             Cloud.Type.$fEqTask
+                             ww1
+                             ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.$fEq[]_$c==
+                                  @ Cloud.Type.Task
+                                  Cloud.Type.$fEqTask
+                                  ww2
+                                  ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> GHC.Classes.$fEq[]_$c==
+                                  @ [Cloud.Type.Result]
+                                  Cloud.Type.$fEqDistControlStruct_$s$fEq[]
+                                  ww3
+                                  ww7 } } }) -}
+61125733369791b07a8a84a7872aadba
+  $w$c==1 ::
+    GHC.Prim.Int#
+    -> (Cloud.Type.Vect, Cloud.Type.Vect)
+    -> GHC.Prim.Int#
+    -> (Cloud.Type.Vect, Cloud.Type.Vect)
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U)))><S,U><L,1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U)))>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: (Cloud.Type.Vect, Cloud.Type.Vect))
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: (Cloud.Type.Vect, Cloud.Type.Vect)) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case ww1 of ww4 { (,) ww5 ww6 ->
+                      case ww3 of ww7 { (,) ww8 ww9 ->
+                      case ww5 of ww10 { (,,) ww11 ww12 ww13 ->
+                      case ww8 of ww14 { (,,) ww15 ww16 ww17 ->
+                      case ww11 of wild1 { GHC.Types.F# x ->
+                      case ww15 of wild2 { GHC.Types.F# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.eqFloat# x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case ww12 of wild4 { GHC.Types.F# x1 ->
+                           case ww16 of wild5 { GHC.Types.F# y1 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.eqFloat# x1 y1) of wild6 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case ww13 of wild7 { GHC.Types.F# x2 ->
+                                case ww17 of wild8 { GHC.Types.F# y2 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.eqFloat# x2 y2) of wild9 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case ww6 of ww18 { (,,) ww19 ww20 ww21 ->
+                                     case ww9 of ww22 { (,,) ww23 ww24 ww25 ->
+                                     case ww19 of wild10 { GHC.Types.F# x3 ->
+                                     case ww23 of wild11 { GHC.Types.F# y3 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.eqFloat# x3 y3) of wild12 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> case ww20 of wild13 { GHC.Types.F# x4 ->
+                                          case ww24 of wild14 { GHC.Types.F# y4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.eqFloat# x4 y4) of wild15 {
+                                            GHC.Types.False -> GHC.Types.False
+                                            GHC.Types.True
+                                            -> GHC.Classes.eqFloat
+                                                 ww21
+                                                 ww25 } } } } } } } } } } } } } } } } } } } } } }) -}
+66f1b1d510489b4488ef2344be11f39d
+  $w$c==2 ::
+    GHC.Prim.Int#
+    -> Cloud.Type.Comptime
+    -> GHC.Prim.Int#
+    -> Cloud.Type.Comptime
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Cloud.Type.Comptime)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: Cloud.Type.Comptime) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.eqDouble ww1 ww3 }) -}
+71952858e6c7a20c759dea30cab6b714
   $w$cget ::
     GHC.Prim.Addr#
     -> GHC.ForeignPtr.ForeignPtrContents
@@ -1226,7 +1800,7 @@ bf034cd3390ac885965bb47ac2c869d3
                                         <'GHC.Generics.MetaData
                                            "MSG"
                                            "Cloud.Type"
-                                           "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+                                           "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                                            'GHC.Types.False>_P
                                         <GHC.Generics.C1
                                            ('GHC.Generics.MetaCons
@@ -1255,7 +1829,79 @@ bf034cd3390ac885965bb47ac2c869d3
                                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
                                                                    [Cloud.Type.Result])))>_R))
                               (Sub (Sym (Cloud.Type.Rep_MSG[0]))) <GHC.Prim.Any>_N)))) -}
-621a410179266f31e7c9d940c6cae0a1
+3b6813e83eddcc1b53ef13b8d6065f46
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> [Cloud.Type.TimeStamp]
+    -> [Cloud.Type.Task]
+    -> [Cloud.Type.Task]
+    -> [[Cloud.Type.Result]]
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 6, Strictness: <S,U><L,1*U><L,1*U><L,1*U><L,1*U><L,U>,
+     Inline: [0] -}
+543e8111585a847afc422a04e9344dfe
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> Cloud.Type.ID
+    -> (Cloud.Type.Vect, Cloud.Type.Vect)
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4,
+     Strictness: <S,U><L,1*U(U)><L,1*U(1*U(1*U(U),1*U(U),1*U(U)),U(U(U),U(U),U(U)))><L,U>,
+     Inline: [0] -}
+a47f911a07897af0a07baa93e2e18f1b
+  $w$cshowsPrec2 ::
+    GHC.Prim.Int#
+    -> Cloud.Type.ID -> Cloud.Type.Comptime -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,U><L,U(U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Cloud.Type.ID)
+                   (ww2 :: Cloud.Type.Comptime) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = case ww2 of ww3 { GHC.Types.D# ww4 ->
+                     GHC.Float.$w$sshowSignedFloat
+                       GHC.Float.$fShowDouble_$sshowFloat
+                       Cloud.Type.$fShowTimeStamp7
+                       ww4 }
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Cloud.Type.$fShowTimeStamp6
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Cloud.Type.$fShowTimeStamp5
+                          (case ww1 of ww3 { GHC.Types.I# ww4 ->
+                           case GHC.Show.$wshowSignedInt
+                                  0#
+                                  ww4
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     Cloud.Type.$fShowTimeStamp4
+                                     (GHC.Base.++
+                                        @ GHC.Types.Char
+                                        Cloud.Type.$fShowTimeStamp3
+                                        (f (GHC.Base.++
+                                              @ GHC.Types.Char
+                                              Cloud.Type.$fShowTimeStamp2
+                                              x)))) of ww5 { (#,#) ww6 ww7 ->
+                           GHC.Types.: @ GHC.Types.Char ww6 ww7 } }))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x)) }) -}
+7176b67ccc6d01f33a7fbddc2c587836
   $w$dGSumGet ::
     GHC.Prim.Addr#
     -> GHC.ForeignPtr.ForeignPtrContents
@@ -1359,7 +2005,7 @@ bf034cd3390ac885965bb47ac2c869d3
                                                 (GHC.Generics.Rec0
                                                    (Control.Distributed.Process.Internal.Types.ProcessId,
                                                     [Cloud.Type.Result]))>_R)) <a1>_N))) })) -}
-59a7ff06a512fb681b27ad73721b6bb8
+24f80b79c550e4c31400d84bc31c14cd
   $w$dGSumGet1 ::
     GHC.Prim.Addr#
     -> GHC.ForeignPtr.ForeignPtrContents
@@ -1418,64 +2064,64 @@ bf034cd3390ac885965bb47ac2c869d3
                    (\ (i' :: Data.ByteString.Internal.ByteString)
                       (a2 :: Control.Distributed.Process.Internal.Types.ProcessId)[OneShot] ->
                     case i' of ww4 { Data.ByteString.Internal.PS ww5 ww6 ww7 ww8 ->
-                    Data.Binary.Class.$w$cget4
+                    Data.Binary.Class.$w$cget8
                       @ r
                       ww5
                       ww6
                       ww7
                       ww8
                       (\ (i'1 :: Data.ByteString.Internal.ByteString)
-                         (a3 :: GHC.Types.Double)[OneShot] ->
+                         (a3 :: GHC.Types.Float)[OneShot] ->
                        case i'1 of ww9 { Data.ByteString.Internal.PS ww10 ww11 ww12 ww13 ->
-                       Data.Binary.Class.$w$cget4
+                       Data.Binary.Class.$w$cget8
                          @ r
                          ww10
                          ww11
                          ww12
                          ww13
                          (\ (i'2 :: Data.ByteString.Internal.ByteString)
-                            (a4 :: GHC.Types.Double)[OneShot] ->
+                            (a4 :: GHC.Types.Float)[OneShot] ->
                           case i'2 of ww14 { Data.ByteString.Internal.PS ww15 ww16 ww17 ww18 ->
-                          Data.Binary.Class.$w$cget4
+                          Data.Binary.Class.$w$cget8
                             @ r
                             ww15
                             ww16
                             ww17
                             ww18
                             (\ (i'3 :: Data.ByteString.Internal.ByteString)
-                               (a5 :: GHC.Types.Double)[OneShot] ->
+                               (a5 :: GHC.Types.Float)[OneShot] ->
                              case i'3 of ww19 { Data.ByteString.Internal.PS ww20 ww21 ww22 ww23 ->
                              let {
-                               a6 :: (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+                               a6 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
                                  {- Strictness: m -}
                                = (a3, a4, a5)
                              } in
-                             Data.Binary.Class.$w$cget4
+                             Data.Binary.Class.$w$cget8
                                @ r
                                ww20
                                ww21
                                ww22
                                ww23
                                (\ (i'4 :: Data.ByteString.Internal.ByteString)
-                                  (a7 :: GHC.Types.Double)[OneShot] ->
+                                  (a7 :: GHC.Types.Float)[OneShot] ->
                                 case i'4 of ww24 { Data.ByteString.Internal.PS ww25 ww26 ww27 ww28 ->
-                                Data.Binary.Class.$w$cget4
+                                Data.Binary.Class.$w$cget8
                                   @ r
                                   ww25
                                   ww26
                                   ww27
                                   ww28
                                   (\ (i'5 :: Data.ByteString.Internal.ByteString)
-                                     (a8 :: GHC.Types.Double)[OneShot] ->
+                                     (a8 :: GHC.Types.Float)[OneShot] ->
                                    case i'5 of ww29 { Data.ByteString.Internal.PS ww30 ww31 ww32 ww33 ->
-                                   Data.Binary.Class.$w$cget4
+                                   Data.Binary.Class.$w$cget8
                                      @ r
                                      ww30
                                      ww31
                                      ww32
                                      ww33
                                      (\ (i'6 :: Data.ByteString.Internal.ByteString)
-                                        (a9 :: GHC.Types.Double)[OneShot] ->
+                                        (a9 :: GHC.Types.Float)[OneShot] ->
                                       w i'6
                                         (a2, (a6, (a7, a8, a9)))
                                           `cast`
@@ -1515,7 +2161,7 @@ bf034cd3390ac885965bb47ac2c869d3
                                                                   (Control.Distributed.Process.Internal.Types.ProcessId,
                                                                    (Cloud.Type.Vect,
                                                                     Cloud.Type.Vect)))>_R)) <a1>_N))) }) }) }) }) }) })) -}
-8f8863b3dff59655ce3946c10e843478
+9b733e9beda75147d57c1e1f32a022fc
   $w$dGSumPut ::
     Data.Binary.Class.Binary w =>
     w
@@ -1654,7 +2300,7 @@ bf034cd3390ac885965bb47ac2c869d3
                           eta))
                       `cast`
                     (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) #) }) -}
-ab383f75478391401ff03db0f17b1b82
+c10ab22a1326ab32662db998d8e563aa
   $w$dGSumPut1 ::
     Data.Binary.Class.Binary w =>
     w
@@ -1676,22 +2322,32 @@ ab383f75478391401ff03db0f17b1b82
   {- Arity: 3,
      Strictness: <L,1*U(1*C1(U(A,U)),A,A)><S,1*U><L,1*U(1*U(U(U,U,U,U),U,U),1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U))))>,
      Inline: [0] -}
-a6eb91aab4183c65cccf21a26bc83a19
+b827c413e62ecd244bb389aa839d03a2
+  type Comptime = GHC.Types.Double
+925c344c11d18e1fe23f8bd00516342d
+  data DistControlStruct
+    = DistControlStruct {timeStamps_ :: [Cloud.Type.TimeStamp],
+                         runningTasks_ :: [Cloud.Type.Task],
+                         openTasks_ :: [Cloud.Type.Task],
+                         responses_ :: [[Cloud.Type.Result]]}
+dc71491f1344d41be1610ae9015c0b62
+  type ID = GHC.Types.Int
+ab762ff6e2e9ca52482703ea7ded7229
   type IterationCount = GHC.Integer.Type.Integer
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   data MSG
     = ARG (Control.Distributed.Process.Internal.Types.ProcessId,
            (Cloud.Type.Vect, Cloud.Type.Vect))
     | RESPONSE (Control.Distributed.Process.Internal.Types.ProcessId,
                 [Cloud.Type.Result])
-bf034cd3390ac885965bb47ac2c869d3
+71952858e6c7a20c759dea30cab6b714
   axiom Rep_MSG::
       GHC.Generics.Rep Cloud.Type.MSG
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
                "MSG"
                "Cloud.Type"
-               "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+               "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
@@ -1717,14 +2373,108 @@ bf034cd3390ac885965bb47ac2c869d3
                                    (GHC.Generics.Rec0
                                       (Control.Distributed.Process.Internal.Types.ProcessId,
                                        [Cloud.Type.Result]))))
-7b1c9a8409219ff24a3681454df7431e
+eba2e5a5018cf4017d122e06800f65e4
   type Result = (Cloud.Type.Vect, Cloud.Type.IterationCount)
-8c391a93b4b1398d5c285c5d294fd60a
-  type Vect = (GHC.Types.Double, GHC.Types.Double, GHC.Types.Double)
+94acd7a86585f7090bbb2c12b05538a8
+  data Task
+    = Task {taskId_ :: Cloud.Type.ID,
+            domain_ :: (Cloud.Type.Vect, Cloud.Type.Vect)}
+e912185473c22035d01b7ca12dcc02d0
+  data TimeStamp
+    = TimeStamp {stampId_ :: Cloud.Type.ID,
+                 comptime_ :: Cloud.Type.Comptime}
+e3584f5562382a82e541d6b296b7441d
+  type Vect = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+b3cb795e1f9f64a034b10114d9132390
+  comptime_ :: Cloud.Type.TimeStamp -> Cloud.Type.Comptime
+  RecSel Left Cloud.Type.TimeStamp
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.TimeStamp) ->
+                 case ds of wild { Cloud.Type.TimeStamp ds1 ds2 -> ds2 }) -}
+3eefff19972c87d138eadef0fbdde3f3
+  domain_ :: Cloud.Type.Task -> (Cloud.Type.Vect, Cloud.Type.Vect)
+  RecSel Left Cloud.Type.Task
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.Task) ->
+                 case ds of wild { Cloud.Type.Task ds1 ds2 -> ds2 }) -}
+17bcf0ad853dd9a8f7e7a03800a0396b
+  initStructure :: Cloud.Type.DistControlStruct
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Cloud.Type.DistControlStruct
+                   (GHC.Types.[] @ Cloud.Type.TimeStamp)
+                   (GHC.Types.[] @ Cloud.Type.Task)
+                   (GHC.Types.[] @ Cloud.Type.Task)
+                   Cloud.Type.initStructure1) -}
+1072011fbb3576f144663d701a74a9a5
+  initStructure1 :: [[Cloud.Type.Result]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [Cloud.Type.Result]
+                   (GHC.Types.[] @ Cloud.Type.Result)
+                   (GHC.Types.[] @ [Cloud.Type.Result])) -}
+8a4c0816a51485754d7f9441dd11e967
+  openTasks_ :: Cloud.Type.DistControlStruct -> [Cloud.Type.Task]
+  RecSel Left Cloud.Type.DistControlStruct
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.DistControlStruct) ->
+                 case ds of wild { Cloud.Type.DistControlStruct ds1 ds2 ds3 ds4 ->
+                 ds3 }) -}
+f1e8b0ba88c28edda66c80229ffc67a5
+  responses_ :: Cloud.Type.DistControlStruct -> [[Cloud.Type.Result]]
+  RecSel Left Cloud.Type.DistControlStruct
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.DistControlStruct) ->
+                 case ds of wild { Cloud.Type.DistControlStruct ds1 ds2 ds3 ds4 ->
+                 ds4 }) -}
+67c3e518bda2507b60a85ae8fa195355
+  runningTasks_ :: Cloud.Type.DistControlStruct -> [Cloud.Type.Task]
+  RecSel Left Cloud.Type.DistControlStruct
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.DistControlStruct) ->
+                 case ds of wild { Cloud.Type.DistControlStruct ds1 ds2 ds3 ds4 ->
+                 ds2 }) -}
+8a8f3eb72655c9e711e974e8d331810c
+  stampId_ :: Cloud.Type.TimeStamp -> Cloud.Type.ID
+  RecSel Left Cloud.Type.TimeStamp
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.TimeStamp) ->
+                 case ds of wild { Cloud.Type.TimeStamp ds1 ds2 -> ds1 }) -}
+2bd5db7b96dc5082060bfd0bdb212710
+  taskId_ :: Cloud.Type.Task -> Cloud.Type.ID
+  RecSel Left Cloud.Type.Task
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.Task) ->
+                 case ds of wild { Cloud.Type.Task ds1 ds2 -> ds1 }) -}
+80a09ac9b4d0e1c17eea7f58ab38c0ac
+  timeStamps_ ::
+    Cloud.Type.DistControlStruct -> [Cloud.Type.TimeStamp]
+  RecSel Left Cloud.Type.DistControlStruct
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Type.DistControlStruct) ->
+                 case ds of wild { Cloud.Type.DistControlStruct ds1 ds2 ds3 ds4 ->
+                 ds1 }) -}
 instance Data.Binary.Class.Binary [Cloud.Type.MSG]
   = Cloud.Type.$fBinaryMSG
+instance GHC.Classes.Eq [Cloud.Type.DistControlStruct]
+  = Cloud.Type.$fEqDistControlStruct
+instance GHC.Classes.Eq [Cloud.Type.Task] = Cloud.Type.$fEqTask
+instance GHC.Classes.Eq [Cloud.Type.TimeStamp]
+  = Cloud.Type.$fEqTimeStamp
 instance GHC.Generics.Generic [Cloud.Type.MSG]
   = Cloud.Type.$fGenericMSG
+instance GHC.Show.Show [Cloud.Type.DistControlStruct]
+  = Cloud.Type.$fShowDistControlStruct
+instance GHC.Show.Show [Cloud.Type.Task] = Cloud.Type.$fShowTask
+instance GHC.Show.Show [Cloud.Type.TimeStamp]
+  = Cloud.Type.$fShowTimeStamp
 family instance GHC.Generics.Rep [Cloud.Type.MSG]
   = Cloud.Type.Rep_MSG
 "SPEC/Cloud.Type $dmput @ MSG" [ALWAYS] forall ($dGBinaryPut :: Data.Binary.Class.GBinaryPut
@@ -1736,31 +2486,82 @@ family instance GHC.Generics.Rep [Cloud.Type.MSG]
                            $dGeneric
                            $dGBinaryPut
   = Cloud.Type.$fBinaryMSG_$s$dmput
-"SPEC/Cloud.Type $fBinary(,) @ (Double, Double, Double) @ Integer" [ALWAYS] forall ($dBinary1 :: Data.Binary.Class.Binary
-                                                                                                   GHC.Integer.Type.Integer)
-                                                                                   ($dBinary :: Data.Binary.Class.Binary
-                                                                                                  (GHC.Types.Double,
-                                                                                                   GHC.Types.Double,
-                                                                                                   GHC.Types.Double))
-  Data.Binary.Class.$fBinary(,) @ (GHC.Types.Double,
-                                   GHC.Types.Double, GHC.Types.Double)
+"SPEC/Cloud.Type $fBinary(,) @ (Float, Float, Float) @ Integer" [ALWAYS] forall ($dBinary1 :: Data.Binary.Class.Binary
+                                                                                                GHC.Integer.Type.Integer)
+                                                                                ($dBinary :: Data.Binary.Class.Binary
+                                                                                               (GHC.Types.Float,
+                                                                                                GHC.Types.Float,
+                                                                                                GHC.Types.Float))
+  Data.Binary.Class.$fBinary(,) @ (GHC.Types.Float, GHC.Types.Float,
+                                   GHC.Types.Float)
                                 @ GHC.Integer.Type.Integer
                                 $dBinary
                                 $dBinary1
   = Cloud.Type.$fBinaryMSG_$s$fBinary(,)
-"SPEC/Cloud.Type $fBinary(,,) @ Double @ Double @ Double" [ALWAYS] forall ($dBinary2 :: Data.Binary.Class.Binary
-                                                                                          GHC.Types.Double)
-                                                                          ($dBinary1 :: Data.Binary.Class.Binary
-                                                                                          GHC.Types.Double)
-                                                                          ($dBinary :: Data.Binary.Class.Binary
-                                                                                         GHC.Types.Double)
-  Data.Binary.Class.$fBinary(,,) @ GHC.Types.Double
-                                 @ GHC.Types.Double
-                                 @ GHC.Types.Double
+"SPEC/Cloud.Type $fBinary(,,) @ Float @ Float @ Float" [ALWAYS] forall ($dBinary2 :: Data.Binary.Class.Binary
+                                                                                       GHC.Types.Float)
+                                                                       ($dBinary1 :: Data.Binary.Class.Binary
+                                                                                       GHC.Types.Float)
+                                                                       ($dBinary :: Data.Binary.Class.Binary
+                                                                                      GHC.Types.Float)
+  Data.Binary.Class.$fBinary(,,) @ GHC.Types.Float
+                                 @ GHC.Types.Float
+                                 @ GHC.Types.Float
                                  $dBinary
                                  $dBinary1
                                  $dBinary2
   = Cloud.Type.$fBinaryMSG_$s$fBinary(,,)
+"SPEC/Cloud.Type $fEq(,) @ (Float, Float, Float) @ Integer" [ALWAYS] forall ($dEq1 :: GHC.Classes.Eq
+                                                                                        GHC.Integer.Type.Integer)
+                                                                            ($dEq :: GHC.Classes.Eq
+                                                                                       (GHC.Types.Float,
+                                                                                        GHC.Types.Float,
+                                                                                        GHC.Types.Float))
+  GHC.Classes.$fEq(,) @ (GHC.Types.Float, GHC.Types.Float,
+                         GHC.Types.Float)
+                      @ GHC.Integer.Type.Integer
+                      $dEq
+                      $dEq1
+  = Cloud.Type.$fEqDistControlStruct_$s$fEq(,)
+"SPEC/Cloud.Type $fEq(,,) @ Float @ Float @ Float" [ALWAYS] forall ($dEq2 :: GHC.Classes.Eq
+                                                                               GHC.Types.Float)
+                                                                   ($dEq1 :: GHC.Classes.Eq
+                                                                               GHC.Types.Float)
+                                                                   ($dEq :: GHC.Classes.Eq
+                                                                              GHC.Types.Float)
+  GHC.Classes.$fEq(,,) @ GHC.Types.Float
+                       @ GHC.Types.Float
+                       @ GHC.Types.Float
+                       $dEq
+                       $dEq1
+                       $dEq2
+  = Cloud.Type.$fEqDistControlStruct_$s$fEq(,,)
+"SPEC/Cloud.Type $fEq(,,)_$c/= @ Float @ Float @ Float" [ALWAYS] forall ($dEq2 :: GHC.Classes.Eq
+                                                                                    GHC.Types.Float)
+                                                                        ($dEq1 :: GHC.Classes.Eq
+                                                                                    GHC.Types.Float)
+                                                                        ($dEq :: GHC.Classes.Eq
+                                                                                   GHC.Types.Float)
+  GHC.Classes.$fEq(,,)_$c/= @ GHC.Types.Float
+                            @ GHC.Types.Float
+                            @ GHC.Types.Float
+                            $dEq
+                            $dEq1
+                            $dEq2
+  = Cloud.Type.$fEqDistControlStruct_$s$fEq(,,)_$c/=
+"SPEC/Cloud.Type $fEq[] @ (Vect, IterationCount)" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                                             (Cloud.Type.Vect,
+                                                                              Cloud.Type.IterationCount))
+  GHC.Classes.$fEq[] @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                     $dEq
+  = Cloud.Type.$fEqDistControlStruct_$s$fEq[]
+"SPEC/Cloud.Type $fEq[]_$c/= @ (Vect, IterationCount)" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                                                  (Cloud.Type.Vect,
+                                                                                   Cloud.Type.IterationCount))
+  GHC.Classes.$fEq[]_$c/= @ (Cloud.Type.Vect,
+                             Cloud.Type.IterationCount)
+                          $dEq
+  = Cloud.Type.$fEqDistControlStruct_$s$fEq[]_$c/=
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

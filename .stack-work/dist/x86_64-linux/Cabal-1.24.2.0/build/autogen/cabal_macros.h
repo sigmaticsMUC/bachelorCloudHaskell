@@ -7,6 +7,13 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
+/* package JuicyPixels-3.2.8.1 */
+#define VERSION_JuicyPixels "3.2.8.1"
+#define MIN_VERSION_JuicyPixels(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  2 || \
+  (major1) == 3 && (major2) == 2 && (minor) <= 8)
+
 /* package base-4.9.1.0 */
 #define VERSION_base "4.9.1.0"
 #define MIN_VERSION_base(major1,major2,minor) (\
@@ -168,7 +175,7 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
 
-#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-FoxhxgXdoxp1fJvDcTEVH3"
+#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
 

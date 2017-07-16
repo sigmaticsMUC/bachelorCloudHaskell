@@ -1,4 +1,5 @@
 {-# LANGUAGE TemplateHaskell #-}
+
 module Main where
 
 import MandelBulb.Math.Core (doBulb, norm)
@@ -7,16 +8,18 @@ import qualified MandelBulb.Utils.Domain as DM
 import Control.Distributed.Process hiding (Message)
 import Control.Distributed.Process.Closure
 import Control.Monad
+import IOUtils.ColorMap as CM
 import Cloud.Master (masterProcess)
-import Cloud.Type (Vect, IterationCount, Result, MSG (ARG, RESPONSE))
+import Cloud.Type (Vect, IterationCount, Result, MSG (RESPONSE), DistControlStruct, Task, TimeStamp, initStructure)
 import System.CPUTime
 import Graphics.EasyPlot
 import System.IO
+import           Codec.Picture
 
-h = 0.01
+h = 0.1
 
 --domain_ = DM.rowMajor $ DM.generateDomain (0, 0, 0) (0.5,0.5,1) 0.01
-domain_ = DM.rowMajor $ DM.generateDomain (-2,-2,-2) (2, 2, 2) h
+domain_ = DM.rowMajor $ DM.generateDomain (-1,-1,-1) (1, 1, 1) h
 mbulb = doBulb 8 0 256 4.0
 
 mbulb_ :: () -> (Vect -> IterationCount)
@@ -47,27 +50,26 @@ main = do
   putStrLn $  "Computation time: " ++ (show (diff :: Double))
 -}
 
-mapColor :: Double -> Vect
-mapColor i = (20, j, 30)
-  where j = i*i*i
+mapColor :: Float -> (Float, Float, Float)
+mapColor i = CM.heightToRGB8 2.0 (i, i, i)
+  where j = i + 2.0
 
-countToColorString :: Double -> String
+countToColorString :: Float -> String
 countToColorString = vecToString . mapColor
 
-vecToString :: Vect -> String
-vecToString (a, b, c) = (show a) ++ "," ++ (show b) ++ "," ++(show c) ++ " "
+vecToString :: Show a => (a, a, a) -> String
+vecToString (a, b, c) = (show a) ++ "," ++ (show b) ++ "," ++ (show c)
 
 iterToRgbString :: Integer -> String
-iterToRgbString i = show $ 256 * i + i
+iterToRgbString i = show $ i
+
+toCSVLine :: (Integer, Vect) -> String
+toCSVLine (i, v@(_, _, z)) = (vecToString v) ++ "," ++ (countToColorString z) ++ "\n"
 
 {-
 toCSVLine :: (Integer, Vect) -> String
-toCSVLine (i, v) = (vecToString v) ++ (countToColorString (norm v)) ++ "\n"
--}
-
-toCSVLine :: (Integer, Vect) -> String
 toCSVLine (i, v) = (vecToString v) ++ "," ++ (iterToRgbString i) ++ "\n"
-
+-}
 {-
 main :: IO ()
 main = do
@@ -77,10 +79,13 @@ main = do
   let vec = map snd dataS
   putStrLn $ show $ length vec
   putStrLn $ show $ length fullData
+  let ctrl = initStructure
+  putStrLn $ show ctrl
   --putStrLn $ show $ fullData
-  outh <- openFile "../test3.txt" WriteMode
-  hPutStrLn outh $ "x, y, z, c\n" ++ (concat (map toCSVLine dataS))
+  outh <- openFile "./data.txt" WriteMode
+  --hPutStrLn outh $ "x, y, z, c\n" ++ (concat (map toCSVLine dataS))
+  hPutStrLn outh $ (concat (map toCSVLine dataS))
   hClose outh
-  --plot' [Interactive] X11 $ Data3D [(Title "Test"), (Style Dots)] [] vec
+  --plot' [] X11 $ Data3D [(Title "Test"), (Style Dots)] [] vec
   return ()
 -}
