@@ -6,11 +6,8 @@ module Cloud.Master(
 )where
 
 import Control.Distributed.Process hiding (Message)
-
-import Cloud.Type (Vect, IterationCount, Result, MSG (RESPONSE),
-  DistControlStruct(timeStamps_, runningTasks_, openTasks_, responses_, DistControlStruct),
-  Task (Task),
-  TimeStamp (TimeStamp), initStructure)
+import Cloud.Type
+import Cloud.Utils.DistControlStruct
 import Cloud.Kernel (spawnProcesses, distribute)
 import System.IO
 
@@ -33,7 +30,7 @@ toCSVLine (v, i) = (vecToString v) ++ "," ++ (iterToRgbString i) ++ "\n"
 masterProcess :: Closure(Vect->IterationCount) -> [Vect] -> Float -> [NodeId] -> Process ()
 masterProcess cF args h nodes = do
   master <- getSelfPid
-  let ctrl = initStructure
+  let ctrl = empty
   say "spawning processes..."
   ps <- spawnProcesses h master cF nodes
   say $ (show $ length nodes) ++ " processes spawned!"

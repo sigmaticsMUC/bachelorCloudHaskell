@@ -2,6 +2,7 @@
 
 module Main where
 
+
 import MandelBulb.Math.Core (doBulb, norm)
 import Cloud.Utils.DistribUtils (distribMain)
 import qualified MandelBulb.Utils.Domain as DM
@@ -10,12 +11,17 @@ import Control.Distributed.Process.Closure
 import Control.Monad
 import IOUtils.ColorMap as CM
 import Cloud.Master (masterProcess)
-import Cloud.Type (Vect, IterationCount, Result, MSG (RESPONSE), DistControlStruct, Task, TimeStamp, initStructure)
+--import Cloud.Type (Vect, IterationCount, Result, MSG (RESPONSE), DistControlStruct, Task, TimeStamp, initStructure)
 import System.CPUTime
 import Graphics.EasyPlot
 import System.IO
-import           Codec.Picture
+import Codec.Picture
+import Cloud.Type
+import Cloud.Utils.DistControlStruct
 
+main :: IO ()
+main = return ()
+{-
 h = 0.1
 
 --domain_ = DM.rowMajor $ DM.generateDomain (0, 0, 0) (0.5,0.5,1) 0.01
@@ -30,7 +36,7 @@ remotable ['mbulb_]
 master :: [NodeId] -> Process ()
 master = masterProcess ($(mkClosure 'mbulb_) ()) domain_ h
 
-
+{-
 main :: IO ()
 main = do
   start <- getCPUTime
@@ -38,7 +44,7 @@ main = do
   end<- getCPUTime
   let diff = (fromIntegral (end - start)) / (10^12)
   putStrLn $  "Computation time: " ++ (show (diff :: Double))
-
+-}
 {-
 main :: IO ()
 main = do
@@ -70,7 +76,7 @@ toCSVLine (i, v@(_, _, z)) = (vecToString v) ++ "," ++ (countToColorString z) ++
 toCSVLine :: (Integer, Vect) -> String
 toCSVLine (i, v) = (vecToString v) ++ "," ++ (iterToRgbString i) ++ "\n"
 -}
-{-
+Integer
 main :: IO ()
 main = do
   let fullData = map mbulb domain_

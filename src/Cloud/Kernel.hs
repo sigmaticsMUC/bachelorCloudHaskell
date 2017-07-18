@@ -11,21 +11,23 @@ import Control.Distributed.Process.Closure
 import Control.Monad
 import Data.List.Split
 import qualified MandelBulb.Utils.Domain as DM
-import Cloud.Type (Vect, IterationCount, Result, MSG (ARG, RESPONSE))
+import Cloud.Type (Vect, IterationCount, Result,
+  MSG (ARG, RESPONSE, EXIT), Task (taskId_, taskData_, Task))
 
-{-
+
 slaveProcess :: (ProcessId, Closure(Vect->IterationCount)) -> Process ()
 slaveProcess (master, cF) = do
   us <- getSelfPid
   f <- unClosure cF
   say "Waiting for input..."
   ARG (_, args) <- expect
-  results <- forM args $ \vec -> do
+  results <- forM (taskData_ args) $ \vec -> do
     let result = f vec
     return (vec, result)
   send master (RESPONSE (us, results))
--}
 
+
+{-
 slaveProcess :: (ProcessId, Float, Closure(Vect->IterationCount)) -> Process ()
 slaveProcess (master, h, cF) = do
   us <- getSelfPid
@@ -39,6 +41,7 @@ slaveProcess (master, h, cF) = do
   let results' = filter (\(_, i) -> i /= 255) results
   --liftIO $ putStrLn $ show $ results'
   send master (RESPONSE (us, results'))
+-}
 
 remotable ['slaveProcess]
 
@@ -55,11 +58,11 @@ distribute master args pids = do
   splices <- chunkData args pids
   let spliceData = zip splices pids
   forM_ spliceData $ \(args', pid) -> do
-    let a = head args'
+    --let a = head args'
     --let b = last args'
-    let b = (head . reverse) args'
+    --let b = (head . reverse) args'
     say $ "sending data to " ++ (show pid)
-    send pid (ARG (master, (a, b)))
+    send pid (ARG (master, Task {taskId_ = 0, taskData_ = args'}))
   return()
 
 chunkData :: [Vect] -> [ProcessId] -> Process [[Vect]]

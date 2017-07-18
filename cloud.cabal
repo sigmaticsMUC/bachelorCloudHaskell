@@ -21,7 +21,9 @@ library
                       ,Cloud.Utils.DistribUtils
                       ,Cloud.Master
                       ,Cloud.Type
+                      ,Cloud.Slave
                       ,Cloud.Kernel
+                      ,Cloud.Utils.DistControlStruct
   build-depends:       base >= 4.7 && < 5
     , network
     , distributed-process
