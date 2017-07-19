@@ -10,7 +10,7 @@ import Control.Distributed.Process hiding (Message)
 import Control.Distributed.Process.Closure
 import Control.Monad
 import IOUtils.ColorMap as CM
-import Cloud.Master (masterProcess)
+import Cloud.Master (masterProcess, masterProcess2)
 --import Cloud.Type (Vect, IterationCount, Result, MSG (RESPONSE), DistControlStruct, Task, TimeStamp, initStructure)
 import System.CPUTime
 import Graphics.EasyPlot
@@ -19,8 +19,28 @@ import Codec.Picture
 import Cloud.Type
 import Cloud.Utils.DistControlStruct
 
+h = 0.1
+domain_ = DM.rowMajor $ DM.generateDomain (-1,-1,-1) (1, 1, 1) h
+mbulb = doBulb 8 0 256 4.0
+
+mbulb_ :: () -> (Vect -> IterationCount)
+mbulb_ () = mbulb
+
+remotable ['mbulb_]
+
+settings = Settings {  chunkSize_ = 1000, outputPath_ = "", numNodes_ = -1}
+
+master :: [NodeId] -> Process ()
+master = masterProcess2 settings ($(mkClosure 'mbulb_) ()) domain_
+
+
 main :: IO ()
-main = return ()
+main = do
+  start <- getCPUTime
+  distribMain master Main.__remoteTable
+  end <- getCPUTime
+  let diff = (fromIntegral (end - start)) / (10^12)
+  putStrLn $  "Computation time: " ++ (show (diff :: Double))
 {-
 h = 0.1
 

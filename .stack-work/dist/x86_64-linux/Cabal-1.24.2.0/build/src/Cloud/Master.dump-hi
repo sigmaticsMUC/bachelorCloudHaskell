@@ -1,20 +1,21 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-16 14:41:06.21564 UTC
+2017-07-19 15:54:06.105822 UTC
 
 interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Master 8002
-  interface hash: ac63ff8511d658f399fb500258b516e7
-  ABI hash: c83336dac2c43d501dc0809cea29d148
-  export-list hash: d1c74683029eeef788a39618082cd9a0
-  orphan hash: ed159168ec68469b8ba8c8aa7fb36c1f
+  interface hash: bfbfc3dbc24fea5f927f7e33d3532add
+  ABI hash: b37ebff3d804fd6b298df068abe6ffac
+  export-list hash: b5224ad5f0a59e280b2d8b4872b5aac7
+  orphan hash: 35e849ae6ef6bed8c69d9df8c9572127
   flag hash: 3154edb06e70847877e7ec9876375ad9
   sig of: Nothing
   used TH splices: False
   where
 exports:
   Cloud.Master.masterProcess
-module dependencies: Cloud.Kernel Cloud.Type
-                     MandelBulb.Utils.Domain
+  Cloud.Master.masterProcess2
+module dependencies: Cloud.Handler Cloud.Kernel Cloud.Slave
+                     Cloud.Type Cloud.Utils.DistControlStruct MandelBulb.Utils.Domain
 package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       binary-0.8.3.0@binary-0.8.3.0
                       bytestring-0.10.8.1@bytestring-0.10.8.1
@@ -60,6 +61,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
                          cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type
+                         cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -76,6 +78,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
@@ -88,23 +91,33 @@ import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
-import  -/  Cloud.Kernel 678f727864b1f73295efc27f21676cd9
-  exports: 3fe9b24c38d0ca70dff2e76b839bc674
-  distribute a439ead9a6926007867c7f2ac0c03a2c
-  spawnProcesses 35bdc8ea3d50d41b20a83998377a2389
-import  -/  Cloud.Type 07640426b2f4e38a72607d9978c2cf18
-  exports: 803f70d5b9768e522790e03388e1996f
-  DistControlStruct ee41a7701228fbbc7a11ec1b987630e4
-  DistControlStruct 925c344c11d18e1fe23f8bd00516342d
+import  -/  Cloud.Handler 02364ff141d529ef8655e10bccb7cd29
+  exports: 338ac0983a5ddc6c0263817fbb6ce117
+  handlerProcess 2ff6301c0827c98b0a4a86f2245cacd4
+import  -/  Cloud.Kernel 0dc02d1c8724aa06474a9f4cd686ec84
+  exports: 3d2ab42671944c568b19c490ab82925d
+  distribute 2b65bdbf2883a052754cbb5cf0cc98e4
+  spawnProcesses d86e44926e615cf0011d43d495366c09
+  spawnProcesses2 0c7e9eb05ba8b2061f3e969d8474d6c2
+import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
+  exports: fad69a16fba538d02bdf00f946ca33fd
+  EXIT 415a02aa9fde15dbacefcc0e4221ad37
   IterationCount ab762ff6e2e9ca52482703ea7ded7229
-  RESPONSE 76962f7e7c1edfca4f07dff43b4dc98e
+  RESPONSE 90dd246e61f9b8a1a6da2a184ba64bd3
   Result eba2e5a5018cf4017d122e06800f65e4
+  START 45d9cf2ddeabf1104344738b6aa5de4c
+  Settings ab130f1f2487716e713e91ebfd8e650f
   Vect e3584f5562382a82e541d6b296b7441d
-  initStructure 17bcf0ad853dd9a8f7e7a03800a0396b
-  openTasks_ 8a4c0816a51485754d7f9441dd11e967
-  responses_ f1e8b0ba88c28edda66c80229ffc67a5
-  runningTasks_ 67c3e518bda2507b60a85ae8fa195355
-  timeStamps_ 80a09ac9b4d0e1c17eea7f58ab38c0ac
+  numNodes_ 6b87818696e3d04e551ebb9b92bc5b1b
+import  -/  Cloud.Utils.DistControlStruct 4a6a0683d4e4cee41eb88f127009e9fa
+  exports: 9873922fce9452faed5cece8228301b9
+  DistControlStruct b63ef357d79f3485e71e33792b826351
+  DistControlStruct 21d49f3dbb74f3f471817d5dca3d72e7
+  empty 6a0241ae4628081b53f38a14f4b642de
+  openTasks_ 26cad88239d615982b68ecc94ba3e012
+  responses_ c4587d52c295703ff25b2999a37d46d3
+  runningTasks_ 855c1216c12324e1a8907c3dadc5ff8e
+  timeStamps_ 60a4f47852194785318d6d7fa553e667
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Primitives b74924c8dd3a3c8d0b2bca48b358e70f
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
@@ -112,7 +125,7 @@ import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDyp
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
-a9e1780ddab1c34e1998c1c58bb18711
+64012df17dd5c651e1a4ee4edac9a866
   $s$fSerializablea ::
     Control.Distributed.Process.Serializable.Serializable
       Cloud.Type.MSG
@@ -121,7 +134,7 @@ a9e1780ddab1c34e1998c1c58bb18711
                   @ Cloud.Type.MSG
                   Cloud.Master.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
                   Cloud.Master.$s$fSerializablea1 -}
-2dd1b6f523ebd615aebe3579502e7158
+2a82bdb9e4ae039f3fa13ffbfb1febf5
   $s$fSerializablea1 ::
     Data.Typeable.Internal.Typeable Cloud.Type.MSG
   {- Arity: 1, Strictness: <L,A>,
@@ -130,7 +143,7 @@ a9e1780ddab1c34e1998c1c58bb18711
                   `cast`
                 (Sym (Data.Typeable.Internal.N:Typeable[0]
                           <*>_N <Cloud.Type.MSG>_N)) -}
-6afd3adf134379d9046a0246a2e51f7e
+da58d4518a5010bd76d884f13aef3f2e
   $s$fSerializablea2 ::
     GHC.Prim.Proxy# Cloud.Type.MSG -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
@@ -160,7 +173,7 @@ a9e1780ddab1c34e1998c1c58bb18711
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    4541439096892297965##
                    3051610108435893611##) -}
-5d718307f43d4dcbe762742be7a7ac9b
+2657d0be02b865c0dc38e873fdd32818
   $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
     Data.Binary.Class.Binary Cloud.Type.MSG
   {- Strictness: m,
@@ -180,7 +193,7 @@ b18dddc5427351ac1a445b813c116e41
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
-607a26379a3e0aff2618b80dada092dd
+00b58a47547f18987f04ab669a6f76e2
   masterProcess ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -208,7 +221,7 @@ b18dddc5427351ac1a445b813c116e41
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-2f4f8b3bfc0c0f03ee499b81e538c484
+eca756061233731bb5d3622235c405cf
   masterProcess1 ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -228,7 +241,7 @@ b18dddc5427351ac1a445b813c116e41
                    (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
                    (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Control.Distributed.Process.Internal.Primitives.say1
-                        Cloud.Master.masterProcess5
+                        Cloud.Master.masterProcess6
                         eta
                         eta1 of ds1 { (#,#) ipv ipv1 ->
                  let {
@@ -262,7 +275,7 @@ b18dddc5427351ac1a445b813c116e41
                          GHC.Base.++
                            @ GHC.Types.Char
                            (GHC.Types.: @ GHC.Types.Char ww5 ww6)
-                           Cloud.Master.masterProcess4 } })
+                           Cloud.Master.masterProcess5 } })
                         eta
                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
                  case ((Cloud.Kernel.distribute master args ipv3)
@@ -278,20 +291,20 @@ b18dddc5427351ac1a445b813c116e41
                         `cast`
                       (GHC.Types.N:IO[0] <()>_R)
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
-                 case Cloud.Master.masterProcess3
+                 case Cloud.Master.masterProcess4
                         ipv3
-                        Cloud.Type.initStructure
+                        Cloud.Utils.DistControlStruct.empty
                         eta
                         ipv6 of ds5 { (#,#) ipv8 ipv9 ->
                  case GHC.IO.Handle.FD.openFile1
-                        Cloud.Master.masterProcess2
+                        Cloud.Master.masterProcess3
                         GHC.IO.IOMode.WriteMode
                         ipv8 of ds6 { (#,#) ipv10 ipv11 ->
                  case GHC.IO.Handle.Text.hPutStr2
                         ipv11
                         (GHC.CString.unpackAppendCString#
                            "x, y, z, c\n"#
-                           (case ipv9 of wild { Cloud.Type.DistControlStruct ds7 ds8 ds9 ds10 ->
+                           (case ipv9 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds7 ds8 ds9 ds10 ds11 ds12 ds13 ->
                             Cloud.Master.masterProcess_go ds10 }))
                         GHC.Types.True
                         ipv10 of ds7 { (#,#) ipv12 ipv13 ->
@@ -299,27 +312,67 @@ b18dddc5427351ac1a445b813c116e41
                         ipv11
                         ipv12 of ds8 { (#,#) ipv14 ipv15 ->
                  (# ipv14, GHC.Tuple.() #) } } } } } } } }) -}
-db0ef6f1fabd5afc9165703374d20ef8
-  masterProcess2 :: [GHC.Types.Char]
+ac54929d84e5aefb8714b661cbb633bf
+  masterProcess2 ::
+    Cloud.Type.Settings
+    -> Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> [Cloud.Type.Vect]
+    -> [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.Process ()
+  {- Arity: 6,
+     Strictness: <L,U(1*U(U),A,1*U(U))><L,U><L,U><L,1*U><L,U(U,U,U(U,U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Master.masterProcess7
+                  `cast`
+                (<Cloud.Type.Settings>_R
+                 ->_R <Control.Distributed.Static.Closure
+                         (Cloud.Type.Vect -> Cloud.Type.IterationCount)>_R
+                 ->_R <[Cloud.Type.Vect]>_R
+                 ->_R <[Control.Distributed.Process.Internal.Types.NodeId]>_R
+                 ->_R Trans
+                          (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                           ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                          (Trans
+                               (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                         <*>_N
+                                         <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                         <GHC.Types.IO>_R
+                                         <()>_N))
+                               (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
+72ddfc0d09b6a4bc926f1a143eab6261
+  masterProcess3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "./HIER.txt"#) -}
-5ca5d53520ec73a8fc99894e434cada1
-  masterProcess3 ::
+48382e165b070446c56e22af74d74914
+  masterProcess4 ::
     [Control.Distributed.Process.Internal.Types.ProcessId]
-    -> Cloud.Type.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
     -> Control.Distributed.Process.Internal.Types.LocalProcess
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Cloud.Type.DistControlStruct #)
+          Cloud.Utils.DistControlStruct.DistControlStruct #)
   {- Arity: 4,
-     Strictness: <S,1*U><L,U(U,U,U,U)><L,1*U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U,U,U,U(U,U),U,U))><S,U> -}
-24b7ac8057e51ab7b4db3f28b59a870c
-  masterProcess4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   " processes spawned!"#) -}
-c11c7d3f7754f5db71b3cd37e885bd66
+     Strictness: <S,1*U><L,U(U,U,U,U,U,U,U)><L,1*U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U,U,U,U(U,U),U,U))><S,U> -}
+a56674fe940676dcb168e0c8ce68a9ed
   masterProcess5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
+                   " processes spawned!"#) -}
+cb88abcbae50da9ca939227e4102ddee
+  masterProcess6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
                    "spawning processes..."#) -}
+b90291677982c977a49a251d60801528
+  masterProcess7 ::
+    Cloud.Type.Settings
+    -> Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> [Cloud.Type.Vect]
+    -> [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.LocalProcess
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6,
+     Strictness: <L,U(1*U(U),A,1*U(U))><L,U><L,U><L,1*U><L,U(U,U,U(U,U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U> -}
 081d92a876df05eb0bc8ec13a78b4719
   masterProcess_go :: [[Cloud.Type.Result]] -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <S,1*U> -}

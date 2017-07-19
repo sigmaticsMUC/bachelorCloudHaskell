@@ -2,14 +2,18 @@
 {-# OPTIONS_GHC -Wall #-}
 
 module Cloud.Master(
-  masterProcess
+  masterProcess,
+  masterProcess2
 )where
 
 import Control.Distributed.Process hiding (Message)
 import Cloud.Type
+import Cloud.Handler
 import Cloud.Utils.DistControlStruct
-import Cloud.Kernel (spawnProcesses, distribute)
+import Cloud.Kernel (spawnProcesses, spawnProcesses2, distribute)
 import System.IO
+import Control.Monad
+
 
 
 vecToString :: Vect -> String
@@ -39,6 +43,27 @@ masterProcess cF args h nodes = do
   --say (show result)
   liftIO $ writeToFile $ "x, y, z, c\n" ++ (concat (map toCSVLine (concat (responses_ response))))
   return ()
+
+
+masterProcess2 :: Settings -> Closure(Vect->IterationCount) -> [Vect] -> [NodeId] -> Process ()
+masterProcess2 s cF args nids = do
+  master <- getSelfPid
+  ps <- spawnProcesses2 master cF (takeNodes s nids)
+  forM_ ps $ \pid -> do
+    send pid (START master)
+  ctrl <- handlerProcess s args
+  forM_ ps $ \pid -> do
+    send pid EXIT
+  liftIO $ writeToFile $ "x, y, z, c\n" ++ (concat (map toCSVLine (concat (responses_ ctrl))))
+  return ()
+
+
+
+takeNodes :: Settings -> [NodeId] -> [NodeId]
+takeNodes s nids
+    | num > 0 = take num nids
+    | otherwise = nids
+      where num = numNodes_ s
 
 writeToFile :: String -> IO ()
 writeToFile dataS = do

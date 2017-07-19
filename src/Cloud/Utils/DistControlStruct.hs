@@ -9,7 +9,9 @@ module Cloud.Utils.DistControlStruct(
   insertResponse,
   insertRunningTask,
   removeOpenTask,
-  removeOpenTask
+  removeOpenTask,
+  isFinished,
+  removeTaskComplete
 )where
 
 import Cloud.Type
@@ -28,8 +30,14 @@ data DistControlStruct  = DistControlStruct {
   numOpenTasks_ :: Int,
   numOpenRunns_ :: Int
 }
-  deriving(Show, Eq, Typeable, Generic)
+  deriving(Eq, Typeable, Generic)
 
+
+instance Show DistControlStruct where
+  show ctrl = responses ++ open ++ running
+    where responses = "RESPONSES: " ++ (show $ (numResponses_ ctrl))
+          open = "OPEN: " ++ (show $ (numOpenTasks_ ctrl))
+          running = "RUNNING: " ++ (show $ (numOpenRunns_ ctrl))
 
 empty :: DistControlStruct
 empty = DistControlStruct {
@@ -147,7 +155,7 @@ removeTaskComplete id' s = DistControlStruct {
 -- HELPER FUCNTIONS --
 
 estimateChunkSize :: [Vect] -> Int
-estimateChunkSize domain = undefined
+estimateChunkSize domain = 500000
 
 
 isFinished :: DistControlStruct -> Bool

@@ -12,6 +12,7 @@ import Control.Distributed.Static hiding (initRemoteTable)
 import System.Environment
 import Network.Socket hiding (shutdown)
 import qualified Cloud.Kernel as CK
+import qualified Cloud.Slave as CS
 
 import Language.Haskell.TH
 

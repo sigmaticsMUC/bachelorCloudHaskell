@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-16 14:41:07.98321 UTC
+2017-07-19 15:54:07.68059 UTC
 
 interface main@main:Main 8002
-  interface hash: 088bbab0182f8de6654497d2e46dfe0a
-  ABI hash: ae7dc1691a71054fe9a2c847936a94bf
-  export-list hash: cc1cdf2c7f537113e9d8ae5d3ac9d534
+  interface hash: 4d5e0028b67afea35d75911a38278b31
+  ABI hash: 8750033910a3ce414a1b6833783e2199
+  export-list hash: 65608ab32ca8dfc165e1f1d76b5951f1
   orphan hash: 5fca8292af8d04d339aa20da86b44d53
   flag hash: 387e78a1174af00d868509f3a7fc4598
   sig of: Nothing
@@ -13,19 +13,15 @@ interface main@main:Main 8002
   where
 exports:
   Main.__remoteTable
-  Main.countToColorString
   Main.domain_
   Main.h
-  Main.iterToRgbString
   Main.main
-  Main.mapColor
   Main.master
   Main.mbulb
   Main.mbulb_
   Main.mbulb___sdict
   Main.mbulb___static
-  Main.toCSVLine
-  Main.vecToString
+  Main.settings
 module dependencies:
 package dependencies: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOsmMKGed
                       array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
@@ -89,6 +85,7 @@ family instance modules: JuicyPixels-3.2.8.1@JuicyPixels-3.2.8.1-4AbHYLGcEbLBNOs
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
                          cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type
+                         cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -122,8 +119,9 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
-import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Master c83336dac2c43d501dc0809cea29d148
-import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type 07640426b2f4e38a72607d9978c2cf18
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Master b37ebff3d804fd6b298df068abe6ffac
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type 664c53857e454ec7d0db2f9a347112b4
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct 4a6a0683d4e4cee41eb88f127009e9fa
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistribUtils 7a30ff6404145e21427d41a448b02b18
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:IOUtils.ColorMap 062b33f581ea43e041792df386e38d22
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:MandelBulb.Math.Core 90a7117be398eb7b2e9b4c70569a426a
@@ -137,7 +135,6 @@ import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OV
 import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ:Control.Distributed.Static 841c7e8459fcc6cc4abf344e1885a430
 import  -/  easyplot-1.0@easyplot-1.0-HadVy2ptFU0L9Shdyk9SLl:Graphics.EasyPlot 1ce3d892b56f30f6cfed76fe53ed8e04
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
 import  -/  rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b:Data.Rank1Dynamic f77a29a40055e3d0ea5d0878528a8a87
 eca1cef5d71b5b3673cd812f5371fed1
   $s$fSerializablea ::
@@ -481,107 +478,10 @@ d6831ef04cb9301b090dfae6f7bb7ec7
                         GHC.Types.True -> 1.0## } }
                    GHC.Types.True
                    -> case Main.$s^1 ret_ty GHC.Prim.Double# of {} } }) -}
-ac0387dd0b5cbc8f2cedfd7d1f42c30d
-  $wcountToColorString ::
-    GHC.Prim.Float#
-    -> GHC.Types.Float -> GHC.Types.Float -> GHC.Base.String
-  {- Arity: 3, Strictness: <S,U><L,1*U(U)><L,1*U(U)>, Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.Float#)
-                   (ww1 :: GHC.Types.Float)
-                   (ww2 :: GHC.Types.Float) ->
-                 GHC.Base.++
-                   @ GHC.Types.Char
-                   (GHC.Float.$w$sshowSignedFloat1
-                      GHC.Float.$fShowFloat_$sshowFloat
-                      GHC.Show.shows22
-                      ww
-                      (GHC.Types.[] @ GHC.Types.Char))
-                   (GHC.CString.unpackAppendCString#
-                      ","#
-                      (case ww1 of ww3 { GHC.Types.F# ww4 ->
-                       GHC.Base.++
-                         @ GHC.Types.Char
-                         (GHC.Float.$w$sshowSignedFloat1
-                            GHC.Float.$fShowFloat_$sshowFloat
-                            GHC.Show.shows22
-                            ww4
-                            (GHC.Types.[] @ GHC.Types.Char))
-                         (GHC.CString.unpackAppendCString#
-                            ","#
-                            (case ww2 of ww5 { GHC.Types.F# ww6 ->
-                             GHC.Float.$w$sshowSignedFloat1
-                               GHC.Float.$fShowFloat_$sshowFloat
-                               GHC.Show.shows22
-                               ww6
-                               (GHC.Types.[] @ GHC.Types.Char) })) }))) -}
 4819299f5e7d3117a44d7f492cb3f1a7
   $wf ::
     GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
   {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
-4d5b5385124cf72e5d97b4ddaa0e6402
-  $wtoCSVLine ::
-    GHC.Prim.Float#
-    -> GHC.Types.Float -> GHC.Types.Float -> GHC.Base.String
-  {- Arity: 3, Strictness: <S,U><L,1*U(U)><L,1*U(U)>, Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.Float#)
-                   (ww1 :: GHC.Types.Float)
-                   (ww2 :: GHC.Types.Float) ->
-                 GHC.Base.++
-                   @ GHC.Types.Char
-                   (GHC.Float.$w$sshowSignedFloat1
-                      GHC.Float.$fShowFloat_$sshowFloat
-                      GHC.Show.shows22
-                      ww
-                      (GHC.Types.[] @ GHC.Types.Char))
-                   (GHC.CString.unpackAppendCString#
-                      ","#
-                      (case ww1 of ww3 { GHC.Types.F# ww4 ->
-                       GHC.Base.++
-                         @ GHC.Types.Char
-                         (GHC.Float.$w$sshowSignedFloat1
-                            GHC.Float.$fShowFloat_$sshowFloat
-                            GHC.Show.shows22
-                            ww4
-                            (GHC.Types.[] @ GHC.Types.Char))
-                         (GHC.CString.unpackAppendCString#
-                            ","#
-                            (case ww2 of ww5 { GHC.Types.F# ww6 ->
-                             GHC.Base.++
-                               @ GHC.Types.Char
-                               (GHC.Float.$w$sshowSignedFloat1
-                                  GHC.Float.$fShowFloat_$sshowFloat
-                                  GHC.Show.shows22
-                                  ww6
-                                  (GHC.Types.[] @ GHC.Types.Char))
-                               (GHC.CString.unpackAppendCString#
-                                  ","#
-                                  (case IOUtils.ColorMap.$wheightToRGB8
-                                          ww6 of ww7 { (#,,#) ww8 ww9 ww10 ->
-                                   case ww8 of ww11 { GHC.Types.F# ww12 ->
-                                   GHC.Base.++
-                                     @ GHC.Types.Char
-                                     (Main.$wcountToColorString ww12 ww9 ww10)
-                                     Main.toCSVLine1 } })) })) }))) -}
-7b737a97f7bb101506788427c002f397
-  $wvecToString :: GHC.Show.Show a => a -> a -> a -> GHC.Base.String
-  {- Arity: 4, HasNoCafRefs,
-     Strictness: <S(LC(S)L),U(A,C(U),A)><L,U><L,U><L,U>, Inline: [0],
-     Unfolding: (\ @ a
-                   (w :: GHC.Show.Show a)
-                   (ww :: a)
-                   (ww1 :: a)
-                   (ww2 :: a) ->
-                 GHC.Base.++
-                   @ GHC.Types.Char
-                   (GHC.Show.show @ a w ww)
-                   (GHC.CString.unpackAppendCString#
-                      ","#
-                      (GHC.Base.++
-                         @ GHC.Types.Char
-                         (GHC.Show.show @ a w ww1)
-                         (GHC.CString.unpackAppendCString#
-                            ","#
-                            (GHC.Show.show @ a w ww2))))) -}
 0ba548c2ab1771ee3afe402988b5cbea
   __remoteTable ::
     Control.Distributed.Static.RemoteTable
@@ -688,27 +588,7 @@ c885ba0a6a0b63dbe89f220ff5383a23
 e3a88b04ef04000e799f13e832397d05
   __remoteTable_x1 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Main.mbulb_"#) -}
-846d14be92cad3912602ec5e4a7fdc02
-  countToColorString :: GHC.Types.Float -> GHC.Base.String
-  {- Arity: 1, Strictness: <S(S),1*U(U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (x :: GHC.Types.Float) ->
-                 case x of ww4 { GHC.Types.F# ww5 ->
-                 case IOUtils.ColorMap.$wheightToRGB8
-                        ww5 of ww6 { (#,,#) ww7 ww8 ww9 ->
-                 Main.countToColorString1 (ww7, ww8, ww9) } }) -}
-5904db59070114798c69523f8f952f0a
-  countToColorString1 ::
-    (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
-    -> GHC.Base.String
-  {- Arity: 1, Strictness: <S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)) ->
-                 case w of ww { (,,) ww1 ww2 ww3 ->
-                 case ww1 of ww4 { GHC.Types.F# ww5 ->
-                 Main.$wcountToColorString ww5 ww2 ww3 } }) -}
-e5602b6914973787efedb12db8421eac
+61936434ed87addc68c38cd764c3940b
   domain_ :: [MandelBulb.Utils.Domain.Point]
   {- Unfolding: (case MandelBulb.Utils.Domain.$wgenerateDomain
                         Main.domain_2
@@ -727,20 +607,15 @@ eafb54921a9bf05440ff95760e17172c
 6e0c525bb8dc45b821b7f2b403e5550f
   domain_2 :: GHC.Types.Float
   {- HasNoCafRefs, Unfolding: (GHC.Types.F# -1.0#) -}
-3eae5466b120bb5f3a94dc4326a04125
-  h :: GHC.Types.Float
+23e70b0ffaa6b3bd07c59bcb755e5da6
+  h :: MandelBulb.Utils.Domain.Step
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.1#) -}
-e9c8dd6ce81897ed4365f7aec1dfa7f3
-  iterToRgbString :: GHC.Integer.Type.Integer -> GHC.Base.String
-  {- Arity: 1, Strictness: <S,U>m2,
-     Unfolding: InlineRule (0, True, True)
-                GHC.Show.$fShowInteger_$cshow -}
-6ab0e05f5b6c0347afadf5aba20c7ab3
+4cace01073a1a66499ce6b19d6ecef21
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-1acdf1f052019e863274709c8eff08ee
+b1a4e9a3161407f6ce1bc76b283a0082
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -810,7 +685,7 @@ e07338230127967395ef2af6f7eea304
                    (cont :: Data.ByteString.Builder.Internal.BuildStep r)
                    (range :: Data.ByteString.Builder.Internal.BufferRange) ->
                  cont range) -}
-5f0d63a3a149d851e6edc01d95cf0dcc
+8a9950a20c629d571b8f70bd05b23fb2
   main14 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -824,17 +699,17 @@ a4c892693f4b4662b4c9556454b21e0e
 f6335948d897f9d139e43b080b5fa7cd
   main3 :: GHC.Types.Double
   {- HasNoCafRefs, Unfolding: (GHC.Types.D# 10.0##) -}
-8c023e600b9e3ae904ad04a03c3b1525
+71bd4cc631579be521060ab668f7dbe2
   main4 ::
     [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.LocalProcess
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 3,
-     Unfolding: (Cloud.Master.masterProcess1
+     Unfolding: (Cloud.Master.masterProcess7
+                   Main.settings
                    Main.main5
-                   Main.domain_
-                   Main.h) -}
+                   Main.domain_) -}
 9a93d6b2a99cd7897742951801dbdeb6
   main5 ::
     Control.Distributed.Static.Closure
@@ -874,18 +749,7 @@ f6335948d897f9d139e43b080b5fa7cd
                         (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
                         Main.__remoteTable_x of wild { () ->
                  Main.__remoteTable_x }) -}
-c519f66ca4e49497dc45af256b58c9b2
-  mapColor ::
-    GHC.Types.Float
-    -> (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
-  {- Arity: 1, Strictness: <S(S),1*U(U)>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ (i :: GHC.Types.Float) ->
-                 case i of ww4 { GHC.Types.F# ww5 ->
-                 case IOUtils.ColorMap.$wheightToRGB8
-                        ww5 of ww6 { (#,,#) ww7 ww8 ww9 ->
-                 (ww7, ww8, ww9) } }) -}
-03f253014d0662b185c4d52b0cde06f6
+84421e945b1bf70ee01319ceedfc6579
   master ::
     [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.Process ()
@@ -948,30 +812,19 @@ d017d3b0f1e47fa22a4e7b04c7e5dbad
                   `cast`
                 (Sym (Control.Distributed.Static.N:Static[0]
                           <() -> Cloud.Type.Vect -> Cloud.Type.IterationCount>_P)) -}
-602e7f8f07a4ae2029520ac9779a8178
-  toCSVLine ::
-    (GHC.Integer.Type.Integer, Cloud.Type.Vect) -> GHC.Base.String
-  {- Arity: 1,
-     Strictness: <S(LS(S(S)LL)),1*U(A,1*U(1*U(U),1*U(U),1*U(U)))>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: (GHC.Integer.Type.Integer, Cloud.Type.Vect)) ->
-                 case w of ww { (,) ww1 ww2 ->
-                 case ww2 of ww3 { (,,) ww4 ww5 ww6 ->
-                 case ww4 of ww7 { GHC.Types.F# ww8 ->
-                 Main.$wtoCSVLine ww8 ww5 ww6 } } }) -}
-3aabbe9c529d1bc7b409d757f68b3abc
-  toCSVLine1 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "\n"#) -}
-ce24d2644a25bcc08ee0188b2158692a
-  vecToString :: GHC.Show.Show a => (a, a, a) -> GHC.Base.String
-  {- Arity: 2, HasNoCafRefs,
-     Strictness: <S(LC(S)L),U(A,C(U),A)><S,1*U(U,U,U)>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ @ a (w :: GHC.Show.Show a) (w1 :: (a, a, a)) ->
-                 case w1 of ww { (,,) ww1 ww2 ww3 ->
-                 Main.$wvecToString @ a w ww1 ww2 ww3 }) -}
+443538567243be386a511bfc96d654d8
+  settings :: Cloud.Type.Settings
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Cloud.Type.Settings
+                   Main.settings2
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.settings1) -}
+8e405c5dbbd190ed58a2d75cd5f3c058
+  settings1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# -1#) -}
+18d615158f8a8fd640ffc18c1e042b31
+  settings2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1000#) -}
 "SPEC/Main $fSerializablea @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
                                                                   ())
                                                  ($dBinary :: Data.Binary.Class.Binary ())

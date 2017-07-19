@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-16 14:09:33.913425 UTC
+2017-07-19 15:44:39.850439 UTC
 
 interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistribUtils 8002
-  interface hash: 701f9807c580061dc1a1e407d5c2b0f7
+  interface hash: 2abe09e11bfa2b7b566e31412eedf7cc
   ABI hash: 7a30ff6404145e21427d41a448b02b18
   export-list hash: c86439f57009490fafae3a266c460abd
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -13,7 +13,7 @@ interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistribUtils 8002
   where
 exports:
   Cloud.Utils.DistribUtils.distribMain
-module dependencies: Cloud.Kernel Cloud.Type
+module dependencies: Cloud.Kernel Cloud.Slave Cloud.Type
                      MandelBulb.Utils.Domain
 package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       binary-0.8.3.0@binary-0.8.3.0
@@ -84,9 +84,11 @@ family instance modules: base-4.9.1.0:Control.Applicative
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.Environment 08cb808e8e6a7821e6f8cfa76a977431
-import  -/  Cloud.Kernel 678f727864b1f73295efc27f21676cd9
-  exports: 3fe9b24c38d0ca70dff2e76b839bc674
-  __remoteTable cdeb7dae883457034f3acdf117f3183e
+import  -/  Cloud.Kernel 0dc02d1c8724aa06474a9f4cd686ec84
+  exports: 3d2ab42671944c568b19c490ab82925d
+  __remoteTable 37799ecda2f9df3b783ff4eec1e21752
+import  -/  Cloud.Slave 6c89ea60a12d1ddc70ca63c9e81923a6
+  exports: a22525debba137bbbfa49bffc2ea9768
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c

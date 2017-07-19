@@ -4,7 +4,7 @@ module Cloud.Type(
   Vect,
   Result,
   IterationCount,
-  MSG (ARG, RESPONSE, EXIT),
+  MSG (START, ARG, RESPONSE, EXIT, RESPONSE2),
   Task (taskId_, taskData_, Task),
   TimeStamp (TimeStamp),
   Settings (Settings, chunkSize_, outputPath_, numNodes_),
@@ -22,8 +22,8 @@ type Vect = (Float, Float, Float)
 type IterationCount = Integer
 type Result = (Vect, IterationCount)
 
-data MSG = ARG (ProcessId, Task) | RESPONSE (ProcessId, [Result]) | EXIT | RESPONSE2 (ProcessId, ID, [Result])
-  deriving (Typeable, Generic)
+data MSG = START ProcessId | ARG (ProcessId, Task) | RESPONSE (ProcessId, [Result]) | EXIT | RESPONSE2 (ProcessId, ID, [Result])
+  deriving (Show, Typeable, Generic)
 
 type ID = Int
 type Comptime = Double

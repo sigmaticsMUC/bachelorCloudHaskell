@@ -1,0 +1,1776 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-19 15:54:04.45573 UTC
+
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct [family instance module] 8002
+  interface hash: 2b9680828d928c15f0adae127394b97b
+  ABI hash: 4a6a0683d4e4cee41eb88f127009e9fa
+  export-list hash: 9873922fce9452faed5cece8228301b9
+  orphan hash: 5dda22a304ca351c76d83230d1e84b0b
+  flag hash: ce11935361ef814ece2254f1b6384662
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cloud.Utils.DistControlStruct.empty
+  Cloud.Utils.DistControlStruct.initStructure
+  Cloud.Utils.DistControlStruct.insertResponse
+  Cloud.Utils.DistControlStruct.insertRunningTask
+  Cloud.Utils.DistControlStruct.insertTimeStamp
+  Cloud.Utils.DistControlStruct.isFinished
+  Cloud.Utils.DistControlStruct.removeOpenTask
+  Cloud.Utils.DistControlStruct.removeTaskComplete
+  Cloud.Utils.DistControlStruct.DistControlStruct{Cloud.Utils.DistControlStruct.DistControlStruct numOpenRunns_ numOpenTasks_ numResponses_ openTasks_ responses_ runningTasks_ timeStamps_}
+module dependencies: Cloud.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      data-accessor-0.2.2.7@data-accessor-0.2.2.7-4qt9kbhlqc22eurok1PC3k
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT
+                      distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      network-transport-0.4.4.0@network-transport-0.4.4.0-7G0sWBx1K9o9bqvCq0N0q5
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b
+                      split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Compose base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Table
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Trace.Types
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Types
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         network-transport-0.4.4.0@network-transport-0.4.4.0-7G0sWBx1K9o9bqvCq0N0q5:Network.Transport
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Typeable 9257e47d10882145c67c5b489965cfb7
+import  -/  base-4.9.1.0:Data.Typeable.Internal 0e9bdefa4325a0112d8e73b5e1e1f85d
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Generics 1dbec2bc7dd1c5bd8c89ed857eaed19b
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
+import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
+  exports: fad69a16fba538d02bdf00f946ca33fd
+  ID dc71491f1344d41be1610ae9015c0b62
+  Result eba2e5a5018cf4017d122e06800f65e4
+  Settings ab130f1f2487716e713e91ebfd8e650f
+  Task de1b2b6a35f19c31a3f9beaba39f5e6f
+  Task 27fc69fdfe7a4d0825890afdaec914d1
+  TimeStamp 5dfe82794392fd31704adf1d8b90cd5c
+  Vect e3584f5562382a82e541d6b296b7441d
+  chunkSize_ b3b51b1c46f8c3ddca296110298ab894
+  taskData_ bc0c4bb8b26f25635f1a672d552f1a26
+  taskId_ 4fcdb1e0eed2e9b7a01dad80bd533262
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split c60198a427bfd51d9fb4562c059ec1d2
+import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.Internals 25dced234ed01c9c803d678763a4d772
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fEqDistControlStruct ::
+    GHC.Classes.Eq Cloud.Utils.DistControlStruct.DistControlStruct
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Utils.DistControlStruct.DistControlStruct
+                  Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$c==
+                  Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$c/= -}
+f35abff1fa4b4e6810765d5f853b9c58
+  $fEqDistControlStruct1 ::
+    GHC.Classes.Eq (Cloud.Type.Vect, Cloud.Type.IterationCount)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,) -}
+38be6cca58d634953fb33a08a3e1c4a6
+  $fEqDistControlStruct2 ::
+    GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,,) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fEqDistControlStruct_$c/= ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U(U),1*U(U),1*U(U))><S(SLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U(U),1*U(U),1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cloud.Utils.DistControlStruct.DistControlStruct)
+                   (b :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$c==
+                        a
+                        b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fEqDistControlStruct_$c== ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U(U),1*U(U),1*U(U))><S(SLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U(U),1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Utils.DistControlStruct.DistControlStruct)
+                   (w1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case w of ww { Cloud.Utils.DistControlStruct.DistControlStruct ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case w1 of ww8 { Cloud.Utils.DistControlStruct.DistControlStruct ww9 ww10 ww11 ww12 ww13 ww14 ww15 ->
+                 Cloud.Utils.DistControlStruct.$w$c==
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww9
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15 } }) -}
+faefa0a0fa622c7633719b15250dd11f
+  $fEqDistControlStruct_$s$fEq(,) ::
+    GHC.Classes.Eq
+      ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
+       GHC.Integer.Type.Integer)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
+                     GHC.Integer.Type.Integer)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Utils.DistControlStruct.$fEqDistControlStruct2
+                     GHC.Integer.Type.$fEqInteger)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                     @ GHC.Integer.Type.Integer
+                     Cloud.Utils.DistControlStruct.$fEqDistControlStruct2
+                     GHC.Integer.Type.$fEqInteger) -}
+a3edd588a692acfc16c71dbf7b937e80
+  $fEqDistControlStruct_$s$fEq(,,) ::
+    GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                  (GHC.Classes.$fEq(,,)_$c==
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     GHC.Classes.$fEqFloat
+                     GHC.Classes.$fEqFloat
+                     GHC.Classes.$fEqFloat)
+                  Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,,)_$c/= -}
+99c43693cc758e489647a67682172182
+  $fEqDistControlStruct_$s$fEq(,,)_$c/= ::
+    (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+    -> (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))><S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float))
+                   (b1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)) ->
+                 case GHC.Classes.$fEq(,,)_$c==
+                        @ GHC.Types.Float
+                        @ GHC.Types.Float
+                        @ GHC.Types.Float
+                        GHC.Classes.$fEqFloat
+                        GHC.Classes.$fEqFloat
+                        GHC.Classes.$fEqFloat
+                        a1
+                        b1 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+45d2209c50e56ffdb31ec7d533a70c6b
+  $fEqDistControlStruct_$s$fEq[] ::
+    GHC.Classes.Eq [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
+                  (GHC.Classes.$fEq[]_$c==
+                     @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                     Cloud.Utils.DistControlStruct.$fEqDistControlStruct1)
+                  Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq[]_$c/= -}
+57b63b38a605ac606457b0fd607454e6
+  $fEqDistControlStruct_$s$fEq[]_$c/= ::
+    [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
+    -> [(Cloud.Type.Vect, Cloud.Type.IterationCount)] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: [(Cloud.Type.Vect, Cloud.Type.IterationCount)])
+                   (y :: [(Cloud.Type.Vect, Cloud.Type.IterationCount)]) ->
+                 GHC.Classes.not
+                   (GHC.Classes.$fEq[]_$c==
+                      @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                      Cloud.Utils.DistControlStruct.$fEqDistControlStruct1
+                      x
+                      y)) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fGenericDistControlStruct ::
+    GHC.Generics.Generic
+      Cloud.Utils.DistControlStruct.DistControlStruct
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Utils.DistControlStruct.DistControlStruct
+                  Cloud.Utils.DistControlStruct.$fGenericDistControlStruct_$cfrom
+                  Cloud.Utils.DistControlStruct.$fGenericDistControlStruct_$cto -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fGenericDistControlStruct1 ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> GHC.Generics.M1
+         GHC.Generics.C
+         ('GHC.Generics.MetaCons
+            "DistControlStruct" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         ((GHC.Generics.M1
+             GHC.Generics.S
+             ('GHC.Generics.MetaSel
+                ('GHC.Base.Just "timeStamps_")
+                'GHC.Generics.NoSourceUnpackedness
+                'GHC.Generics.NoSourceStrictness
+                'GHC.Generics.DecidedLazy)
+             (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp])
+           GHC.Generics.:*: (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "runningTasks_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task])
+                             GHC.Generics.:*: GHC.Generics.M1
+                                                GHC.Generics.S
+                                                ('GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "openTasks_")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task])))
+          GHC.Generics.:*: ((GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "responses_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R [[Cloud.Type.Result]])
+                             GHC.Generics.:*: GHC.Generics.M1
+                                                GHC.Generics.S
+                                                ('GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "numResponses_")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                            GHC.Generics.:*: (GHC.Generics.M1
+                                                GHC.Generics.S
+                                                ('GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "numOpenTasks_")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                              GHC.Generics.:*: GHC.Generics.M1
+                                                                 GHC.Generics.S
+                                                                 ('GHC.Generics.MetaSel
+                                                                    ('GHC.Base.Just "numOpenRunns_")
+                                                                    'GHC.Generics.NoSourceUnpackedness
+                                                                    'GHC.Generics.NoSourceStrictness
+                                                                    'GHC.Generics.DecidedLazy)
+                                                                 (GHC.Generics.K1
+                                                                    GHC.Generics.R GHC.Types.Int))))
+         x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,U,U,U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (x1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case x1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct g1 g2 g3 g4 g5 g6 g7 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "timeStamps_")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp])
+                       GHC.Generics.:*: (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "runningTasks_")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task])
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "openTasks_")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R [Cloud.Type.Task])))
+                    @ ((GHC.Generics.M1
+                          GHC.Generics.S
+                          ('GHC.Generics.MetaSel
+                             ('GHC.Base.Just "responses_")
+                             'GHC.Generics.NoSourceUnpackedness
+                             'GHC.Generics.NoSourceStrictness
+                             'GHC.Generics.DecidedLazy)
+                          (GHC.Generics.K1 GHC.Generics.R [[Cloud.Type.Result]])
+                        GHC.Generics.:*: GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "numResponses_")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                       GHC.Generics.:*: (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "numOpenTasks_")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "numOpenRunns_")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Types.Int)))
+                    @ x
+                    (GHC.Generics.:*:
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "timeStamps_")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp]))
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "runningTasks_")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task])
+                          GHC.Generics.:*: GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "openTasks_")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task]))
+                       @ x
+                       g1
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <[Cloud.Type.TimeStamp]>_R <x>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "timeStamps_")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R [Cloud.Type.TimeStamp]>_R) <x>_N))
+                       (GHC.Generics.:*:
+                          @ (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "runningTasks_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task]))
+                          @ (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "openTasks_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task]))
+                          @ x
+                          g2
+                            `cast`
+                          (Trans
+                               (Sym (GHC.Generics.N:K1[0]
+                                         <GHC.Generics.R>_P <[Cloud.Type.Task]>_R <x>_P))
+                               (Sym (GHC.Generics.N:M1[0]
+                                         <GHC.Generics.S>_P
+                                         <'GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "runningTasks_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy>_P
+                                         <GHC.Generics.K1
+                                            GHC.Generics.R [Cloud.Type.Task]>_R) <x>_N))
+                          g3
+                            `cast`
+                          (Trans
+                               (Sym (GHC.Generics.N:K1[0]
+                                         <GHC.Generics.R>_P <[Cloud.Type.Task]>_R <x>_P))
+                               (Sym (GHC.Generics.N:M1[0]
+                                         <GHC.Generics.S>_P
+                                         <'GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "openTasks_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy>_P
+                                         <GHC.Generics.K1
+                                            GHC.Generics.R [Cloud.Type.Task]>_R) <x>_N))))
+                    (GHC.Generics.:*:
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "responses_")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R [[Cloud.Type.Result]])
+                          GHC.Generics.:*: GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "numResponses_")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "numOpenTasks_")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                          GHC.Generics.:*: GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "numOpenRunns_")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                       @ x
+                       (GHC.Generics.:*:
+                          @ (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "responses_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R [[Cloud.Type.Result]]))
+                          @ (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "numResponses_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                          @ x
+                          g4
+                            `cast`
+                          (Trans
+                               (Sym (GHC.Generics.N:K1[0]
+                                         <GHC.Generics.R>_P <[[Cloud.Type.Result]]>_R <x>_P))
+                               (Sym (GHC.Generics.N:M1[0]
+                                         <GHC.Generics.S>_P
+                                         <'GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "responses_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy>_P
+                                         <GHC.Generics.K1
+                                            GHC.Generics.R [[Cloud.Type.Result]]>_R) <x>_N))
+                          g5
+                            `cast`
+                          (Trans
+                               (Sym (GHC.Generics.N:K1[0]
+                                         <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                               (Sym (GHC.Generics.N:M1[0]
+                                         <GHC.Generics.S>_P
+                                         <'GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "numResponses_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy>_P
+                                         <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R) <x>_N)))
+                       (GHC.Generics.:*:
+                          @ (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "numOpenTasks_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                          @ (GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "numOpenRunns_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                          @ x
+                          g6
+                            `cast`
+                          (Trans
+                               (Sym (GHC.Generics.N:K1[0]
+                                         <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                               (Sym (GHC.Generics.N:M1[0]
+                                         <GHC.Generics.S>_P
+                                         <'GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "numOpenTasks_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy>_P
+                                         <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R) <x>_N))
+                          g7
+                            `cast`
+                          (Trans
+                               (Sym (GHC.Generics.N:K1[0]
+                                         <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                               (Sym (GHC.Generics.N:M1[0]
+                                         <GHC.Generics.S>_P
+                                         <'GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "numOpenRunns_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy>_P
+                                         <GHC.Generics.K1
+                                            GHC.Generics.R GHC.Types.Int>_R) <x>_N)))))
+                   `cast`
+                 (Sym (GHC.Generics.N:M1[0]
+                           <GHC.Generics.C>_P
+                           <'GHC.Generics.MetaCons
+                              "DistControlStruct" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                           <(GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "timeStamps_")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp])
+                             GHC.Generics.:*: (GHC.Generics.M1
+                                                 GHC.Generics.S
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "runningTasks_")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task])
+                                               GHC.Generics.:*: GHC.Generics.M1
+                                                                  GHC.Generics.S
+                                                                  ('GHC.Generics.MetaSel
+                                                                     ('GHC.Base.Just "openTasks_")
+                                                                     'GHC.Generics.NoSourceUnpackedness
+                                                                     'GHC.Generics.NoSourceStrictness
+                                                                     'GHC.Generics.DecidedLazy)
+                                                                  (GHC.Generics.K1
+                                                                     GHC.Generics.R
+                                                                     [Cloud.Type.Task])))
+                            GHC.Generics.:*: ((GHC.Generics.M1
+                                                 GHC.Generics.S
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "responses_")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.K1
+                                                    GHC.Generics.R [[Cloud.Type.Result]])
+                                               GHC.Generics.:*: GHC.Generics.M1
+                                                                  GHC.Generics.S
+                                                                  ('GHC.Generics.MetaSel
+                                                                     ('GHC.Base.Just
+                                                                        "numResponses_")
+                                                                     'GHC.Generics.NoSourceUnpackedness
+                                                                     'GHC.Generics.NoSourceStrictness
+                                                                     'GHC.Generics.DecidedLazy)
+                                                                  (GHC.Generics.K1
+                                                                     GHC.Generics.R GHC.Types.Int))
+                                              GHC.Generics.:*: (GHC.Generics.M1
+                                                                  GHC.Generics.S
+                                                                  ('GHC.Generics.MetaSel
+                                                                     ('GHC.Base.Just
+                                                                        "numOpenTasks_")
+                                                                     'GHC.Generics.NoSourceUnpackedness
+                                                                     'GHC.Generics.NoSourceStrictness
+                                                                     'GHC.Generics.DecidedLazy)
+                                                                  (GHC.Generics.K1
+                                                                     GHC.Generics.R GHC.Types.Int)
+                                                                GHC.Generics.:*: GHC.Generics.M1
+                                                                                   GHC.Generics.S
+                                                                                   ('GHC.Generics.MetaSel
+                                                                                      ('GHC.Base.Just
+                                                                                         "numOpenRunns_")
+                                                                                      'GHC.Generics.NoSourceUnpackedness
+                                                                                      'GHC.Generics.NoSourceStrictness
+                                                                                      'GHC.Generics.DecidedLazy)
+                                                                                   (GHC.Generics.K1
+                                                                                      GHC.Generics.R
+                                                                                      GHC.Types.Int)))>_R) <x>_N) }) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fGenericDistControlStruct_$cfrom ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> GHC.Generics.Rep
+         Cloud.Utils.DistControlStruct.DistControlStruct x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,U,U,U,U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Utils.DistControlStruct.$fGenericDistControlStruct1
+                  `cast`
+                (forall (x :: <GHC.Types.*>_N).
+                 <Cloud.Utils.DistControlStruct.DistControlStruct>_R
+                 ->_R Trans
+                          (Sym (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.D>_P
+                                    <'GHC.Generics.MetaData
+                                       "DistControlStruct"
+                                       "Cloud.Utils.DistControlStruct"
+                                       "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
+                                       'GHC.Types.False>_P
+                                    <GHC.Generics.M1
+                                       GHC.Generics.C
+                                       ('GHC.Generics.MetaCons
+                                          "DistControlStruct" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                       ((GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "timeStamps_")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp])
+                                         GHC.Generics.:*: (GHC.Generics.M1
+                                                             GHC.Generics.S
+                                                             ('GHC.Generics.MetaSel
+                                                                ('GHC.Base.Just "runningTasks_")
+                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                'GHC.Generics.NoSourceStrictness
+                                                                'GHC.Generics.DecidedLazy)
+                                                             (GHC.Generics.K1
+                                                                GHC.Generics.R [Cloud.Type.Task])
+                                                           GHC.Generics.:*: GHC.Generics.M1
+                                                                              GHC.Generics.S
+                                                                              ('GHC.Generics.MetaSel
+                                                                                 ('GHC.Base.Just
+                                                                                    "openTasks_")
+                                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                                 'GHC.Generics.NoSourceStrictness
+                                                                                 'GHC.Generics.DecidedLazy)
+                                                                              (GHC.Generics.K1
+                                                                                 GHC.Generics.R
+                                                                                 [Cloud.Type.Task])))
+                                        GHC.Generics.:*: ((GHC.Generics.M1
+                                                             GHC.Generics.S
+                                                             ('GHC.Generics.MetaSel
+                                                                ('GHC.Base.Just "responses_")
+                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                'GHC.Generics.NoSourceStrictness
+                                                                'GHC.Generics.DecidedLazy)
+                                                             (GHC.Generics.K1
+                                                                GHC.Generics.R
+                                                                [[Cloud.Type.Result]])
+                                                           GHC.Generics.:*: GHC.Generics.M1
+                                                                              GHC.Generics.S
+                                                                              ('GHC.Generics.MetaSel
+                                                                                 ('GHC.Base.Just
+                                                                                    "numResponses_")
+                                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                                 'GHC.Generics.NoSourceStrictness
+                                                                                 'GHC.Generics.DecidedLazy)
+                                                                              (GHC.Generics.K1
+                                                                                 GHC.Generics.R
+                                                                                 GHC.Types.Int))
+                                                          GHC.Generics.:*: (GHC.Generics.M1
+                                                                              GHC.Generics.S
+                                                                              ('GHC.Generics.MetaSel
+                                                                                 ('GHC.Base.Just
+                                                                                    "numOpenTasks_")
+                                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                                 'GHC.Generics.NoSourceStrictness
+                                                                                 'GHC.Generics.DecidedLazy)
+                                                                              (GHC.Generics.K1
+                                                                                 GHC.Generics.R
+                                                                                 GHC.Types.Int)
+                                                                            GHC.Generics.:*: GHC.Generics.M1
+                                                                                               GHC.Generics.S
+                                                                                               ('GHC.Generics.MetaSel
+                                                                                                  ('GHC.Base.Just
+                                                                                                     "numOpenRunns_")
+                                                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                                                  'GHC.Generics.NoSourceStrictness
+                                                                                                  'GHC.Generics.DecidedLazy)
+                                                                                               (GHC.Generics.K1
+                                                                                                  GHC.Generics.R
+                                                                                                  GHC.Types.Int))))>_R))
+                          (Sub (Sym (Cloud.Utils.DistControlStruct.Rep_DistControlStruct[0]))) <x>_N) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fGenericDistControlStruct_$cto ::
+    GHC.Generics.Rep Cloud.Utils.DistControlStruct.DistControlStruct x
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(LS)S(SS)),1*U(1*U(U,1*U(U,U)),1*U(1*U(U,U),1*U(U,U)))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x
+                   (ds :: GHC.Generics.Rep
+                            Cloud.Utils.DistControlStruct.DistControlStruct x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (Cloud.Utils.DistControlStruct.Rep_DistControlStruct[0]))
+                           (Trans
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "DistControlStruct"
+                                        "Cloud.Utils.DistControlStruct"
+                                        "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "DistControlStruct"
+                                           'GHC.Generics.PrefixI
+                                           'GHC.Types.True)
+                                        ((GHC.Generics.M1
+                                            GHC.Generics.S
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "timeStamps_")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp])
+                                          GHC.Generics.:*: (GHC.Generics.M1
+                                                              GHC.Generics.S
+                                                              ('GHC.Generics.MetaSel
+                                                                 ('GHC.Base.Just "runningTasks_")
+                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                 'GHC.Generics.NoSourceStrictness
+                                                                 'GHC.Generics.DecidedLazy)
+                                                              (GHC.Generics.K1
+                                                                 GHC.Generics.R [Cloud.Type.Task])
+                                                            GHC.Generics.:*: GHC.Generics.M1
+                                                                               GHC.Generics.S
+                                                                               ('GHC.Generics.MetaSel
+                                                                                  ('GHC.Base.Just
+                                                                                     "openTasks_")
+                                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                                  'GHC.Generics.NoSourceStrictness
+                                                                                  'GHC.Generics.DecidedLazy)
+                                                                               (GHC.Generics.K1
+                                                                                  GHC.Generics.R
+                                                                                  [Cloud.Type.Task])))
+                                         GHC.Generics.:*: ((GHC.Generics.M1
+                                                              GHC.Generics.S
+                                                              ('GHC.Generics.MetaSel
+                                                                 ('GHC.Base.Just "responses_")
+                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                 'GHC.Generics.NoSourceStrictness
+                                                                 'GHC.Generics.DecidedLazy)
+                                                              (GHC.Generics.K1
+                                                                 GHC.Generics.R
+                                                                 [[Cloud.Type.Result]])
+                                                            GHC.Generics.:*: GHC.Generics.M1
+                                                                               GHC.Generics.S
+                                                                               ('GHC.Generics.MetaSel
+                                                                                  ('GHC.Base.Just
+                                                                                     "numResponses_")
+                                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                                  'GHC.Generics.NoSourceStrictness
+                                                                                  'GHC.Generics.DecidedLazy)
+                                                                               (GHC.Generics.K1
+                                                                                  GHC.Generics.R
+                                                                                  GHC.Types.Int))
+                                                           GHC.Generics.:*: (GHC.Generics.M1
+                                                                               GHC.Generics.S
+                                                                               ('GHC.Generics.MetaSel
+                                                                                  ('GHC.Base.Just
+                                                                                     "numOpenTasks_")
+                                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                                  'GHC.Generics.NoSourceStrictness
+                                                                                  'GHC.Generics.DecidedLazy)
+                                                                               (GHC.Generics.K1
+                                                                                  GHC.Generics.R
+                                                                                  GHC.Types.Int)
+                                                                             GHC.Generics.:*: GHC.Generics.M1
+                                                                                                GHC.Generics.S
+                                                                                                ('GHC.Generics.MetaSel
+                                                                                                   ('GHC.Base.Just
+                                                                                                      "numOpenRunns_")
+                                                                                                   'GHC.Generics.NoSourceUnpackedness
+                                                                                                   'GHC.Generics.NoSourceStrictness
+                                                                                                   'GHC.Generics.DecidedLazy)
+                                                                                                (GHC.Generics.K1
+                                                                                                   GHC.Generics.R
+                                                                                                   GHC.Types.Int))))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "DistControlStruct" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <(GHC.Generics.M1
+                                         GHC.Generics.S
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "timeStamps_")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp])
+                                       GHC.Generics.:*: (GHC.Generics.M1
+                                                           GHC.Generics.S
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "runningTasks_")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.K1
+                                                              GHC.Generics.R [Cloud.Type.Task])
+                                                         GHC.Generics.:*: GHC.Generics.M1
+                                                                            GHC.Generics.S
+                                                                            ('GHC.Generics.MetaSel
+                                                                               ('GHC.Base.Just
+                                                                                  "openTasks_")
+                                                                               'GHC.Generics.NoSourceUnpackedness
+                                                                               'GHC.Generics.NoSourceStrictness
+                                                                               'GHC.Generics.DecidedLazy)
+                                                                            (GHC.Generics.K1
+                                                                               GHC.Generics.R
+                                                                               [Cloud.Type.Task])))
+                                      GHC.Generics.:*: ((GHC.Generics.M1
+                                                           GHC.Generics.S
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "responses_")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.K1
+                                                              GHC.Generics.R [[Cloud.Type.Result]])
+                                                         GHC.Generics.:*: GHC.Generics.M1
+                                                                            GHC.Generics.S
+                                                                            ('GHC.Generics.MetaSel
+                                                                               ('GHC.Base.Just
+                                                                                  "numResponses_")
+                                                                               'GHC.Generics.NoSourceUnpackedness
+                                                                               'GHC.Generics.NoSourceStrictness
+                                                                               'GHC.Generics.DecidedLazy)
+                                                                            (GHC.Generics.K1
+                                                                               GHC.Generics.R
+                                                                               GHC.Types.Int))
+                                                        GHC.Generics.:*: (GHC.Generics.M1
+                                                                            GHC.Generics.S
+                                                                            ('GHC.Generics.MetaSel
+                                                                               ('GHC.Base.Just
+                                                                                  "numOpenTasks_")
+                                                                               'GHC.Generics.NoSourceUnpackedness
+                                                                               'GHC.Generics.NoSourceStrictness
+                                                                               'GHC.Generics.DecidedLazy)
+                                                                            (GHC.Generics.K1
+                                                                               GHC.Generics.R
+                                                                               GHC.Types.Int)
+                                                                          GHC.Generics.:*: GHC.Generics.M1
+                                                                                             GHC.Generics.S
+                                                                                             ('GHC.Generics.MetaSel
+                                                                                                ('GHC.Base.Just
+                                                                                                   "numOpenRunns_")
+                                                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                                                'GHC.Generics.NoSourceStrictness
+                                                                                                'GHC.Generics.DecidedLazy)
+                                                                                             (GHC.Generics.K1
+                                                                                                GHC.Generics.R
+                                                                                                GHC.Types.Int)))>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 case ds1 of wild1 { GHC.Generics.:*: ds3 ds4 ->
+                 case ds4 of wild2 { GHC.Generics.:*: ds5 ds6 ->
+                 case ds2 of wild3 { GHC.Generics.:*: ds7 ds8 ->
+                 case ds7 of wild4 { GHC.Generics.:*: ds9 ds10 ->
+                 case ds8 of wild5 { GHC.Generics.:*: ds11 ds12 ->
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   ds3
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "timeStamps_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [Cloud.Type.TimeStamp]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[Cloud.Type.TimeStamp]>_R <x>_P))
+                   ds5
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "runningTasks_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[Cloud.Type.Task]>_R <x>_P))
+                   ds6
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "openTasks_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [Cloud.Type.Task]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[Cloud.Type.Task]>_R <x>_P))
+                   ds9
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "responses_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [[Cloud.Type.Result]]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[[Cloud.Type.Result]]>_R <x>_P))
+                   ds10
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "numResponses_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <x>_N)
+                        (GHC.Generics.N:K1[0] <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                   ds11
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "numOpenTasks_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <x>_N)
+                        (GHC.Generics.N:K1[0] <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                   ds12
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "numOpenRunns_")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P)) } } } } } }) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fShowDistControlStruct ::
+    GHC.Show.Show Cloud.Utils.DistControlStruct.DistControlStruct
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Utils.DistControlStruct.DistControlStruct
+                  Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshowsPrec
+                  Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshow
+                  Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshowList -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fShowDistControlStruct1 ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ (x :: Cloud.Utils.DistControlStruct.DistControlStruct)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshow x)
+                   s) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fShowDistControlStruct_$cshow ::
+    Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,1*U(U),1*U(U),1*U(U))>,
+     Unfolding: (\ (ctrl :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 GHC.CString.unpackAppendCString#
+                   "RESPONSES: "#
+                   (case ctrl of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds4 of ww2 { GHC.Types.I# ww3 ->
+                    case GHC.Show.$wshowSignedInt
+                           0#
+                           ww3
+                           (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                    GHC.Base.++
+                      @ GHC.Types.Char
+                      (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                      (GHC.CString.unpackAppendCString#
+                         "OPEN: "#
+                         (case ds5 of ww1 { GHC.Types.I# ww8 ->
+                          case GHC.Show.$wshowSignedInt
+                                 0#
+                                 ww8
+                                 (GHC.Types.[] @ GHC.Types.Char) of ww9 { (#,#) ww10 ww11 ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            (GHC.Types.: @ GHC.Types.Char ww10 ww11)
+                            (GHC.CString.unpackAppendCString#
+                               "RUNNING: "#
+                               (case ds6 of ww12 { GHC.Types.I# ww13 ->
+                                case GHC.Show.$wshowSignedInt
+                                       0#
+                                       ww13
+                                       (GHC.Types.[] @ GHC.Types.Char) of ww14 { (#,#) ww15 ww16 ->
+                                GHC.Types.: @ GHC.Types.Char ww15 ww16 } })) } })) } } })) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fShowDistControlStruct_$cshowList ::
+    [Cloud.Utils.DistControlStruct.DistControlStruct] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [Cloud.Utils.DistControlStruct.DistControlStruct])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Cloud.Utils.DistControlStruct.DistControlStruct
+                   Cloud.Utils.DistControlStruct.$fShowDistControlStruct1
+                   ls
+                   s) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  $fShowDistControlStruct_$cshowsPrec ::
+    GHC.Types.Int
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><L,1*U(A,A,A,A,1*U(U),1*U(U),1*U(U))><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Cloud.Utils.DistControlStruct.DistControlStruct)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshow x))
+                   s) -}
+d3293fc1ca621fdb86c397d42dd80768
+  $tc'DistControlStruct :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2440472206327801283##
+                   5226794142324523574##
+                   Cloud.Utils.DistControlStruct.$trModule
+                   Cloud.Utils.DistControlStruct.$tc'DistControlStruct1) -}
+745dfcfb2372b5153f032db531e5c192
+  $tc'DistControlStruct1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'DistControlStruct"#) -}
+76ddde04d6d199c87832f72dcc5f621d
+  $tcDistControlStruct :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1537878083375786689##
+                   13525903281381554195##
+                   Cloud.Utils.DistControlStruct.$trModule
+                   Cloud.Utils.DistControlStruct.$tcDistControlStruct1) -}
+57f70c8cc62e3fde56c3e7bb1a2b754d
+  $tcDistControlStruct1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "DistControlStruct"#) -}
+9bae9b55d2836f4ec9e4fb5b55314f36
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Cloud.Utils.DistControlStruct.$trModule2
+                   Cloud.Utils.DistControlStruct.$trModule1) -}
+074926bb8ecb7c6db616a24f8d5fa548
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Cloud.Utils.DistControlStruct"#) -}
+120d1653d6810aa11054d24c5fef0cfd
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+0b8c35babeabbea90ce2a508fc90bf92
+  $w$c== ::
+    [Cloud.Type.TimeStamp]
+    -> [Cloud.Type.Task]
+    -> [Cloud.Type.Task]
+    -> [[Cloud.Type.Result]]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [Cloud.Type.TimeStamp]
+    -> [Cloud.Type.Task]
+    -> [Cloud.Type.Task]
+    -> [[Cloud.Type.Result]]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 14, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U(U)><L,1*U(U)><L,1*U(U)><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U(U)><L,1*U(U)><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Cloud.Type.TimeStamp])
+                   (ww1 :: [Cloud.Type.Task])
+                   (ww2 :: [Cloud.Type.Task])
+                   (ww3 :: [[Cloud.Type.Result]])
+                   (ww4 :: GHC.Types.Int)
+                   (ww5 :: GHC.Types.Int)
+                   (ww6 :: GHC.Types.Int)
+                   (ww7 :: [Cloud.Type.TimeStamp])
+                   (ww8 :: [Cloud.Type.Task])
+                   (ww9 :: [Cloud.Type.Task])
+                   (ww10 :: [[Cloud.Type.Result]])
+                   (ww11 :: GHC.Types.Int)
+                   (ww12 :: GHC.Types.Int)
+                   (ww13 :: GHC.Types.Int) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ Cloud.Type.TimeStamp
+                        Cloud.Type.$fEqTimeStamp
+                        ww
+                        ww7 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$c==
+                             @ Cloud.Type.Task
+                             Cloud.Type.$fEqTask
+                             ww1
+                             ww8 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.$fEq[]_$c==
+                                  @ Cloud.Type.Task
+                                  Cloud.Type.$fEqTask
+                                  ww2
+                                  ww9 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Classes.$fEq[]_$c==
+                                       @ [Cloud.Type.Result]
+                                       Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq[]
+                                       ww3
+                                       ww10 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case ww4 of wild4 { GHC.Types.I# x ->
+                                     case ww11 of wild5 { GHC.Types.I# y ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x y) of wild6 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> case ww5 of wild7 { GHC.Types.I# x1 ->
+                                          case ww12 of wild8 { GHC.Types.I# y1 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.==# x1 y1) of wild9 {
+                                            GHC.Types.False -> GHC.Types.False
+                                            GHC.Types.True
+                                            -> GHC.Classes.eqInt ww6 ww13 } } } } } } } } } }) -}
+3ac55586d1caa03e9945c1e0d6f20937
+  $winitTasksWith ::
+    GHC.Types.Int
+    -> [Cloud.Type.Vect] -> (# GHC.Types.Int, [Cloud.Type.Task] #)
+  {- Arity: 2, Strictness: <L,1*U(1*U)><L,U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Int) (w1 :: [Cloud.Type.Vect]) ->
+                 let {
+                   splices :: [[Cloud.Type.Vect]]
+                   = Data.List.Split.Internals.chunksOf
+                       @ Cloud.Type.Vect
+                       (case GHC.List.$wlenAcc
+                               @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                               w1
+                               0# of ww2 { DEFAULT ->
+                        case w of ww1 { GHC.Types.I# ww3 ->
+                        case ww3 of wild {
+                          DEFAULT
+                          -> case GHC.Classes.divInt# ww2 wild of ww4 { DEFAULT ->
+                             GHC.Types.I# ww4 }
+                          -1#
+                          -> case ww2 of wild1 {
+                               DEFAULT
+                               -> case GHC.Classes.divInt# wild1 -1# of ww4 { DEFAULT ->
+                                  GHC.Types.I# ww4 }
+                               -9223372036854775808#
+                               -> case GHC.Real.overflowError ret_ty GHC.Types.Int of {} }
+                          0# -> case GHC.Real.divZeroError ret_ty GHC.Types.Int of {} } } })
+                       w1
+                 } in
+                 let {
+                   numTasks :: GHC.Types.Int
+                   = case GHC.List.$wlenAcc
+                            @ [Cloud.Type.Vect]
+                            splices
+                            0# of ww2 { DEFAULT ->
+                     GHC.Types.I# ww2 }
+                 } in
+                 (# numTasks,
+                    GHC.List.zipWith
+                      @ [Cloud.Type.Vect]
+                      @ GHC.Types.Int
+                      @ Cloud.Type.Task
+                      Cloud.Utils.DistControlStruct.initStructure3
+                      splices
+                      (case numTasks of wild1 { GHC.Types.I# y ->
+                       case GHC.Prim.tagToEnum#
+                              @ GHC.Types.Bool
+                              (GHC.Prim.<# 0# y) of wild {
+                         GHC.Types.False -> GHC.Types.[] @ GHC.Types.Int
+                         GHC.Types.True
+                         -> GHC.List.$wunsafeTake
+                              @ GHC.Types.Int
+                              y
+                              Cloud.Utils.DistControlStruct.initStructure2 } }) #)) -}
+07a2d1563cc9bb71dc7dbee917b8781a
+  $wremoveTaskComplete ::
+    Cloud.Type.ID
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> (# [Cloud.Type.TimeStamp], [Cloud.Type.Task], [Cloud.Type.Task],
+          [[Cloud.Type.Result]], GHC.Types.Int, GHC.Types.Int,
+          GHC.Types.Int #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U)><L,U(1*U,1*U,1*U,1*U,1*U,U(U),A)>, Inline: [0],
+     Unfolding: (\ (w :: Cloud.Type.ID)
+                   (w1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 (# case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds },
+                    case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    GHC.List.filter
+                      @ Cloud.Type.Task
+                      (\ (task :: Cloud.Type.Task) ->
+                       case task of wild1 { Cloud.Type.Task ds7 ds8 ->
+                       case ds7 of wild2 { GHC.Types.I# x ->
+                       case w of wild3 { GHC.Types.I# y ->
+                       GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim./=# x y) } } })
+                      ds1 },
+                    case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    GHC.List.filter
+                      @ Cloud.Type.Task
+                      (\ (task :: Cloud.Type.Task) ->
+                       case task of wild1 { Cloud.Type.Task ds7 ds8 ->
+                       case ds7 of wild2 { GHC.Types.I# x ->
+                       case w of wild3 { GHC.Types.I# y ->
+                       GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim./=# x y) } } })
+                      ds2 },
+                    case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds3 },
+                    case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds4 },
+                    case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds5 of wild1 { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.-# x 1#) } },
+                    case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds5 of wild1 { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.-# x 1#) } } #)) -}
+21d49f3dbb74f3f471817d5dca3d72e7
+  data DistControlStruct
+    = DistControlStruct {timeStamps_ :: [Cloud.Type.TimeStamp],
+                         runningTasks_ :: [Cloud.Type.Task],
+                         openTasks_ :: [Cloud.Type.Task],
+                         responses_ :: [[Cloud.Type.Result]],
+                         numResponses_ :: GHC.Types.Int,
+                         numOpenTasks_ :: GHC.Types.Int,
+                         numOpenRunns_ :: GHC.Types.Int}
+21d49f3dbb74f3f471817d5dca3d72e7
+  axiom Rep_DistControlStruct::
+      GHC.Generics.Rep Cloud.Utils.DistControlStruct.DistControlStruct
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "DistControlStruct"
+               "Cloud.Utils.DistControlStruct"
+               "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "DistControlStruct" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               ((GHC.Generics.S1
+                   ('GHC.Generics.MetaSel
+                      ('GHC.Base.Just "timeStamps_")
+                      'GHC.Generics.NoSourceUnpackedness
+                      'GHC.Generics.NoSourceStrictness
+                      'GHC.Generics.DecidedLazy)
+                   (GHC.Generics.Rec0 [Cloud.Type.TimeStamp])
+                 GHC.Generics.:*: (GHC.Generics.S1
+                                     ('GHC.Generics.MetaSel
+                                        ('GHC.Base.Just "runningTasks_")
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy)
+                                     (GHC.Generics.Rec0 [Cloud.Type.Task])
+                                   GHC.Generics.:*: GHC.Generics.S1
+                                                      ('GHC.Generics.MetaSel
+                                                         ('GHC.Base.Just "openTasks_")
+                                                         'GHC.Generics.NoSourceUnpackedness
+                                                         'GHC.Generics.NoSourceStrictness
+                                                         'GHC.Generics.DecidedLazy)
+                                                      (GHC.Generics.Rec0 [Cloud.Type.Task])))
+                GHC.Generics.:*: ((GHC.Generics.S1
+                                     ('GHC.Generics.MetaSel
+                                        ('GHC.Base.Just "responses_")
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy)
+                                     (GHC.Generics.Rec0 [[Cloud.Type.Result]])
+                                   GHC.Generics.:*: GHC.Generics.S1
+                                                      ('GHC.Generics.MetaSel
+                                                         ('GHC.Base.Just "numResponses_")
+                                                         'GHC.Generics.NoSourceUnpackedness
+                                                         'GHC.Generics.NoSourceStrictness
+                                                         'GHC.Generics.DecidedLazy)
+                                                      (GHC.Generics.Rec0 GHC.Types.Int))
+                                  GHC.Generics.:*: (GHC.Generics.S1
+                                                      ('GHC.Generics.MetaSel
+                                                         ('GHC.Base.Just "numOpenTasks_")
+                                                         'GHC.Generics.NoSourceUnpackedness
+                                                         'GHC.Generics.NoSourceStrictness
+                                                         'GHC.Generics.DecidedLazy)
+                                                      (GHC.Generics.Rec0 GHC.Types.Int)
+                                                    GHC.Generics.:*: GHC.Generics.S1
+                                                                       ('GHC.Generics.MetaSel
+                                                                          ('GHC.Base.Just
+                                                                             "numOpenRunns_")
+                                                                          'GHC.Generics.NoSourceUnpackedness
+                                                                          'GHC.Generics.NoSourceStrictness
+                                                                          'GHC.Generics.DecidedLazy)
+                                                                       (GHC.Generics.Rec0
+                                                                          GHC.Types.Int)))))
+6a0241ae4628081b53f38a14f4b642de
+  empty :: Cloud.Utils.DistControlStruct.DistControlStruct
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Cloud.Utils.DistControlStruct.DistControlStruct
+                   (GHC.Types.[] @ Cloud.Type.TimeStamp)
+                   (GHC.Types.[] @ Cloud.Type.Task)
+                   (GHC.Types.[] @ Cloud.Type.Task)
+                   Cloud.Utils.DistControlStruct.empty2
+                   Cloud.Utils.DistControlStruct.empty1
+                   Cloud.Utils.DistControlStruct.empty1
+                   Cloud.Utils.DistControlStruct.empty1) -}
+75e9a7e6620dd58cdc2ce3aa299f03ca
+  empty1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+c02656f7d09b98f5593e39b268c4d91b
+  empty2 :: [[Cloud.Type.Result]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [Cloud.Type.Result]
+                   (GHC.Types.[] @ Cloud.Type.Result)
+                   (GHC.Types.[] @ [Cloud.Type.Result])) -}
+f8c3528ee81dff678b034c8d7f609388
+  initStructure ::
+    Cloud.Type.Settings
+    -> [Cloud.Type.Vect]
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, Strictness: <L,1*U(1*U(U),A,A)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.Settings) (w1 :: [Cloud.Type.Vect]) ->
+                 let {
+                   ds :: (GHC.Types.Int, [Cloud.Type.Task])
+                   = case w of wild { Cloud.Type.Settings ds1 ds2 ds3 ->
+                     case ds1 of wild1 { GHC.Types.I# x ->
+                     case x of wild2 {
+                       DEFAULT
+                       -> case Cloud.Utils.DistControlStruct.$winitTasksWith
+                                 wild1
+                                 w1 of ww { (#,#) ww1 ww2 ->
+                          (ww1, ww2) }
+                       -1#
+                       -> case Cloud.Utils.DistControlStruct.$winitTasksWith
+                                 Cloud.Utils.DistControlStruct.initStructure1
+                                 w1 of ww { (#,#) ww1 ww2 ->
+                          (ww1, ww2) } } } }
+                 } in
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   (GHC.Types.[] @ Cloud.Type.TimeStamp)
+                   (GHC.Types.[] @ Cloud.Type.Task)
+                   (case ds of wild { (,) numOpen openTasks -> openTasks })
+                   Cloud.Utils.DistControlStruct.empty2
+                   Cloud.Utils.DistControlStruct.empty1
+                   (case ds of wild { (,) numOpen openTasks -> numOpen })
+                   Cloud.Utils.DistControlStruct.empty1) -}
+d14e109da9cd80241f27cc4141eedb92
+  initStructure1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.I# 500000#) -}
+cfaafe660ca15269fbc1c13f965d04f5
+  initStructure2 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.eftInt 0# 9223372036854775807#) -}
+be915064cdcb620365a52fabc2c942cd
+  initStructure3 ::
+    [Cloud.Type.Vect] -> Cloud.Type.ID -> Cloud.Type.Task
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m,
+     Unfolding: InlineRule (2, True, True)
+                (\ (x :: [Cloud.Type.Vect]) (y :: Cloud.Type.ID)[OneShot] ->
+                 Cloud.Type.Task y x) -}
+e993e208bd66004103fcb3d3f54b51d0
+  insertResponse ::
+    [Cloud.Type.Result]
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U><L,U(1*U,1*U,1*U,1*U,1*U(U),U,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: [Cloud.Type.Result])
+                   (w1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds1 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds2 })
+                   (GHC.Types.:
+                      @ [Cloud.Type.Result]
+                      w
+                      (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                       ds3 }))
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds4 of wild1 { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds5 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds5 })) -}
+b230a481f928f6c7f88f06bf7ffa8a0c
+  insertRunningTask ::
+    Cloud.Type.Task
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U><L,U(1*U,1*U,1*U,1*U,1*U,U(U),A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.Task)
+                   (w1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds })
+                   (GHC.Types.:
+                      @ Cloud.Type.Task
+                      w
+                      (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                       ds1 }))
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds2 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds3 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds4 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds5 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds5 of wild1 { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } })) -}
+798ea05be5cebdf947de36e0431ca8a9
+  insertTimeStamp ::
+    Cloud.Type.TimeStamp
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U><L,U(1*U,1*U,1*U,1*U,1*U,1*U,1*U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t :: Cloud.Type.TimeStamp)
+                   (s :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   (GHC.Types.:
+                      @ Cloud.Type.TimeStamp
+                      t
+                      (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                       ds }))
+                   (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds1 })
+                   (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds2 })
+                   (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds3 })
+                   (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds4 })
+                   (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds5 })
+                   (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds6 })) -}
+f3f58876f7d4d7c6287d588a40306a9a
+  isFinished ::
+    Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLS(S)L),1*U(A,A,A,A,A,1*U(1*U),1*U(1*U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 case ds5 of wild1 { GHC.Types.I# x ->
+                 case x of wild2 {
+                   DEFAULT -> GHC.Types.False
+                   0#
+                   -> case ds6 of wild3 { GHC.Types.I# x1 ->
+                      case x1 of wild4 {
+                        DEFAULT -> GHC.Types.False 0# -> GHC.Types.True } } } } }) -}
+2abc0bff767309187a123092cf18bff2
+  numOpenRunns_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Int
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLS),1*U(A,A,A,A,A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds7 }) -}
+3cb2577240de2fdfda681ead574ebe41
+  numOpenTasks_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Int
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLSL),1*U(A,A,A,A,A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds6 }) -}
+13d9076ea034dcda777ef3b484c9d57e
+  numResponses_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Int
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLL),1*U(A,A,A,A,1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds5 }) -}
+26cad88239d615982b68ecc94ba3e012
+  openTasks_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> [Cloud.Type.Task]
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLLL),1*U(A,A,1*U,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds3 }) -}
+fce710d0312dc60847a6e694c2062641
+  removeOpenTask ::
+    Cloud.Type.ID
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U)><L,U(1*U,1*U,1*U,1*U,1*U,U(U),A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.ID)
+                   (w1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds1 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    GHC.List.filter
+                      @ Cloud.Type.Task
+                      (\ (task :: Cloud.Type.Task) ->
+                       case task of wild1 { Cloud.Type.Task ds7 ds8 ->
+                       case ds7 of wild2 { GHC.Types.I# x ->
+                       case w of wild3 { GHC.Types.I# y ->
+                       GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim./=# x y) } } })
+                      ds2 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds3 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds4 })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds5 of wild1 { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.-# x 1#) } })
+                   (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds5 })) -}
+588c959c6f028bfc227f8a94cb65b47b
+  removeTaskComplete ::
+    Cloud.Type.ID
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U)><L,U(1*U,1*U,1*U,1*U,1*U,U(U),A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cloud.Type.ID)
+                   (w1 :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case Cloud.Utils.DistControlStruct.$wremoveTaskComplete
+                        w
+                        w1 of ww { (#,,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Cloud.Utils.DistControlStruct.DistControlStruct
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7 }) -}
+c4587d52c295703ff25b2999a37d46d3
+  responses_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> [[Cloud.Type.Result]]
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLLL),1*U(A,A,A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds4 }) -}
+855c1216c12324e1a8907c3dadc5ff8e
+  runningTasks_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> [Cloud.Type.Task]
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLL),1*U(A,1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds2 }) -}
+60a4f47852194785318d6d7fa553e667
+  timeStamps_ ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> [Cloud.Type.TimeStamp]
+  RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLLL),1*U(1*U,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
+                 case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds1 }) -}
+instance GHC.Classes.Eq [Cloud.Utils.DistControlStruct.DistControlStruct]
+  = Cloud.Utils.DistControlStruct.$fEqDistControlStruct
+instance GHC.Generics.Generic [Cloud.Utils.DistControlStruct.DistControlStruct]
+  = Cloud.Utils.DistControlStruct.$fGenericDistControlStruct
+instance GHC.Show.Show [Cloud.Utils.DistControlStruct.DistControlStruct]
+  = Cloud.Utils.DistControlStruct.$fShowDistControlStruct
+family instance GHC.Generics.Rep [Cloud.Utils.DistControlStruct.DistControlStruct]
+  = Cloud.Utils.DistControlStruct.Rep_DistControlStruct
+"SPEC/Cloud.Utils.DistControlStruct $fEq(,) @ (Float, Float,
+                                              Float) @ Integer" [ALWAYS] forall ($dEq1 :: GHC.Classes.Eq
+                                                                                                                                                         GHC.Integer.Type.Integer)
+                                                                                                                                             ($dEq :: GHC.Classes.Eq
+                                                                                                                                                        (GHC.Types.Float,
+                                                                                                                                                         GHC.Types.Float,
+                                                                                                                                                         GHC.Types.Float))
+  GHC.Classes.$fEq(,) @ (GHC.Types.Float, GHC.Types.Float,
+                         GHC.Types.Float)
+                      @ GHC.Integer.Type.Integer
+                      $dEq
+                      $dEq1
+  = Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,)
+"SPEC/Cloud.Utils.DistControlStruct $fEq(,,) @ Float @ Float @ Float" [ALWAYS] forall ($dEq2 :: GHC.Classes.Eq
+                                                                                                  GHC.Types.Float)
+                                                                                      ($dEq1 :: GHC.Classes.Eq
+                                                                                                  GHC.Types.Float)
+                                                                                      ($dEq :: GHC.Classes.Eq
+                                                                                                 GHC.Types.Float)
+  GHC.Classes.$fEq(,,) @ GHC.Types.Float
+                       @ GHC.Types.Float
+                       @ GHC.Types.Float
+                       $dEq
+                       $dEq1
+                       $dEq2
+  = Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,,)
+"SPEC/Cloud.Utils.DistControlStruct $fEq(,,)_$c/= @ Float @ Float @ Float" [ALWAYS] forall ($dEq2 :: GHC.Classes.Eq
+                                                                                                       GHC.Types.Float)
+                                                                                           ($dEq1 :: GHC.Classes.Eq
+                                                                                                       GHC.Types.Float)
+                                                                                           ($dEq :: GHC.Classes.Eq
+                                                                                                      GHC.Types.Float)
+  GHC.Classes.$fEq(,,)_$c/= @ GHC.Types.Float
+                            @ GHC.Types.Float
+                            @ GHC.Types.Float
+                            $dEq
+                            $dEq1
+                            $dEq2
+  = Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,,)_$c/=
+"SPEC/Cloud.Utils.DistControlStruct $fEq[] @ (Vect, IterationCount)" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                                                                (Cloud.Type.Vect,
+                                                                                                 Cloud.Type.IterationCount))
+  GHC.Classes.$fEq[] @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                     $dEq
+  = Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq[]
+"SPEC/Cloud.Utils.DistControlStruct $fEq[]_$c/= @ (Vect,
+                                                  IterationCount)" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                                                                                                                       (Cloud.Type.Vect,
+                                                                                                                                                        Cloud.Type.IterationCount))
+  GHC.Classes.$fEq[]_$c/= @ (Cloud.Type.Vect,
+                             Cloud.Type.IterationCount)
+                          $dEq
+  = Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq[]_$c/=
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

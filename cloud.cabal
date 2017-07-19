@@ -21,6 +21,7 @@ library
                       ,Cloud.Utils.DistribUtils
                       ,Cloud.Master
                       ,Cloud.Type
+                      ,Cloud.Handler
                       ,Cloud.Slave
                       ,Cloud.Kernel
                       ,Cloud.Utils.DistControlStruct

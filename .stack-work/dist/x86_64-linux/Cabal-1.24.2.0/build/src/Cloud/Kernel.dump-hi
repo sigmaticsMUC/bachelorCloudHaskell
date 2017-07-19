@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-16 14:41:05.863059 UTC
+2017-07-19 15:54:05.526642 UTC
 
 interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Kernel 8002
-  interface hash: e57cfa92fbf1b0b152a5a564a848d808
-  ABI hash: 678f727864b1f73295efc27f21676cd9
-  export-list hash: 3fe9b24c38d0ca70dff2e76b839bc674
-  orphan hash: fc851448f3b239ea8095637d5ede492d
+  interface hash: 6b6084cf3cb67847ad1e83c24a56e6b2
+  ABI hash: 0dc02d1c8724aa06474a9f4cd686ec84
+  export-list hash: 3d2ab42671944c568b19c490ab82925d
+  orphan hash: 90c7ae967a0a928f721866f33a44d351
   flag hash: 3154edb06e70847877e7ec9876375ad9
   sig of: Nothing
   used TH splices: True
@@ -15,7 +15,8 @@ exports:
   Cloud.Kernel.__remoteTable
   Cloud.Kernel.distribute
   Cloud.Kernel.spawnProcesses
-module dependencies: Cloud.Type MandelBulb.Utils.Domain
+  Cloud.Kernel.spawnProcesses2
+module dependencies: Cloud.Slave Cloud.Type MandelBulb.Utils.Domain
 package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       binary-0.8.3.0@binary-0.8.3.0
                       bytestring-0.10.8.1@bytestring-0.10.8.1
@@ -83,19 +84,22 @@ import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
 import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
-import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
-import  -/  Cloud.Type 07640426b2f4e38a72607d9978c2cf18
-  exports: 803f70d5b9768e522790e03388e1996f
-  ARG 23571b55235c77c37c87a4b87cd1eb4b
+import  -/  Cloud.Slave 6c89ea60a12d1ddc70ca63c9e81923a6
+  exports: a22525debba137bbbfa49bffc2ea9768
+  slaveProcess2 8c33b8a9f3c51724f5d69d6d906a7d27
+import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
+  exports: fad69a16fba538d02bdf00f946ca33fd
+  ARG e7a6ff1440280460254b383064fbc68b
   IterationCount ab762ff6e2e9ca52482703ea7ded7229
-  RESPONSE 76962f7e7c1edfca4f07dff43b4dc98e
+  RESPONSE 90dd246e61f9b8a1a6da2a184ba64bd3
+  Task de1b2b6a35f19c31a3f9beaba39f5e6f
   Vect e3584f5562382a82e541d6b296b7441d
+  taskData_ bc0c4bb8b26f25635f1a672d552f1a26
+  taskId_ 4fcdb1e0eed2e9b7a01dad80bd533262
 import  -/  MandelBulb.Utils.Domain fcff6e7791bddff4fc7bd31083131372
   exports: 66cf7b4a5fd5b58c027cc4d521042622
-  generateDomain 95e821dd0c322f9716f8a095fc6b492a
-  rowMajor 94e1f38c05483c9a2c8a05bda5bdf6b5
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Closure.BuiltIn 09bd43d2da350c5cae04e4056c2ca0e6
@@ -105,88 +109,62 @@ import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OV
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Serializable 500cfb956cecdda59dfccf37b8980e97
 import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ:Control.Distributed.Static 841c7e8459fcc6cc4abf344e1885a430
-import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b:Data.Rank1Dynamic f77a29a40055e3d0ea5d0878528a8a87
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split c60198a427bfd51d9fb4562c059ec1d2
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.Internals 25dced234ed01c9c803d678763a4d772
-73a10ddf17b9fef78e9d5a226b2e1dd9
-  $s$fBinary(,,) ::
+f3021bb3b73604050161f312c7c9cbc7
+  $s$fBinary(,) ::
     Data.Binary.Class.Binary
       (Control.Distributed.Process.Internal.Types.ProcessId,
-       GHC.Types.Float,
        Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ (Control.Distributed.Process.Internal.Types.ProcessId,
-                     GHC.Types.Float,
                      Control.Distributed.Static.Closure
                        (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-                  (Data.Binary.Class.$fBinary(,,)_$cput
+                  (Data.Binary.Class.$fBinary(,)_$cput
                      @ Control.Distributed.Process.Internal.Types.ProcessId
-                     @ GHC.Types.Float
                      @ (Control.Distributed.Static.Closure
                           (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                      Control.Distributed.Process.Internal.Types.$fBinaryProcessId
-                     Data.Binary.Class.$fBinaryFloat
-                     Cloud.Kernel.$s$fBinary(,,)_$dBinary2)
-                  (Data.Binary.Class.$fBinary(,,)_$cget
+                     Cloud.Kernel.$s$fBinary(,)_$dBinary2)
+                  (Data.Binary.Class.$fBinary(,)_$cget
                      @ Control.Distributed.Process.Internal.Types.ProcessId
-                     @ GHC.Types.Float
                      @ (Control.Distributed.Static.Closure
                           (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                      Control.Distributed.Process.Internal.Types.$fBinaryProcessId
-                     Data.Binary.Class.$fBinaryFloat
-                     Cloud.Kernel.$s$fBinary(,,)_$dBinary2)
-                  (Data.Binary.Class.$fBinary(,,)_$cputList
+                     Cloud.Kernel.$s$fBinary(,)_$dBinary2)
+                  (Data.Binary.Class.$fBinary(,)_$cputList
                      @ Control.Distributed.Process.Internal.Types.ProcessId
-                     @ GHC.Types.Float
                      @ (Control.Distributed.Static.Closure
                           (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                      Control.Distributed.Process.Internal.Types.$fBinaryProcessId
-                     Data.Binary.Class.$fBinaryFloat
-                     Cloud.Kernel.$s$fBinary(,,)_$dBinary2) -}
-a15911f5171793621039911cdab136a3
-  $s$fBinary(,,)1 ::
+                     Cloud.Kernel.$s$fBinary(,)_$dBinary2) -}
+a3baee2e012e76e93fe470ad7bb79423
+  $s$fBinary(,)1 ::
     GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy#
                               (Cloud.Type.Vect -> Cloud.Type.IterationCount)) ->
-                 Cloud.Kernel.$s$fBinary(,,)2) -}
-5773e84b42714ecf0a7eda7596efd551
-  $s$fBinary(,,)10 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
-                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
-                        (GHC.Types.[]
-                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fBinary(,,)11
-                           kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
-                 Data.Typeable.Internal.TypeRep
-                   dt6
-                   dt7
-                   GHC.Types.$tcFloat
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-19a920365afcf663a43888f207a98471
-  $s$fBinary(,,)11 :: GHC.Fingerprint.Type.Fingerprint
+                 Cloud.Kernel.$s$fBinary(,)2) -}
+bf4edff8bc46bb7fbcfd90d05975c655
+  $s$fBinary(,)10 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    8679316326329983383##
                    1648058332703460507##) -}
-5f0636028b5e82c5cc120499a472b2a8
-  $s$fBinary(,,)12 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)13 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+a53df3c949c231ed1a2dacb7d9e525e1
+  $s$fBinary(,)11 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)12 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fBinary(,,)9
+                       Cloud.Kernel.$s$fBinary(,)_types
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -197,15 +175,15 @@ a15911f5171793621039911cdab136a3
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-b94ebdab25a6e3998523c971484f170c
-  $s$fBinary(,,)13 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)14 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+7322d9acf6f9da6e3bb5755585f6f124
+  $s$fBinary(,)12 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)13 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fBinary(,,)9
+                       Cloud.Kernel.$s$fBinary(,)_types
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -216,8 +194,8 @@ b94ebdab25a6e3998523c971484f170c
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-37a052a6320e8e7ceaf32de6aeeb2a78
-  $s$fBinary(,,)14 :: Data.Typeable.Internal.TypeRep
+ab7c334fe42fe01f7661cdcf98e1a7dd
+  $s$fBinary(,)13 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -225,7 +203,7 @@ b94ebdab25a6e3998523c971484f170c
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fBinary(,,)15
+                           Cloud.Kernel.$s$fBinary(,)14
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  Data.Typeable.Internal.TypeRep
                    dt6
@@ -233,14 +211,14 @@ b94ebdab25a6e3998523c971484f170c
                    GHC.Tuple.$tc(,,)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-be50408110619090c12d02e1100dcd6d
-  $s$fBinary(,,)15 :: GHC.Fingerprint.Type.Fingerprint
+707acfce4f75fb3cec975cea4a9aed81
+  $s$fBinary(,)14 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    16902069906016602646##
                    15238449149262190978##) -}
-9c40bec71c33de3092acb16d43d3211f
-  $s$fBinary(,,)16 :: Data.Typeable.Internal.TypeRep
+c23a6c18a463c41c84e115b43569f4e3
+  $s$fBinary(,)15 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -248,7 +226,7 @@ be50408110619090c12d02e1100dcd6d
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fBinary(,,)17
+                           Cloud.Kernel.$s$fBinary(,)16
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  Data.Typeable.Internal.TypeRep
                    dt6
@@ -256,21 +234,21 @@ be50408110619090c12d02e1100dcd6d
                    GHC.Types.$tc(->)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-9b98a1d0b8b6df0d06559227fecad217
-  $s$fBinary(,,)17 :: GHC.Fingerprint.Type.Fingerprint
+8658f20a290c31a3d8485ee098dfd234
+  $s$fBinary(,)16 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    16275961958878852713##
                    3578558998586661682##) -}
-7d314068bbd30a8ea7d711a4a792b129
-  $s$fBinary(,,)2 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)6 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+43bb4fe3304ed3aa88396f6ede323198
+  $s$fBinary(,)2 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)6 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fBinary(,,)3
+                       Cloud.Kernel.$s$fBinary(,)3
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -281,14 +259,14 @@ be50408110619090c12d02e1100dcd6d
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-8be7da6479d6b38109d5d6eb7fbbe441
-  $s$fBinary(,,)3 :: [Data.Typeable.Internal.TypeRep]
+bf7a42cd9a43fb17d5ad83370c29d5bc
+  $s$fBinary(,)3 :: [Data.Typeable.Internal.TypeRep]
   {- Unfolding: (GHC.Types.:
                    @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fBinary(,,)4
+                   Cloud.Kernel.$s$fBinary(,)4
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-387b1d732bd094a438c3152f39622bbf
-  $s$fBinary(,,)4 :: Data.Typeable.Internal.TypeRep
+6a293d096199c209445c7833af00c8c3
+  $s$fBinary(,)4 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -296,7 +274,7 @@ be50408110619090c12d02e1100dcd6d
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fBinary(,,)5
+                           Cloud.Kernel.$s$fBinary(,)5
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  Data.Typeable.Internal.TypeRep
                    dt6
@@ -304,21 +282,21 @@ be50408110619090c12d02e1100dcd6d
                    GHC.Integer.Type.$tcInteger
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-1e22c0249bc797a3d727d6381b6af792
-  $s$fBinary(,,)5 :: GHC.Fingerprint.Type.Fingerprint
+e297ebc5801af43acce52c451437895a
+  $s$fBinary(,)5 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    4243490490217825131##
                    6185988462045966752##) -}
-2cb3a8e372ff5ee74c11c1351b6568c2
-  $s$fBinary(,,)6 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)16 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+f04d22cb6b9a43c34c65bff8dabb06c9
+  $s$fBinary(,)6 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fBinary(,,)7
+                       Cloud.Kernel.$s$fBinary(,)7
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -329,21 +307,21 @@ be50408110619090c12d02e1100dcd6d
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-bc3a9c4cc08ede4f2149eb8c01d25111
-  $s$fBinary(,,)7 :: [Data.Typeable.Internal.TypeRep]
+224ff666b4a4e2cfe27ce7c86d8748e6
+  $s$fBinary(,)7 :: [Data.Typeable.Internal.TypeRep]
   {- Unfolding: (GHC.Types.:
                    @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fBinary(,,)8
+                   Cloud.Kernel.$s$fBinary(,)8
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-3febd3e3dba328c8744e535343eed089
-  $s$fBinary(,,)8 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)12 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+4c1e74c8861bf35a7c3f09c58cb98210
+  $s$fBinary(,)8 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)11 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fBinary(,,)9
+                       Cloud.Kernel.$s$fBinary(,)_types
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -354,22 +332,33 @@ bc3a9c4cc08ede4f2149eb8c01d25111
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-d2f579f35744e78d0113d1b7e7c6320a
-  $s$fBinary(,,)9 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fBinary(,,)10
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-96c7e41c998ba782998f7a6005d9d467
-  $s$fBinary(,,)_$dBinary2 ::
+f9fe915777e43fecc4a593294595c37e
+  $s$fBinary(,)9 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fBinary(,)10
+                           kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt6
+                   dt7
+                   GHC.Types.$tcFloat
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+ceed4da06a1034edeba42a8e94518c9c
+  $s$fBinary(,)_$dBinary2 ::
     Data.Binary.Class.Binary
       (Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.$s$fBinary(,,)_$s$fBinaryClosure -}
-fb7614cb57efed9b5b728d77f8cf8579
-  $s$fBinary(,,)_$s$fBinaryClosure ::
+                Cloud.Kernel.$s$fBinary(,)_$s$fBinaryClosure -}
+deb308f5037fe520b3ccb7234f45ae10
+  $s$fBinary(,)_$s$fBinaryClosure ::
     Data.Binary.Class.Binary
       (Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
@@ -379,43 +368,43 @@ fb7614cb57efed9b5b728d77f8cf8579
                        (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                   (Control.Distributed.Static.$fBinaryClosure_$cput
                      @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
-                     Cloud.Kernel.$s$fBinary(,,)1
+                     Cloud.Kernel.$s$fBinary(,)1
                        `cast`
                      (Sym (Data.Typeable.Internal.N:Typeable[0]
                                <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N)))
                   (Control.Distributed.Static.$fBinaryClosure_$cget
                      @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
-                     Cloud.Kernel.$s$fBinary(,,)1
+                     Cloud.Kernel.$s$fBinary(,)1
                        `cast`
                      (Sym (Data.Typeable.Internal.N:Typeable[0]
                                <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N)))
                   (Control.Distributed.Static.$fBinaryClosure_$cputList
                      @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
-                     Cloud.Kernel.$s$fBinary(,,)1
+                     Cloud.Kernel.$s$fBinary(,)1
                        `cast`
                      (Sym (Data.Typeable.Internal.N:Typeable[0]
                                <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N))) -}
-11f82b6f8a94c8a0f64cd12311934aec
+ed3bd7633dd52c3f1f08d9aef5afc947
+  $s$fBinary(,)_types :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fBinary(,)9
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+6a760b8eb8ee9fcf1b76a238eaec62f2
   $s$fSerializablea ::
     Control.Distributed.Process.Serializable.Serializable
-      (Control.Distributed.Process.Internal.Types.ProcessId,
-       GHC.Types.Float,
-       Control.Distributed.Static.Closure
+      (Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ (Control.Distributed.Process.Internal.Types.ProcessId,
-                     GHC.Types.Float,
-                     Control.Distributed.Static.Closure
+                  @ (Control.Distributed.Static.Closure
                        (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-                  Cloud.Kernel.$s$fSerializablea_$dBinary
+                  Cloud.Kernel.$s$fBinary(,)_$dBinary2
                   Cloud.Kernel.$s$fSerializablea1 -}
-d2bf2948c67bdb3774e9ae72841ae487
+b95513a9830562e15b5b1b670d52ee59
   $s$fSerializablea1 ::
     Data.Typeable.Internal.Typeable
-      (Control.Distributed.Process.Internal.Types.ProcessId,
-       GHC.Types.Float,
-       Control.Distributed.Static.Closure
+      (Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
@@ -423,18 +412,10 @@ d2bf2948c67bdb3774e9ae72841ae487
                   `cast`
                 (Sym (Data.Typeable.Internal.N:Typeable[0]
                           <*>_N
-                          <(Control.Distributed.Process.Internal.Types.ProcessId,
-                            GHC.Types.Float,
-                            Control.Distributed.Static.Closure
-                              (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_N)) -}
-1e93f532dd76b3728e175c3e0967222e
-  $s$fSerializablea10 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fSerializablea11
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-3c9c09cb8628df741ff452e6dcb58c26
-  $s$fSerializablea11 :: Data.Typeable.Internal.TypeRep
+                          <Control.Distributed.Static.Closure
+                             (Cloud.Type.Vect -> Cloud.Type.IterationCount)>_N)) -}
+f55a9febec2758b30cf789aea37b8195
+  $s$fSerializablea10 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -442,7 +423,52 @@ d2bf2948c67bdb3774e9ae72841ae487
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fSerializablea12
+                           Cloud.Kernel.$s$fSerializablea15
+                           kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        Cloud.Kernel.$s$fSerializablea12 of kt_fps1 { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fSerializablea15
+                           kt_fps1) of dt8 { GHC.Fingerprint.Type.Fingerprint dt9 dt10 ->
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        Cloud.Kernel.$s$fSerializablea_types4 of kt_fps2 { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fSerializablea15
+                           kt_fps2) of dt11 { GHC.Fingerprint.Type.Fingerprint dt12 dt13 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt12
+                   dt13
+                   GHC.Tuple.$tc(,)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   Cloud.Kernel.$s$fSerializablea_types4 } } } } } }) -}
+8a35b4e670da7aa26b4b999237a8e0ea
+  $s$fSerializablea11 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea3
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+73e44090e3bb8c91316fad66f28dc498
+  $s$fSerializablea12 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea13
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+1282788a5ee7de43b0359314877718bc
+  $s$fSerializablea13 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fSerializablea14
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  Data.Typeable.Internal.TypeRep
                    dt6
@@ -450,100 +476,42 @@ d2bf2948c67bdb3774e9ae72841ae487
                    Control.Distributed.Process.Internal.Types.$tcProcessId
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-d32e80bb124305e1939c9a9678a38701
-  $s$fSerializablea12 :: GHC.Fingerprint.Type.Fingerprint
+3a56b524f3da4e17c6299cf040457c86
+  $s$fSerializablea14 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    6848054525988913529##
                    13703691127929396415##) -}
-f7e93a826ca7d2a44c0b1a21fe947af1
-  $s$fSerializablea13 ::
-    Control.Distributed.Process.Serializable.Serializable
-      Cloud.Type.MSG
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Cloud.Type.MSG
-                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
-                  Cloud.Kernel.$s$fSerializablea14 -}
-ad28f9d17965365fda8c82af5831c7e9
-  $s$fSerializablea14 ::
-    Data.Typeable.Internal.Typeable Cloud.Type.MSG
-  {- Arity: 1, Strictness: <L,A>,
-     Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.$s$fSerializablea15
-                  `cast`
-                (Sym (Data.Typeable.Internal.N:Typeable[0]
-                          <*>_N <Cloud.Type.MSG>_N)) -}
-3f77d260750ee4f3edc15607f4fa85c7
-  $s$fSerializablea15 ::
-    GHC.Prim.Proxy# Cloud.Type.MSG -> Data.Typeable.Internal.TypeRep
-  {- Arity: 1, Strictness: <L,A>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (wild :: GHC.Prim.Proxy# Cloud.Type.MSG) ->
-                 Cloud.Kernel.$s$fSerializablea16) -}
-133ea3f86bfb1a1c873d3c915a3a310c
-  $s$fSerializablea16 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
-                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
-                        (GHC.Types.[]
-                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fSerializablea17
-                           kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
-                 Data.Typeable.Internal.TypeRep
-                   dt6
-                   dt7
-                   Cloud.Type.$tcMSG
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-5866cce736e44769375fda141eef3933
-  $s$fSerializablea17 :: GHC.Fingerprint.Type.Fingerprint
+97ebcca1c8567d69e8b74b7f59ae36e9
+  $s$fSerializablea15 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
-                   4541439096892297965##
-                   3051610108435893611##) -}
-54b0a3771f253b7f3a8d352ffe23906c
-  $s$fSerializablea18 ::
+                   17502837480397947244##
+                   15872498598114190556##) -}
+94678d82389263a8de2e48c386011758
+  $s$fSerializablea16 ::
     Control.Distributed.Process.Serializable.Serializable ()
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ ()
-                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
-                  Cloud.Kernel.$s$fSerializablea19 -}
-6fcbaea69af283d4fbb5028b6c0845f5
-  $s$fSerializablea19 :: Data.Typeable.Internal.Typeable ()
+                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+                  Cloud.Kernel.$s$fSerializablea17 -}
+50372c3e3b5d8cefa60426913a89e7dc
+  $s$fSerializablea17 :: Data.Typeable.Internal.Typeable ()
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.$s$fSerializablea20
+                Cloud.Kernel.$s$fSerializablea18
                   `cast`
                 (Sym (Data.Typeable.Internal.N:Typeable[0] <*>_N <()>_N)) -}
-c8e14479284a225b30bbaaddecba4fdd
-  $s$fSerializablea2 ::
-    GHC.Prim.Proxy#
-      (Control.Distributed.Process.Internal.Types.ProcessId,
-       GHC.Types.Float,
-       Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-    -> Data.Typeable.Internal.TypeRep
-  {- Arity: 1, Strictness: <L,A>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (wild :: GHC.Prim.Proxy#
-                              (Control.Distributed.Process.Internal.Types.ProcessId,
-                               GHC.Types.Float,
-                               Control.Distributed.Static.Closure
-                                 (Cloud.Type.Vect -> Cloud.Type.IterationCount))) ->
-                 Cloud.Kernel.$s$fSerializablea3) -}
-946feb193089cb132fd3c61b7f9d0445
-  $s$fSerializablea20 ::
+5da4f0d431f5b72b7de820ce501703d5
+  $s$fSerializablea18 ::
     GHC.Prim.Proxy# () -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy# ()) ->
-                 Cloud.Kernel.$s$fSerializablea21) -}
-678c2b31b00c7a8c79343e4267fb0f20
-  $s$fSerializablea21 :: Data.Typeable.Internal.TypeRep
+                 Cloud.Kernel.$s$fSerializablea19) -}
+f344cb787c0aeb9ca59054fca0ad5a25
+  $s$fSerializablea19 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -551,7 +519,7 @@ c8e14479284a225b30bbaaddecba4fdd
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fSerializablea22
+                           Cloud.Kernel.$s$fSerializablea20
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  Data.Typeable.Internal.TypeRep
                    dt6
@@ -559,74 +527,51 @@ c8e14479284a225b30bbaaddecba4fdd
                    GHC.Tuple.$tc()
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-5e704081f810e70e6198b13b16bc04e9
-  $s$fSerializablea22 :: GHC.Fingerprint.Type.Fingerprint
+71694544b899c258a5d0c7294234f7ef
+  $s$fSerializablea2 ::
+    GHC.Prim.Proxy#
+      (Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+    -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy#
+                              (Control.Distributed.Static.Closure
+                                 (Cloud.Type.Vect -> Cloud.Type.IterationCount))) ->
+                 Cloud.Kernel.$s$fSerializablea3) -}
+db5846c9706f73aca77427c9d1cb613b
+  $s$fSerializablea20 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    15843165073189925570##
                    13730769858450861905##) -}
-ee74e0ee4a8442cac1bab56f98634329
-  $s$fSerializablea3 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)14 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Kernel.$s$fSerializablea10
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
-                 let {
-                   types1 :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       types
-                       Cloud.Kernel.$s$fBinary(,,)9
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types1 of kt_fps1 { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps1) of dt10 { GHC.Fingerprint.Type.Fingerprint dt11 dt12 ->
-                 let {
-                   types2 :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       types1
-                       Cloud.Kernel.$s$fSerializablea4
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types2 of kt_fps2 { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps2) of dt13 { GHC.Fingerprint.Type.Fingerprint dt14 dt15 ->
-                 Data.Typeable.Internal.TypeRep
-                   dt14
-                   dt15
-                   tc
-                   ks
-                   types2 } } } } } } }) -}
-6ae1259e6e8a1607255d757084335add
-  $s$fSerializablea4 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fSerializablea5
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-9c40ed96b8b797aca4bb847ac4687e6b
-  $s$fSerializablea5 :: Data.Typeable.Internal.TypeRep
+ddd3c5a91b66df81a618b1c9deec447d
+  $s$fSerializablea21 ::
+    Control.Distributed.Process.Serializable.Serializable
+      Cloud.Type.MSG
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.MSG
+                  Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
+                  Cloud.Kernel.$s$fSerializablea22 -}
+9e2986adc9767612171380fb95dc11c4
+  $s$fSerializablea22 ::
+    Data.Typeable.Internal.Typeable Cloud.Type.MSG
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Kernel.$s$fSerializablea23
+                  `cast`
+                (Sym (Data.Typeable.Internal.N:Typeable[0]
+                          <*>_N <Cloud.Type.MSG>_N)) -}
+e74340c23810daf73a0c9fe56e978adb
+  $s$fSerializablea23 ::
+    GHC.Prim.Proxy# Cloud.Type.MSG -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy# Cloud.Type.MSG) ->
+                 Cloud.Kernel.$s$fSerializablea24) -}
+bd3b68f41bb9fd9ff27c3c9cdcaed50a
+  $s$fSerializablea24 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -634,7 +579,30 @@ ee74e0ee4a8442cac1bab56f98634329
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fSerializablea9
+                           Cloud.Kernel.$s$fSerializablea25
+                           kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt6
+                   dt7
+                   Cloud.Type.$tcMSG
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+1287795846ddfab200eb82da05dbaead
+  $s$fSerializablea25 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   4541439096892297965##
+                   3051610108435893611##) -}
+b2ff865e481292a332a8f46becd60673
+  $s$fSerializablea3 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fSerializablea6
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
@@ -642,7 +610,7 @@ ee74e0ee4a8442cac1bab56f98634329
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$s$fSerializablea9
+                           Cloud.Kernel.$s$fSerializablea6
                            kt_fps1) of dt8 { GHC.Fingerprint.Type.Fingerprint dt9 dt10 ->
                  Data.Typeable.Internal.TypeRep
                    dt9
@@ -650,15 +618,15 @@ ee74e0ee4a8442cac1bab56f98634329
                    Control.Distributed.Static.$tcClosure
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    Cloud.Kernel.$s$fSerializablea_types } } } }) -}
-f96d125ecfbf3fed8e56ec0661b60fa6
-  $s$fSerializablea6 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)16 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+e6d8574384ac5fcc549df153c6a0a5ff
+  $s$fSerializablea4 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fSerializablea7
+                       Cloud.Kernel.$s$fSerializablea_types1
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -673,7 +641,7 @@ f96d125ecfbf3fed8e56ec0661b60fa6
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        types
-                       Cloud.Kernel.$s$fBinary(,,)3
+                       Cloud.Kernel.$s$fBinary(,)3
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -684,21 +652,159 @@ f96d125ecfbf3fed8e56ec0661b60fa6
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps1) of dt10 { GHC.Fingerprint.Type.Fingerprint dt11 dt12 ->
                  Data.Typeable.Internal.TypeRep dt11 dt12 tc ks types1 } } } } }) -}
-2884116f2a3a3261eca7001f5ef66d7a
-  $s$fSerializablea7 :: [Data.Typeable.Internal.TypeRep]
+f254efa4ce3f4f62ce62e323e971921a
+  $s$fSerializablea5 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fBinary(,)14
+                           kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        Cloud.Kernel.$s$fBinary(,)_types of kt_fps1 { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fBinary(,)14
+                           kt_fps1) of dt8 { GHC.Fingerprint.Type.Fingerprint dt9 dt10 ->
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        Cloud.Kernel.$s$fSerializablea_types3 of kt_fps2 { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fBinary(,)14
+                           kt_fps2) of dt11 { GHC.Fingerprint.Type.Fingerprint dt12 dt13 ->
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        Cloud.Kernel.$s$fSerializablea_types2 of kt_fps3 { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Kernel.$s$fBinary(,)14
+                           kt_fps3) of dt14 { GHC.Fingerprint.Type.Fingerprint dt15 dt16 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt15
+                   dt16
+                   GHC.Tuple.$tc(,,)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   Cloud.Kernel.$s$fSerializablea_types2 } } } } } } } }) -}
+c8f28018338dbd0ddc4ebf2638a73bfd
+  $s$fSerializablea6 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   11168708350194058468##
+                   6517994011780897202##) -}
+b956558f1ead6d9c0b01094315477186
+  $s$fSerializablea7 ::
+    Control.Distributed.Process.Serializable.Serializable
+      (Control.Distributed.Process.Internal.Types.ProcessId,
+       Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Distributed.Process.Internal.Types.ProcessId,
+                     Control.Distributed.Static.Closure
+                       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                  Cloud.Kernel.$s$fSerializablea_$dBinary
+                  Cloud.Kernel.$s$fSerializablea8 -}
+922da041af3ec3eb969ba8af834b42d6
+  $s$fSerializablea8 ::
+    Data.Typeable.Internal.Typeable
+      (Control.Distributed.Process.Internal.Types.ProcessId,
+       Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Kernel.$s$fSerializablea9
+                  `cast`
+                (Sym (Data.Typeable.Internal.N:Typeable[0]
+                          <*>_N
+                          <(Control.Distributed.Process.Internal.Types.ProcessId,
+                            Control.Distributed.Static.Closure
+                              (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_N)) -}
+fd08b20695f1af892b37b905201c8849
+  $s$fSerializablea9 ::
+    GHC.Prim.Proxy#
+      (Control.Distributed.Process.Internal.Types.ProcessId,
+       Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+    -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy#
+                              (Control.Distributed.Process.Internal.Types.ProcessId,
+                               Control.Distributed.Static.Closure
+                                 (Cloud.Type.Vect -> Cloud.Type.IterationCount))) ->
+                 Cloud.Kernel.$s$fSerializablea10) -}
+b05a69ca0aae8d3a6777f6add915c8d1
+  $s$fSerializablea_$dBinary ::
+    Data.Binary.Class.Binary
+      (Control.Distributed.Process.Internal.Types.ProcessId,
+       Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Cloud.Kernel.$s$fBinary(,) -}
+e6fc14a4f87eef099df86ec83e476b48
+  $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
+    Data.Binary.Class.Binary ()
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Binary.Class.$fBinary() -}
+35becabf169dbb749103d7089b1433d8
+  $s$fSerializablea_$s$fSerializablea_$cp1Serializable1 ::
+    Data.Binary.Class.Binary Cloud.Type.MSG
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Cloud.Type.$fBinaryMSG -}
+f8ec25a3c054740e7d9c1e75a738c7e6
+  $s$fSerializablea_types :: [Data.Typeable.Internal.TypeRep]
   {- Unfolding: (GHC.Types.:
                    @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fSerializablea8
+                   Cloud.Kernel.$s$fSerializablea4
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-882d1865dba276b4d72d91fe87c15dc0
-  $s$fSerializablea8 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)14 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+e565397a93a60fa74afc15585bd011f1
+  $s$fSerializablea_types1 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea5
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+d7bb571e1ef7aa9220fa1a4711f1b572
+  $s$fSerializablea_types2 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Base.++
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea_types3
+                   Cloud.Kernel.$s$fBinary(,)_types) -}
+3339119983cc84e2a837d82e19e920ba
+  $s$fSerializablea_types3 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Base.++
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fBinary(,)_types
+                   Cloud.Kernel.$s$fBinary(,)_types) -}
+cb0d919969414dc39354820693d244b6
+  $s$fSerializablea_types4 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Base.++
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea12
+                   Cloud.Kernel.$s$fSerializablea11) -}
+37690ce06de38af25fd40738fe732d80
+  $stoDynamic10 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$s$fSerializablea10
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+41d6408db10d816a11a680d15a685ae4
+  $stoDynamic14 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$s$fBinary(,,)9
+                       Cloud.Kernel.$stoDynamic3
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -708,77 +814,9 @@ f96d125ecfbf3fed8e56ec0661b60fa6
                            @ GHC.Fingerprint.Type.Fingerprint
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
-                 let {
-                   types1 :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       types
-                       Cloud.Kernel.$s$fBinary(,,)9
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types1 of kt_fps1 { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps1) of dt10 { GHC.Fingerprint.Type.Fingerprint dt11 dt12 ->
-                 let {
-                   types2 :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       types1
-                       Cloud.Kernel.$s$fBinary(,,)9
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types2 of kt_fps2 { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps2) of dt13 { GHC.Fingerprint.Type.Fingerprint dt14 dt15 ->
-                 Data.Typeable.Internal.TypeRep
-                   dt14
-                   dt15
-                   tc
-                   ks
-                   types2 } } } } } } }) -}
-77b442ab9b409cb9502c21ecdec5d4bd
-  $s$fSerializablea9 :: GHC.Fingerprint.Type.Fingerprint
-  {- HasNoCafRefs,
-     Unfolding: (GHC.Fingerprint.Type.Fingerprint
-                   11168708350194058468##
-                   6517994011780897202##) -}
-3ec760b81128f466ef3d47242e7219e4
-  $s$fSerializablea_$dBinary ::
-    Data.Binary.Class.Binary
-      (Control.Distributed.Process.Internal.Types.ProcessId,
-       GHC.Types.Float,
-       Control.Distributed.Static.Closure
-         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.$s$fBinary(,,) -}
-a5741fb71921bdcdcdfe5d48bf81b087
-  $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
-    Data.Binary.Class.Binary Cloud.Type.MSG
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True) Cloud.Type.$fBinaryMSG -}
-7aecea7bd64576d523e2c01021fb58b0
-  $s$fSerializablea_$s$fSerializablea_$cp1Serializable1 ::
-    Data.Binary.Class.Binary ()
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Data.Binary.Class.$fBinary() -}
-04952a5b85276f95ce5f546be0a2e8ad
-  $s$fSerializablea_types :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fSerializablea6
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-8099344f67b0810ff14d1f6762a49a70
-  $stoDynamic10 :: Data.Typeable.Internal.TypeRep
+                 Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
+55250505bd35af4f0071f66ba854bdd6
+  $stoDynamic15 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -786,7 +824,7 @@ a5741fb71921bdcdcdfe5d48bf81b087
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Kernel.$stoDynamic11
+                           Cloud.Kernel.$stoDynamic16
                            kt_fps) of dt5 { GHC.Fingerprint.Type.Fingerprint dt6 dt7 ->
                  Data.Typeable.Internal.TypeRep
                    dt6
@@ -794,13 +832,13 @@ a5741fb71921bdcdcdfe5d48bf81b087
                    Control.Distributed.Process.Serializable.$tcSerializableDict
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-260966f0242016aa97c91329ea824060
-  $stoDynamic11 :: GHC.Fingerprint.Type.Fingerprint
+13bc96bfa7c1fcb782e8166a27338dc1
+  $stoDynamic16 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    10658944029390058201##
                    13154103510098428930##) -}
-108e7ec85a821b099ca3b1a7780b3802
+6f01538dacc82479a16b53ce7034a317
   $stoDynamic2 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Cloud.Kernel.$stoDynamic4 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
@@ -819,11 +857,11 @@ a5741fb71921bdcdcdfe5d48bf81b087
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-b5caa57e7993cf65be6c48bfd0bb6b52
+8832e16f8945b5d9f97c048af2f51b95
   $stoDynamic3 :: [Data.Typeable.Internal.TypeRep]
   {- Unfolding: (GHC.Types.:
                    @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fSerializablea21
+                   Cloud.Kernel.$s$fSerializablea19
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
 c203e11502773a2b6df35178b9a7a0bd
   $stoDynamic4 :: Data.Typeable.Internal.TypeRep
@@ -848,15 +886,15 @@ c203e11502773a2b6df35178b9a7a0bd
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    16388574162845728638##
                    4943431739041295902##) -}
-5cee6ed2006ae70596efc7c8c3b604bc
+9f81dc0c861194bd6ee8528d1bae1b2b
   $stoDynamic6 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,,)16 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$stoDynamic7
+                       Cloud.Kernel.$s$fSerializablea11
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -867,12 +905,25 @@ c203e11502773a2b6df35178b9a7a0bd
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
                  Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
-99826a46995361abaa31f70b885edf37
-  $stoDynamic7 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$s$fSerializablea3
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+346307893917fb1fef0194612f0c0577
+  $stoDynamic9 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$s$fBinary(,)15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.$stoDynamic10
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
+                 Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types } } }) -}
 2012f8b0d480b3e93f5187a4ab0254af
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -888,19 +939,241 @@ a888fc3f216d3e21947ac5f910f563cc
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
-67bdac08ab081acda3c16ddf75d481a5
+98b177282930ac10888a82ea64495579
   $wslaveProcess ::
     Control.Distributed.Process.Internal.Types.ProcessId
-    -> GHC.Types.Float
     -> Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Control.Distributed.Process.Internal.Types.LocalProcess
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 5,
-     Strictness: <L,1*U(U(U,U,U,U),U,U)><L,U(U)><L,U><L,U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
-     Inline: [0] -}
-cdeb7dae883457034f3acdf117f3183e
+  {- Arity: 4,
+     Strictness: <L,1*U(U(U,U,U,U),U,U)><L,U><L,U(U(U(U),U(U,U),U(U)),U,U,U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Control.Distributed.Process.Internal.Types.ProcessId)
+                   (ww1 :: Control.Distributed.Static.Closure
+                             (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                   (w :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Control.Distributed.Process.Internal.Primitives.unClosure1
+                        @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+                        Cloud.Kernel.__remoteTable23
+                          `cast`
+                        (Sym (Data.Typeable.Internal.N:Typeable[0]
+                                  <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N))
+                        ww1
+                        w
+                        w1 of ds1 { (#,#) ipv ipv1 ->
+                 case w of ww2 { Control.Distributed.Process.Internal.Types.LocalProcess ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case ww3 of ww9 { Control.Distributed.Process.Internal.CQueue.CQueue ww10 ww11 ww12 ->
+                 case ww8 of ww16 { Control.Distributed.Process.Internal.Types.LocalNode ww17 ww18 ww19 ww20 ww21 ww22 ->
+                 case ww17
+                        `cast`
+                      (Trans
+                           (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                           (Network.Transport.N:EndPointAddress[0])) of ww23 { Data.ByteString.Internal.PS ww24 ww25 ww26 ww27 ->
+                 case ww18 of ww28 { Network.Transport.EndPoint ww29 ww30 ww31 ww32 ww33 ww34 ->
+                 case ww20 of ww35 { Control.Concurrent.Chan.Chan ww36 ww37 ->
+                 case Control.Distributed.Process.Internal.CQueue.$wdequeue
+                        @ Control.Distributed.Process.Internal.Types.Message
+                        @ (Control.Distributed.Process.Internal.Types.Process
+                             Cloud.Type.MSG)
+                        ww10
+                        ww11
+                        ww12
+                        Control.Distributed.Process.Internal.CQueue.Blocking
+                        Cloud.Kernel.__remoteTable20
+                          `cast`
+                        ([Control.Distributed.Process.Internal.Primitives.N:Match[0]
+                              <Cloud.Type.MSG>_N])_R
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild {
+                   GHC.Base.Nothing
+                   -> case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ Cloud.Type.MSG
+                             Cloud.Kernel.__remoteTable18
+                             ipv2
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   GHC.Base.Just proc
+                   -> case (proc
+                              `cast`
+                            (Trans
+                                 (Control.Distributed.Process.Internal.Types.N:Process[0] <Cloud.Type.MSG>_N)
+                                 (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                      <*>_N
+                                      <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                      <GHC.Types.IO>_R
+                                      <Cloud.Type.MSG>_N))
+                              ww2)
+                             `cast`
+                           (GHC.Types.N:IO[0] <Cloud.Type.MSG>_R)
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      case ipv5 of wild1 {
+                        DEFAULT -> GHC.IO.failIO1 @ () Cloud.Kernel.__remoteTable17 ipv4
+                        Cloud.Type.ARG ds
+                        -> case ds of wild2 { (,) ds4 args ->
+                           case args of wild3 { Cloud.Type.Task ds5 ds6 ->
+                           letrec {
+                             $wgo :: [Cloud.Type.Vect]
+                                     -> GHC.Prim.State# GHC.Prim.RealWorld
+                                     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                           [(Cloud.Type.Vect, Cloud.Type.IterationCount)] #)
+                               {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
+                             = \ (w2 :: [Cloud.Type.Vect])
+                                 (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                               case w2 of wild4 {
+                                 []
+                                 -> (# w3,
+                                       GHC.Types.[]
+                                         @ (Cloud.Type.Vect, Cloud.Type.IterationCount) #)
+                                 : y ys
+                                 -> case $wgo ys w3 of ds7 { (#,#) ipv6 ipv7 ->
+                                    (# ipv6,
+                                       GHC.Types.:
+                                         @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
+                                         (y, ipv1 y)
+                                         ipv7 #) } }
+                           } in
+                           case $wgo ds6 ipv4 of ds7 { (#,#) ipv6 ipv7 ->
+                           case ww of ww13 { Control.Distributed.Process.Internal.Types.ProcessId ww14 ww15 ww44 ->
+                           case ww14
+                                  `cast`
+                                (Trans
+                                     (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                                     (Network.Transport.N:EndPointAddress[0])) of ww45 { Data.ByteString.Internal.PS ww46 ww47 ww48 ww49 ->
+                           Control.Distributed.Process.Internal.Primitives.$wsend
+                             @ Cloud.Type.MSG
+                             Cloud.Kernel.$s$fSerializablea21
+                             ww46
+                             ww47
+                             ww48
+                             ww49
+                             ww15
+                             ww44
+                             (Cloud.Type.RESPONSE (ww5, ipv7))
+                             ww4
+                             ww5
+                             ww6
+                             ww7
+                             ww24
+                             ww25
+                             ww26
+                             ww27
+                             ww31
+                             ww19
+                             ww36
+                             ww37
+                             ww21
+                             ipv6 } } } } } } } } } } } } } } } }) -}
+c88b51ca9d1cfc12e6092e1d8af777dd
+  $wspawnProcesses2 ::
+    Control.Distributed.Static.Closure
+      (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.Process
+         [Control.Distributed.Process.Internal.Types.ProcessId]
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: [0],
+     Unfolding: (\ (w :: Control.Distributed.Static.Closure
+                           (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                   (w1 :: [Control.Distributed.Process.Internal.Types.NodeId]) ->
+                 let {
+                   lvl14 :: Control.Distributed.Static.Closure
+                              (Control.Distributed.Process.Internal.Types.Process ())
+                   = case Data.ByteString.Builder.toLazyByteString
+                            (case (Cloud.Kernel.spawnProcesses6 w)
+                                    `cast`
+                                  (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds1 b ->
+                             b }) of dt5 { DEFAULT ->
+                     Control.Distributed.Static.Closure
+                       @ (Control.Distributed.Process.Internal.Types.Process ())
+                       Cloud.Kernel.spawnProcesses1
+                         `cast`
+                       (Sym (Control.Distributed.Static.N:Static[0]
+                                 <Data.ByteString.Lazy.Internal.ByteString
+                                  -> Control.Distributed.Process.Internal.Types.Process ()>_P))
+                       dt5 }
+                 } in
+                 letrec {
+                   go :: [Control.Distributed.Process.Internal.Types.NodeId]
+                         -> Control.Distributed.Process.Internal.Types.LocalProcess
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                               [Control.Distributed.Process.Internal.Types.ProcessId] #)
+                     {- Arity: 3,
+                        Strictness: <S,1*U><L,1*U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U> -}
+                   = \ (ds :: [Control.Distributed.Process.Internal.Types.NodeId])
+                       (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                       (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       []
+                       -> (# eta1,
+                             GHC.Types.[]
+                               @ Control.Distributed.Process.Internal.Types.ProcessId #)
+                       : y ys
+                       -> case eta of ww { Control.Distributed.Process.Internal.Types.LocalProcess ww3 ww5 ww6 ww7 ww8 ww9 ->
+                          case ww3 of ww10 { Control.Distributed.Process.Internal.CQueue.CQueue ww11 ww12 ww13 ->
+                          case ww6 of ww14 { Control.Distributed.Process.Internal.Types.ProcessId ww15 ww16 ww17 ->
+                          case ww9 of ww18 { Control.Distributed.Process.Internal.Types.LocalNode ww19 ww20 ww21 ww22 ww23 ww24 ->
+                          case ww19
+                                 `cast`
+                               (Trans
+                                    (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                                    (Network.Transport.N:EndPointAddress[0])) of ww25 { Data.ByteString.Internal.PS ww26 ww27 ww28 ww29 ->
+                          case ww20 of ww30 { Network.Transport.EndPoint ww31 ww32 ww33 ww34 ww35 ww36 ->
+                          case ww22 of ww37 { Control.Concurrent.Chan.Chan ww38 ww39 ->
+                          case Control.Distributed.Process.Internal.Spawn.$wspawn
+                                 y
+                                 lvl14
+                                 ww11
+                                 ww12
+                                 ww13
+                                 ww5
+                                 ww15
+                                 ww16
+                                 ww17
+                                 ww7
+                                 ww8
+                                 ww26
+                                 ww27
+                                 ww28
+                                 ww29
+                                 ww31
+                                 ww32
+                                 ww33
+                                 ww34
+                                 ww35
+                                 ww36
+                                 ww21
+                                 ww38
+                                 ww39
+                                 ww23
+                                 ww24
+                                 eta1 of ds1 { (#,#) ipv ipv1 ->
+                          case go ys ww ipv of ds2 { (#,#) ipv2 ipv3 ->
+                          (# ipv2,
+                             GHC.Types.:
+                               @ Control.Distributed.Process.Internal.Types.ProcessId
+                               ipv1
+                               ipv3 #) } } } } } } } } } }
+                 } in
+                 (\ (r1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  go w1 r1 s)
+                   `cast`
+                 (Trans
+                      (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <[Control.Distributed.Process.Internal.Types.ProcessId]>_R))
+                      (Trans
+                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                     <*>_N
+                                     <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                     <GHC.Types.IO>_R
+                                     <[Control.Distributed.Process.Internal.Types.ProcessId]>_N))
+                           (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <[Control.Distributed.Process.Internal.Types.ProcessId]>_N)))) -}
+37799ecda2f9df3b783ff4eec1e21752
   __remoteTable ::
     Control.Distributed.Static.RemoteTable
     -> Control.Distributed.Static.RemoteTable
@@ -910,7 +1183,7 @@ cdeb7dae883457034f3acdf117f3183e
                   `cast`
                 (<Control.Distributed.Static.RemoteTable>_R
                  ->_R Sym (Control.Distributed.Static.N:RemoteTable[0])) -}
-cc91f0c504700fa97b6d9c719988d0ea
+d25a8220b7164d46dac3cc48779a8836
   __remoteTable1 ::
     Control.Distributed.Static.RemoteTable
     -> Data.Map.Base.Map GHC.Base.String Data.Rank1Dynamic.Dynamic
@@ -918,142 +1191,73 @@ cc91f0c504700fa97b6d9c719988d0ea
      Unfolding: (\ (x :: Control.Distributed.Static.RemoteTable) ->
                  Control.Distributed.Static.$sinsert_$sgo10
                    @ Data.Rank1Dynamic.Dynamic
-                   Cloud.Kernel.__remoteTable_x1
-                   Cloud.Kernel.__remoteTable9
+                   Cloud.Kernel.__remoteTable_x3
+                   Cloud.Kernel.__remoteTable15
                    (Control.Distributed.Static.$sinsert_$sgo10
                       @ Data.Rank1Dynamic.Dynamic
-                      Cloud.Kernel.__remoteTable_x
-                      Cloud.Kernel.__remoteTable6
+                      Cloud.Kernel.__remoteTable_x2
+                      Cloud.Kernel.__remoteTable12
                       (Control.Distributed.Static.$sinsert_$sgo10
                          @ Data.Rank1Dynamic.Dynamic
-                         Cloud.Kernel.__remoteTable5
-                         Cloud.Kernel.__remoteTable2
-                         x `cast` (Control.Distributed.Static.N:RemoteTable[0])))) -}
-af6fcf867938967c795086a15e17637b
+                         Cloud.Kernel.__remoteTable11
+                         Cloud.Kernel.__remoteTable9
+                         (Control.Distributed.Static.$sinsert_$sgo10
+                            @ Data.Rank1Dynamic.Dynamic
+                            Cloud.Kernel.__remoteTable_x1
+                            Cloud.Kernel.__remoteTable6
+                            (Control.Distributed.Static.$sinsert_$sgo10
+                               @ Data.Rank1Dynamic.Dynamic
+                               Cloud.Kernel.__remoteTable_x
+                               Cloud.Kernel.__remoteTable3
+                               (Control.Distributed.Static.$sinsert_$sgo10
+                                  @ Data.Rank1Dynamic.Dynamic
+                                  Cloud.Kernel.__remoteTable2
+                                  Cloud.Kernel.__remoteTable9
+                                  x `cast` (Control.Distributed.Static.N:RemoteTable[0]))))))) -}
+cc7fcb6a9a923e45693bf361fb174acd
   __remoteTable10 ::
-    (Control.Distributed.Process.Internal.Types.ProcessId,
-     GHC.Types.Float,
-     Control.Distributed.Static.Closure
-       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-    -> Control.Distributed.Process.Internal.Types.LocalProcess
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3,
-     Strictness: <S,1*U(1*U(U(U,U,U,U),U,U),U(U),U)><L,U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (3, True, False)
-                (\ (w :: (Control.Distributed.Process.Internal.Types.ProcessId,
-                          GHC.Types.Float,
-                          Control.Distributed.Static.Closure
-                            (Cloud.Type.Vect -> Cloud.Type.IterationCount)))
-                   (w1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
-                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case w of ww { (,,) ww1 ww2 ww3 ->
-                 Cloud.Kernel.$wslaveProcess ww1 ww2 ww3 w1 w2 }) -}
-112572bee64b7ad50178ba5a1ee5c095
-  __remoteTable11 :: Data.Rank1Typeable.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$stoDynamic6 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Kernel.__remoteTable12
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
-                 (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
-                   `cast`
-                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
-a3e42c98f0075162b51378a2d2c62660
-  __remoteTable12 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Kernel.$stoDynamic2
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-581ae5117da1170bd99d532dde922c20
-  __remoteTable2 :: Data.Rank1Dynamic.Dynamic
-  {- Strictness: m,
-     Unfolding: (Data.Rank1Dynamic.Dynamic
-                   Cloud.Kernel.__remoteTable4
-                   Cloud.Kernel.__remoteTable3
-                     `cast`
-                   (UnsafeCo representational (Control.Distributed.Process.Serializable.SerializableDict
-                                                 ()) GHC.Prim.Any)) -}
-9c77b5a1318438869409abf7ac33ce5d
-  __remoteTable3 ::
     Control.Distributed.Process.Serializable.SerializableDict ()
   {- Strictness: m,
      Unfolding: (Control.Distributed.Process.Serializable.SerializableDict
                    @ ()
-                   Cloud.Kernel.$s$fSerializablea18) -}
-e86147c3cc77645093e29e26b08adbee
-  __remoteTable4 :: Data.Rank1Typeable.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$stoDynamic10 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Kernel.$stoDynamic3
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
-                 (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
-                   `cast`
-                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
-5483651860f63fa341dc02fdd8aa5b07
-  __remoteTable5 :: [GHC.Types.Char]
+                   Cloud.Kernel.$s$fSerializablea16) -}
+ef0208fb509d84effd403ff558454333
+  __remoteTable11 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Cloud.Kernel.slaveProcess__tdict"#) -}
-ac34d5b96138cbff24f0fbb7e1d8d86a
-  __remoteTable6 :: Data.Rank1Dynamic.Dynamic
+397e4125ab2ba5408c939b794a46c0a6
+  __remoteTable12 :: Data.Rank1Dynamic.Dynamic
   {- Strictness: m,
      Unfolding: (Data.Rank1Dynamic.Dynamic
-                   Cloud.Kernel.__remoteTable8
-                   Cloud.Kernel.__remoteTable7
+                   Cloud.Kernel.__remoteTable14
+                   Cloud.Kernel.__remoteTable13
                      `cast`
                    (UnsafeCo representational (Control.Distributed.Process.Serializable.SerializableDict
                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                  GHC.Types.Float,
                                                   Control.Distributed.Static.Closure
                                                     (Cloud.Type.Vect
                                                      -> Cloud.Type.IterationCount))) GHC.Prim.Any)) -}
-cc3663cb48442cc5153580f77c5b4f73
-  __remoteTable7 ::
+ca93cf997e63337dd9bbcfdeb35df582
+  __remoteTable13 ::
     Control.Distributed.Process.Serializable.SerializableDict
       (Control.Distributed.Process.Internal.Types.ProcessId,
-       GHC.Types.Float,
        Control.Distributed.Static.Closure
          (Cloud.Type.Vect -> Cloud.Type.IterationCount))
   {- Strictness: m,
      Unfolding: (Control.Distributed.Process.Serializable.SerializableDict
                    @ (Control.Distributed.Process.Internal.Types.ProcessId,
-                      GHC.Types.Float,
                       Control.Distributed.Static.Closure
                         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-                   Cloud.Kernel.$s$fSerializablea) -}
-98a0bb6cb09db955f112b11d572b7994
-  __remoteTable8 :: Data.Rank1Typeable.TypeRep
-  {- Unfolding: (case Cloud.Kernel.$stoDynamic10 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+                   Cloud.Kernel.$s$fSerializablea7) -}
+596b10c67b1451199645316b650b5b81
+  __remoteTable14 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
                        @ Data.Typeable.Internal.TypeRep
                        trs
-                       Cloud.Kernel.$stoDynamic7
+                       Cloud.Kernel.$stoDynamic10
                  } in
                  case Data.Typeable.Internal.typeRepFingerprints
                         ks
@@ -1066,16 +1270,15 @@ cc3663cb48442cc5153580f77c5b4f73
                  (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
                    `cast`
                  (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
-fca7cd52d8ae7676e317a8cc86ec7c80
-  __remoteTable9 :: Data.Rank1Dynamic.Dynamic
+f4011934e27e0890f61c8be36ed780f5
+  __remoteTable15 :: Data.Rank1Dynamic.Dynamic
   {- Strictness: m,
      Unfolding: (Data.Rank1Dynamic.Dynamic
-                   Cloud.Kernel.__remoteTable11
-                   Cloud.Kernel.__remoteTable10
+                   Cloud.Kernel.__remoteTable24
+                   Cloud.Kernel.__remoteTable16
                      `cast`
                    (Trans
                         (<(Control.Distributed.Process.Internal.Types.ProcessId,
-                           GHC.Types.Float,
                            Control.Distributed.Static.Closure
                              (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_R
                          ->_R Trans
@@ -1089,41 +1292,371 @@ fca7cd52d8ae7676e317a8cc86ec7c80
                                                  <()>_N))
                                        (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)))
                         (UnsafeCo representational ((Control.Distributed.Process.Internal.Types.ProcessId,
-                                                     GHC.Types.Float,
                                                      Control.Distributed.Static.Closure
                                                        (Cloud.Type.Vect
                                                         -> Cloud.Type.IterationCount))
                                                     -> Control.Distributed.Process.Internal.Types.Process
                                                          ()) GHC.Prim.Any))) -}
-e6f78ed15b5aab967d8a236fd73245b7
+a278a58e44c609123f6370df715d6324
+  __remoteTable16 ::
+    (Control.Distributed.Process.Internal.Types.ProcessId,
+     Control.Distributed.Static.Closure
+       (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+    -> Control.Distributed.Process.Internal.Types.LocalProcess
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S,1*U(1*U(U(U,U,U,U),U,U),U)><L,U(U(U(U),U(U,U),U(U)),U,U,U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: (Control.Distributed.Process.Internal.Types.ProcessId,
+                          Control.Distributed.Static.Closure
+                            (Cloud.Type.Vect -> Cloud.Type.IterationCount)))
+                   (w1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,) ww1 ww2 ->
+                 Cloud.Kernel.$wslaveProcess ww1 ww2 w1 w2 }) -}
+267c7bcceaf25c99529a6b617b7c8fd8
+  __remoteTable17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Pattern match failure in do expression at src/Cloud/Kernel.hs:24:3-15"#) -}
+970be2bfd72bb7d37e768d20a323140f
+  __remoteTable18 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                   Cloud.Kernel.__remoteTable19) -}
+972035cf19b3bd55ad9d6faa159e736e
+  __remoteTable19 :: GHC.IO.Exception.IOException
+  {- Unfolding: (GHC.IO.Exception.IOError
+                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                   GHC.IO.Exception.UserError
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Control.Distributed.Process.Internal.Primitives.expect4
+                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
+5bc95c843d8860003ad46d993fb86306
+  __remoteTable2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Cloud.Kernel.slaveProcess2__tdict"#) -}
+e8a99db52a2879fce8702d8f61f33bd7
+  __remoteTable20 ::
+    [Control.Distributed.Process.Internal.Primitives.Match
+       Cloud.Type.MSG]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Control.Distributed.Process.Internal.Primitives.Match
+                        Cloud.Type.MSG)
+                   Cloud.Kernel.__remoteTable21
+                   (GHC.Types.[]
+                      @ (Control.Distributed.Process.Internal.Primitives.Match
+                           Cloud.Type.MSG))) -}
+bc0a463a8dd58bec448e99005688fb6c
+  __remoteTable21 ::
+    Control.Distributed.Process.Internal.Primitives.Match
+      Cloud.Type.MSG
+  {- Unfolding: (Cloud.Kernel.__remoteTable22
+                   (Control.Distributed.Process.Internal.Primitives.expect2
+                      @ Cloud.Type.MSG)
+                   (Control.Distributed.Process.Internal.Types.$fApplicativeProcess3
+                      @ Cloud.Type.MSG)
+                     `cast`
+                   (<Cloud.Type.MSG>_R
+                    ->_R Trans
+                             (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                              ->_R Sym (GHC.Types.N:IO[0] <Cloud.Type.MSG>_R))
+                             (Trans
+                                  (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                            <*>_N
+                                            <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                            <GHC.Types.IO>_R
+                                            <Cloud.Type.MSG>_N))
+                                  (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <Cloud.Type.MSG>_N)))) -}
+f2fbacbf1c9db45098b38dc29749666a
+  __remoteTable22 ::
+    (Cloud.Type.MSG -> GHC.Types.Bool)
+    -> (Cloud.Type.MSG
+        -> Control.Distributed.Process.Internal.Types.Process
+             Cloud.Type.MSG)
+    -> Control.Distributed.Process.Internal.Primitives.Match
+         Cloud.Type.MSG
+  {- Unfolding: (Control.Distributed.Process.Internal.Primitives.matchIf
+                   @ Cloud.Type.MSG
+                   @ Cloud.Type.MSG
+                   Cloud.Kernel.$s$fSerializablea21) -}
+ca3638d27dd0dea49b85d0c9f144209b
+  __remoteTable23 ::
+    GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy#
+                              (Cloud.Type.Vect -> Cloud.Type.IterationCount)) ->
+                 Cloud.Kernel.$s$fSerializablea4) -}
+96f751d5b9ab4100a37a8630cd795c61
+  __remoteTable24 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic9 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.__remoteTable8
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
+                 (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
+                   `cast`
+                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
+ed1bd35ad29585dab243281ef10bb193
+  __remoteTable3 :: Data.Rank1Dynamic.Dynamic
+  {- Strictness: m,
+     Unfolding: (Data.Rank1Dynamic.Dynamic
+                   Cloud.Kernel.__remoteTable5
+                   Cloud.Kernel.__remoteTable4
+                     `cast`
+                   (UnsafeCo representational (Control.Distributed.Process.Serializable.SerializableDict
+                                                 (Control.Distributed.Static.Closure
+                                                    (Cloud.Type.Vect
+                                                     -> Cloud.Type.IterationCount))) GHC.Prim.Any)) -}
+5c505f7b9d3953f41bad1e86cf8c1e99
+  __remoteTable4 ::
+    Control.Distributed.Process.Serializable.SerializableDict
+      (Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+  {- Strictness: m,
+     Unfolding: (Control.Distributed.Process.Serializable.SerializableDict
+                   @ (Control.Distributed.Static.Closure
+                        (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                   Cloud.Kernel.$s$fSerializablea) -}
+9f37a171e6a12926f607f3dfd27696e7
+  __remoteTable5 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic15 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.$s$fSerializablea11
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
+                 (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
+                   `cast`
+                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
+9f0bbae9dca817e6b9a6f8afc0447ef8
+  __remoteTable6 :: Data.Rank1Dynamic.Dynamic
+  {- Strictness: m,
+     Unfolding: (Data.Rank1Dynamic.Dynamic
+                   Cloud.Kernel.__remoteTable7
+                   Cloud.Slave.slaveProcess1
+                     `cast`
+                   (Trans
+                        (<Control.Distributed.Static.Closure
+                            (Cloud.Type.Vect -> Cloud.Type.IterationCount)>_R
+                         ->_R Trans
+                                  (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                   ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                                  (Trans
+                                       (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                 <*>_N
+                                                 <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                                 <GHC.Types.IO>_R
+                                                 <()>_N))
+                                       (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)))
+                        (UnsafeCo representational (Control.Distributed.Static.Closure
+                                                      (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+                                                    -> Control.Distributed.Process.Internal.Types.Process
+                                                         ()) GHC.Prim.Any))) -}
+53cb8bc90cd660df7958aeb508a24511
+  __remoteTable7 :: Data.Rank1Typeable.TypeRep
+  {- Unfolding: (case Cloud.Kernel.$stoDynamic6 of wild { Data.Typeable.Internal.TypeRep dt5 dt6 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Kernel.__remoteTable8
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt7 { GHC.Fingerprint.Type.Fingerprint dt8 dt9 ->
+                 (Data.Typeable.Internal.TypeRep dt8 dt9 tc ks types)
+                   `cast`
+                 (Sym (Data.Rank1Typeable.N:TypeRep[0])) } } }) -}
+6f89b7fe4c337868552ace809b689d04
+  __remoteTable8 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Kernel.$stoDynamic2
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+36e932c685fb3589896a542d4d123edc
+  __remoteTable9 :: Data.Rank1Dynamic.Dynamic
+  {- Strictness: m,
+     Unfolding: (Data.Rank1Dynamic.Dynamic
+                   Cloud.Kernel.$stoDynamic14
+                     `cast`
+                   (Sym (Data.Rank1Typeable.N:TypeRep[0]))
+                   Cloud.Kernel.__remoteTable10
+                     `cast`
+                   (UnsafeCo representational (Control.Distributed.Process.Serializable.SerializableDict
+                                                 ()) GHC.Prim.Any)) -}
+9194c9ed53e019ba99bc3340222224b2
   __remoteTable_x :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString#
-                   "Cloud.Kernel.slaveProcess__sdict"#) -}
-108dca08a2ab037065e5cef3b9e33cab
+                   "Cloud.Kernel.slaveProcess2__sdict"#) -}
+eb6dc56934273b6b5713b8dbb5ae9e25
   __remoteTable_x1 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString#
+                   "Cloud.Kernel.slaveProcess2"#) -}
+a6553c477ccf7e6d18db2c2c0302dbba
+  __remoteTable_x2 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Cloud.Kernel.slaveProcess__sdict"#) -}
+99ce2e311b1326869a85ffc3e169ea1a
+  __remoteTable_x3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString#
                    "Cloud.Kernel.slaveProcess"#) -}
-a439ead9a6926007867c7f2ac0c03a2c
+2b65bdbf2883a052754cbb5cf0cc98e4
   distribute ::
     Control.Distributed.Process.Internal.Types.ProcessId
     -> [Cloud.Type.Vect]
     -> [Control.Distributed.Process.Internal.Types.ProcessId]
     -> Control.Distributed.Process.Internal.Types.Process ()
-  {- Arity: 3, Strictness: <L,U><L,U><L,U> -}
-093b7ebce5218c8f08ac35cea35caa61
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: (\ (master :: Control.Distributed.Process.Internal.Types.ProcessId)
+                   (args :: [Cloud.Type.Vect])
+                   (pids :: [Control.Distributed.Process.Internal.Types.ProcessId]) ->
+                 let {
+                   eta :: [[Cloud.Type.Vect]]
+                   = Data.List.Split.Internals.chunksOf
+                       @ Cloud.Type.Vect
+                       (case GHC.List.$wlenAcc
+                               @ (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+                               args
+                               0# of ww2 { DEFAULT ->
+                        case GHC.List.$wlenAcc
+                               @ Control.Distributed.Process.Internal.Types.ProcessId
+                               pids
+                               0# of ww1 {
+                          DEFAULT
+                          -> case GHC.Classes.divInt# ww2 ww1 of ww4 { DEFAULT ->
+                             GHC.Types.I# ww4 }
+                          -1#
+                          -> case ww2 of wild1 {
+                               DEFAULT
+                               -> case GHC.Classes.divInt# wild1 -1# of ww4 { DEFAULT ->
+                                  GHC.Types.I# ww4 }
+                               -9223372036854775808#
+                               -> case GHC.Real.overflowError ret_ty GHC.Types.Int of {} }
+                          0# -> case GHC.Real.divZeroError ret_ty GHC.Types.Int of {} } })
+                       args
+                 } in
+                 letrec {
+                   go :: [[Cloud.Type.Vect]]
+                         -> [Control.Distributed.Process.Internal.Types.ProcessId]
+                         -> Control.Distributed.Process.Internal.Types.LocalProcess
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 4,
+                        Strictness: <S,1*U><L,1*U><L,1*U(A,U,U,U,U,U(U(U,U,U,U),U(A,A,C(C1(C1(C1(U(U,1*U))))),A,A,A),U,U(U,U),U,A))><S,U> -}
+                   = \ (ds :: [[Cloud.Type.Vect]])
+                       (_ys :: [Control.Distributed.Process.Internal.Types.ProcessId])
+                       (eta1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                       (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta2, GHC.Tuple.() #)
+                       : ipv ipv1
+                       -> case _ys of wild1 {
+                            [] -> (# eta2, GHC.Tuple.() #)
+                            : ipv2 ipv3
+                            -> case ipv2 of ww { Control.Distributed.Process.Internal.Types.ProcessId ww1 ww2 ww3 ->
+                               case ww1
+                                      `cast`
+                                    (Trans
+                                         (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                                         (Network.Transport.N:EndPointAddress[0])) of ww4 { Data.ByteString.Internal.PS ww5 ww6 ww7 ww8 ->
+                               case eta1 of ww9 { Control.Distributed.Process.Internal.Types.LocalProcess ww10 ww11 ww12 ww13 ww14 ww15 ->
+                               case ww15 of ww16 { Control.Distributed.Process.Internal.Types.LocalNode ww17 ww18 ww19 ww20 ww21 ww22 ->
+                               case ww17
+                                      `cast`
+                                    (Trans
+                                         (Control.Distributed.Process.Internal.Types.N:NodeId[0])
+                                         (Network.Transport.N:EndPointAddress[0])) of ww23 { Data.ByteString.Internal.PS ww24 ww25 ww26 ww27 ->
+                               case ww18 of ww28 { Network.Transport.EndPoint ww29 ww30 ww31 ww32 ww33 ww34 ->
+                               case ww20 of ww35 { Control.Concurrent.Chan.Chan ww36 ww37 ->
+                               case Control.Distributed.Process.Internal.Primitives.$wsend
+                                      @ Cloud.Type.MSG
+                                      Cloud.Kernel.$s$fSerializablea21
+                                      ww5
+                                      ww6
+                                      ww7
+                                      ww8
+                                      ww2
+                                      ww3
+                                      (Cloud.Type.ARG
+                                         (master, Cloud.Type.Task Cloud.Kernel.distribute1 ipv))
+                                      ww11
+                                      ww12
+                                      ww13
+                                      ww14
+                                      ww24
+                                      ww25
+                                      ww26
+                                      ww27
+                                      ww31
+                                      ww19
+                                      ww36
+                                      ww37
+                                      ww21
+                                      eta2 of ds1 { (#,#) ipv4 ipv5 ->
+                               go ipv1 ipv3 ww9 ipv4 } } } } } } } } } }
+                 } in
+                 (\ (r1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case go eta pids r1 s of ds1 { (#,#) ipv ipv1 ->
+                  (# ipv, GHC.Tuple.() #) })
+                   `cast`
+                 (Trans
+                      (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                       ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                      (Trans
+                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                     <*>_N
+                                     <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                     <GHC.Types.IO>_R
+                                     <()>_N))
+                           (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)))) -}
+8df8f906f079e97ec91791b48b1893f9
+  distribute1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+462d3330c5c3cdc3e58442d48028ded6
   slaveProcess ::
     (Control.Distributed.Process.Internal.Types.ProcessId,
-     GHC.Types.Float,
      Control.Distributed.Static.Closure
        (Cloud.Type.Vect -> Cloud.Type.IterationCount))
     -> Control.Distributed.Process.Internal.Types.Process ()
   {- Arity: 3,
-     Strictness: <S,1*U(1*U(U(U,U,U,U),U,U),U(U),U)><L,U(U(U(U),U(U,U),U(U)),U,U(U(U,U,U,U),U,U),U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
+     Strictness: <S,1*U(1*U(U(U,U,U,U),U,U),U)><L,U(U(U(U),U(U,U),U(U)),U,U,U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U>,
      Unfolding: InlineRule (0, True, True)
-                Cloud.Kernel.__remoteTable10
+                Cloud.Kernel.__remoteTable16
                   `cast`
                 (<(Control.Distributed.Process.Internal.Types.ProcessId,
-                   GHC.Types.Float,
                    Control.Distributed.Static.Closure
                      (Cloud.Type.Vect -> Cloud.Type.IterationCount))>_R
                  ->_R Trans
@@ -1136,7 +1669,7 @@ a439ead9a6926007867c7f2ac0c03a2c
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-35bdc8ea3d50d41b20a83998377a2389
+d86e44926e615cf0011d43d495366c09
   spawnProcesses ::
     GHC.Types.Float
     -> Control.Distributed.Process.Internal.Types.ProcessId
@@ -1146,83 +1679,162 @@ a439ead9a6926007867c7f2ac0c03a2c
     -> Control.Distributed.Process.Internal.Types.Process
          [Control.Distributed.Process.Internal.Types.ProcessId]
   {- Arity: 4,
-     Strictness: <L,1*U(U)><L,1*U(U(U,U,U,U),U,U)><L,U><L,1*U> -}
-"SPEC/Cloud.Kernel $fBinary(,,) @ ProcessId @ Float @ (Closure
-                                                        (Vect -> IterationCount))" [ALWAYS] forall ($dBinary2 :: Data.Binary.Class.Binary
-                                                                                                                                                                                  (Control.Distributed.Static.Closure
-                                                                                                                                                                                     (Cloud.Type.Vect
-                                                                                                                                                                                      -> Cloud.Type.IterationCount)))
-                                                                                                                                                                  ($dBinary1 :: Data.Binary.Class.Binary
-                                                                                                                                                                                  GHC.Types.Float)
-                                                                                                                                                                  ($dBinary :: Data.Binary.Class.Binary
-                                                                                                                                                                                 Control.Distributed.Process.Internal.Types.ProcessId)
-  Data.Binary.Class.$fBinary(,,) @ Control.Distributed.Process.Internal.Types.ProcessId
-                                 @ GHC.Types.Float
-                                 @ (Control.Distributed.Static.Closure
-                                      (Cloud.Type.Vect -> Cloud.Type.IterationCount))
-                                 $dBinary
-                                 $dBinary1
-                                 $dBinary2
-  = Cloud.Kernel.$s$fBinary(,,)
-"SPEC/Cloud.Kernel $fBinaryClosure @ (Vect -> IterationCount)" [ALWAYS] forall ($dTypeable1 :: Data.Typeable.Internal.Typeable
-                                                                                                 (Cloud.Type.Vect
-                                                                                                  -> Cloud.Type.IterationCount))
+     Strictness: <L,1*U(U)><L,1*U(U(U,U,U,U),U,U)><L,U><L,U> -}
+904cc62af5d178dad05e5d6400c1574e
+  spawnProcesses1 :: Control.Distributed.Static.StaticLabel
+  {- Unfolding: (Control.Distributed.Static.StaticApply
+                   Cloud.Kernel.spawnProcesses4
+                   Cloud.Kernel.spawnProcesses2_dt1) -}
+0c7e9eb05ba8b2061f3e969d8474d6c2
+  spawnProcesses2 ::
+    Control.Distributed.Process.Internal.Types.ProcessId
+    -> Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.Process
+         [Control.Distributed.Process.Internal.Types.ProcessId]
+  {- Arity: 3, Strictness: <L,A><L,U><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: Control.Distributed.Process.Internal.Types.ProcessId)
+                   (w1 :: Control.Distributed.Static.Closure
+                            (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                   (w2 :: [Control.Distributed.Process.Internal.Types.NodeId]) ->
+                 Cloud.Kernel.$wspawnProcesses2 w1 w2) -}
+b3967381d0b37d7b2fcaac5387cfc0cb
+  spawnProcesses2_dt :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m1,
+     Unfolding: (Control.Distributed.Static.StaticLabel
+                   Cloud.Kernel.spawnProcesses3) -}
+eabbbcd7f5e33ec5414a4e8e90bad18b
+  spawnProcesses2_dt1 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m2,
+     Unfolding: (Control.Distributed.Static.StaticApply
+                   Control.Distributed.Process.Internal.Closure.BuiltIn.returnCP1
+                   Cloud.Kernel.spawnProcesses2_dt) -}
+485dafb7b2c4d35f2920549c0fffb350
+  spawnProcesses2_dt2 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m1,
+     Unfolding: (Control.Distributed.Static.StaticLabel
+                   Cloud.Kernel.spawnProcesses5) -}
+0f1dd05b26c2ad85c7187da24d1aa08d
+  spawnProcesses3 :: GHC.Base.String
+  {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
+                        @ GHC.Types.Char
+                        Control.DeepSeq.$fNFDataChar_$crnf
+                          `cast`
+                        (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
+                        Cloud.Kernel.__remoteTable_x of wild { () ->
+                 Cloud.Kernel.__remoteTable_x }) -}
+9dd6b2329b4cedee7d4b486d62066fa2
+  spawnProcesses4 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m2,
+     Unfolding: (Control.Distributed.Static.StaticApply
+                   Control.Distributed.Static.closureApply8
+                   Cloud.Kernel.spawnProcesses2_dt2) -}
+bf7b7cb5c54f3af77656ecf17f10a334
+  spawnProcesses5 :: GHC.Base.String
+  {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
+                        @ GHC.Types.Char
+                        Control.DeepSeq.$fNFDataChar_$crnf
+                          `cast`
+                        (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
+                        Cloud.Kernel.__remoteTable_x1 of wild { () ->
+                 Cloud.Kernel.__remoteTable_x1 }) -}
+943ffef624df7dd34e638ab3589bf2e2
+  spawnProcesses6 ::
+    Control.Distributed.Static.Closure
+      (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> Data.Binary.Put.Put
+  {- Unfolding: (Control.Distributed.Static.$fBinaryClosure_$cput
+                   @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+                   Cloud.Kernel.$s$fBinary(,)1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.N:Typeable[0]
+                             <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N))) -}
+"SPEC/Cloud.Kernel $fBinary(,) @ ProcessId @ (Closure
+                                               (Vect -> IterationCount))" [ALWAYS] forall ($dBinary1 :: Data.Binary.Class.Binary
+                                                                                                                                                                (Control.Distributed.Static.Closure
+                                                                                                                                                                   (Cloud.Type.Vect
+                                                                                                                                                                    -> Cloud.Type.IterationCount)))
+                                                                                                                                                ($dBinary :: Data.Binary.Class.Binary
+                                                                                                                                                               Control.Distributed.Process.Internal.Types.ProcessId)
+  Data.Binary.Class.$fBinary(,) @ Control.Distributed.Process.Internal.Types.ProcessId
+                                @ (Control.Distributed.Static.Closure
+                                     (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                                $dBinary
+                                $dBinary1
+  = Cloud.Kernel.$s$fBinary(,)
+"SPEC/Cloud.Kernel $fBinaryClosure @ (Vect -> IterationCount)" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                                (Cloud.Type.Vect
+                                                                                                 -> Cloud.Type.IterationCount))
   Control.Distributed.Static.$fBinaryClosure @ (Cloud.Type.Vect
                                                 -> Cloud.Type.IterationCount)
-                                             $dTypeable1
-  = Cloud.Kernel.$s$fBinary(,,)_$s$fBinaryClosure
-"SPEC/Cloud.Kernel $fSerializablea @ ()" [ALWAYS] forall ($dTypeable1 :: Data.Typeable.Internal.Typeable
-                                                                           ())
+                                             $dTypeable
+  = Cloud.Kernel.$s$fBinary(,)_$s$fBinaryClosure
+"SPEC/Cloud.Kernel $fSerializablea @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                          ())
                                                          ($dBinary :: Data.Binary.Class.Binary ())
   Control.Distributed.Process.Serializable.$fSerializablea @ ()
                                                            $dBinary
-                                                           $dTypeable1
-  = Cloud.Kernel.$s$fSerializablea18
-"SPEC/Cloud.Kernel $fSerializablea @ (ProcessId, Float,
-                                     Closure (Vect -> IterationCount))" [ALWAYS] forall ($dTypeable1 :: Data.Typeable.Internal.Typeable
-                                                                                                                                                                  (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                                                                                                                                   GHC.Types.Float,
-                                                                                                                                                                   Control.Distributed.Static.Closure
-                                                                                                                                                                     (Cloud.Type.Vect
-                                                                                                                                                                      -> Cloud.Type.IterationCount)))
-                                                                                                                                                ($dBinary :: Data.Binary.Class.Binary
-                                                                                                                                                               (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                                                                                                                                GHC.Types.Float,
-                                                                                                                                                                Control.Distributed.Static.Closure
-                                                                                                                                                                  (Cloud.Type.Vect
-                                                                                                                                                                   -> Cloud.Type.IterationCount)))
+                                                           $dTypeable
+  = Cloud.Kernel.$s$fSerializablea16
+"SPEC/Cloud.Kernel $fSerializablea @ (Closure
+                                       (Vect -> IterationCount))" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                                                                                 (Control.Distributed.Static.Closure
+                                                                                                                                                    (Cloud.Type.Vect
+                                                                                                                                                     -> Cloud.Type.IterationCount)))
+                                                                                                                                ($dBinary :: Data.Binary.Class.Binary
+                                                                                                                                               (Control.Distributed.Static.Closure
+                                                                                                                                                  (Cloud.Type.Vect
+                                                                                                                                                   -> Cloud.Type.IterationCount)))
+  Control.Distributed.Process.Serializable.$fSerializablea @ (Control.Distributed.Static.Closure
+                                                                (Cloud.Type.Vect
+                                                                 -> Cloud.Type.IterationCount))
+                                                           $dBinary
+                                                           $dTypeable
+  = Cloud.Kernel.$s$fSerializablea
+"SPEC/Cloud.Kernel $fSerializablea @ (ProcessId,
+                                     Closure (Vect -> IterationCount))" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                                                                                          (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                                                                                                                           Control.Distributed.Static.Closure
+                                                                                                                                                             (Cloud.Type.Vect
+                                                                                                                                                              -> Cloud.Type.IterationCount)))
+                                                                                                                                         ($dBinary :: Data.Binary.Class.Binary
+                                                                                                                                                        (Control.Distributed.Process.Internal.Types.ProcessId,
+                                                                                                                                                         Control.Distributed.Static.Closure
+                                                                                                                                                           (Cloud.Type.Vect
+                                                                                                                                                            -> Cloud.Type.IterationCount)))
   Control.Distributed.Process.Serializable.$fSerializablea @ (Control.Distributed.Process.Internal.Types.ProcessId,
-                                                              GHC.Types.Float,
                                                               Control.Distributed.Static.Closure
                                                                 (Cloud.Type.Vect
                                                                  -> Cloud.Type.IterationCount))
                                                            $dBinary
-                                                           $dTypeable1
-  = Cloud.Kernel.$s$fSerializablea
-"SPEC/Cloud.Kernel $fSerializablea @ MSG" [ALWAYS] forall ($dTypeable1 :: Data.Typeable.Internal.Typeable
-                                                                            Cloud.Type.MSG)
+                                                           $dTypeable
+  = Cloud.Kernel.$s$fSerializablea7
+"SPEC/Cloud.Kernel $fSerializablea @ MSG" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                           Cloud.Type.MSG)
                                                           ($dBinary :: Data.Binary.Class.Binary
                                                                          Cloud.Type.MSG)
   Control.Distributed.Process.Serializable.$fSerializablea @ Cloud.Type.MSG
                                                            $dBinary
-                                                           $dTypeable1
-  = Cloud.Kernel.$s$fSerializablea13
-"SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ ()" [ALWAYS] forall ($dTypeable1 :: Data.Typeable.Internal.Typeable
-                                                                                            ())
+                                                           $dTypeable
+  = Cloud.Kernel.$s$fSerializablea21
+"SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                           ())
                                                                           ($dBinary :: Data.Binary.Class.Binary
                                                                                          ())
   Control.Distributed.Process.Serializable.$fSerializablea_$cp1Serializable @ ()
                                                                             $dBinary
-                                                                            $dTypeable1
-  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
-"SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ MSG" [ALWAYS] forall ($dTypeable1 :: Data.Typeable.Internal.Typeable
-                                                                                             Cloud.Type.MSG)
+                                                                            $dTypeable
+  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+"SPEC/Cloud.Kernel $fSerializablea_$cp1Serializable @ MSG" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                            Cloud.Type.MSG)
                                                                            ($dBinary :: Data.Binary.Class.Binary
                                                                                           Cloud.Type.MSG)
   Control.Distributed.Process.Serializable.$fSerializablea_$cp1Serializable @ Cloud.Type.MSG
                                                                             $dBinary
-                                                                            $dTypeable1
-  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+                                                                            $dTypeable
+  = Cloud.Kernel.$s$fSerializablea_$s$fSerializablea_$cp1Serializable1
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

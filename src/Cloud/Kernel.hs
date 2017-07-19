@@ -2,6 +2,7 @@
 {-# OPTIONS_GHC -Wall #-}
 module Cloud.Kernel(
   spawnProcesses,
+  spawnProcesses2,
   distribute,
   __remoteTable
 )where
@@ -10,6 +11,7 @@ import Control.Distributed.Process hiding (Message)
 import Control.Distributed.Process.Closure
 import Control.Monad
 import Data.List.Split
+import Cloud.Slave
 import qualified MandelBulb.Utils.Domain as DM
 import Cloud.Type (Vect, IterationCount, Result,
   MSG (ARG, RESPONSE, EXIT), Task (taskId_, taskData_, Task))
@@ -19,7 +21,6 @@ slaveProcess :: (ProcessId, Closure(Vect->IterationCount)) -> Process ()
 slaveProcess (master, cF) = do
   us <- getSelfPid
   f <- unClosure cF
-  say "Waiting for input..."
   ARG (_, args) <- expect
   results <- forM (taskData_ args) $ \vec -> do
     let result = f vec
@@ -43,13 +44,19 @@ slaveProcess (master, h, cF) = do
   send master (RESPONSE (us, results'))
 -}
 
-remotable ['slaveProcess]
+remotable ['slaveProcess, 'slaveProcess2]
 
 spawnProcesses :: Float -> ProcessId -> Closure (Vect->IterationCount) -> [NodeId] -> Process [ProcessId]
 spawnProcesses h master cF nodes = do
   pids <- forM nodes $ \nid -> do
-    say $ "spawning on" ++ (show nid)
     let cSlave = ($(mkClosure 'slaveProcess) (master, h, cF))
+    spawn nid cSlave
+  return pids
+
+spawnProcesses2 :: ProcessId -> Closure (Vect->IterationCount) -> [NodeId] -> Process [ProcessId]
+spawnProcesses2 master cF nids = do
+  pids <- forM nids $ \nid -> do
+    let cSlave = ($(mkClosure 'slaveProcess2) cF)
     spawn nid cSlave
   return pids
 
@@ -61,7 +68,6 @@ distribute master args pids = do
     --let a = head args'
     --let b = last args'
     --let b = (head . reverse) args'
-    say $ "sending data to " ++ (show pid)
     send pid (ARG (master, Task {taskId_ = 0, taskData_ = args'}))
   return()
 

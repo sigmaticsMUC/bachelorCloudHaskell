@@ -1,0 +1,301 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-19 15:54:05.869297 UTC
+
+interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Handler 8002
+  interface hash: 01ef30c13f409e41a652474d1ad068fe
+  ABI hash: 02364ff141d529ef8655e10bccb7cd29
+  export-list hash: 338ac0983a5ddc6c0263817fbb6ce117
+  orphan hash: f01c4cd5418134348179f00811679ac3
+  flag hash: a0259133c9e8956e3c5da0f6704b190b
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cloud.Handler.handlerProcess
+module dependencies: Cloud.Type Cloud.Utils.DistControlStruct
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      data-accessor-0.2.2.7@data-accessor-0.2.2.7-4qt9kbhlqc22eurok1PC3k
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT
+                      distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      network-transport-0.4.4.0@network-transport-0.4.4.0-7G0sWBx1K9o9bqvCq0N0q5
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b
+                      split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.0@hashable-1.2.6.0-3EXxoqeEgbfAKr6aGkye6x:Data.Hashable.Generic
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Compose base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type
+                         cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Table
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Trace.Types
+                         distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Management.Internal.Types
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         network-transport-0.4.4.0@network-transport-0.4.4.0-7G0sWBx1K9o9bqvCq0N0q5:Network.Transport
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
+  exports: fad69a16fba538d02bdf00f946ca33fd
+  ARG e7a6ff1440280460254b383064fbc68b
+  MSG 91146399fbcf6ecb6e62c5dc3dce6890
+  RESPONSE2 90389e45351745ccfd37d8f8159392c8
+  START 45d9cf2ddeabf1104344738b6aa5de4c
+  Settings ab130f1f2487716e713e91ebfd8e650f
+  Vect e3584f5562382a82e541d6b296b7441d
+import  -/  Cloud.Utils.DistControlStruct 4a6a0683d4e4cee41eb88f127009e9fa
+  exports: 9873922fce9452faed5cece8228301b9
+  DistControlStruct 21d49f3dbb74f3f471817d5dca3d72e7
+  initStructure f8c3528ee81dff678b034c8d7f609388
+  insertResponse e993e208bd66004103fcb3d3f54b51d0
+  insertRunningTask b230a481f928f6c7f88f06bf7ffa8a0c
+  isFinished f3f58876f7d4d7c6287d588a40306a9a
+  numOpenTasks_ 3cb2577240de2fdfda681ead574ebe41
+  openTasks_ 26cad88239d615982b68ecc94ba3e012
+  removeTaskComplete 588c959c6f028bfc227f8a94cb65b47b
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Primitives b74924c8dd3a3c8d0b2bca48b358e70f
+import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+b4a19cf82f95eb20dc1841f7d547b55d
+  $s$fSerializablea ::
+    Control.Distributed.Process.Serializable.Serializable
+      Cloud.Type.MSG
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Cloud.Type.MSG
+                  Cloud.Handler.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+                  Cloud.Handler.$s$fSerializablea1 -}
+055d2878bde7dd953d59e591191ffb2b
+  $s$fSerializablea1 ::
+    Data.Typeable.Internal.Typeable Cloud.Type.MSG
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Cloud.Handler.$s$fSerializablea2
+                  `cast`
+                (Sym (Data.Typeable.Internal.N:Typeable[0]
+                          <*>_N <Cloud.Type.MSG>_N)) -}
+d5ef87ab97b9599244e4f8c4b337478a
+  $s$fSerializablea2 ::
+    GHC.Prim.Proxy# Cloud.Type.MSG -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy# Cloud.Type.MSG) ->
+                 Cloud.Handler.$s$fSerializablea3) -}
+70a6cb3c4c59330708755d3bceddd116
+  $s$fSerializablea3 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Cloud.Handler.$s$fSerializablea4
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Cloud.Type.$tcMSG
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+bb193babd3256c74d7b5ec92ffe1d1ca
+  $s$fSerializablea4 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   4541439096892297965##
+                   3051610108435893611##) -}
+b612f1a0f8f32034d84a26b4a86ffeb5
+  $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
+    Data.Binary.Class.Binary Cloud.Type.MSG
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Cloud.Type.$fBinaryMSG -}
+ecec2f1e93b346ce92ce0897b43511b5
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Cloud.Handler.$trModule2
+                   Cloud.Handler.$trModule1) -}
+59ef60740e18d2903252fa9121743af5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Cloud.Handler"#) -}
+cdf6ae8064a43329bd4547ac9187a902
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
+11adbab29a79cf465a2c8d1768743e6d
+  $whandlerProcess' ::
+    Cloud.Utils.DistControlStruct.DistControlStruct
+    -> Control.Distributed.Process.Internal.StrictMVar.StrictMVar
+         (Control.Distributed.Process.Internal.StrictList.StrictList
+            Control.Distributed.Process.Internal.Types.Message)
+    -> Control.Concurrent.STM.TChan.TChan
+         Control.Distributed.Process.Internal.Types.Message
+    -> GHC.Conc.Sync.TVar GHC.Types.Int
+    -> GHC.Prim.Weak#
+         (Control.Distributed.Process.Internal.CQueue.CQueue
+            Control.Distributed.Process.Internal.Types.Message)
+    -> Control.Distributed.Process.Internal.Types.ProcessId
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         Control.Distributed.Process.Internal.Types.LocalProcessState
+    -> GHC.Prim.ThreadId#
+    -> Control.Distributed.Process.Internal.Types.NodeId
+    -> Network.Transport.EndPoint
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         Control.Distributed.Process.Internal.Types.LocalNodeState
+    -> Control.Concurrent.Chan.Chan
+         Control.Distributed.Process.Internal.Types.NCMsg
+    -> Control.Distributed.Process.Internal.Types.MxEventBus
+    -> Control.Distributed.Static.RemoteTable
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Cloud.Utils.DistControlStruct.DistControlStruct #)
+  {- Arity: 15,
+     Strictness: <L,U(U,U,U,U,U,U(U),U(U))><L,U(U)><L,U(U,U)><L,U(U)><L,U><S,U><L,U><L,U><L,U(U,U,U,U)><L,U(U,U,U,U,U,U)><L,U><L,U(U,U)><L,U><L,U><S,U>,
+     Inline: [0] -}
+2ff6301c0827c98b0a4a86f2245cacd4
+  handlerProcess ::
+    Cloud.Type.Settings
+    -> [Cloud.Type.Vect]
+    -> Control.Distributed.Process.Internal.Types.Process
+         Cloud.Utils.DistControlStruct.DistControlStruct
+  {- Arity: 2, Strictness: <L,1*U(1*U(U),A,A)><L,U>,
+     Unfolding: (\ (settings :: Cloud.Type.Settings)
+                   (domain :: [Cloud.Type.Vect]) ->
+                 let {
+                   ds :: (GHC.Types.Int, [Cloud.Type.Task])
+                   = case settings of wild { Cloud.Type.Settings ds1 ds2 ds3 ->
+                     case ds1 of wild1 { GHC.Types.I# x ->
+                     case x of wild2 {
+                       DEFAULT
+                       -> case Cloud.Utils.DistControlStruct.$winitTasksWith
+                                 wild1
+                                 domain of ww { (#,#) ww1 ww2 ->
+                          (ww1, ww2) }
+                       -1#
+                       -> case Cloud.Utils.DistControlStruct.$winitTasksWith
+                                 Cloud.Utils.DistControlStruct.initStructure1
+                                 domain of ww { (#,#) ww1 ww2 ->
+                          (ww1, ww2) } } } }
+                 } in
+                 let {
+                   m1 :: [Cloud.Type.Task]
+                   = case ds of wild { (,) numOpen openTasks -> openTasks }
+                 } in
+                 let {
+                   m2 :: GHC.Types.Int
+                   = case ds of wild { (,) numOpen openTasks -> numOpen }
+                 } in
+                 let {
+                   m3 :: Cloud.Utils.DistControlStruct.DistControlStruct
+                     {- Strictness: m -}
+                   = Cloud.Utils.DistControlStruct.DistControlStruct
+                       (GHC.Types.[] @ Cloud.Type.TimeStamp)
+                       (GHC.Types.[] @ Cloud.Type.Task)
+                       m1
+                       Cloud.Utils.DistControlStruct.empty2
+                       Cloud.Utils.DistControlStruct.empty1
+                       m2
+                       Cloud.Utils.DistControlStruct.empty1
+                 } in
+                 (\ (r1 :: Control.Distributed.Process.Internal.Types.LocalProcess)
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case r1 of ww { Control.Distributed.Process.Internal.Types.LocalProcess ww1 ww2 ww3 ww4 ww5 ww6 ->
+                  case ww1 of ww7 { Control.Distributed.Process.Internal.CQueue.CQueue ww8 ww9 ww10 ->
+                  case ww6 of ww11 { Control.Distributed.Process.Internal.Types.LocalNode ww12 ww13 ww14 ww15 ww16 ww17 ->
+                  Cloud.Handler.$whandlerProcess'
+                    m3
+                    ww8
+                    ww9
+                    ww10
+                    ww2
+                    ww3
+                    ww4
+                    ww5
+                    ww12
+                    ww13
+                    ww14
+                    ww15
+                    ww16
+                    ww17
+                    s } } })
+                   `cast`
+                 (Trans
+                      (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <Cloud.Utils.DistControlStruct.DistControlStruct>_R))
+                      (Trans
+                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                     <*>_N
+                                     <Control.Distributed.Process.Internal.Types.LocalProcess>_R
+                                     <GHC.Types.IO>_R
+                                     <Cloud.Utils.DistControlStruct.DistControlStruct>_N))
+                           (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <Cloud.Utils.DistControlStruct.DistControlStruct>_N)))) -}
+"SPEC/Cloud.Handler $fSerializablea @ MSG" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                            Cloud.Type.MSG)
+                                                           ($dBinary :: Data.Binary.Class.Binary
+                                                                          Cloud.Type.MSG)
+  Control.Distributed.Process.Serializable.$fSerializablea @ Cloud.Type.MSG
+                                                           $dBinary
+                                                           $dTypeable
+  = Cloud.Handler.$s$fSerializablea
+"SPEC/Cloud.Handler $fSerializablea_$cp1Serializable @ MSG" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
+                                                                                             Cloud.Type.MSG)
+                                                                            ($dBinary :: Data.Binary.Class.Binary
+                                                                                           Cloud.Type.MSG)
+  Control.Distributed.Process.Serializable.$fSerializablea_$cp1Serializable @ Cloud.Type.MSG
+                                                                            $dBinary
+                                                                            $dTypeable
+  = Cloud.Handler.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
