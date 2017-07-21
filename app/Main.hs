@@ -19,7 +19,7 @@ import Codec.Picture
 import Cloud.Type
 import Cloud.Utils.DistControlStruct
 
-h = 0.1
+h = 0.05
 domain_ = DM.rowMajor $ DM.generateDomain (-1,-1,-1) (1, 1, 1) h
 mbulb = doBulb 8 0 256 4.0
 
@@ -28,7 +28,7 @@ mbulb_ () = mbulb
 
 remotable ['mbulb_]
 
-settings = Settings {  chunkSize_ = 1000, outputPath_ = "", numNodes_ = -1}
+settings = Settings {  chunkSize_ = 10000, outputPath_ = "", numNodes_ = -1}
 
 master :: [NodeId] -> Process ()
 master = masterProcess2 settings ($(mkClosure 'mbulb_) ()) domain_

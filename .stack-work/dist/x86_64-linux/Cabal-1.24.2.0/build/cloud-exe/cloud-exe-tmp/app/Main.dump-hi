@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-19 15:54:07.68059 UTC
+2017-07-21 13:07:01.212027 UTC
 
 interface main@main:Main 8002
-  interface hash: 4d5e0028b67afea35d75911a38278b31
-  ABI hash: 8750033910a3ce414a1b6833783e2199
+  interface hash: 890bf7a4b1e715c54cb5432a47695e6e
+  ABI hash: 4dcf05d938bffdefa5a6a0b84fec8d56
   export-list hash: 65608ab32ca8dfc165e1f1d76b5951f1
   orphan hash: 5fca8292af8d04d339aa20da86b44d53
   flag hash: 387e78a1174af00d868509f3a7fc4598
@@ -119,9 +119,9 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
-import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Master b37ebff3d804fd6b298df068abe6ffac
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Master 69f50b32a09f84feec0bdb130f2864df
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type 664c53857e454ec7d0db2f9a347112b4
-import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct 4a6a0683d4e4cee41eb88f127009e9fa
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistControlStruct 31190f92312c2e3696a50db620eebc5d
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Utils.DistribUtils 7a30ff6404145e21427d41a448b02b18
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:IOUtils.ColorMap 062b33f581ea43e041792df386e38d22
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:MandelBulb.Math.Core 90a7117be398eb7b2e9b4c70569a426a
@@ -588,7 +588,7 @@ c885ba0a6a0b63dbe89f220ff5383a23
 e3a88b04ef04000e799f13e832397d05
   __remoteTable_x1 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Main.mbulb_"#) -}
-61936434ed87addc68c38cd764c3940b
+319b9ed65070b782b2ecb5a4a99f0ff4
   domain_ :: [MandelBulb.Utils.Domain.Point]
   {- Unfolding: (case MandelBulb.Utils.Domain.$wgenerateDomain
                         Main.domain_2
@@ -607,15 +607,16 @@ eafb54921a9bf05440ff95760e17172c
 6e0c525bb8dc45b821b7f2b403e5550f
   domain_2 :: GHC.Types.Float
   {- HasNoCafRefs, Unfolding: (GHC.Types.F# -1.0#) -}
-23e70b0ffaa6b3bd07c59bcb755e5da6
+8b13bf0e2d3a8ca79f01859e8c1b662a
   h :: MandelBulb.Utils.Domain.Step
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.1#) -}
-4cace01073a1a66499ce6b19d6ecef21
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.F# 5.0e-2#) -}
+b889305cd313b9cdab0f3269c131a7f8
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-b1a4e9a3161407f6ce1bc76b283a0082
+f177a68391254824e7985f6d765eeeed
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -685,7 +686,7 @@ e07338230127967395ef2af6f7eea304
                    (cont :: Data.ByteString.Builder.Internal.BuildStep r)
                    (range :: Data.ByteString.Builder.Internal.BufferRange) ->
                  cont range) -}
-8a9950a20c629d571b8f70bd05b23fb2
+e32fd7f6b7342d1204d2c72e0759a186
   main14 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -699,7 +700,7 @@ a4c892693f4b4662b4c9556454b21e0e
 f6335948d897f9d139e43b080b5fa7cd
   main3 :: GHC.Types.Double
   {- HasNoCafRefs, Unfolding: (GHC.Types.D# 10.0##) -}
-71bd4cc631579be521060ab668f7dbe2
+8833cb2bc7672ce53fcc5b8199beddda
   main4 ::
     [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.LocalProcess
@@ -749,7 +750,7 @@ f6335948d897f9d139e43b080b5fa7cd
                         (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
                         Main.__remoteTable_x of wild { () ->
                  Main.__remoteTable_x }) -}
-84421e945b1bf70ee01319ceedfc6579
+547ef5311ccb54407896e82a726d396d
   master ::
     [Control.Distributed.Process.Internal.Types.NodeId]
     -> Control.Distributed.Process.Internal.Types.Process ()
@@ -812,7 +813,7 @@ d017d3b0f1e47fa22a4e7b04c7e5dbad
                   `cast`
                 (Sym (Control.Distributed.Static.N:Static[0]
                           <() -> Cloud.Type.Vect -> Cloud.Type.IterationCount>_P)) -}
-443538567243be386a511bfc96d654d8
+330a0cfa2f5abf1bc0df5aa8732f950d
   settings :: Cloud.Type.Settings
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (Cloud.Type.Settings
@@ -822,9 +823,9 @@ d017d3b0f1e47fa22a4e7b04c7e5dbad
 8e405c5dbbd190ed58a2d75cd5f3c058
   settings1 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# -1#) -}
-18d615158f8a8fd640ffc18c1e042b31
+be2a80ec34cbf61f0791c79cdd0f47f9
   settings2 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1000#) -}
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10000#) -}
 "SPEC/Main $fSerializablea @ ()" [ALWAYS] forall ($dTypeable :: Data.Typeable.Internal.Typeable
                                                                   ())
                                                  ($dBinary :: Data.Binary.Class.Binary ())

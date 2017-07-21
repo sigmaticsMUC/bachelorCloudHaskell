@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-19 15:54:06.105822 UTC
+2017-07-21 13:00:11.71547 UTC
 
 interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Master 8002
-  interface hash: bfbfc3dbc24fea5f927f7e33d3532add
-  ABI hash: b37ebff3d804fd6b298df068abe6ffac
+  interface hash: 31bb4d737bf539c00627acbfdf8b2dec
+  ABI hash: 69f50b32a09f84feec0bdb130f2864df
   export-list hash: b5224ad5f0a59e280b2d8b4872b5aac7
   orphan hash: 35e849ae6ef6bed8c69d9df8c9572127
   flag hash: 3154edb06e70847877e7ec9876375ad9
@@ -91,9 +91,9 @@ import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
-import  -/  Cloud.Handler 02364ff141d529ef8655e10bccb7cd29
+import  -/  Cloud.Handler b4968d4e6b55243d1756623db24d5a4a
   exports: 338ac0983a5ddc6c0263817fbb6ce117
-  handlerProcess 2ff6301c0827c98b0a4a86f2245cacd4
+  handlerProcess c8492a89869f979afc7fbd6f58d6d36c
 import  -/  Cloud.Kernel 0dc02d1c8724aa06474a9f4cd686ec84
   exports: 3d2ab42671944c568b19c490ab82925d
   distribute 2b65bdbf2883a052754cbb5cf0cc98e4
@@ -109,15 +109,15 @@ import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
   Settings ab130f1f2487716e713e91ebfd8e650f
   Vect e3584f5562382a82e541d6b296b7441d
   numNodes_ 6b87818696e3d04e551ebb9b92bc5b1b
-import  -/  Cloud.Utils.DistControlStruct 4a6a0683d4e4cee41eb88f127009e9fa
+import  -/  Cloud.Utils.DistControlStruct 31190f92312c2e3696a50db620eebc5d
   exports: 9873922fce9452faed5cece8228301b9
-  DistControlStruct b63ef357d79f3485e71e33792b826351
-  DistControlStruct 21d49f3dbb74f3f471817d5dca3d72e7
-  empty 6a0241ae4628081b53f38a14f4b642de
-  openTasks_ 26cad88239d615982b68ecc94ba3e012
-  responses_ c4587d52c295703ff25b2999a37d46d3
-  runningTasks_ 855c1216c12324e1a8907c3dadc5ff8e
-  timeStamps_ 60a4f47852194785318d6d7fa553e667
+  DistControlStruct c61b1feb3c98befd4fea55822b5026db
+  DistControlStruct f483187bb3f00f6ebee3140666408d7a
+  empty ee90b2a43f27f20ce6ecd826b4864e37
+  openTasks_ a660c39b1b41a228ef3fffb7c431e61f
+  responses_ 2b8246fdee7fcf52f84f02bcf6340e92
+  runningTasks_ 62f7914cc755cb4ea860eb8e3515a177
+  timeStamps_ f8b4c8131fc11741e0b65e1e1cc07504
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Primitives b74924c8dd3a3c8d0b2bca48b358e70f
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
@@ -193,7 +193,7 @@ b18dddc5427351ac1a445b813c116e41
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
-00b58a47547f18987f04ab669a6f76e2
+0e0f5edef779e8ac1d06f7997ebacc9c
   masterProcess ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -221,7 +221,7 @@ b18dddc5427351ac1a445b813c116e41
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-eca756061233731bb5d3622235c405cf
+b42677b804048934c180f6bb8abefa04
   masterProcess1 ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -343,7 +343,7 @@ ac54929d84e5aefb8714b661cbb633bf
 72ddfc0d09b6a4bc926f1a143eab6261
   masterProcess3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "./HIER.txt"#) -}
-48382e165b070446c56e22af74d74914
+66f7b2a2b339d904fde85f130cf97c93
   masterProcess4 ::
     [Control.Distributed.Process.Internal.Types.ProcessId]
     -> Cloud.Utils.DistControlStruct.DistControlStruct

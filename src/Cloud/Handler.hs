@@ -18,6 +18,7 @@ handlerProcess' :: DistControlStruct -> Process DistControlStruct
 handlerProcess' ctrl = do
   response <- expect
   ctrlUpdate <- handleResponse response ctrl
+  liftIO $ putStrLn $ show ctrlUpdate
   if isFinished ctrlUpdate
     then return ctrlUpdate
     else handlerProcess' ctrlUpdate
@@ -35,11 +36,11 @@ handleResponse response ctrl = case response of
 feadSlave :: ProcessId -> DistControlStruct -> Process DistControlStruct
 feadSlave pid ctrl = do
   us <- getSelfPid
-  let currentTask = if (numOpenTasks_ ctrl) /= 0 then (openTasks_ ctrl) else []
+  let currentTask = if (numOpenTasks_ ctrl) > 0 then (openTasks_ ctrl) else []
   case currentTask of
     [] -> return ctrl
     tasks -> do
       let task = head tasks
       send pid (ARG(us, task))
-      let updateCtrl = insertRunningTask task ctrl
+      let updateCtrl = removeOpenTask (taskId_ task) (insertRunningTask task ctrl)
       return updateCtrl

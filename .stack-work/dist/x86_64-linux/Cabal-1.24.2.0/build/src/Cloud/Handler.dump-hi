@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-19 15:54:05.869297 UTC
+2017-07-21 13:00:11.442144 UTC
 
 interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Handler 8002
-  interface hash: 01ef30c13f409e41a652474d1ad068fe
-  ABI hash: 02364ff141d529ef8655e10bccb7cd29
+  interface hash: f2b9b11d28f0d9134dec59b50af5ee11
+  ABI hash: b4968d4e6b55243d1756623db24d5a4a
   export-list hash: 338ac0983a5ddc6c0263817fbb6ce117
   orphan hash: f01c4cd5418134348179f00811679ac3
   flag hash: a0259133c9e8956e3c5da0f6704b190b
@@ -72,9 +72,12 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
   exports: fad69a16fba538d02bdf00f946ca33fd
   ARG e7a6ff1440280460254b383064fbc68b
@@ -83,16 +86,18 @@ import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
   START 45d9cf2ddeabf1104344738b6aa5de4c
   Settings ab130f1f2487716e713e91ebfd8e650f
   Vect e3584f5562382a82e541d6b296b7441d
-import  -/  Cloud.Utils.DistControlStruct 4a6a0683d4e4cee41eb88f127009e9fa
+  taskId_ 4fcdb1e0eed2e9b7a01dad80bd533262
+import  -/  Cloud.Utils.DistControlStruct 31190f92312c2e3696a50db620eebc5d
   exports: 9873922fce9452faed5cece8228301b9
-  DistControlStruct 21d49f3dbb74f3f471817d5dca3d72e7
-  initStructure f8c3528ee81dff678b034c8d7f609388
-  insertResponse e993e208bd66004103fcb3d3f54b51d0
-  insertRunningTask b230a481f928f6c7f88f06bf7ffa8a0c
-  isFinished f3f58876f7d4d7c6287d588a40306a9a
-  numOpenTasks_ 3cb2577240de2fdfda681ead574ebe41
-  openTasks_ 26cad88239d615982b68ecc94ba3e012
-  removeTaskComplete 588c959c6f028bfc227f8a94cb65b47b
+  DistControlStruct f483187bb3f00f6ebee3140666408d7a
+  initStructure fce376521be1ea3eb1d8528420e262dd
+  insertResponse 240619cc91590a0f6a0eee3be40188ea
+  insertRunningTask f38ee8837d9db914b42c0cbf25ac84c5
+  isFinished 17f4a457388b9a86edc7c59513e99eb9
+  numOpenTasks_ 5d1870dad8568686e419de0df8d39f3d
+  openTasks_ a660c39b1b41a228ef3fffb7c431e61f
+  removeOpenTask d6e26177b8fbb6583d471613bc3ee4a3
+  removeTaskComplete ad797b3b4cb500c8e0dcae6d239fe860
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Primitives b74924c8dd3a3c8d0b2bca48b358e70f
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
@@ -165,7 +170,7 @@ cdf6ae8064a43329bd4547ac9187a902
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
-11adbab29a79cf465a2c8d1768743e6d
+d710054c87ac0ae3065196674d3e35fd
   $whandlerProcess' ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> Control.Distributed.Process.Internal.StrictMVar.StrictMVar
@@ -195,9 +200,9 @@ cdf6ae8064a43329bd4547ac9187a902
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Cloud.Utils.DistControlStruct.DistControlStruct #)
   {- Arity: 15,
-     Strictness: <L,U(U,U,U,U,U,U(U),U(U))><L,U(U)><L,U(U,U)><L,U(U)><L,U><S,U><L,U><L,U><L,U(U,U,U,U)><L,U(U,U,U,U,U,U)><L,U><L,U(U,U)><L,U><L,U><S,U>,
+     Strictness: <L,U(U,U,U,U,U(U),U(U),U(U))><L,U(U)><L,U(U,U)><L,U(U)><L,U><S,U><L,U><L,U><L,U(U,U,U,U)><L,U(U,U,U,U,U,U)><L,U><L,U(U,U)><L,U><L,U><S,U>,
      Inline: [0] -}
-2ff6301c0827c98b0a4a86f2245cacd4
+c8492a89869f979afc7fbd6f58d6d36c
   handlerProcess ::
     Cloud.Type.Settings
     -> [Cloud.Type.Vect]

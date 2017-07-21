@@ -35,8 +35,8 @@ data DistControlStruct  = DistControlStruct {
 
 instance Show DistControlStruct where
   show ctrl = responses ++ open ++ running
-    where responses = "RESPONSES: " ++ (show $ (numResponses_ ctrl))
-          open = "OPEN: " ++ (show $ (numOpenTasks_ ctrl))
+    where responses = "RESPONSES: " ++ (show $ (numResponses_ ctrl)) ++ " "
+          open = "OPEN: " ++ (show $ (numOpenTasks_ ctrl)) ++ " "
           running = "RUNNING: " ++ (show $ (numOpenRunns_ ctrl))
 
 empty :: DistControlStruct
@@ -72,7 +72,7 @@ initTasks settings domain
 initTasksWith :: Int -> [Vect] -> (Int, [Task])
 initTasksWith size domain = (numTasks ,zipWith (\x y -> Task {taskId_ = y, taskData_ = x}) splices ids)
   where numAs = length domain
-        spliceLength = div numAs size
+        spliceLength = div numAs (div numAs size)
         splices = chunksOf spliceLength domain :: [[Vect]]
         numTasks = (length splices)
         ids = take numTasks [0..]
@@ -126,7 +126,7 @@ removeRunningTask id' s = DistControlStruct {
     responses_ = responses_ s,
     numResponses_ = numResponses_ s,
     numOpenTasks_ = numOpenTasks_ s,
-    numOpenRunns_ = (numOpenTasks_ s) - 1
+    numOpenRunns_ = numOpenTasks_ s
   }
 
 removeOpenTask :: ID -> DistControlStruct -> DistControlStruct
@@ -136,7 +136,7 @@ removeOpenTask id' s = DistControlStruct {
     openTasks_ = filter (\task -> (taskId_ task) /= id')  (openTasks_ s),
     responses_ = responses_ s,
     numResponses_ = numResponses_ s,
-    numOpenTasks_ = (numOpenTasks_ s) - 1,
+    numOpenTasks_ = numOpenTasks_ s,
     numOpenRunns_ = numOpenTasks_ s
   }
 
@@ -160,5 +160,5 @@ estimateChunkSize domain = 500000
 
 isFinished :: DistControlStruct -> Bool
 isFinished s
-  | (numOpenTasks_ s) == 0 && (numOpenRunns_ s) == 0 = True
+  | (numOpenTasks_ s) <= 0 && (numOpenRunns_ s) <= 0 = True
   | otherwise = False
