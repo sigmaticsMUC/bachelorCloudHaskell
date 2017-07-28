@@ -14,6 +14,13 @@
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 8)
 
+/* package ansi-terminal-0.6.2.3 */
+#define VERSION_ansi_terminal "0.6.2.3"
+#define MIN_VERSION_ansi_terminal(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  6 || \
+  (major1) == 0 && (major2) == 6 && (minor) <= 2)
+
 /* package base-4.9.1.0 */
 #define VERSION_base "4.9.1.0"
 #define MIN_VERSION_base(major1,major2,minor) (\
@@ -49,6 +56,13 @@
   (major1) == 0 && (major2) <  3 || \
   (major1) == 0 && (major2) == 3 && (minor) <= 5)
 
+/* package easyplot-1.0 */
+#define VERSION_easyplot "1.0"
+#define MIN_VERSION_easyplot(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 0)
+
 /* package network-2.6.3.1 */
 #define VERSION_network "2.6.3.1"
 #define MIN_VERSION_network(major1,major2,minor) (\
@@ -83,13 +97,6 @@
   (major1) <  2 || \
   (major1) == 2 && (major2) <  11 || \
   (major1) == 2 && (major2) == 11 && (minor) <= 1)
-
-/* package easyplot-1.0 */
-#define VERSION_easyplot "1.0"
-#define MIN_VERSION_easyplot(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  0 || \
-  (major1) == 1 && (major2) == 0 && (minor) <= 0)
 
 /* package gnuplot-0.5.4.1 */
 #define VERSION_gnuplot "0.5.4.1"
@@ -175,7 +182,7 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
+#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
 
-#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"
+#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
 

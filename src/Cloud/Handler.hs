@@ -5,6 +5,9 @@ module Cloud.Handler(
 import Cloud.Type
 import Cloud.Utils.DistControlStruct
 import Control.Distributed.Process
+import System.Console.ANSI
+import System.IO
+import System.CPUTime
 
 
 
@@ -16,9 +19,19 @@ handlerProcess settings domain = do
 
 handlerProcess' :: DistControlStruct -> Process DistControlStruct
 handlerProcess' ctrl = do
+  startTime <- liftIO getCPUTime
   response <- expect
+  endTime <- liftIO getCPUTime
+  let diff = (fromIntegral (endTime - startTime)) / (10^12)
+  liftIO $ putStrLn $ "-> WAITING: " ++ (show diff)
+  start <- liftIO getCPUTime
   ctrlUpdate <- handleResponse response ctrl
-  liftIO $ putStrLn $ show ctrlUpdate
+  end <- liftIO getCPUTime
+  let diff2 = (fromIntegral (end - start)) / (10^12)
+  liftIO $ putStrLn $ "-> HANDLING TIME: " ++ (show diff2)
+  --liftIO $ putStrLn $ show ctrlUpdate
+  liftIO $ displayProgress ctrlUpdate
+  liftIO $ putStrLn ""
   if isFinished ctrlUpdate
     then return ctrlUpdate
     else handlerProcess' ctrlUpdate
@@ -41,6 +54,15 @@ feadSlave pid ctrl = do
     [] -> return ctrl
     tasks -> do
       let task = head tasks
-      send pid (ARG(us, task))
+      spawnLocal $ send pid (ARG(us, task))
+      --send pid (ARG(us, task))
       let updateCtrl = removeOpenTask (taskId_ task) (insertRunningTask task ctrl)
       return updateCtrl
+
+
+
+displayProgress :: DistControlStruct -> IO ()
+displayProgress ctrl = do
+  putStrLn $ "Tasks open: " ++ (show $ numOpenTasks_ ctrl)
+  hFlush stdout
+  return ()

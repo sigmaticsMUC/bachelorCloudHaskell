@@ -19,8 +19,8 @@ import Codec.Picture
 import Cloud.Type
 import Cloud.Utils.DistControlStruct
 
-h = 0.05
-domain_ = DM.rowMajor $ DM.generateDomain (-1,-1,-1) (1, 1, 1) h
+h = 0.01
+domain_ = DM.rowMajor $ DM.generateDomain (-1,-1,-1) (0, 0, 0) h
 mbulb = doBulb 8 0 256 4.0
 
 mbulb_ :: () -> (Vect -> IterationCount)
@@ -28,19 +28,24 @@ mbulb_ () = mbulb
 
 remotable ['mbulb_]
 
-settings = Settings {  chunkSize_ = 10000, outputPath_ = "", numNodes_ = -1}
+settings = Settings {  chunkSize_ = 100000, outputPath_ = "DD2.txt", numNodes_ = -1}
+
+
+test :: IO ()
+test = do
+  start <- getCPUTime
+  let i = mbulb (0.1, 0.1, 0.1)
+  end <- getCPUTime
+  let diff = (fromIntegral (end - start)) / (10^12)
+  putStrLn $  "Computation time: " ++ (show (diff :: Double)) ++ " with " ++ (show i)
 
 master :: [NodeId] -> Process ()
 master = masterProcess2 settings ($(mkClosure 'mbulb_) ()) domain_
 
 
 main :: IO ()
-main = do
-  start <- getCPUTime
-  distribMain master Main.__remoteTable
-  end <- getCPUTime
-  let diff = (fromIntegral (end - start)) / (10^12)
-  putStrLn $  "Computation time: " ++ (show (diff :: Double))
+main = distribMain master Main.__remoteTable
+
 {-
 h = 0.1
 

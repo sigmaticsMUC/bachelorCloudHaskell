@@ -36,6 +36,8 @@ library
     , process
     , split
     , JuicyPixels
+    , ansi-terminal
+    , easyplot
   default-language:    Haskell2010
 
 executable cloud-exe

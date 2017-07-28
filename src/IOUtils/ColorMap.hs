@@ -35,12 +35,14 @@ heightToRGB8 maxHeight (x, _, _) = calcRange x
       | otherwise             = intrplt h f (4000, maxHeight) s
       -}
     calcRange s
-      | s > -2.0 && s < -1.2      = intrplt lime yellow (0, 200) s
-      | s >= -1.2 && s < -0.4   = intrplt yellow orangebrown (200, 500) s
-      | s >= -0.4 && s < 0.4  = intrplt orangebrown blackbrown (500 ,1000) s
-      | s >= 0.4 && s < 1.2 = intrplt blackbrown redbrown (1000, 2000) s
-      | s >= 1.2 && s < 2.0 = intrplt redbrown brownred (2000, 4000) s
-      | otherwise             = intrplt brownred white (4000, 5000) s
+      | s >= 1 && s < 1.05 = intrplt redbrown brownred (1, 1.05) s
+      | s >= 1.05 && s < 1.25 = intrplt brownred cyan (1.05, 1.25) s
+      | s >= 1.25 && s < 1.35 = intrplt cyan magenta (1.25, 1.35) s
+      | s >= 1.35 && s < 1.45 = intrplt magenta blue (1.35, 1.45) s
+      | s > 1.45 && s < 1.55  = intrplt lime yellow (1.45, 1.55) s
+      | s > 1.55 && s < 1.65  = intrplt lime yellow (1.55, 1.65) s
+      | s >= 1.65 && s < 1.7 = intrplt yellow orangebrown (1.65, 1.7) s
+      | otherwise             = intrplt blue white (1.7, 2) s
 
 intrplt
   :: RGB8
@@ -84,7 +86,7 @@ linearMap
 linearMap (a1, a2) (b1, b2) s = b1 + (s - a1) * (b2 - b1) / (a2 - a1)
 
 -- gradient1
-lime, yellow, orangebrown, blackbrown, redbrown, brownred, white :: RGB8
+lime, yellow, orangebrown, blackbrown, redbrown, brownred, white, blue :: RGB8
 lime = (163, 255, 0)
 yellow = (255, 255, 0)
 orangebrown = (150, 82, 32)
@@ -92,6 +94,7 @@ blackbrown = (85 , 58, 38)
 redbrown = (150, 63, 32)
 brownred = (120, 31, 25)
 white = (255, 255, 255)
+blue = (0, 0, 255)
 
 -- einzugsgebiete
 cyan, magenta, red :: RGB8

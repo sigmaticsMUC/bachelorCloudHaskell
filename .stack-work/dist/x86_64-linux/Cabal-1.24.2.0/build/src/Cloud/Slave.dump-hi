@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-19 15:54:04.922184 UTC
+2017-07-28 18:37:37.303241 UTC
 
-interface cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Slave 8002
-  interface hash: 3ff65a1e076c6bcb7749498c3e8e455a
-  ABI hash: 6c89ea60a12d1ddc70ca63c9e81923a6
-  export-list hash: a22525debba137bbbfa49bffc2ea9768
-  orphan hash: c36ed774fbe10f53480fdf9e1ffad75d
+interface cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:Cloud.Slave 8002
+  interface hash: 7aa482748346a5daf8dcec2671033461
+  ABI hash: 77647b7234443ab77fb4c9b355d025ab
+  export-list hash: 98fd80e8dd5f75b145ba2c0a4be7cda6
+  orphan hash: 940e3ddbdb7c6de1fd0c8a33fe525233
   flag hash: 3154edb06e70847877e7ec9876375ad9
   sig of: Nothing
   used TH splices: True
@@ -58,7 +58,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
-                         cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq:Cloud.Type
+                         cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:Cloud.Type
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -79,20 +79,26 @@ import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO.Handle ba98a5b34d78cbf48b41fe58a3735c69
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD dbf0d0d4f42ab1465129a88ccf7880ff
+import  -/  base-4.9.1.0:GHC.IO.Handle.Types 17aa0e2ab137800e3a31992d780c071f
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
-import  -/  Cloud.Type 664c53857e454ec7d0db2f9a347112b4
-  exports: fad69a16fba538d02bdf00f946ca33fd
-  ARG e7a6ff1440280460254b383064fbc68b
-  IterationCount ab762ff6e2e9ca52482703ea7ded7229
-  RESPONSE2 90389e45351745ccfd37d8f8159392c8
-  START 45d9cf2ddeabf1104344738b6aa5de4c
-  Task 27fc69fdfe7a4d0825890afdaec914d1
-  Vect e3584f5562382a82e541d6b296b7441d
-  taskData_ bc0c4bb8b26f25635f1a672d552f1a26
-  taskId_ 4fcdb1e0eed2e9b7a01dad80bd533262
+import  -/  Cloud.Type bcce17d2d2dc1d837acb0826b705df51
+  exports: 29db800bdd47ef0e50ec132ae9733836
+  ARG 6912a080ee3e9f2a7fbfc0b5f800d025
+  IterationCount f29922ef78077da47284193b00575397
+  RESPONSE2 2b5fddd39a823cd0a31d08ce73ab99f1
+  START d4b947d5596913d9b54f7535fb186714
+  Task 8c7a2fb1d5840fd2139f3348a32cac47
+  Vect 56031f4de81b94e7bf73049a92597e7c
+  taskData_ 5634d1c8e8e4d27fa331ab8340cda146
+  taskId_ 722dd775b0878ec0a5648fce8886a6fe
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Closure 39c43a429eae0b36fa565b581f290fd8
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Closure.TH 7d063937231664b6296c0e9a44084cdd
@@ -100,9 +106,11 @@ import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OV
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Types cec2856172456d4db10f6506628e5d5c
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Serializable 500cfb956cecdda59dfccf37b8980e97
 import  -/  distributed-static-0.3.5.0@distributed-static-0.3.5.0-1FkXlZiCjtfDypukzfxJEJ:Control.Distributed.Static 841c7e8459fcc6cc4abf344e1885a430
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  rank1dynamic-0.3.3.0@rank1dynamic-0.3.3.0-Dc2KQPZw4y91X07lv5KN1b:Data.Rank1Dynamic f77a29a40055e3d0ea5d0878528a8a87
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split c60198a427bfd51d9fb4562c059ec1d2
-f5ad3ab26b6118b7d6e5471e027cf645
+854dc171bceef52b81de4ee2fa3f9f2b
   $s$fSerializablea ::
     Control.Distributed.Process.Serializable.Serializable
       Cloud.Type.MSG
@@ -111,7 +119,7 @@ f5ad3ab26b6118b7d6e5471e027cf645
                   @ Cloud.Type.MSG
                   Cloud.Slave.$s$fSerializablea_$s$fSerializablea_$cp1Serializable
                   Cloud.Slave.$s$fSerializablea1 -}
-5c5f8dbef7b8439c515443089ce580b0
+b55807d4e25f669febfd1638ce7bb1ff
   $s$fSerializablea1 ::
     Data.Typeable.Internal.Typeable Cloud.Type.MSG
   {- Arity: 1, Strictness: <L,A>,
@@ -120,14 +128,14 @@ f5ad3ab26b6118b7d6e5471e027cf645
                   `cast`
                 (Sym (Data.Typeable.Internal.N:Typeable[0]
                           <*>_N <Cloud.Type.MSG>_N)) -}
-be5e144fa44df322e000079048d8bb26
+6ee004cea1b26bd1380cf05a06d87244
   $s$fSerializablea2 ::
     GHC.Prim.Proxy# Cloud.Type.MSG -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ (wild :: GHC.Prim.Proxy# Cloud.Type.MSG) ->
                  Cloud.Slave.$s$fSerializablea3) -}
-379abf75a29085cefed45f40e0239ee3
+bcb7d5e3161c443163cec8c8c217e9a9
   $s$fSerializablea3 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
@@ -144,107 +152,28 @@ be5e144fa44df322e000079048d8bb26
                    Cloud.Type.$tcMSG
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-0d54a1e98a9e3f0299da32178d05cfd5
+2485e21f8ae6774f4591b78c1f1d9c21
   $s$fSerializablea4 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
-                   4541439096892297965##
-                   3051610108435893611##) -}
-93eb0c90659775401ed13c594d786337
+                   5420858550532042995##
+                   10002086296125191692##) -}
+a5d82390d96429da82d0382a97728241
   $s$fSerializablea_$s$fSerializablea_$cp1Serializable ::
     Data.Binary.Class.Binary Cloud.Type.MSG
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True) Cloud.Type.$fBinaryMSG -}
-df13fea14417dbfb2b079a08f9e8ed73
+e6a00f520b6be0e454aec9939f9af6f5
+  $s^1 :: GHC.Types.Double
+  {- Strictness: x -}
+33c94ca545e623c999014ac849833ee4
+  $s^2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+c1aff9aa2a610f8ea8b89dcfe3df594d
+  $seven1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+e174372bc31e7d16158ff654bbab33e8
   $stypeRep#11 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Slave.$stypeRep#7 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Slave.$stypeRep#12
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
-                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
-3eb15fe5002d7587646a36e3b575f7ee
-  $stypeRep#12 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Slave.$stypeRep#13
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-4d367b407a1274bb28126ba41a8b4c67
-  $stypeRep#13 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Slave.$stypeRep#15 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Slave.$stypeRep#14
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
-                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
-8a72b9a49fe3a3688a350685e594c698
-  $stypeRep#14 :: [Data.Typeable.Internal.TypeRep]
-  {- Unfolding: (GHC.Types.:
-                   @ Data.Typeable.Internal.TypeRep
-                   Cloud.Slave.$stypeRep#3
-                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-1e4003e3ecad7202c3631a4b30c47e9d
-  $stypeRep#15 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Slave.$stypeRep#16 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Slave.$stypeRep#14
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
-                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
-52ae51c9c83a7e25caf4454487b3d197
-  $stypeRep#16 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Slave.$stypeRep#17 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
-                 let {
-                   types :: [Data.Typeable.Internal.TypeRep]
-                   = GHC.Base.++
-                       @ Data.Typeable.Internal.TypeRep
-                       trs
-                       Cloud.Slave.$stypeRep#14
-                 } in
-                 case Data.Typeable.Internal.typeRepFingerprints
-                        ks
-                        types of kt_fps { DEFAULT ->
-                 case GHC.Fingerprint.fingerprintFingerprints
-                        (GHC.Types.:
-                           @ GHC.Fingerprint.Type.Fingerprint
-                           (Data.Typeable.Internal.tyConFingerprint tc)
-                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
-                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
-de7a15a99fe95c613eabc33adc48fe8a
-  $stypeRep#17 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                         (GHC.Types.[]
@@ -252,7 +181,7 @@ de7a15a99fe95c613eabc33adc48fe8a
                  case GHC.Fingerprint.fingerprintFingerprints
                         (GHC.Types.:
                            @ GHC.Fingerprint.Type.Fingerprint
-                           Cloud.Slave.$stypeRep#18
+                           Cloud.Slave.$stypeRep#12
                            kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
                  Data.Typeable.Internal.TypeRep
                    dt1
@@ -260,13 +189,101 @@ de7a15a99fe95c613eabc33adc48fe8a
                    GHC.Tuple.$tc(,,)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-259621193e666f1580aa46843be00f8e
-  $stypeRep#18 :: GHC.Fingerprint.Type.Fingerprint
+3395385c32c63bb594f8398b7c7ad167
+  $stypeRep#12 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    16902069906016602646##
                    15238449149262190978##) -}
-a24986e866602dd1f64cd5278466c448
+6dc6762546cf36f47ae88890e474292e
+  $stypeRep#15 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Slave.$stypeRep#11 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Slave.$stypeRep#16
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+d8db6aaee1cc2cb906f401082e8ca50c
+  $stypeRep#16 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Slave.$stypeRep#3
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+152f7abb81b27ac0fcb8cb21f354f674
+  $stypeRep#19 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Slave.$stypeRep#15 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Slave.$stypeRep#16
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+d093cc60524445e50d70778f947887aa
+  $stypeRep#22 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Slave.$stypeRep#7 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Slave.$stypeRep#23
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+990cbf39e26d423ebac060db600d7ebe
+  $stypeRep#23 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Cloud.Slave.$stypeRep#24
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+0ad20967510f79e9ab78f9386c8a9842
+  $stypeRep#24 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Cloud.Slave.$stypeRep#19 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Cloud.Slave.$stypeRep#16
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+cf427a8d42cb88fdbd41219a3331aa18
   $stypeRep#29 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
@@ -283,7 +300,7 @@ a24986e866602dd1f64cd5278466c448
                    GHC.Integer.Type.$tcInteger
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-042dd5e36fc411882ecfd8cc6aaa33a6
+db071db52d781460d5dc3b57dff3bc64
   $stypeRep#3 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
@@ -300,19 +317,19 @@ a24986e866602dd1f64cd5278466c448
                    GHC.Types.$tcFloat
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-f0ac9d14e1c2df656de9c3ef41627c75
+221b717813ad7647a7a70470aeb3c045
   $stypeRep#30 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    4243490490217825131##
                    6185988462045966752##) -}
-56eb31a96f5c6e125ebc3966f9327976
+4b3e932f0e887cbd96dfbfd9a64ab24f
   $stypeRep#4 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    8679316326329983383##
                    1648058332703460507##) -}
-12174ca47026d5369fec2ae31ceb161d
+17d928b7bc908eb4f5e5c1e07876aea7
   $stypeRep#7 :: Data.Typeable.Internal.TypeRep
   {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
                         (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
@@ -329,28 +346,52 @@ f0ac9d14e1c2df656de9c3ef41627c75
                    GHC.Types.$tc(->)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
-2344e16029a1838b6d75eab22ea12a79
+948bade767ac7ff45e39833042044490
   $stypeRep#8 :: GHC.Fingerprint.Type.Fingerprint
   {- HasNoCafRefs,
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    16275961958878852713##
                    3578558998586661682##) -}
-a9ccc04684fcdf93baffb59eac295e96
+22599502cc0e80838950c6f52e76bd52
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Cloud.Slave.$trModule2
                    Cloud.Slave.$trModule1) -}
-4a26d94c686fb14b11bf36e69c5b6370
+ef7183231143f38f8a4c628766a67ff4
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Cloud.Slave"#) -}
-98e11e73d6312e109f9f620409122b01
+89b3f549eff7bfd1664249c7d4bc9896
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-3a3GeZiGjOxJ7Wkt0CZsuq"#) -}
-db316c5640a2d8b4352579804a5e86d4
+                   "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"#) -}
+a78751c1bc881e50f85c8cbc1fc0016a
+  $w$s^ ::
+    GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Double)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.ltInteger#
+                        w1
+                        Cloud.Slave.$s^2 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             w1
+                             Cloud.Slave.$s^2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case w of ww { GHC.Types.D# ww1 -> Cloud.Slave.$wf ww1 w1 }
+                        GHC.Types.True -> 1.0## } }
+                   GHC.Types.True
+                   -> case Cloud.Slave.$s^1 ret_ty GHC.Prim.Double# of {} } }) -}
+d92952b8a34957db6c48f237afcd764b
+  $wf ::
+    GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+ee0d35f772285d4c46490ab79fc2bf7e
   slaveProcess1 ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -363,11 +404,15 @@ db316c5640a2d8b4352579804a5e86d4
                             (Cloud.Type.Vect -> Cloud.Type.IterationCount))
                    (eta :: Control.Distributed.Process.Internal.Types.LocalProcess)
                    (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.hSetBuffering1
+                        GHC.IO.Handle.FD.stdout
+                        GHC.IO.Handle.Types.NoBuffering
+                        eta1 of ds1 { (#,#) ipv ipv1 ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
                         Cloud.Slave.slaveProcess8
                         GHC.Types.True
-                        eta1 of ds1 { (#,#) ipv ipv1 ->
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
                  case Control.Distributed.Process.Internal.Primitives.unClosure1
                         @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
                         Cloud.Slave.slaveProcess5
@@ -376,18 +421,22 @@ db316c5640a2d8b4352579804a5e86d4
                                   <*>_N <Cloud.Type.Vect -> Cloud.Type.IterationCount>_N))
                         cF
                         eta
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 case Cloud.Slave.slaveProcess4
-                        ipv3
-                        eta
                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case Cloud.Slave.slaveProcess4
+                        ipv5
+                        eta
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.IO.Handle.hSetBuffering1
+                        GHC.IO.Handle.FD.stdout
+                        GHC.IO.Handle.Types.NoBuffering
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
                         Cloud.Slave.slaveProcess3
                         GHC.Types.True
-                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
-                 (# ipv6, GHC.Tuple.() #) } } } }) -}
-8c33b8a9f3c51724f5d69d6d906a7d27
+                        ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                 (# ipv10, GHC.Tuple.() #) } } } } } }) -}
+a5e8ee1741125c0389012f671411211c
   slaveProcess2 ::
     Control.Distributed.Static.Closure
       (Cloud.Type.Vect -> Cloud.Type.IterationCount)
@@ -409,11 +458,11 @@ db316c5640a2d8b4352579804a5e86d4
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
-62aecfd2e8112926aeb3dbcdfe6078c7
+892be70b52ccd6a388c0575105ef384f
   slaveProcess3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "### PROCESS CLOSED ###"#) -}
-fb2a2dd2f990bd64a6d3cb5ebfa36ba5
+961281a062f38f169fb9e7c0ca08095d
   slaveProcess4 ::
     (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Control.Distributed.Process.Internal.Types.LocalProcess
@@ -421,7 +470,7 @@ fb2a2dd2f990bd64a6d3cb5ebfa36ba5
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 3,
      Strictness: <L,C(U)><L,1*U(U(U(U),U(U,U),U(U)),U,U,U,U,U(U(U,U,U,U),U(U,U,U,U,U,U),U,U(U,U),U,U))><S,U> -}
-05185693f8693506023aebe2fd228152
+d4075a47fc7094dbc1069a2303cd43ef
   slaveProcess5 ::
     GHC.Prim.Proxy# (Cloud.Type.Vect -> Cloud.Type.IterationCount)
     -> Data.Typeable.Internal.TypeRep
@@ -430,9 +479,9 @@ fb2a2dd2f990bd64a6d3cb5ebfa36ba5
                 (\ (wild :: GHC.Prim.Proxy#
                               (Cloud.Type.Vect -> Cloud.Type.IterationCount)) ->
                  Cloud.Slave.slaveProcess6) -}
-76579c842a2a1c06dc1f2dda52b08356
+b060202d9b4c4a173dc091182debde2a
   slaveProcess6 :: Data.Typeable.Internal.TypeRep
-  {- Unfolding: (case Cloud.Slave.$stypeRep#11 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+  {- Unfolding: (case Cloud.Slave.$stypeRep#22 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
                  let {
                    types :: [Data.Typeable.Internal.TypeRep]
                    = GHC.Base.++
@@ -449,13 +498,13 @@ fb2a2dd2f990bd64a6d3cb5ebfa36ba5
                            (Data.Typeable.Internal.tyConFingerprint tc)
                            kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
                  Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
-1bf42266f8d352b3d2943ff0ad318952
+777a91cab9dfddf3c354f821caabaa68
   slaveProcess7 :: [Data.Typeable.Internal.TypeRep]
   {- Unfolding: (GHC.Types.:
                    @ Data.Typeable.Internal.TypeRep
                    Cloud.Slave.$stypeRep#29
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-9042da0a872a103df54c72914e058e3b
+dc5f092c49e46e7573f54dd47a558904
   slaveProcess8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "### PROCESS SPAWNED ###"#) -}

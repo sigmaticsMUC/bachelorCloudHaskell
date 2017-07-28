@@ -101,7 +101,7 @@ insertRunningTask t s = DistControlStruct {
     responses_ = responses_ s,
     numResponses_ = numResponses_ s,
     numOpenTasks_ = numOpenTasks_ s,
-    numOpenRunns_ = (numOpenTasks_ s) + 1
+    numOpenRunns_ = (numOpenRunns_ s) + 1
   }
 
 insertResponse :: [Result] -> DistControlStruct -> DistControlStruct
@@ -112,7 +112,7 @@ insertResponse t s = DistControlStruct {
     responses_ = t : (responses_ s),
     numResponses_ = (numResponses_ s) + 1,
     numOpenTasks_ = numOpenTasks_ s,
-    numOpenRunns_ = numOpenTasks_ s
+    numOpenRunns_ = numOpenRunns_ s
   }
 
 
@@ -126,7 +126,7 @@ removeRunningTask id' s = DistControlStruct {
     responses_ = responses_ s,
     numResponses_ = numResponses_ s,
     numOpenTasks_ = numOpenTasks_ s,
-    numOpenRunns_ = numOpenTasks_ s
+    numOpenRunns_ = numOpenRunns_ s
   }
 
 removeOpenTask :: ID -> DistControlStruct -> DistControlStruct
@@ -137,7 +137,7 @@ removeOpenTask id' s = DistControlStruct {
     responses_ = responses_ s,
     numResponses_ = numResponses_ s,
     numOpenTasks_ = numOpenTasks_ s,
-    numOpenRunns_ = numOpenTasks_ s
+    numOpenRunns_ = numOpenRunns_ s
   }
 
 removeTaskComplete :: ID -> DistControlStruct -> DistControlStruct
@@ -148,7 +148,7 @@ removeTaskComplete id' s = DistControlStruct {
     responses_ = responses_ s,
     numResponses_ = numResponses_ s,
     numOpenTasks_ = (numOpenTasks_ s) - 1,
-    numOpenRunns_ = (numOpenTasks_ s) - 1
+    numOpenRunns_ = (numOpenRunns_ s) - 1
   }
 
 
