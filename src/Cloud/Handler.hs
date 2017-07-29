@@ -38,8 +38,9 @@ handlerProcess' ctrl = do
 
 handleResponse :: MSG -> DistControlStruct -> Process DistControlStruct
 handleResponse response ctrl = case response of
-  RESPONSE2 (pid, tid, res) -> do
-    updateCtrl <- feadSlave pid (insertResponse res (removeTaskComplete tid ctrl))
+  RESPONSE2 (pid, tid, timestamp, res) -> do
+    let insertedCtrl = insertTimeStamp timestamp (insertResponse res (removeTaskComplete tid ctrl))
+    updateCtrl <- feadSlave pid insertedCtrl
     return updateCtrl
   START pid -> do
     updateCtrl <- feadSlave pid ctrl

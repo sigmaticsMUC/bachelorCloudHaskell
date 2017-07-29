@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-28 14:56:12.256867 UTC
+2017-07-29 15:57:53.409651 UTC
 
-interface cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:IOUtils.ColorMap 8002
-  interface hash: 6797a00b9c58d6c3b2d3fe7088e4a09f
-  ABI hash: 7e1118a5613dbd37a986f3bc6619fba6
-  export-list hash: 24be7e353ddc7a108a71b62de3ae36fb
+interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:IOUtils.ColorMap 8002
+  interface hash: 855ca888495fc4ea00dad4bce11ff4cf
+  ABI hash: d572b39d49e9309b0d7194c1f813f96c
+  export-list hash: 07a910aa6d4d78423f18e2337be40d57
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: facbb4190854d381b93fed21f8551940
   sig of: Nothing
@@ -61,29 +61,29 @@ import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
-b67d4563cd5283e6944e2b794b122829
+4d2874726c4b33ae3b5808f9e714d7ba
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    IOUtils.ColorMap.$trModule2
                    IOUtils.ColorMap.$trModule1) -}
-aa55eca8b5caa359d5565380c1bfac50
+3efd6e847afedf1d4a83c27b973ba6ca
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "IOUtils.ColorMap"#) -}
-ace1dc7bcdf61d64caf8aaa9248bd1e9
+ead05b558cb808349c97323b312ed542
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"#) -}
-3064cfaf97302c7e515283704fa18d6c
+                   "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"#) -}
+c27cb8d8a4384dfa3670c3189a52c261
   $wheightToRGB8 ::
     GHC.Prim.Float#
     -> (# GHC.Types.Float, GHC.Types.Float, GHC.Types.Float #)
   {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
-8ed73fb4ca3929081c48c46f892f5e5f
+41b2701ad692478f817a13560291ed77
   type RGB8 = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
-a0dc653ed28937c06c24791981233c52
+a952451acb696d72c3e453fc799c320e
   heightToRGB8 ::
     GHC.Types.Float
     -> (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)

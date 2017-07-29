@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/alex/Workspace/Bachelor/cloud/.stack-work/install/x86_64-linux/lts-8.8/8.0.2/bin"
-libdir     = "/home/alex/Workspace/Bachelor/cloud/.stack-work/install/x86_64-linux/lts-8.8/8.0.2/lib/x86_64-linux-ghc-8.0.2/cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
+libdir     = "/home/alex/Workspace/Bachelor/cloud/.stack-work/install/x86_64-linux/lts-8.8/8.0.2/lib/x86_64-linux-ghc-8.0.2/cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"
 dynlibdir  = "/home/alex/Workspace/Bachelor/cloud/.stack-work/install/x86_64-linux/lts-8.8/8.0.2/lib/x86_64-linux-ghc-8.0.2"
 datadir    = "/home/alex/Workspace/Bachelor/cloud/.stack-work/install/x86_64-linux/lts-8.8/8.0.2/share/x86_64-linux-ghc-8.0.2/cloud-0.1.0.0"
 libexecdir = "/home/alex/Workspace/Bachelor/cloud/.stack-work/install/x86_64-linux/lts-8.8/8.0.2/libexec"

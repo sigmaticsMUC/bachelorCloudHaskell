@@ -15,6 +15,7 @@ import System.IO
 import Control.Monad
 import Codec.Picture
 import System.CPUTime
+import System.Directory
 import Graphics.EasyPlot
 import IOUtils.ColorMap as CM
 
@@ -75,13 +76,24 @@ masterProcess2 s cF args nids = do
     send pid EXIT
   --let results = concat (responses_ ctrl)
   let fileContent = ("x, y, z, c\n" ++ concat (map toCSVLine (concat (responses_ ctrl))))
+  let timeStamps = concat (map show (timeStamps_ ctrl))
   end <- liftIO getCPUTime
   let diff = (fromIntegral (end - start)) / (10^12)
   liftIO $ putStrLn $ "-> Computation time: " ++ (show (diff :: Double))
+  liftIO $ storeResults (outputPath_ s) timeStamps fileContent
   --liftIO $ writeToFile (outputPath_ s) fileContent
   --liftIO $ writeToFile (outputPath_ s) ("x, y, z, c\n" ++ concat (map toCSVLine results))
   --liftIO $ plot' [] X11 $ Data3D [(Title "Test"), (Style Dots)] [] (concat $ map fst results)
   return ()
+
+
+storeResults :: String -> String -> String -> IO ()
+storeResults setName stamps points = do
+  createDirectory setName
+  writeToFile (setName ++ "/timestamps.txt") stamps
+  writeToFile (setName ++ "/points.txt") points
+  return ()
+
 
 
 

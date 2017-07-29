@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-25 18:59:42.60361 UTC
+2017-07-29 15:57:56.092124 UTC
 
-interface cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:Cloud.Utils.DistControlStruct [family instance module] 8002
-  interface hash: bb372851f993d071078d73f4a01e6a9a
-  ABI hash: 081d21ca244a61a367140859b2b59c88
-  export-list hash: c6ca4f1f77f9a2af5fb14e67d22ca363
-  orphan hash: 7a755a21b11cdb45fe0b4754cb00f081
+interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Utils.DistControlStruct [family instance module] 8002
+  interface hash: c0ae5c4e0aa3c0c851c25ad0aece3527
+  ABI hash: 39fa090420f39f8eda5c9a15917e1336
+  export-list hash: 814cb9f1ea58103e8e0ca67eb70b1f1d
+  orphan hash: d330921e83b587268f18724423a363df
   flag hash: ce11935361ef814ece2254f1b6384662
   sig of: Nothing
   used TH splices: False
@@ -64,7 +64,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
                          base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
                          base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
-                         cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:Cloud.Type
+                         cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Type
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -90,22 +90,22 @@ import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
-import  -/  Cloud.Type bcce17d2d2dc1d837acb0826b705df51
-  exports: 29db800bdd47ef0e50ec132ae9733836
-  ID 9e289dead605592f4dde923000587deb
-  Result 23f51ea52b7e1c83a81d5d9a200e4de7
-  Settings 976eada546ec5b1eade9c5fe371c8c20
-  Task ded39b8ce3d6f16db70736cfc8584113
-  Task 8c7a2fb1d5840fd2139f3348a32cac47
-  TimeStamp 251794dfb150f90fa00823b04acaa7ec
-  Vect 56031f4de81b94e7bf73049a92597e7c
-  chunkSize_ 1cc5cccc46acec661c1deb9565778d0f
-  taskData_ 5634d1c8e8e4d27fa331ab8340cda146
-  taskId_ 722dd775b0878ec0a5648fce8886a6fe
+import  -/  Cloud.Type 5ddf21eb2e89235a7bab91facabdf645
+  exports: 2a41af8ad3d956075f334754c129e7b0
+  ID 4c49cbf5576b021695808af9144581e3
+  Result ae077aec05a4f54de54ff990bebf6aba
+  Settings 56ac1953935d46fcd49d31f2fbef3084
+  Task 0c008ca8ec6b3b4247909e4e99fe5fa4
+  Task 00134dc3f614b7fcbfe819c03500d4cb
+  TimeStamp d3fe9da977b7195d40a9f9206df2100a
+  Vect 4893d9dd3ed8f438550216b597ff67b6
+  chunkSize_ 8f6bec3109ea3145d726d110fdc077a2
+  taskData_ 4fdcdd23c9788ed9b61c1b62ecc23f60
+  taskId_ d18954f74f88e53eb06475eb47a56e4d
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split c60198a427bfd51d9fb4562c059ec1d2
 import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.Internals 25dced234ed01c9c803d678763a4d772
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fEqDistControlStruct ::
     GHC.Classes.Eq Cloud.Utils.DistControlStruct.DistControlStruct
   DFunId
@@ -114,19 +114,19 @@ import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.I
                   @ Cloud.Utils.DistControlStruct.DistControlStruct
                   Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$c==
                   Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$c/= -}
-155e05d41f31c7a6a53e89146cfe68ce
+c1a568ee28a62752dad204fdb10704de
   $fEqDistControlStruct1 ::
     GHC.Classes.Eq (Cloud.Type.Vect, Cloud.Type.IterationCount)
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,) -}
-652102653c98456758d1221790e0866a
+51b597e431b20fb7c307a90670dc3993
   $fEqDistControlStruct2 ::
     GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,,) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fEqDistControlStruct_$c/= ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -141,7 +141,7 @@ import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.I
                         b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fEqDistControlStruct_$c== ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -169,7 +169,7 @@ import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.I
                    ww13
                    ww14
                    ww15 } }) -}
-8f40423f9b268faa4dc32f5fa1ba838e
+02cb8076dba9f92481f951b964268538
   $fEqDistControlStruct_$s$fEq(,) ::
     GHC.Classes.Eq
       ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
@@ -188,7 +188,7 @@ import  -/  split-0.2.3.1@split-0.2.3.1-FWyXC6nhV0H3AfM8IzrEFk:Data.List.Split.I
                      @ GHC.Integer.Type.Integer
                      Cloud.Utils.DistControlStruct.$fEqDistControlStruct2
                      GHC.Integer.Type.$fEqInteger) -}
-c2035cae6710a4a1b43972cd6edcf98d
+0a2f2a7e5300769340db32d7e7fd0012
   $fEqDistControlStruct_$s$fEq(,,) ::
     GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -202,7 +202,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                      GHC.Classes.$fEqFloat
                      GHC.Classes.$fEqFloat)
                   Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq(,,)_$c/= -}
-5d067ce66028b19b9b3f5cc425bb352f
+44ab837c591b201ed9d7db5947354b42
   $fEqDistControlStruct_$s$fEq(,,)_$c/= ::
     (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
     -> (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
@@ -223,7 +223,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                         b1 of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-69ff75004be7790a126307fb6587f13f
+994c954d9290c28c30fc315896bcc58e
   $fEqDistControlStruct_$s$fEq[] ::
     GHC.Classes.Eq [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -233,7 +233,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                      @ (Cloud.Type.Vect, Cloud.Type.IterationCount)
                      Cloud.Utils.DistControlStruct.$fEqDistControlStruct1)
                   Cloud.Utils.DistControlStruct.$fEqDistControlStruct_$s$fEq[]_$c/= -}
-6b61852d651dd49ea7eabd06a3c632cd
+c3f9676d705a17f41aabbf052bb8ad05
   $fEqDistControlStruct_$s$fEq[]_$c/= ::
     [(Cloud.Type.Vect, Cloud.Type.IterationCount)]
     -> [(Cloud.Type.Vect, Cloud.Type.IterationCount)] -> GHC.Types.Bool
@@ -248,7 +248,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                       Cloud.Utils.DistControlStruct.$fEqDistControlStruct1
                       x
                       y)) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fGenericDistControlStruct ::
     GHC.Generics.Generic
       Cloud.Utils.DistControlStruct.DistControlStruct
@@ -258,7 +258,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                   @ Cloud.Utils.DistControlStruct.DistControlStruct
                   Cloud.Utils.DistControlStruct.$fGenericDistControlStruct_$cfrom
                   Cloud.Utils.DistControlStruct.$fGenericDistControlStruct_$cto -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fGenericDistControlStruct1 ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> GHC.Generics.M1
@@ -668,7 +668,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                                                                                    (GHC.Generics.K1
                                                                                       GHC.Generics.R
                                                                                       GHC.Types.Int)))>_R) <x>_N) }) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fGenericDistControlStruct_$cfrom ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> GHC.Generics.Rep
@@ -685,7 +685,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                                     <'GHC.Generics.MetaData
                                        "DistControlStruct"
                                        "Cloud.Utils.DistControlStruct"
-                                       "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
+                                       "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"
                                        'GHC.Types.False>_P
                                     <GHC.Generics.M1
                                        GHC.Generics.C
@@ -763,7 +763,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                                                                                                   GHC.Generics.R
                                                                                                   GHC.Types.Int))))>_R))
                           (Sub (Sym (Cloud.Utils.DistControlStruct.Rep_DistControlStruct[0]))) <x>_N) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fGenericDistControlStruct_$cto ::
     GHC.Generics.Rep Cloud.Utils.DistControlStruct.DistControlStruct x
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -783,7 +783,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                                      <'GHC.Generics.MetaData
                                         "DistControlStruct"
                                         "Cloud.Utils.DistControlStruct"
-                                        "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
+                                        "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
@@ -1031,7 +1031,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                              <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P)) } } } } } }) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fShowDistControlStruct ::
     GHC.Show.Show Cloud.Utils.DistControlStruct.DistControlStruct
   DFunId
@@ -1041,7 +1041,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                   Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshowsPrec
                   Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshow
                   Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshowList -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fShowDistControlStruct1 ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> GHC.Base.String -> [GHC.Types.Char]
@@ -1052,7 +1052,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                    @ GHC.Types.Char
                    (Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshow x)
                    s) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fShowDistControlStruct_$cshow ::
     Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Base.String
   {- Arity: 1, HasNoCafRefs,
@@ -1095,7 +1095,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                                         @ GHC.Types.Char
                                         ww15
                                         ww16 } }))) } }))) } } })) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fShowDistControlStruct_$cshowList ::
     [Cloud.Utils.DistControlStruct.DistControlStruct] -> GHC.Show.ShowS
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
@@ -1106,7 +1106,7 @@ c2035cae6710a4a1b43972cd6edcf98d
                    Cloud.Utils.DistControlStruct.$fShowDistControlStruct1
                    ls
                    s) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   $fShowDistControlStruct_$cshowsPrec ::
     GHC.Types.Int
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1129,46 +1129,46 @@ c2035cae6710a4a1b43972cd6edcf98d
                       n
                       (Cloud.Utils.DistControlStruct.$fShowDistControlStruct_$cshow x))
                    s) -}
-554224032708fcc30196e9028cb7e579
+2d81a1dc3389c1c7ffb18cf1197b53b0
   $tc'DistControlStruct :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   15374174194828654935##
-                   17449189672798418001##
+                   8288018718428311745##
+                   13985834214613696760##
                    Cloud.Utils.DistControlStruct.$trModule
                    Cloud.Utils.DistControlStruct.$tc'DistControlStruct1) -}
-0a4b3addc986d41d93bfb6c18c9fbe9f
+e6aa8e05d86a824185ae344ec723ab5f
   $tc'DistControlStruct1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'DistControlStruct"#) -}
-4cd3989aa1e19539775cec443da2ee33
+9dfd098db8d33352b589788b000f1b48
   $tcDistControlStruct :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   2183181318663533606##
-                   14617169979932739956##
+                   1319462908389493675##
+                   13243285256533628530##
                    Cloud.Utils.DistControlStruct.$trModule
                    Cloud.Utils.DistControlStruct.$tcDistControlStruct1) -}
-cf003a55b1eed7e72adc1b1816c0124a
+0ef613c30f42ff6b21e636491601208b
   $tcDistControlStruct1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "DistControlStruct"#) -}
-b569b3f0adb691a5b7a3a207ccc72276
+546a989bb850c7a1c59a9dc78c0a0fff
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Cloud.Utils.DistControlStruct.$trModule2
                    Cloud.Utils.DistControlStruct.$trModule1) -}
-ffa9fe7e60eb368ab6c0391d49512012
+e250ead28f90f19c187ce23209487978
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Cloud.Utils.DistControlStruct"#) -}
-74cc58ff39d1f43a14a6fe9be93b1563
+81b6cac89ba6583567aea58462f8941c
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"#) -}
-3068b5bae0f89824181f2c54007366c0
+                   "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"#) -}
+ce162d274df1a6963eed093e834a7d8f
   $w$c== ::
     [Cloud.Type.TimeStamp]
     -> [Cloud.Type.Task]
@@ -1245,7 +1245,7 @@ ffa9fe7e60eb368ab6c0391d49512012
                                             GHC.Types.False -> GHC.Types.False
                                             GHC.Types.True
                                             -> GHC.Classes.eqInt ww6 ww13 } } } } } } } } } }) -}
-91ccd2960739ec8e164a92abd28c258b
+963107a6f48f0b067eb716bd6de19f4a
   $winitTasksWith ::
     GHC.Types.Int
     -> [Cloud.Type.Vect] -> (# GHC.Types.Int, [Cloud.Type.Task] #)
@@ -1313,7 +1313,7 @@ ffa9fe7e60eb368ab6c0391d49512012
                               @ GHC.Types.Int
                               y
                               Cloud.Utils.DistControlStruct.initStructure2 } }) #)) -}
-7c0fc179ec44847483ea4414853698e7
+24282d035c97a5254c67ca4cef30f6b7
   $wremoveTaskComplete ::
     Cloud.Type.ID
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1355,7 +1355,7 @@ ffa9fe7e60eb368ab6c0391d49512012
                     case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
                     case ds6 of wild1 { GHC.Types.I# x ->
                     GHC.Types.I# (GHC.Prim.-# x 1#) } } #)) -}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   data DistControlStruct
     = DistControlStruct {timeStamps_ :: [Cloud.Type.TimeStamp],
                          runningTasks_ :: [Cloud.Type.Task],
@@ -1364,14 +1364,14 @@ ffa9fe7e60eb368ab6c0391d49512012
                          numResponses_ :: GHC.Types.Int,
                          numOpenTasks_ :: GHC.Types.Int,
                          numOpenRunns_ :: GHC.Types.Int}
-0db8d3df4d95e81815f99880f0bb705a
+f2cade7cb1f43ecceda40d4ad5335a63
   axiom Rep_DistControlStruct::
       GHC.Generics.Rep Cloud.Utils.DistControlStruct.DistControlStruct
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
                "DistControlStruct"
                "Cloud.Utils.DistControlStruct"
-               "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
+               "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
@@ -1427,7 +1427,7 @@ ffa9fe7e60eb368ab6c0391d49512012
                                                                           'GHC.Generics.DecidedLazy)
                                                                        (GHC.Generics.Rec0
                                                                           GHC.Types.Int)))))
-9f8ca64ee75c1442630e2582f1fe5b97
+bf66d7f1b91fa09ab3cfe99a8a446411
   empty :: Cloud.Utils.DistControlStruct.DistControlStruct
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1438,17 +1438,17 @@ ffa9fe7e60eb368ab6c0391d49512012
                    Cloud.Utils.DistControlStruct.empty1
                    Cloud.Utils.DistControlStruct.empty1
                    Cloud.Utils.DistControlStruct.empty1) -}
-5c3530e4b6564f4d6f8acbff813a4d14
+2141c658f596dd3eb7adcd1a02d29c16
   empty1 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-3871dcbd77e1305468c51bfe64e311e8
+286b74dc887870db646d7616b14ef08e
   empty2 :: [[Cloud.Type.Result]]
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ [Cloud.Type.Result]
                    (GHC.Types.[] @ Cloud.Type.Result)
                    (GHC.Types.[] @ [Cloud.Type.Result])) -}
-f24e77c522c3ad86201cdd1a0c7bbbb1
+271fa7e4f55c8a36a03fd446120a4545
   initStructure ::
     Cloud.Type.Settings
     -> [Cloud.Type.Vect]
@@ -1481,21 +1481,21 @@ f24e77c522c3ad86201cdd1a0c7bbbb1
                    Cloud.Utils.DistControlStruct.empty1
                    (case ds of wild { (,) numOpen openTasks -> numOpen })
                    Cloud.Utils.DistControlStruct.empty1) -}
-95c8f538db03d51bb43f7661746814d2
+4cb8b1c405e2c4c7c09b136a820da216
   initStructure1 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.I# 500000#) -}
-b7e52c2be1f0f9df64ca00c30a2c0e05
+c5d07e52b45f42df47ab9702fb56f2bf
   initStructure2 :: [GHC.Types.Int]
   {- Unfolding: (GHC.Enum.eftInt 0# 9223372036854775807#) -}
-f77648a232925036d6bce177f676edf1
+b317d68abde5c4300063ad135147f9a1
   initStructure3 ::
     [Cloud.Type.Vect] -> Cloud.Type.ID -> Cloud.Type.Task
   {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m,
      Unfolding: InlineRule (2, True, True)
                 (\ (x :: [Cloud.Type.Vect]) (y :: Cloud.Type.ID)[OneShot] ->
                  Cloud.Type.Task y x) -}
-6739ef0f2a6bfbeb59be616fc78f3958
+f9c8045a5bc582b761fa64c92dee2d08
   insertResponse ::
     [Cloud.Type.Result]
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1525,7 +1525,7 @@ f77648a232925036d6bce177f676edf1
                     ds5 })
                    (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
                     ds6 })) -}
-f47952a97aed0cc54dc07e2700858570
+38bf4b73dfa907d2e4ca528565e0efd0
   insertRunningTask ::
     Cloud.Type.Task
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1555,7 +1555,7 @@ f47952a97aed0cc54dc07e2700858570
                    (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
                     case ds6 of wild1 { GHC.Types.I# x ->
                     GHC.Types.I# (GHC.Prim.+# x 1#) } })) -}
-b7fb5e8f12a5051ccbf85c6379920337
+4af45a9880dd9e528c78abe209a3e8bd
   insertTimeStamp ::
     Cloud.Type.TimeStamp
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1583,7 +1583,7 @@ b7fb5e8f12a5051ccbf85c6379920337
                     ds5 })
                    (case s of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
                     ds6 })) -}
-2c704540fb1305326fa8e2c21ce02296
+2527cc9926a2f09f8df96c45fe4dbffd
   isFinished ::
     Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Bool
   {- Arity: 1, HasNoCafRefs,
@@ -1601,7 +1601,7 @@ b7fb5e8f12a5051ccbf85c6379920337
                       GHC.Prim.tagToEnum#
                         @ GHC.Types.Bool
                         (GHC.Prim.<=# x1 0#) } } } }) -}
-93c49655df2791828dde470ac989a9ea
+bc2d45f3d959d13617b369464d45b07f
   numOpenRunns_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Int
   RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1611,7 +1611,7 @@ b7fb5e8f12a5051ccbf85c6379920337
                 (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
                  case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
                  ds7 }) -}
-97cfbebccdd317c0ab1a89b8c4dbaa79
+7a5c74bab1fbb208f9fd115364ebade0
   numOpenTasks_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Int
   RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1621,7 +1621,7 @@ b7fb5e8f12a5051ccbf85c6379920337
                 (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
                  case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
                  ds6 }) -}
-772d5cd007fe5bbe312ec9d02a44f046
+93acacd55682d09d87c58fc4482ed273
   numResponses_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct -> GHC.Types.Int
   RecSel Left Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1631,7 +1631,7 @@ b7fb5e8f12a5051ccbf85c6379920337
                 (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
                  case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
                  ds5 }) -}
-996bf52ecc801d407f7d5b0e3bde5578
+10b11ea22b94ee7ec1128074a0fe300f
   openTasks_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> [Cloud.Type.Task]
@@ -1642,7 +1642,7 @@ b7fb5e8f12a5051ccbf85c6379920337
                 (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
                  case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
                  ds3 }) -}
-f042b615f7f1945ce06a03c6b82b0092
+2559267860cd3a1c8ced5c1fec8c940c
   removeOpenTask ::
     Cloud.Type.ID
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1675,7 +1675,7 @@ f042b615f7f1945ce06a03c6b82b0092
                     ds5 })
                    (case w1 of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds ds1 ds2 ds3 ds4 ds5 ds6 ->
                     ds6 })) -}
-cf0afaaecd71c02444fb1198d0d57ea9
+210d5910485698c7bfdacd5834afcf76
   removeTaskComplete ::
     Cloud.Type.ID
     -> Cloud.Utils.DistControlStruct.DistControlStruct
@@ -1697,7 +1697,7 @@ cf0afaaecd71c02444fb1198d0d57ea9
                    ww5
                    ww6
                    ww7 }) -}
-bbdefb2ab5312eadd580939a099f20ea
+2e86aafe82b528288b5bc666ff30648e
   responses_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> [[Cloud.Type.Result]]
@@ -1708,7 +1708,7 @@ bbdefb2ab5312eadd580939a099f20ea
                 (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
                  case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
                  ds4 }) -}
-abe233e326779fb1c69f4d4e7caa600a
+9d5ee200a07ee05cd64a0801157e28d0
   runningTasks_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> [Cloud.Type.Task]
@@ -1719,7 +1719,7 @@ abe233e326779fb1c69f4d4e7caa600a
                 (\ (ds :: Cloud.Utils.DistControlStruct.DistControlStruct) ->
                  case ds of wild { Cloud.Utils.DistControlStruct.DistControlStruct ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
                  ds2 }) -}
-365e39132608e70ab74bf3a004599bb9
+895e7a9a565bb4a2fb894b6f6821dba2
   timeStamps_ ::
     Cloud.Utils.DistControlStruct.DistControlStruct
     -> [Cloud.Type.TimeStamp]

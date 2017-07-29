@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-28 12:40:55.260789 UTC
+2017-07-29 15:57:53.229835 UTC
 
-interface cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:MandelBulb.Math.Core 8002
-  interface hash: 0559fa2f00f78b8304d25cb1a1728dbd
-  ABI hash: 1cb70e8ef1992a1f3886f9e44325417c
-  export-list hash: f87004fcdcf0f1090d6d1ea5718b7a16
+interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:MandelBulb.Math.Core 8002
+  interface hash: 174fbff36d0d34335353cc4fbc3618bb
+  ABI hash: 18b2155d031e77a9ba9d7203695c1269
+  export-list hash: f49d3b4fdabcde6a15936d14795a476a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ed72a826337bf6a9c63f2f27ffdcdd90
   sig of: Nothing
@@ -30,28 +30,28 @@ import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
-3d807cfdb5f61943f93040fe8bb43236
+4f120ece16838877defbfb1786e4a734
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    MandelBulb.Math.Core.$trModule2
                    MandelBulb.Math.Core.$trModule1) -}
-71bbbd9b2d7d512b9d14a5a8297789d4
+b3bfc3229d779f83df8f6a37fa45f3b1
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "MandelBulb.Math.Core"#) -}
-ab32d084c866147be3d5d0b3d107b01f
+dfbc206f8a9a41980efb5d867cd3a67a
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"#) -}
-61788f9e7e81bd5265817f077728ab90
+                   "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"#) -}
+a39d15bf9dde9de560b48e97d5b8d095
   type Iter = GHC.Integer.Type.Integer
-093cef50b67c30d3b6c475a651210ef6
+e79379dcac49b2f747ccfdbe7ba62735
   type Limit = GHC.Types.Float
-d4cfee3e0da2df8399be66f7af458fd9
+c81cb1f24443631bb39357f2f55ede65
   type Vect = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
-edf774aa5cb2de3afb765b88c6fff79d
+2b2057d4ddeab54120ae9ef175d1ab74
   bulb ::
     GHC.Types.Float
     -> MandelBulb.Math.Core.Iter
@@ -62,7 +62,7 @@ edf774aa5cb2de3afb765b88c6fff79d
     -> MandelBulb.Math.Core.Iter
   {- Arity: 6,
      Strictness: <L,U(U)><S,U><S,U><L,1*U(U)><L,U(U(U),U(U),U(U))><L,1*U(1*U(U),1*U(U),1*U(U))> -}
-d7d0117cc038f01c834cc9f6d9fcaf19
+78f482d94cbce89226f109572b53358f
   doBulb ::
     GHC.Types.Float
     -> MandelBulb.Math.Core.Iter
@@ -85,15 +85,15 @@ d7d0117cc038f01c834cc9f6d9fcaf19
                    l
                    c
                    MandelBulb.Math.Core.doBulb1) -}
-dfd85b199d577362c8aed8ad5c7d89fa
+4cd4ef822d4f5107df3fed2e783f79c7
   doBulb1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
   {- HasNoCafRefs, Strictness: m,
      Unfolding: ((MandelBulb.Math.Core.doBulb2,
                   MandelBulb.Math.Core.doBulb2, MandelBulb.Math.Core.doBulb2)) -}
-753835b836abd65a6604e89020b6ee28
+75d4b16d66a04f9092e56c4a8bae1c6d
   doBulb2 :: GHC.Types.Float
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.0#) -}
-d6eb0495dba88bf028bf589d1e094fdd
+f9f1136c8dc884109d06977c74c4f268
   norm :: MandelBulb.Math.Core.Vect -> GHC.Types.Float
   {- Arity: 1, HasNoCafRefs,
      Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))>m,

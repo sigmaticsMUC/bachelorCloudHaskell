@@ -10,7 +10,8 @@ import Control.Distributed.Process.Closure
 import Control.Monad
 import Data.List.Split
 import Cloud.Type (Vect, IterationCount, Result,
-  MSG (ARG, RESPONSE, RESPONSE2, EXIT, START), Task (taskId_, taskData_, Task))
+  MSG (ARG, RESPONSE, RESPONSE2, EXIT, START), Task (taskId_, taskData_, Task),
+  TimeStamp (TimeStamp, comptime_, stampId_, waittime_))
 import System.CPUTime
 import System.IO
 
@@ -35,7 +36,7 @@ slaveProcess' f = do
   liftIO $ display $ "-> RECIEVED INPUT: " ++ (show diff)
   us <- getSelfPid
   case command of
-    ARG arg -> runSlaveTask arg f
+    ARG arg -> runSlaveTask diff arg f
     START m -> startSlave f m
     _ -> return ()
 
@@ -46,8 +47,8 @@ startSlave f master = do
   slaveProcess' f
   return ()
 
-runSlaveTask :: (ProcessId, Task) -> (Vect->IterationCount) -> Process ()
-runSlaveTask (master, task) f = do
+runSlaveTask :: Double -> (ProcessId, Task) -> (Vect->IterationCount) -> Process ()
+runSlaveTask waitTime (master, task) f = do
   us <- getSelfPid
   liftIO $ display $ "-> RUNNING TASK: " ++ (show $ taskId_ task)
   start <- liftIO $ getCPUTime
@@ -56,11 +57,12 @@ runSlaveTask (master, task) f = do
     return (vec, result)
   let response = filter (\(_, i) -> i == 256) results
   end <- liftIO $ getCPUTime
-  let diff = (fromIntegral (end - start)) / (10^12)
-  liftIO $ display $  "-> Computation time: " ++ (show (diff :: Double))
+  let runTime = (fromIntegral (end - start)) / (10^12)
+  liftIO $ display $  "-> Computation time: " ++ (show (runTime :: Double))
   liftIO $ display $ "-> SENDING RESPONSE"
+  let timeStamp = TimeStamp {stampId_ = taskId_ task, comptime_ = runTime, waittime_ = waitTime}
   start2 <- liftIO $ getCPUTime
-  send master (RESPONSE2 (us, (taskId_ task), response))
+  send master (RESPONSE2 (us, (taskId_ task), timeStamp, response))
   end2 <- liftIO $ getCPUTime
   let diff2 = (fromIntegral (end2 - start2)) / (10^12)
   liftIO $ display $  "-> Sending time: " ++ (show (diff2 :: Double))

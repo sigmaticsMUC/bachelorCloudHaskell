@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-25 18:49:43.537809 UTC
+2017-07-29 15:57:53.138357 UTC
 
-interface cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU:MandelBulb.Utils.Domain 8002
-  interface hash: 9eb233788f7338867485eca149da2112
-  ABI hash: 9029f7785a5af06f5f771c51a897f958
-  export-list hash: 285f39f8c61d7d6e2781a18c73479e82
+interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:MandelBulb.Utils.Domain 8002
+  interface hash: 091764cfc30b3ce90f0a2e73962e3a1c
+  ABI hash: c4acb6abc309a07450bad992c14ad231
+  export-list hash: f8e64c60a1beb2b90cee2c81cc3dc3e0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ddd7647a4e66491a595ddf558958a2aa
   sig of: Nothing
@@ -29,22 +29,22 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
-ca00ac2e3e01aa81c0ffe47389c1007d
+83c5453a50d9af563f3dc2e3d7d588d8
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    MandelBulb.Utils.Domain.$trModule2
                    MandelBulb.Utils.Domain.$trModule1) -}
-bcf8b08f79e326e6617b50da73304962
+d12775810b169596aefc93cf6a988c62
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "MandelBulb.Utils.Domain"#) -}
-231e7f53193892acc87f01cf0d926b03
+240f642faa2f8ae076b9e6032b5d3cac
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"#) -}
-5e927773c362a4468d5d4a65fe1d3b2d
+                   "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"#) -}
+c60c9f34d10fd639c81c27e953e6b6bb
   $wgenerateDomain ::
     GHC.Types.Float
     -> GHC.Types.Float
@@ -58,7 +58,7 @@ bcf8b08f79e326e6617b50da73304962
   {- Arity: 7, HasNoCafRefs,
      Strictness: <L,U(U)><L,U(U)><S,U><L,U(U)><L,U(U)><S,U><L,U(U)>,
      Inline: [0] -}
-70c4a4bf09478b852a086dee89437734
+01404b4f60565c866dbb9e856f0d4108
   $wgeneratePlane ::
     GHC.Types.Float
     -> GHC.Prim.Float#
@@ -70,17 +70,17 @@ bcf8b08f79e326e6617b50da73304962
           [[MandelBulb.Utils.Domain.Point]] #)
   {- Arity: 6, HasNoCafRefs,
      Strictness: <L,U(U)><S,U><L,U><L,U(U)><S,U><L,U(U)>, Inline: [0] -}
-8a982707d70d68d270974ed64dc6ea29
+f2fe388ce324db1a5159c7ef63f0b2e5
   type Domain = [MandelBulb.Utils.Domain.Plane]
-e8ad55ebc9b9d3113cc2bba981150bfb
+acbe5ea0b4a91c1664a67ea05aaea78d
   type Plane = [MandelBulb.Utils.Domain.Row]
-5ccb854ccabcc46eb404df8f00b0c494
+0e092b817701113f74946186e9b3c146
   type Point = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
-bfd8502134cfb6f018e75a9f2aae985a
+8d695ec5602e1b64e74ba55a0ce9602a
   type Row = [MandelBulb.Utils.Domain.Point]
-04089f06e8393201270033ad1c93ce8b
+232c2cdc8d79e1538686f6b7e07d841d
   type Step = GHC.Types.Float
-356c7f66f02154c74a5b59874f5b252f
+dd8165fe16faaa54156f3159e920e256
   generateDomain ::
     MandelBulb.Utils.Domain.Point
     -> MandelBulb.Utils.Domain.Point
@@ -109,7 +109,7 @@ bfd8502134cfb6f018e75a9f2aae985a
                    @ [[MandelBulb.Utils.Domain.Point]]
                    ww13
                    ww14 } } } } }) -}
-4f9a41c028039bfa842ac5112fa76abb
+7713472969b89b52b6c50002a6526e60
   generatePlane ::
     MandelBulb.Utils.Domain.Point
     -> MandelBulb.Utils.Domain.Point
@@ -137,12 +137,12 @@ bfd8502134cfb6f018e75a9f2aae985a
                    @ [MandelBulb.Utils.Domain.Point]
                    ww13
                    ww14 } } } } }) -}
-1c3da5f99f3253a4ecaeac711aaa5335
+46133fea1e3ff94ab9741b847d39d440
   rowMajor :: [[[a]]] -> [a]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: (\ @ a (x :: [[[a]]]) ->
                  MandelBulb.Utils.Domain.rowMajor1 @ a x) -}
-ae2e5034a3b920dc55b5c4cc0f4091d8
+f6982ab2f44afbfee381de039e69d59f
   rowMajor1 :: [[[a]]] -> [a]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 vectorised variables:

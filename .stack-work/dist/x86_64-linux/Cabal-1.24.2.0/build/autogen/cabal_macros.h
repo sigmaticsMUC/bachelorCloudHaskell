@@ -35,6 +35,13 @@
   (major1) == 0 && (major2) <  8 || \
   (major1) == 0 && (major2) == 8 && (minor) <= 3)
 
+/* package directory-1.3.0.0 */
+#define VERSION_directory "1.3.0.0"
+#define MIN_VERSION_directory(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  3 || \
+  (major1) == 1 && (major2) == 3 && (minor) <= 0)
+
 /* package distributed-process-0.6.6 */
 #define VERSION_distributed_process "0.6.6"
 #define MIN_VERSION_distributed_process(major1,major2,minor) (\
@@ -182,7 +189,7 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
+#define CURRENT_COMPONENT_ID "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"
 
-#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-JXqi0ZFkKXz7BEviY0BErU"
+#define CURRENT_PACKAGE_KEY "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"
 

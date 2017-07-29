@@ -38,6 +38,7 @@ library
     , JuicyPixels
     , ansi-terminal
     , easyplot
+    , directory
   default-language:    Haskell2010
 
 executable cloud-exe
@@ -58,6 +59,7 @@ executable cloud-exe
                      , split
                      , easyplot
                      , gnuplot
+                     , directory
   default-language:    Haskell2010
 
 test-suite cloud-test
