@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-29 15:57:57.964426 UTC
+2017-07-31 18:51:14.8593 UTC
 
 interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Handler 8002
-  interface hash: 36d5b277a53eef58f1881ea16f5c9552
-  ABI hash: 33cf2eb3405a376575b141b82452517d
+  interface hash: 72e5d671dac7accfbe469e0539eb39a6
+  ABI hash: 74860a2d56e7a1357f4586dd253fd6e8
   export-list hash: 4d47fc5eefb25fde4af47ce9c7508a44
   orphan hash: 568271b9af230a5cbacbfaf33b70fab4
   flag hash: a0259133c9e8956e3c5da0f6704b190b
@@ -164,15 +164,6 @@ eca6048bd04a10355db5444923265044
     Data.Binary.Class.Binary Cloud.Type.MSG
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True) Cloud.Type.$fBinaryMSG -}
-be78a5ea83cb731667f5b2f2b0cfe097
-  $s^1 :: GHC.Types.Double
-  {- Strictness: x -}
-2eff1b2afa0018fccb0479f484dce961
-  $s^2 :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (0) -}
-2f16cee94206dc425f26167ef1356231
-  $seven1 :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (2) -}
 8f0565192827ea84c978e6fc01f116e2
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -188,30 +179,6 @@ be78a5ea83cb731667f5b2f2b0cfe097
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn"#) -}
-8a1ca51180a3f2239415972dab2350eb
-  $w$s^ ::
-    GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
-  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [0],
-     Unfolding: (\ (w :: GHC.Types.Double)
-                   (w1 :: GHC.Integer.Type.Integer) ->
-                 case GHC.Integer.Type.ltInteger#
-                        w1
-                        Cloud.Handler.$s^2 of wild { DEFAULT ->
-                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
-                   GHC.Types.False
-                   -> case GHC.Integer.Type.eqInteger#
-                             w1
-                             Cloud.Handler.$s^2 of wild2 { DEFAULT ->
-                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
-                        GHC.Types.False
-                        -> case w of ww { GHC.Types.D# ww1 -> Cloud.Handler.$wf ww1 w1 }
-                        GHC.Types.True -> 1.0## } }
-                   GHC.Types.True
-                   -> case Cloud.Handler.$s^1 ret_ty GHC.Prim.Double# of {} } }) -}
-0b217d9c98f5d90b08dc8a1a4079b6bf
-  $wf ::
-    GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
-  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
 6a08d6758252835cf04f3956cb524f18
   handlerProcess ::
     Cloud.Type.Settings

@@ -23,15 +23,15 @@ handlerProcess' ctrl = do
   response <- expect
   endTime <- liftIO getCPUTime
   let diff = (fromIntegral (endTime - startTime)) / (10^12)
-  liftIO $ putStrLn $ "-> WAITING: " ++ (show diff)
+  --liftIO $ putStrLn $ "-> WAITING: " ++ (show diff)
   start <- liftIO getCPUTime
   ctrlUpdate <- handleResponse response ctrl
   end <- liftIO getCPUTime
   let diff2 = (fromIntegral (end - start)) / (10^12)
-  liftIO $ putStrLn $ "-> HANDLING TIME: " ++ (show diff2)
+  --liftIO $ putStrLn $ "-> HANDLING TIME: " ++ (show diff2)
   --liftIO $ putStrLn $ show ctrlUpdate
   liftIO $ displayProgress ctrlUpdate
-  liftIO $ putStrLn ""
+  --liftIO $ putStrLn ""
   if isFinished ctrlUpdate
     then return ctrlUpdate
     else handlerProcess' ctrlUpdate

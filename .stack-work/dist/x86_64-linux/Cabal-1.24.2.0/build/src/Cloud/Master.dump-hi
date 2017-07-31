@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-29 15:58:26.950582 UTC
+2017-07-31 19:31:30.362298 UTC
 
 interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Master 8002
-  interface hash: a3ce1d899fd9b1d0f0796e064bc24501
-  ABI hash: 4249b0ce571a0ce6fabf9026e8b78122
-  export-list hash: 6e904d463098280b6df92c2227eb7976
+  interface hash: 0f523e966b78455beac3d0f2bc6558c4
+  ABI hash: 6d2b2a47e074b20b990f6e1a8393e946
+  export-list hash: a39912851bdb5b06b31c9aa8b6a42a0e
   orphan hash: 594f33231d5d735ea23a0c44e52bfd5a
   flag hash: 3154edb06e70847877e7ec9876375ad9
   sig of: Nothing
@@ -13,6 +13,7 @@ interface cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Master 8002
   where
 exports:
   Cloud.Master.masterProcess
+  Cloud.Master.masterProcess''
   Cloud.Master.masterProcess2
 module dependencies: Cloud.Handler Cloud.Kernel Cloud.Slave
                      Cloud.Type Cloud.Utils.DistControlStruct IOUtils.ColorMap
@@ -116,7 +117,7 @@ import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
-import  -/  Cloud.Handler 33cf2eb3405a376575b141b82452517d
+import  -/  Cloud.Handler 74860a2d56e7a1357f4586dd253fd6e8
   exports: 4d47fc5eefb25fde4af47ce9c7508a44
   handlerProcess 6a08d6758252835cf04f3956cb524f18
 import  -/  Cloud.Kernel 36e37fe3e0768f748971e4de77154ace
@@ -147,6 +148,10 @@ import  -/  Cloud.Utils.DistControlStruct 39fa090420f39f8eda5c9a15917e1336
 import  -/  IOUtils.ColorMap d572b39d49e9309b0d7194c1f813f96c
   exports: 07a910aa6d4d78423f18e2337be40d57
   heightToRGB8 a952451acb696d72c3e453fc799c320e
+import  -/  MandelBulb.Utils.Domain c4acb6abc309a07450bad992c14ad231
+  exports: f8e64c60a1beb2b90cee2c81cc3dc3e0
+  generateDomain dd8165fe16faaa54156f3159e920e256
+  rowMajor 46133fea1e3ff94ab9741b847d39d440
 import  -/  directory-1.3.0.0@directory-1.3.0.0:System.Directory 8ff5ebd6a93811413df021d2be39a158
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process e25ca63b4aa87d44ee59f263df60fb0e
 import  -/  distributed-process-0.6.6@distributed-process-0.6.6-8f5KxopqwfxKU2OVNNfjFT:Control.Distributed.Process.Internal.Primitives b74924c8dd3a3c8d0b2bca48b358e70f
@@ -215,6 +220,9 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2
 0827b7408e8cea6eb04450e103ffd29e
   $s^2 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (0) -}
+15256ad76427f5a41f0093758258f67a
+  $s^4 :: GHC.Types.Float
+  {- Strictness: x -}
 1aefc3266e028f733a377ded8f131a82
   $seven1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (2) -}
@@ -253,10 +261,53 @@ d852d7c523abaa6248ce553a3824db42
                         GHC.Types.True -> 1.0## } }
                    GHC.Types.True
                    -> case Cloud.Master.$s^1 ret_ty GHC.Prim.Double# of {} } }) -}
+94ab2e709615ee0878c046fdea39180d
+  $w$s^1 ::
+    GHC.Types.Float -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Float)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.ltInteger#
+                        w1
+                        Cloud.Master.$s^2 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             w1
+                             Cloud.Master.$s^2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case w of ww { GHC.Types.F# ww1 -> Cloud.Master.$wf1 ww1 w1 }
+                        GHC.Types.True -> 1.0# } }
+                   GHC.Types.True
+                   -> case Cloud.Master.$s^4 ret_ty GHC.Prim.Float# of {} } }) -}
 fad12291905fcc3398e5edac0c098157
   $wf ::
     GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
   {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+58af4ced6633075eac03d76179ab1db1
+  $wf1 ::
+    GHC.Prim.Float# -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+769c08f682d481fe048fcd6dbbc58a5b
+  $wmasterProcess'' ::
+    Cloud.Type.Settings
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.Process ()
+  {- Arity: 10,
+     Strictness: <L,U(U(U),U,U(U))><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U><L,U>,
+     Inline: [0] -}
+79ef88837a56a817712b80fa046c1703
+  type Point = (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
 2f42b5ce85c253fd380d8b10428d6954
   masterProcess ::
     Control.Distributed.Static.Closure
@@ -285,6 +336,39 @@ fad12291905fcc3398e5edac0c098157
                                          <GHC.Types.IO>_R
                                          <()>_N))
                                (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
+206f5e25879c328216da6d83e57618d9
+  masterProcess'' ::
+    Cloud.Type.Settings
+    -> GHC.Types.Float
+    -> (Cloud.Master.Point, Cloud.Master.Point)
+    -> Control.Distributed.Static.Closure
+         (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+    -> [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.Process ()
+  {- Arity: 5,
+     Strictness: <L,U(U(U),U,U(U))><L,U(U)><S(SS),1*U(1*U(U(U),U(U),U(U)),1*U(U(U),U(U),U(U)))><L,U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ (w :: Cloud.Type.Settings)
+                   (w1 :: GHC.Types.Float)
+                   (w2 :: (Cloud.Master.Point, Cloud.Master.Point))
+                   (w3 :: Control.Distributed.Static.Closure
+                            (Cloud.Type.Vect -> Cloud.Type.IterationCount))
+                   (w4 :: [Control.Distributed.Process.Internal.Types.NodeId]) ->
+                 case w2 of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { (,,) ww4 ww5 ww6 ->
+                 case ww2 of ww7 { (,,) ww8 ww9 ww10 ->
+                 Cloud.Master.$wmasterProcess''
+                   w
+                   w1
+                   ww4
+                   ww5
+                   ww6
+                   ww8
+                   ww9
+                   ww10
+                   w3
+                   w4 } } }) -}
 07b94297b235446eb1b6c346326a242f
   masterProcess1 ::
     Control.Distributed.Static.Closure

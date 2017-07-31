@@ -3,7 +3,8 @@
 
 module Cloud.Master(
   masterProcess,
-  masterProcess2
+  masterProcess2,
+  masterProcess''
 )where
 
 import Control.Distributed.Process hiding (Message)
@@ -18,6 +19,10 @@ import System.CPUTime
 import System.Directory
 import Graphics.EasyPlot
 import IOUtils.ColorMap as CM
+import qualified MandelBulb.Utils.Domain as D
+import qualified MandelBulb.Utils.Domain as DM
+
+type Point = (Float, Float, Float)
 
 
 
@@ -86,6 +91,53 @@ masterProcess2 s cF args nids = do
   --liftIO $ plot' [] X11 $ Data3D [(Title "Test"), (Style Dots)] [] (concat $ map fst results)
   return ()
 
+masterProcess'' :: Settings -> Float -> (Point, Point) -> Closure(Vect->IterationCount) -> [NodeId] -> Process ()
+masterProcess'' settings h ((xS, yS, zS), (xE, yE, zE)) cF nids = do
+  let numX = abs(xS - xE)/h
+  let numY = abs(yS - yE)/h
+  let numPoints = numX * numY
+  --let deltaZ = (64 * 10^6)/numPoints
+  let deltaZ = (1 * 10^6)/numPoints
+  zList <- liftIO $ buildZList h deltaZ zS zE
+  let ids = [0..(length zList)]
+  let zippedZ = zip ids zList
+  liftIO $ putStrLn $ show zList
+  liftIO $ createDirectory (outputPath_ settings)
+  start <- liftIO getCPUTime
+  master <- getSelfPid
+  ps <- spawnProcesses2 master cF (takeNodes settings nids)
+  forM_ zippedZ $ \(zID, zis) -> do
+    --liftIO $ putStrLn "RUNMASTER"
+    let zes = if (zis + (deltaZ * h)) > zE then zE else zis + (deltaZ * h)
+    --liftIO $ putStrLn $ (show (xS, yS, zis)) ++ (show (xE, yE, zes))
+    let domain = DM.rowMajor $ DM.generateDomain (xS,yS,zis) (xE, yE, zes) h
+    runMaster ps settings cF domain nids zID
+    --liftIO $ putStrLn "DONE"
+  forM_ ps $ \pid -> do
+    send pid EXIT
+  end <- liftIO getCPUTime
+  return ()
+
+
+runMaster :: [ProcessId] -> Settings -> Closure(Vect->IterationCount) -> [Vect] -> [NodeId] -> Int -> Process ()
+runMaster pids s cF args nids zID = do
+  --liftIO $ putStrLn "STARTING HANDLER"
+  master <- getSelfPid
+  forM_ pids $ \pid -> do
+    send pid (START master)
+  ctrl <- handlerProcess s args
+  let fileContent = ("x, y, z, c\n" ++ concat (map toCSVLine (concat (responses_ ctrl))))
+  let timeStamps = concat (map show (timeStamps_ ctrl))
+  liftIO $ storeResults path timeStamps fileContent
+  return ()
+    where path = (outputPath_ s) ++ "/" ++ (outputPath_ s) ++ "_" ++ (show zID)
+
+buildZList :: Float -> Float -> Float -> Float -> IO [Float]
+buildZList h dZ zS zE = return zValues
+          where numEle = (((abs(zS-zE))/h)/dZ)
+                eleList = if numEle >= 1 then [0..(numEle-1)] else [0]
+                zValues = map (\z -> zS + h * z * dZ) eleList
+
 
 storeResults :: String -> String -> String -> IO ()
 storeResults setName stamps points = do
@@ -93,7 +145,6 @@ storeResults setName stamps points = do
   writeToFile (setName ++ "/timestamps.txt") stamps
   writeToFile (setName ++ "/points.txt") points
   return ()
-
 
 
 

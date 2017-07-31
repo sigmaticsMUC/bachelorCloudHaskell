@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-29 16:00:13.157589 UTC
+2017-07-31 19:30:24.949016 UTC
 
 interface main@main:Main 8002
-  interface hash: 46e413929400da457c93f13d05b1c2b4
-  ABI hash: 0c97ca81fe2456fa78ca517231af08a8
-  export-list hash: 0a7c7927a4558a7323a766f02dc02591
+  interface hash: 4e2ebf7370265dda943d66511c197395
+  ABI hash: 8f3ba23bf738d7c84cfa992f3e152302
+  export-list hash: 03128c7cb02ac6166bb641a02971aa41
   orphan hash: 5fca8292af8d04d339aa20da86b44d53
   flag hash: 387e78a1174af00d868509f3a7fc4598
   sig of: Nothing
@@ -21,6 +21,7 @@ exports:
   Main.mbulb_
   Main.mbulb___sdict
   Main.mbulb___static
+  Main.points
   Main.settings
   Main.test
 module dependencies:
@@ -122,7 +123,7 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
 import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
 import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
-import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Master 4249b0ce571a0ce6fabf9026e8b78122
+import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Master 6d2b2a47e074b20b990f6e1a8393e946
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Type 5ddf21eb2e89235a7bab91facabdf645
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Utils.DistControlStruct 39fa090420f39f8eda5c9a15917e1336
 import  -/  cloud-0.1.0.0@cloud-0.1.0.0-3M65siMsBbcBqxzdpRImcn:Cloud.Utils.DistribUtils 4289b705d184d644791184068014d256
@@ -591,7 +592,7 @@ c885ba0a6a0b63dbe89f220ff5383a23
 e3a88b04ef04000e799f13e832397d05
   __remoteTable_x1 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Main.mbulb_"#) -}
-a4786e5b46f0298c7439cd523c8effc7
+bc16615c495b4852595648f3f82fb1ca
   domain_ :: [MandelBulb.Utils.Domain.Point]
   {- Unfolding: (case MandelBulb.Utils.Domain.$wgenerateDomain
                         Main.domain_2
@@ -610,40 +611,101 @@ d703a3e4d59c4b6b5a1d330dc02e97bc
 6e0c525bb8dc45b821b7f2b403e5550f
   domain_2 :: GHC.Types.Float
   {- HasNoCafRefs, Unfolding: (GHC.Types.F# -1.0#) -}
-ca588fe3971399c60bd34c32098a8413
-  h :: MandelBulb.Utils.Domain.Step
+fc50089777a2fdf2d2ae029cf9e2ed8f
+  h :: GHC.Types.Float
   {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.F# 1.0e-2#) -}
-cf91fd03b1d8b764888355487fa365f2
+     Unfolding: (GHC.Types.F# 4.0e-3#) -}
+4e924b538966035798e9a8e553cfb804
   main :: GHC.Types.IO ()
   {- Arity: 1,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8f0a43a29ca1cd0325cbf48d897f7426
+0a90368ca71991e83a614f95be05c573
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (Cloud.Utils.DistribUtils.distribMain1
-                   Main.main2
-                     `cast`
-                   (<[Control.Distributed.Process.Internal.Types.NodeId]>_R
-                    ->_R Trans
-                             (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                              ->_R Sym (GHC.Types.N:IO[0] <()>_R))
-                             (Trans
-                                  (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                            <*>_N
-                                            <Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                                            <GHC.Types.IO>_R
-                                            <()>_N))
-                                  (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N)))
+                   Main.master
                    Main.__remoteTable1
                      `cast`
                    (<Control.Distributed.Static.RemoteTable>_R
                     ->_R Sym (Control.Distributed.Static.N:RemoteTable[0]))) -}
-f797b5af49b1aa350ef6fce37f9fe199
-  main10 :: GHC.Base.String
+13ed3702597ba880f4e2e184abef2b4b
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+09c8f4d180b7e9831ea01ce60ca903d9
+  master ::
+    [Control.Distributed.Process.Internal.Types.NodeId]
+    -> Control.Distributed.Process.Internal.Types.Process ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (w4 :: [Control.Distributed.Process.Internal.Types.NodeId]) ->
+                 Cloud.Master.$wmasterProcess''
+                   Main.settings
+                   Main.h
+                   Main.domain_2
+                   Main.domain_2
+                   Main.domain_2
+                   Main.domain_1
+                   Main.domain_1
+                   Main.domain_1
+                   Main.master1
+                   w4) -}
+1cf39d1745dc29cc49f7d6aea3d61ea7
+  master1 ::
+    Control.Distributed.Static.Closure
+      (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+  {- Unfolding: (case Data.ByteString.Builder.toLazyByteString
+                        Main.master9
+                          `cast`
+                        (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) of dt { DEFAULT ->
+                 Control.Distributed.Static.Closure
+                   @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
+                   Main.master2
+                     `cast`
+                   (Sym (Control.Distributed.Static.N:Static[0]
+                             <Data.ByteString.Lazy.Internal.ByteString
+                              -> Cloud.Type.Vect -> Cloud.Type.IterationCount>_P))
+                   dt }) -}
+ee48e4bc5c165363c2405c215a0064c6
+  master2 :: Control.Distributed.Static.StaticLabel
+  {- Unfolding: (Control.Distributed.Static.StaticApply
+                   Main.master6
+                   Main.master3) -}
+b42eb60d6b9f4f0dc21c20e0498e18ea
+  master3 :: Control.Distributed.Static.StaticLabel
+  {- Unfolding: (Control.Distributed.Static.StaticApply
+                   Control.Distributed.Process.Internal.Closure.BuiltIn.returnCP1
+                   Main.master4) -}
+4b9561faf50fd07779f5c777a6649445
+  master4 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m1,
+     Unfolding: (Control.Distributed.Static.StaticLabel Main.master5) -}
+40b0060fa8d3eb6e6e81622d6367becc
+  master5 :: GHC.Base.String
+  {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
+                        @ GHC.Types.Char
+                        Control.DeepSeq.$fNFDataChar_$crnf
+                          `cast`
+                        (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
+                        Main.__remoteTable_x of wild { () ->
+                 Main.__remoteTable_x }) -}
+9c0fc364b4cdd950249429f3c6db90ab
+  master6 :: Control.Distributed.Static.StaticLabel
+  {- Unfolding: (Control.Distributed.Static.StaticApply
+                   Control.Distributed.Static.closureApply8
+                   Main.master7) -}
+15008d615de3f6188be4ae5410369b41
+  master7 :: Control.Distributed.Static.StaticLabel
+  {- Strictness: m1,
+     Unfolding: (Control.Distributed.Static.StaticLabel Main.master8) -}
+b911ee98f58b374cc6fc55e9e480e834
+  master8 :: GHC.Base.String
   {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
                         @ GHC.Types.Char
                         Control.DeepSeq.$fNFDataChar_$crnf
@@ -651,8 +713,8 @@ f797b5af49b1aa350ef6fce37f9fe199
                         (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
                         Main.__remoteTable_x1 of wild { () ->
                  Main.__remoteTable_x1 }) -}
-c9480ff134fa69e6a97f06e4f9d91f84
-  main11 ::
+4ce0fc3a74540c3851f89d269a5b25e4
+  master9 ::
     Data.ByteString.Builder.Internal.BuildStep r
     -> Data.ByteString.Builder.Internal.BufferRange
     -> GHC.Types.IO (Data.ByteString.Builder.Internal.BuildSignal r)
@@ -661,92 +723,6 @@ c9480ff134fa69e6a97f06e4f9d91f84
                    (cont :: Data.ByteString.Builder.Internal.BuildStep r)
                    (range :: Data.ByteString.Builder.Internal.BufferRange) ->
                  cont range) -}
-bd21b57b808bc10882aa3261dded130f
-  main12 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1,
-     Unfolding: (GHC.TopHandler.runMainIO1
-                   @ ()
-                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-f8844a1ac25f1690738bf7cd4c73a342
-  main2 ::
-    [Control.Distributed.Process.Internal.Types.NodeId]
-    -> Control.Distributed.Process.Internal.Types.LocalProcess
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3,
-     Unfolding: (Cloud.Master.masterProcess7
-                   Main.settings
-                   Main.main3
-                   Main.domain_) -}
-ee2e46e9f1931d0fe073de0185da4471
-  main3 ::
-    Control.Distributed.Static.Closure
-      (Cloud.Type.Vect -> Cloud.Type.IterationCount)
-  {- Unfolding: (case Data.ByteString.Builder.toLazyByteString
-                        Main.main11
-                          `cast`
-                        (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) of dt { DEFAULT ->
-                 Control.Distributed.Static.Closure
-                   @ (Cloud.Type.Vect -> Cloud.Type.IterationCount)
-                   Main.main4
-                     `cast`
-                   (Sym (Control.Distributed.Static.N:Static[0]
-                             <Data.ByteString.Lazy.Internal.ByteString
-                              -> Cloud.Type.Vect -> Cloud.Type.IterationCount>_P))
-                   dt }) -}
-01f0e7dbf2bdcc52d6f4773fc358d673
-  main4 :: Control.Distributed.Static.StaticLabel
-  {- Unfolding: (Control.Distributed.Static.StaticApply
-                   Main.main8
-                   Main.main5) -}
-a958d441ff08fcd318b041ec1a7b50b0
-  main5 :: Control.Distributed.Static.StaticLabel
-  {- Unfolding: (Control.Distributed.Static.StaticApply
-                   Control.Distributed.Process.Internal.Closure.BuiltIn.returnCP1
-                   Main.main6) -}
-a5bc81b73fb09a38264c308695417f00
-  main6 :: Control.Distributed.Static.StaticLabel
-  {- Strictness: m1,
-     Unfolding: (Control.Distributed.Static.StaticLabel Main.main7) -}
-24f9f446f28e1f1a2154b7ed879cb30e
-  main7 :: GHC.Base.String
-  {- Unfolding: (case Control.DeepSeq.$fNFDataArray_$crnf1
-                        @ GHC.Types.Char
-                        Control.DeepSeq.$fNFDataChar_$crnf
-                          `cast`
-                        (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Char>_N))
-                        Main.__remoteTable_x of wild { () ->
-                 Main.__remoteTable_x }) -}
-f3df1c56b0537840ebb58e4396999c94
-  main8 :: Control.Distributed.Static.StaticLabel
-  {- Unfolding: (Control.Distributed.Static.StaticApply
-                   Control.Distributed.Static.closureApply8
-                   Main.main9) -}
-e328b023cb90c94e523ed827d9db2d0b
-  main9 :: Control.Distributed.Static.StaticLabel
-  {- Strictness: m1,
-     Unfolding: (Control.Distributed.Static.StaticLabel Main.main10) -}
-d5e6a1d99c4538f7a9c0c9812c4fd567
-  master ::
-    [Control.Distributed.Process.Internal.Types.NodeId]
-    -> Control.Distributed.Process.Internal.Types.Process ()
-  {- Arity: 3,
-     Unfolding: InlineRule (0, True, True)
-                Main.main2
-                  `cast`
-                (<[Control.Distributed.Process.Internal.Types.NodeId]>_R
-                 ->_R Trans
-                          (<Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                           ->_R Sym (GHC.Types.N:IO[0] <()>_R))
-                          (Trans
-                               (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                         <*>_N
-                                         <Control.Distributed.Process.Internal.Types.LocalProcess>_R
-                                         <GHC.Types.IO>_R
-                                         <()>_N))
-                               (Sym (Control.Distributed.Process.Internal.Types.N:Process[0]) <()>_N))) -}
 b627b25732023d5cc79f0158ed52fe95
   mbulb :: MandelBulb.Math.Core.Vect -> MandelBulb.Math.Core.Iter
   {- Arity: 1, Strictness: <L,U(U(U),U(U),U(U))>,
@@ -774,28 +750,42 @@ b627b25732023d5cc79f0158ed52fe95
      Unfolding: InlineRule (2, True, False)
                 (\ (ds :: ()) (eta :: Cloud.Type.Vect) ->
                  case ds of wild { () -> Main.mbulb eta }) -}
-5915bae9945c0f8aefc23b594e831b92
+dc37b6b2380cc04a3004e226e8e09483
   mbulb___sdict ::
     Control.Distributed.Static.Static
       (Control.Distributed.Process.Serializable.SerializableDict ())
   {- Strictness: m1,
      Unfolding: InlineRule (0, True, True)
-                Main.main6
+                Main.master4
                   `cast`
                 (Sym (Control.Distributed.Static.N:Static[0]
                           <Control.Distributed.Process.Serializable.SerializableDict
                              ()>_P)) -}
-02120f9d9844429368d6ec74da9c3513
+b8b29393123c431001dda225678035fc
   mbulb___static ::
     Control.Distributed.Static.Static
       (() -> Cloud.Type.Vect -> Cloud.Type.IterationCount)
   {- Strictness: m1,
      Unfolding: InlineRule (0, True, True)
-                Main.main9
+                Main.master7
                   `cast`
                 (Sym (Control.Distributed.Static.N:Static[0]
                           <() -> Cloud.Type.Vect -> Cloud.Type.IterationCount>_P)) -}
-5f2e8a52f86ef250a2abe1492b0f53ea
+4e75c4ba417fea6af32fecea439f010d
+  points ::
+    ((GHC.Types.Float, GHC.Types.Float, GHC.Types.Float),
+     (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float))
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Main.points2, Main.points1)) -}
+b107b254ea7e050468b6dde8f53e0195
+  points1 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Main.domain_1, Main.domain_1, Main.domain_1)) -}
+e013a0c82f393a9ba5174f9128a96b95
+  points2 :: (GHC.Types.Float, GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Main.domain_2, Main.domain_2, Main.domain_2)) -}
+1ef2fe7c62f3cfd6ac1bbec241637a5a
   settings :: Cloud.Type.Settings
   {- Strictness: m,
      Unfolding: (Cloud.Type.Settings
@@ -805,12 +795,13 @@ b627b25732023d5cc79f0158ed52fe95
 8e405c5dbbd190ed58a2d75cd5f3c058
   settings1 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# -1#) -}
-6b884bd7f5891fb89a9c88389ca746bf
+30c8d57e9f38bbfd13e49ef2ba35665f
   settings2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "DD2"#) -}
-5ace10edb1d0d9687bfa8d885af29fe9
+  {- Unfolding: (GHC.CString.unpackCString# "DD4"#) -}
+f1aa247dc2c3379aaf2cccd07d60e763
   settings3 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10000#) -}
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.I# 100000#) -}
 c099fe7ed857084f958808ef79d0e1e7
   test :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
